@@ -1,0 +1,16 @@
+{
+  "name": "popular-point",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "@fontsource/merriweather": "^5.2.6",
+    "astro": "^5.6.1"
+  }
+}
