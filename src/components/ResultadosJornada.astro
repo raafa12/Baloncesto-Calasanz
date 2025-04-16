@@ -1,0 +1,138 @@
+---
+// src/components/ResultadosJornada.astro
+
+// Datos de los resultados de la última jornada
+const resultados = [
+  {
+    categoria: "Junior Masculino",
+    local: "CB Calasanz",
+    visitante: "CB Estudiantes",
+    puntosLocal: 78,
+    puntosVisitante: 65,
+    fecha: "14/04/2025",
+    pabellon: "Pabellón Calasanz"
+  },
+  {
+    categoria: "Cadete Femenino",
+    local: "CB Valdemoro",
+    visitante: "CB Calasanz",
+    puntosLocal: 54,
+    puntosVisitante: 62,
+    fecha: "13/04/2025",
+    pabellon: "Pabellón Municipal Valdemoro"
+  },
+  {
+    categoria: "Infantil Masculino",
+    local: "CB Calasanz",
+    visitante: "CB Alcalá",
+    puntosLocal: 68,
+    puntosVisitante: 72,
+    fecha: "14/04/2025",
+    pabellon: "Pabellón Calasanz"
+  },
+  {
+    categoria: "Junior Femenino",
+    local: "CB Fuenlabrada",
+    visitante: "CB Calasanz",
+    puntosLocal: 59,
+    puntosVisitante: 67,
+    fecha: "13/04/2025",
+    pabellon: "Polideportivo Fuenlabrada"
+  },
+  {
+    categoria: "Alevín Masculino",
+    local: "CB Calasanz",
+    visitante: "CB Leganés",
+    puntosLocal: 45,
+    puntosVisitante: 38,
+    fecha: "14/04/2025",
+    pabellon: "Pabellón Calasanz"
+  },
+  {
+    categoria: "Benjamín Femenino",
+    local: "CB Getafe",
+    visitante: "CB Calasanz",
+    puntosLocal: 32,
+    puntosVisitante: 36,
+    fecha: "13/04/2025",
+    pabellon: "Polideportivo Getafe"
+  }
+];
+
+// Función para determinar si un equipo es ganador
+const esGanador = (resultado, esLocal) => {
+  if (esLocal) {
+    return resultado.puntosLocal > resultado.puntosVisitante;
+  } else {
+    return resultado.puntosVisitante > resultado.puntosLocal;
+  }
+};
+
+// Función para determinar si un equipo es CB Calasanz
+const esCalasanz = (nombre) => nombre === "CB Calasanz";
+---
+
+<div class="resultados-jornada">
+  <div class="mb-6 flex justify-between items-center">
+    <h3 class="text-xl font-semibold text-green-300">Última Jornada</h3>
+    <a href="#" class="text-green-400 hover:text-green-300 text-sm flex items-center">
+      <span>Ver historial completo</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {resultados.map((resultado) => (
+      <div class="bg-green-900/30 rounded-lg overflow-hidden">
+        <div class="bg-green-800/50 px-4 py-2 flex justify-between items-center">
+          <span class="text-sm font-medium text-green-200">{resultado.categoria}</span>
+          <span class="text-xs text-green-300">{resultado.fecha}</span>
+        </div>
+        
+        <div class="p-4">
+          <!-- Equipo Local -->
+          <div class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+              <div class={`w-1 h-6 rounded-full mr-3 ${esCalasanz(resultado.local) ? "bg-green-400" : "bg-transparent"}`}></div>
+              <span class={`font-medium ${esGanador(resultado, true) ? "text-white" : "text-gray-400"}`}>
+                {resultado.local}
+              </span>
+            </div>
+            <span class={`text-2xl font-bold ${esGanador(resultado, true) ? "text-white" : "text-gray-400"}`}>
+              {resultado.puntosLocal}
+            </span>
+          </div>
+          
+          <!-- Equipo Visitante -->
+          <div class="flex justify-between items-center">
+            <div class="flex items-center">
+              <div class={`w-1 h-6 rounded-full mr-3 ${esCalasanz(resultado.visitante) ? "bg-green-400" : "bg-transparent"}`}></div>
+              <span class={`font-medium ${esGanador(resultado, false) ? "text-white" : "text-gray-400"}`}>
+                {resultado.visitante}
+              </span>
+            </div>
+            <span class={`text-2xl font-bold ${esGanador(resultado, false) ? "text-white" : "text-gray-400"}`}>
+              {resultado.puntosVisitante}
+            </span>
+          </div>
+          
+          <!-- Pabellón -->
+          <div class="mt-3 text-xs text-gray-400">
+            <span>{resultado.pabellon}</span>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+  
+  <div class="mt-6 flex justify-center">
+    <a href="#" class="px-5 py-2 bg-green-800 hover:bg-green-700 rounded-lg text-white text-sm font-medium transition-colors flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      </svg>
+      Ver clasificación
+    </a>
+  </div>
+</div>

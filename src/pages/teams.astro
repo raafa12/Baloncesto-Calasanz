@@ -4,42 +4,86 @@ import Layout from '../layouts/Layout.astro';
 import SectionContainer from "../components/SectionContainer.astro";
 import TitleSection from "../components/TitleSection.astro";
 import Briefcase from "../assets/Briefcase.astro";
-import TeamSection from "../components/TeamSection.astro";
+import ResultadosJornada from '../components/ResultadosJornada.astro';
 
-const equipos = [
+const secciones = [
   {
-    nombre: 'Junior Masculino',
-    descripcion: 'Jugadores de 14 a 16 años que compiten en la liga regional.',
-    imagen: '/images/equipo_junior.jpg',
-    miembros: [
-      { nombre: 'Pedro López', rol: 'Base', foto: '/images/jugadores/pedro.jpg' },
-      { nombre: 'Juan Díaz', rol: 'Alero', foto: '/images/jugadores/juan.jpg' },
-    ]
+    id: "masculino",
+    titulo: "Sección Masculina",
+    descripcion: "Nuestros equipos masculinos compiten en las distintas categorías de la federación regional.",
+    imagen: "/images/seccion_masculina.jpg",
+    ruta: "/teams/masculino"
   },
   {
-    nombre: 'Senior Femenino',
-    descripcion: 'Equipo senior con gran experiencia en competición.',
-    imagen: '/images/equipo_femenino.jpg',
-    miembros: [
-      { nombre: 'Lucía Gómez', rol: 'Pivot', foto: '/images/jugadores/lucia.jpg' },
-      { nombre: 'Elena Ruiz', rol: 'Escolta', foto: '/images/jugadores/elena.jpg' },
-    ]
+    id: "femenino",
+    titulo: "Sección Femenina",
+    descripcion: "Nuestros equipos femeninos destacan por su excelente nivel técnico y competitivo.",
+    imagen: "/images/seccion_femenina.jpg",
+    ruta: "/teams/femenino"
   }
 ];
 ---
 
-<Layout title="Equipos" description="Conoce a nuestros equipos">
-  <main class="px-4 py-24 space-y-24">
+<Layout title="Equipos | Club Baloncesto Calasanz" description="Conoce a nuestros equipos de baloncesto en sus diferentes categorías">
+  <main class="px-4 py-24">
     <SectionContainer id="equipos">
       <TitleSection>
         <Briefcase class="size-8" />
         Nuestros Equipos
       </TitleSection>
-      <div class="space-y-20">
-        {equipos.map((equipo) => (
-          <TeamSection {...equipo} />
-        ))}
+      
+      <div class="max-w-4xl mx-auto mt-12">
+        <p class="text-xl text-center text-gray-300 mb-16">
+          El Club Baloncesto Calasanz cuenta con equipos en todas las categorías, tanto en la sección masculina como femenina. 
+          Selecciona una sección para conocer todos nuestros equipos y sus integrantes.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {secciones.map((seccion) => (
+            <a href={seccion.ruta} class="group">
+              <div class="bg-green-950 border border-green-800 rounded-xl overflow-hidden shadow-lg hover:shadow-green-800/30 transition-all duration-300 h-full">
+                <div class="relative h-64">
+                  <img 
+                    src={seccion.imagen} 
+                    alt={seccion.titulo} 
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-green-950 via-green-950/70 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 p-6">
+                    <h2 class="text-3xl font-bold text-white">{seccion.titulo}</h2>
+                  </div>
+                </div>
+                
+                <div class="p-6">
+                  <p class="text-gray-300">{seccion.descripcion}</p>
+                  
+                  <div class="mt-6 flex items-center text-green-400 group-hover:text-green-300 transition-colors">
+                    <span class="font-medium">Ver equipos</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+        
+        <!-- Resultados de la jornada -->
+        <div class="mt-24">
+          <h2 class="text-3xl font-bold text-white text-center mb-8">Resultados de la Jornada</h2>
+          <div class="bg-green-950 border border-green-800 rounded-xl overflow-hidden shadow-lg">
+            <div class="p-6">
+              <ResultadosJornada />
+            </div>
+          </div>
+        </div>
       </div>
     </SectionContainer>
   </main>
 </Layout>
+
+---
+// Importamos el componente de resultados al final del archivo
+import ResultadosJornada from "../components/ResultadosJornada.astro";
+---

@@ -1,0 +1,130 @@
+---
+// src/pages/teams/femenino.astro
+import Layout from '../../layouts/Layout.astro';
+import SectionContainer from "../../components/SectionContainer.astro";
+import TitleSection from "../../components/TitleSection.astro";
+import Briefcase from "../../assets/Briefcase.astro";
+import TeamSection from "../../components/TeamSection.astro";
+
+// Datos de los equipos femeninos
+const equiposFemeninos = [
+  {
+    nombre: "Benjamín Femenino",
+    descripcion: "Niñas de 8 a 10 años que se inician en el baloncesto de competición. Se trabaja en el desarrollo de habilidades motrices básicas, coordinación y los fundamentos técnicos del juego de una manera lúdica y divertida.",
+    imagen: "/images/equipos/benjamin_f.jpg",
+    miembros: [
+      { nombre: "Laura Martínez", rol: "Base", foto: "/images/jugadores/laura.jpg" },
+      { nombre: "Sara González", rol: "Alero", foto: "/images/jugadores/sara.jpg" },
+      { nombre: "Sofía Hernández", rol: "Pivot", foto: "/images/jugadores/sofia_h.jpg" },
+      { nombre: "Julia Torres", rol: "Escolta", foto: "/images/jugadores/julia_t.jpg" },
+      { nombre: "Carmen Vega", rol: "Ala-Pivot", foto: "/images/jugadores/carmen_v.jpg" },
+      // Añadir más jugadoras según sea necesario
+    ]
+  },
+  {
+    nombre: "Alevín Femenino",
+    descripcion: "Jugadoras de 10 a 12 años que mejoran sus habilidades técnicas y tácticas. Se profundiza en los aspectos técnicos individuales y se introducen conceptos tácticos básicos, fomentando la toma de decisiones y la visión de juego.",
+    imagen: "/images/equipos/alevin_f.jpg",
+    miembros: [
+      { nombre: "Ana López", rol: "Pivot", foto: "/images/jugadores/ana.jpg" },
+      { nombre: "Marta Ruiz", rol: "Escolta", foto: "/images/jugadores/marta.jpg" },
+      { nombre: "Irene Blanco", rol: "Base", foto: "/images/jugadores/irene_b.jpg" },
+      { nombre: "Paula García", rol: "Alero", foto: "/images/jugadores/paula_g.jpg" },
+      { nombre: "Nuria Sanz", rol: "Ala-Pivot", foto: "/images/jugadores/nuria_s.jpg" },
+      // Añadir más jugadoras según sea necesario
+    ]
+  },
+  {
+    nombre: "Infantil Femenino",
+    descripcion: "Jugadoras de 12 a 14 años en pleno desarrollo deportivo. En esta etapa se trabaja la mejora de los fundamentos técnicos y tácticos del juego, con una atención especial al desarrollo físico propio de esta edad, fundamental para el progreso deportivo.",
+    imagen: "/images/equipos/infantil_f.jpg",
+    miembros: [
+      { nombre: "Claudia Fernández", rol: "Ala-Pivot", foto: "/images/jugadores/claudia.jpg" },
+      { nombre: "Natalia Torres", rol: "Base", foto: "/images/jugadores/natalia.jpg" },
+      { nombre: "Lucía Romero", rol: "Escolta", foto: "/images/jugadores/lucia_r.jpg" },
+      { nombre: "Alba Méndez", rol: "Alero", foto: "/images/jugadores/alba_m.jpg" },
+      { nombre: "Marina Castro", rol: "Pivot", foto: "/images/jugadores/marina_c.jpg" },
+      // Añadir más jugadoras según sea necesario
+    ]
+  },
+  {
+    nombre: "Cadete Femenino",
+    descripcion: "Jugadoras de 14 a 16 años con enfoque en la mejora táctica y competitiva. Se introduce el trabajo físico más específico y se profundiza en la especialización por posiciones, con mayor énfasis en situaciones tácticas avanzadas.",
+    imagen: "/images/equipos/cadete_f.jpg",
+    miembros: [
+      { nombre: "Paula Moreno", rol: "Alero", foto: "/images/jugadores/paula.jpg" },
+      { nombre: "Carla Díaz", rol: "Pivot", foto: "/images/jugadores/carla.jpg" },
+      { nombre: "Andrea Navarro", rol: "Base", foto: "/images/jugadores/andrea_n.jpg" },
+      { nombre: "Cristina López", rol: "Escolta", foto: "/images/jugadores/cristina_l.jpg" },
+      { nombre: "Raquel Soto", rol: "Ala-Pivot", foto: "/images/jugadores/raquel_s.jpg" },
+      // Añadir más jugadoras según sea necesario
+    ]
+  },
+  {
+    nombre: "Junior Femenino",
+    descripcion: "Jugadoras de 16 a 18 años que compiten a nivel avanzado. Este equipo se centra en la preparación para competiciones de alto nivel, con una intensa preparación física, técnica y táctica. Se afinan los detalles del juego para lograr el máximo rendimiento deportivo.",
+    imagen: "/images/equipos/junior_f.jpg",
+    miembros: [
+      { nombre: "Lucía Gómez", rol: "Pivot", foto: "/images/jugadores/lucia.jpg" },
+      { nombre: "Elena Ruiz", rol: "Escolta", foto: "/images/jugadores/elena.jpg" },
+      { nombre: "María Jiménez", rol: "Base", foto: "/images/jugadores/maria_j.jpg" },
+      { nombre: "Silvia Ortega", rol: "Alero", foto: "/images/jugadores/silvia_o.jpg" },
+      { nombre: "Beatriz Martín", rol: "Ala-Pivot", foto: "/images/jugadores/beatriz_m.jpg" },
+      // Añadir más jugadoras según sea necesario
+    ]
+  }
+];
+---
+
+<Layout title="Equipos Femeninos | Club Baloncesto Calasanz" description="Conoce a nuestros equipos femeninos en sus diferentes categorías">
+  <main class="px-4 py-24">
+    <SectionContainer id="equipos-femeninos">
+      <div class="flex items-center space-x-4 mb-8">
+        <a href="/teams" class="text-green-400 hover:text-green-300 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+          </svg>
+          Volver a Equipos
+        </a>
+      </div>
+      
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Sección Femenina
+      </TitleSection>
+      
+      <div class="max-w-5xl mx-auto mt-8">
+        <div class="bg-green-900/30 rounded-xl p-6 mb-16">
+          <p class="text-lg text-gray-300">
+            La sección femenina del Club Baloncesto Calasanz se distingue por su gran nivel técnico y competitivo
+            en todas las categorías, desde Benjamín hasta Junior. Nuestras jugadoras reciben una formación integral
+            que combina desarrollo deportivo, valores de equipo y crecimiento personal. El trabajo en equipo,
+            la disciplina y el afán de superación son los pilares fundamentales sobre los que construimos nuestros éxitos
+            deportivos y personales.
+          </p>
+        </div>
+        
+        <!-- Navegación rápida entre equipos -->
+        <div class="flex flex-wrap justify-center gap-2 mb-16">
+          {equiposFemeninos.map((equipo) => (
+            <a 
+              href={`#${equipo.nombre.toLowerCase().replace(/\s+/g, '-')}`} 
+              class="px-4 py-2 bg-green-800 hover:bg-green-700 rounded-lg text-white text-sm font-medium transition-colors"
+            >
+              {equipo.nombre}
+            </a>
+          ))}
+        </div>
+        
+        <!-- Equipos -->
+        <div class="space-y-24">
+          {equiposFemeninos.map((equipo) => (
+            <div id={equipo.nombre.toLowerCase().replace(/\s+/g, '-')} class="scroll-mt-24">
+              <TeamSection {...equipo} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </SectionContainer>
+  </main>
+</Layout>
