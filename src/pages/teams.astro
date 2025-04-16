@@ -3,7 +3,7 @@
 import Layout from '../layouts/Layout.astro';
 import SectionContainer from "../components/SectionContainer.astro";
 import TitleSection from "../components/TitleSection.astro";
-import Briefcase from "../assets/Briefcase.astro";
+import TeamsIcon from "../assets/Teams.astro";
 import ResultadosJornada from '../components/ResultadosJornada.astro';
 
 const secciones = [
@@ -28,15 +28,11 @@ const secciones = [
   <main class="px-4 py-24">
     <SectionContainer id="equipos">
       <TitleSection>
-        <Briefcase class="size-8" />
+        <TeamsIcon class="size-8" />
         Nuestros Equipos
       </TitleSection>
       
-      <div class="max-w-4xl mx-auto mt-12">
-        <p class="text-xl text-center text-gray-300 mb-16">
-          El Club Baloncesto Calasanz cuenta con equipos en todas las categorías, tanto en la sección masculina como femenina. 
-          Selecciona una sección para conocer todos nuestros equipos y sus integrantes.
-        </p>
+      
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           {secciones.map((seccion) => (
@@ -83,7 +79,3 @@ const secciones = [
   </main>
 </Layout>
 
----
-// Importamos el componente de resultados al final del archivo
-import ResultadosJornada from "../components/ResultadosJornada.astro";
----
