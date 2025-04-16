@@ -12,6 +12,15 @@ const resultados = [
     fecha: "14/04/2025",
     pabellon: "Pabellón Calasanz"
   },
+   {
+    categoria: "Junior Femenino",
+    local: "CB Fuenlabrada",
+    visitante: "CB Calasanz",
+    puntosLocal: 59,
+    puntosVisitante: 67,
+    fecha: "13/04/2025",
+    pabellon: "Polideportivo Fuenlabrada"
+  },
   {
     categoria: "Cadete Femenino",
     local: "CB Valdemoro",
@@ -29,15 +38,6 @@ const resultados = [
     puntosVisitante: 72,
     fecha: "14/04/2025",
     pabellon: "Pabellón Calasanz"
-  },
-  {
-    categoria: "Junior Femenino",
-    local: "CB Fuenlabrada",
-    visitante: "CB Calasanz",
-    puntosLocal: 59,
-    puntosVisitante: 67,
-    fecha: "13/04/2025",
-    pabellon: "Polideportivo Fuenlabrada"
   },
   {
     categoria: "Alevín Masculino",
@@ -75,12 +75,6 @@ const esCalasanz = (nombre) => nombre === "CB Calasanz";
 <div class="resultados-jornada">
   <div class="mb-6 flex justify-between items-center">
     <h3 class="text-xl font-semibold text-green-300">Última Jornada</h3>
-    <a href="#" class="text-green-400 hover:text-green-300 text-sm flex items-center">
-      <span>Ver historial completo</span>
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-      </svg>
-    </a>
   </div>
   
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -125,14 +119,5 @@ const esCalasanz = (nombre) => nombre === "CB Calasanz";
         </div>
       </div>
     ))}
-  </div>
-  
-  <div class="mt-6 flex justify-center">
-    <a href="#" class="px-5 py-2 bg-green-800 hover:bg-green-700 rounded-lg text-white text-sm font-medium transition-colors flex items-center">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
-      Ver clasificación
-    </a>
   </div>
 </div>
