@@ -1,0 +1,14 @@
+---
+// src/components/NewsCard.astro
+const { titulo, descripcion, imagen, fecha } = Astro.props;
+---
+
+<article class="bg-green-950 border border-green-800 rounded-xl overflow-hidden shadow-md">
+  <img src={imagen} alt={titulo} class="w-full h-64 object-cover" />
+  <div class="p-6 space-y-2">
+    <h2 class="text-2xl font-bold text-white">{titulo}</h2>
+    <p class="text-sm text-green-300">{fecha}</p>
+    <p class="text-gray-300">{descripcion}</p>
+  </div>
+</article>
+

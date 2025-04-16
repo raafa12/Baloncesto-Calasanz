@@ -1,12 +1,44 @@
 ---
+// src/pages/contact.astro
 import Layout from '../layouts/Layout.astro';
-import "../styles/global.css";
-import SectionContainer from "../components/SectionContainer.astro"
-
+import SectionContainer from "../components/SectionContainer.astro";
+import TitleSection from "../components/TitleSection.astro";
+import CodeIcon from "../assets/Code.astro";
 ---
-<Layout 
-    title="Club Baloncesto Calasanz"
-    description=""
-    >
- yoooooooooo
+
+<Layout title="Contacto" description="Contáctanos para cualquier duda o sugerencia.">
+  <main class="px-4 py-24 space-y-24">
+    <SectionContainer id="contacto">
+      <TitleSection>
+        <CodeIcon class="size-8" />
+        Contacto
+      </TitleSection>
+      <div class="max-w-xl space-y-8">
+        <form action="https://formsubmit.co/TU_EMAIL@ejemplo.com" method="POST" class="space-y-4">
+          <input type="hidden" name="_captcha" value="false" />
+          <label class="block">
+            <span class="text-sm">Nombre</span>
+            <input type="text" name="nombre" required class="w-full p-2 rounded bg-green-900 border border-green-600" />
+          </label>
+          <label class="block">
+            <span class="text-sm">Correo electrónico</span>
+            <input type="email" name="email" required class="w-full p-2 rounded bg-green-900 border border-green-600" />
+          </label>
+          <label class="block">
+            <span class="text-sm">Mensaje</span>
+            <textarea name="mensaje" rows="4" class="w-full p-2 rounded bg-green-900 border border-green-600"></textarea>
+          </label>
+          <button type="submit" class="bg-green-600 hover:bg-green-700 px-6 py-2 rounded-xl">
+            Enviar mensaje
+          </button>
+        </form>
+
+        <div class="text-sm text-gray-300 space-y-1">
+          <p><strong>Correo:</strong> contacto@clubbaloncesto.com</p>
+          <p><strong>Dirección:</strong> Calle del Deporte, 123</p>
+          <p><strong>Teléfono:</strong> +34 600 123 456</p>
+        </div>
+      </div>
+    </SectionContainer>
+  </main>
 </Layout>

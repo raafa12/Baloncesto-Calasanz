@@ -1,12 +1,45 @@
 ---
+// src/pages/teams.astro
 import Layout from '../layouts/Layout.astro';
-import "../styles/global.css";
-import SectionContainer from "../components/SectionContainer.astro"
+import SectionContainer from "../components/SectionContainer.astro";
+import TitleSection from "../components/TitleSection.astro";
+import Briefcase from "../assets/Briefcase.astro";
+import TeamSection from "../components/TeamSection.astro";
 
+const equipos = [
+  {
+    nombre: 'Junior Masculino',
+    descripcion: 'Jugadores de 14 a 16 años que compiten en la liga regional.',
+    imagen: '/images/equipo_junior.jpg',
+    miembros: [
+      { nombre: 'Pedro López', rol: 'Base', foto: '/images/jugadores/pedro.jpg' },
+      { nombre: 'Juan Díaz', rol: 'Alero', foto: '/images/jugadores/juan.jpg' },
+    ]
+  },
+  {
+    nombre: 'Senior Femenino',
+    descripcion: 'Equipo senior con gran experiencia en competición.',
+    imagen: '/images/equipo_femenino.jpg',
+    miembros: [
+      { nombre: 'Lucía Gómez', rol: 'Pivot', foto: '/images/jugadores/lucia.jpg' },
+      { nombre: 'Elena Ruiz', rol: 'Escolta', foto: '/images/jugadores/elena.jpg' },
+    ]
+  }
+];
 ---
-<Layout 
-    title="Club Baloncesto Calasanz"
-    description=""
-    >
- yoooooooooo
+
+<Layout title="Equipos" description="Conoce a nuestros equipos">
+  <main class="px-4 py-24 space-y-24">
+    <SectionContainer id="equipos">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Nuestros Equipos
+      </TitleSection>
+      <div class="space-y-20">
+        {equipos.map((equipo) => (
+          <TeamSection {...equipo} />
+        ))}
+      </div>
+    </SectionContainer>
+  </main>
 </Layout>
