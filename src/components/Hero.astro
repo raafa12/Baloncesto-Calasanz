@@ -3,27 +3,36 @@ import Badge from "../components/Badge.astro"
 import InstagramIcon from "../assets/Instagram.astro"
 import TwitterIcon from "../assets/Twitter.astro"
 import MailIcon from "../assets/Mail.astro"
+import PhoneIcon from "../assets/Phone.astro"
 import SocialPill from "../components/SocialPill.astro"
 ---
 
 <div class="max-w-xl">
   <div class="flex gap-4 mb-4">
-  </div>
+    <img
+      class="rounded-full shadow-lg size-24"
+      src="../src/assets/LogoCalasanz.png"
+      alt=""
+    />
   <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
     Club Baloncesto Calasanz
   </h1>
+</div>
   <p
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-[#ff6600] [&>strong]:text-[#ff6600] [&>strong]:font-semibold dark:text-gray-300"
   >
-    +4 años <strong>formando jugadores</strong
-    > Canalejas Nº 8. Santander, Cantabria. 
+    +50 años <strong>formando jugadores</strong> a través del deporte.<br>
+    Canalejas Nº 8. Santander, Cantabria. 
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="mailto:miduga@gmail.com">
+    <SocialPill href="mailto:clubdeportivocalasanzsantander@hotmail.com">
       <MailIcon class="size-4" />
-      Contáctanos
+      Escríbenos
+      <SocialPill href="tel:606134150">
+        <PhoneIcon class="size-4" />
+      Llámanos
     </SocialPill>
     <SocialPill href="https://www.instagram.com/cbcalasanz/">
       <InstagramIcon class="size-4" />
