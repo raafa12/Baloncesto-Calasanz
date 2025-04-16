@@ -4,18 +4,18 @@ import ThemeToggle from "./ThemeToggle.astro"
 const navItems = [
   {
     title: "Inicio",
-    label: "experiencia",
-    url: "/#experiencia",
+    label: "inicio",
+    url: "/#",
   },
   {
     title: "Noticias",
-    label: "proyectos",
-    url: "/#proyectos",
+    label: "noticias",
+    url: "/#",
   },
   {
     title: "Equipos",
-    label: "sobre-mi",
-    url: "/#sobre-mi",
+    label: "equipos",
+    url: "/teams",
   },
   {
     title: "Contacto",
@@ -96,22 +96,22 @@ const navItems = [
   }
 
   nav {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #006633;
   /* Add other styles you need */
 }
 
 .dark nav {
-  background-color: rgba(31, 41, 55, 0.9);
+  background-color: #006633;
   /* Add other styles you need */
 }
 
 /* Also add your hover styles directly */
 nav a:hover {
-  color: #41f63b; /* This is approximately the blue-500 color */
+  color: #41f63bc1; /* This is approximately the blue-500 color */
 }
 
 .dark nav a:hover {
-  color:  #41f63b;
+  color:  #41f63bc1;
 }
 
   @keyframes fade {
