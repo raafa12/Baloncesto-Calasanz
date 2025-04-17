@@ -7,7 +7,7 @@ import PhoneIcon from "../assets/Phone.astro"
 import SocialPill from "../components/SocialPill.astro"
 ---
 
-<div class="max-w-xl">
+<div class="max-w-xl mx-auto flex flex-col items-center text-center">
   <div class="flex flex-col items-center text-center sm:text-left sm:flex-row gap-4 mb-6">
     <img
       class="rounded-full shadow-lg size-20 sm:size-24 ring-2 ring-green-500/30"
@@ -21,11 +21,11 @@ import SocialPill from "../components/SocialPill.astro"
     </h1>
   </div>
   <p
-    class="mt-6 text-xl text-gray-300 [&>strong]:text-green-400 [&>strong]:font-semibold"
+    class="mt-6 text-xl text-gray-300 [&>strong]:text-green-400 [&>strong]:font-semibold text-left"
   >
      +50 años <strong>formando personas</strong> a través del deporte.
   </p>
-  <nav class="flex flex-wrap gap-4 mt-8">
+  <nav class="flex flex-wrap justify-center gap-4 mt-8">
     <SocialPill href="mailto:clubdeportivocalasanzsantander@hotmail.com">
       <MailIcon class="size-4" />
       Escríbenos
