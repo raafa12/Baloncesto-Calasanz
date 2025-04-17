@@ -8,13 +8,14 @@ import NewsForm from "../../components/NewsForm.astro";
 export async function getStaticPaths() {
   // Los datos de noticias
   const noticias = [
+    
     {
       id: "victoria-juvenil",
       titulo: '¡Victoria épica del equipo juvenil!',
       descripcion: 'El equipo juvenil ganó 85-82 en un partido increíble...',
       contenido: 'El equipo juvenil logró una victoria histórica 85-82 contra su principal rival en un partido que mantuvo a todos al borde de sus asientos hasta el último segundo. Con esta victoria, nuestros juveniles se colocan en el primer puesto de la clasificación y cada vez más cerca del campeonato regional.',
       fecha: '15 abril 2025',
-      imagen: '/images/noticia1.jpg',
+      imagen: '../assets/basket.JPEG',
       formulario: false,
       tipoFormulario: null
     },
@@ -24,7 +25,7 @@ export async function getStaticPaths() {
       descripcion: 'Ya están abiertas las inscripciones para nuestro campus de verano. Plazas limitadas.',
       contenido: 'Abrimos las inscripciones para el Campus de Verano 2025 que se llevará a cabo del 1 al 15 de julio. Este año contaremos con entrenadores profesionales y actividades especiales. El campus está dirigido a niños y jóvenes de 8 a 16 años. No esperes más y reserva tu plaza, ¡son limitadas!',
       fecha: '10 abril 2025',
-      imagen: '/images/noticia2.jpg',
+      imagen: '../src/assets/basket.JPEG',
       formulario: true,
       tipoFormulario: 'inscripcion'
     }
