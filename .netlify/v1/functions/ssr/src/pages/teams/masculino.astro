@@ -1,0 +1,148 @@
+---
+// src/pages/teams/masculino.astro
+import Layout from '../../layouts/Layout.astro';
+import SectionContainer from "../../components/SectionContainer.astro";
+import TitleSection from "../../components/TitleSection.astro";
+import MascIcon from "../../assets/Masc.astro";
+import TeamSection from "../../components/TeamSection.astro";
+
+// Datos de los equipos masculinos
+const equiposMasculinos = [
+  {
+    nombre: "Benjamín Masculino",
+    descripcion: "Niños de 8 a 10 años que se inician en el baloncesto de competición",
+    imagen: "../src/assets/BenjaKids.JPG",
+    entrenadores: [
+      { nombre: "Rodrigo Peña", rol: "Entrenador", foto: "../src/assets/BenjaMasc/Rodri.JPG" },
+      { nombre: "Andrea González", rol: "Entrenadora", foto: "../src/assets/BenjaMasc/Andrea.JPEG" },
+      { nombre: "David Aleson", rol: "Entrenador Asistente", foto: "../src/assets/BenjaMasc/Aleson.JPEG" },
+    ],
+    miembros: [
+      { nombre: "Cesar Djaider", rol: "", foto: "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/999925fd-f064-43b9-b1e1-7026159d2080.jpg", },
+      { nombre: "Alonso Gallegos", rol: "", foto: "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/902e42f1-68f8-4f20-9139-19ecf80a6fa8.jpg" },
+      { nombre: "Mario Gallegos", rol: "", foto: "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/5ee018d7-9656-4c57-971b-57f5d6782921.jpg" },
+      { nombre: "Javier González", rol: "", foto: "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/22a6f36f-2bdd-458a-a6f8-f1aa26a6ca13.jpeg" },
+      { nombre: "Alvaro Arbide", rol: "", foto: "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/f319881e-c95a-4463-a456-7bc6b8d891b7.jpg" },
+      { nombre: "Julen González", rol: "", foto: "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/860c71f6-a68e-40d5-b50c-049dcdf5d6d0.jpg" },
+      { nombre: "Pablo del Portillo", rol: "", foto: "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/e3d47f66-d394-4bc8-bebf-44461531af23.jpg" },
+      { nombre: "Javier Pérez", rol: "", foto: "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/90ca8457-c0bd-40dc-8be7-03303de0c5a1.jpeg" },
+      { nombre: "Martin Pascual", rol: "", foto: "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/c6862141-eac4-493c-a5cf-d4e5e16e7646.jpg" },
+      { nombre: "Javier Peña", rol: "", foto: "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/84bc4d89-f33f-4bd9-8b55-e6e19907f5a3.jpg" },
+      { nombre: "Borja Fernández", rol: "", foto: "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/be2125b0-9c92-46b1-98bf-ecce4790495e.jpg" },
+      { nombre: "Javier García", rol: "", foto: "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/6fb4c5bc-356a-4460-b4bf-0ab3f74c512b.jpeg" },
+      { nombre: "Hugo Fernández", rol: "", foto: "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/5ec6b999-7c5b-43de-8b1b-e00694cda5c4.jpg" },
+    ]
+  },
+  {
+    nombre: "Alevín Masculino",
+    descripcion: "Jugadores de 10 a 12 años que mejoran sus habilidades técnicas y tácticas.",
+    imagen: "/images/equipos/alevin_m.jpg",
+    entrenadores: [
+      { nombre: "Pedro Sánchez", rol: "Entrenador Principal", foto: "/images/entrenadores/pedro_s.jpg" },
+      { nombre: "Laura González", rol: "Entrenadora Asistente", foto: "/images/entrenadores/laura_g.jpg" },
+    ],
+    miembros: [
+      { nombre: "Pablo García", rol: "Pivot", foto: "/images/jugadores/pablo.jpg" },
+      { nombre: "Marcos López", rol: "Escolta", foto: "/images/jugadores/marcos.jpg" },
+      { nombre: "Lucas Fernández", rol: "Base", foto: "/images/jugadores/lucas_f.jpg" },
+      { nombre: "Adrián Martín", rol: "Alero", foto: "/images/jugadores/adrian_m.jpg" },
+      { nombre: "Hugo Sánchez", rol: "Ala-Pivot", foto: "/images/jugadores/hugo_s.jpg" },
+      // Añadir más jugadores según sea necesario
+    ]
+  },
+  {
+    nombre: "Infantil Masculino",
+    descripcion: "Jugadores de 12 a 14 años en pleno desarrollo deportivo.",
+    imagen: "/images/equipos/infantil_m.jpg",
+    entrenadores: [
+      { nombre: "Miguel Rodríguez", rol: "Entrenador Principal", foto: "/images/entrenadores/miguel_r.jpg" },
+      { nombre: "Sara Pérez", rol: "Preparadora Física", foto: "/images/entrenadores/sara_p.jpg" },
+    ],
+    miembros: [
+      { nombre: "Alejandro Ruiz", rol: "Ala-Pivot", foto: "/images/jugadores/alejandro.jpg" },
+      { nombre: "Miguel Sánchez", rol: "Base", foto: "/images/jugadores/miguel.jpg" },
+      { nombre: "Raúl Torres", rol: "Escolta", foto: "/images/jugadores/raul_t.jpg" },
+      { nombre: "Víctor Navarro", rol: "Alero", foto: "/images/jugadores/victor_n.jpg" },
+      { nombre: "Sergio Muñoz", rol: "Pivot", foto: "/images/jugadores/sergio_m.jpg" },
+      // Añadir más jugadores según sea necesario
+    ]
+  },
+  {
+    nombre: "Cadete Masculino",
+    descripcion: "Jugadores de 14 a 16 años con enfoque en la mejora táctica y competitiva.",
+    imagen: "/images/equipos/cadete_m.jpg",
+    entrenadores: [
+      { nombre: "David Gómez", rol: "Entrenador Principal", foto: "/images/entrenadores/david_g.jpg" },
+      { nombre: "Carlos Ramírez", rol: "Entrenador Asistente", foto: "/images/entrenadores/carlos_r.jpg" },
+    ],
+    miembros: [
+      { nombre: "Javier Rodríguez", rol: "Alero", foto: "/images/jugadores/javier.jpg" },
+      { nombre: "David Núñez", rol: "Pivot", foto: "/images/jugadores/david.jpg" },
+      { nombre: "Iker Vázquez", rol: "Base", foto: "/images/jugadores/iker_v.jpg" },
+      { nombre: "Guillermo Ramos", rol: "Escolta", foto: "/images/jugadores/guillermo_r.jpg" },
+      { nombre: "Roberto Molina", rol: "Ala-Pivot", foto: "/images/jugadores/roberto_m.jpg" },
+      // Añadir más jugadores según sea necesario
+    ]
+  },
+  {
+    nombre: "Junior Masculino",
+    descripcion: "Jugadores de 16 a 18 años que compiten a nivel avanzado.",
+    imagen: "/images/equipos/junior_m.jpg",
+    entrenadores: [
+      { nombre: "Javier Torres", rol: "Entrenador Principal", foto: "/images/entrenadores/javier_t.jpg" },
+      { nombre: "Elena Díaz", rol: "Entrenadora Asistente", foto: "/images/entrenadores/elena_d.jpg" },
+      { nombre: "Roberto Sanz", rol: "Preparador Físico", foto: "/images/entrenadores/roberto_s.jpg" },
+    ],
+    miembros: [
+      { nombre: "Pedro López", rol: "Base", foto: "/images/jugadores/pedro.jpg" },
+      { nombre: "Juan Díaz", rol: "Alero", foto: "/images/jugadores/juan.jpg" },
+      { nombre: "Mario Jiménez", rol: "Pivot", foto: "/images/jugadores/mario_j.jpg" },
+      { nombre: "Álvaro Pérez", rol: "Escolta", foto: "/images/jugadores/alvaro_p.jpg" },
+      { nombre: "Francisco Moreno", rol: "Ala-Pivot", foto: "/images/jugadores/francisco_m.jpg" },
+      // Añadir más jugadores según sea necesario
+    ]
+  }
+];
+---
+
+<Layout title="Equipos Masculinos | Club Baloncesto Calasanz" description="Conoce a nuestros equipos masculinos en sus diferentes categorías">
+  <main class="px-4 py-24">
+    <SectionContainer id="equipos-masculinos">
+      <div class="flex items-center space-x-4 mb-8">
+        <a href="/teams" class="text-green-400 hover:text-green-300 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+          </svg>
+          Volver a Equipos
+        </a>
+      </div>
+      
+      <TitleSection>
+        <MascIcon class="size-8" />
+        Sección Masculina
+      </TitleSection>
+        
+        <!-- Navegación rápida entre equipos -->
+        <div class="flex flex-wrap justify-center gap-2 mb-16">
+          {equiposMasculinos.map((equipo) => (
+            <a 
+              href={`#${equipo.nombre.toLowerCase().replace(/\s+/g, '-')}`} 
+              class="px-4 py-2 bg-green-800 hover:bg-green-700 rounded-lg text-white text-sm font-medium transition-colors"
+            >
+              {equipo.nombre}
+            </a>
+          ))}
+        </div>
+        
+        <!-- Equipos -->
+        <div class="space-y-24">
+          {equiposMasculinos.map((equipo) => (
+            <div id={equipo.nombre.toLowerCase().replace(/\s+/g, '-')} class="scroll-mt-24">
+              <TeamSection {...equipo} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </SectionContainer>
+  </main>
+</Layout>
