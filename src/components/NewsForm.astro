@@ -1,66 +1,56 @@
 ---
-// src/components/NewsForm.astro
-const { tipo = 'contacto', asunto = 'Formulario web' } = Astro.props;
+const { tipo = 'inscripcion', asunto = 'Inscripción al Campus de Verano' } = Astro.props;
 
 // Configuración común para todos los formularios
 const EMAIL_DESTINO = "clubdeportivocalasanzsantander@hotmail.com";
 
-// Define campos según el tipo de formulario
-let camposFormulario = [];
-
-if (tipo === 'inscripcion') {
-  camposFormulario = [
-    { nombre: "nombre", etiqueta: "Nombre y apellidos", tipo: "text", requerido: true },
-    { nombre: "email", etiqueta: "Correo electrónico", tipo: "email", requerido: true },
-    { nombre: "telefono", etiqueta: "Teléfono", tipo: "tel", requerido: true },
-    { nombre: "fechaNacimiento", etiqueta: "Fecha de nacimiento", tipo: "date", requerido: true },
-    { nombre: "comentarios", etiqueta: "Comentarios adicionales", tipo: "textarea", requerido: false }
-  ];
-} else {
-  // Formulario de contacto por defecto
-  camposFormulario = [
-    { nombre: "nombre", etiqueta: "Nombre y apellidos", tipo: "text", requerido: true },
-    { nombre: "email", etiqueta: "Correo electrónico", tipo: "email", requerido: true },
-    { nombre: "mensaje", etiqueta: "Mensaje", tipo: "textarea", requerido: true }
-  ];
-}
+// Define campos para el formulario de inscripción
+let camposFormulario = [
+  { nombre: "nombre", etiqueta: "Nombre y apellidos", tipo: "text", requerido: true },
+  { nombre: "email", etiqueta: "Correo electrónico", tipo: "email", requerido: true },
+  { nombre: "telefono", etiqueta: "Teléfono", tipo: "tel", requerido: true },
+  { nombre: "fechaNacimiento", etiqueta: "Fecha de nacimiento", tipo: "date", requerido: true },
+  { nombre: "comentarios", etiqueta: "Comentarios adicionales", tipo: "textarea", requerido: false }
+];
 ---
-
 <form 
   action={`https://formsubmit.co/${EMAIL_DESTINO}`} 
   method="POST" 
-  class="bg-green-900 border border-green-700 rounded-xl p-6 space-y-4 mt-4"
+  class="bg-green-900 border border-green-700 rounded-xl p-8 space-y-6 mt-8"
 >
   <!-- Configuración del formulario -->
   <input type="hidden" name="_captcha" value="false" />
   <input type="hidden" name="_subject" value={asunto} />
   <input type="hidden" name="_next" value={Astro.url.href} />
   
-  <!-- Campos dinámicos según el tipo de formulario -->
+  <h2 class="text-2xl font-bold text-white">Formulario de inscripción</h2>
+  <p class="text-sm text-green-200">
+    Por favor, rellena el siguiente formulario para inscribirte en el Campus de Verano 2025. Nos pondremos en contacto contigo lo antes posible.
+  </p>
+  
+  <!-- Campos dinámicos del formulario -->
   {camposFormulario.map(campo => (
     <label class="block">
-      <span class="text-sm text-green-200">{campo.etiqueta}</span>
+      <span class="text-sm text-green-200 font-medium">{campo.etiqueta}</span>
       {campo.tipo === 'textarea' ? (
         <textarea 
           name={campo.nombre} 
           rows="4" 
           required={campo.requerido} 
-          class="w-full p-2 rounded bg-green-950 border border-green-700 text-white"
+          class="w-full p-3 rounded bg-green-950 border border-green-700 text-white focus:outline-none focus:ring-2 focus:ring-green-500"
         ></textarea>
       ) : (
         <input 
           name={campo.nombre} 
           type={campo.tipo} 
           required={campo.requerido} 
-          class="w-full p-2 rounded bg-green-950 border border-green-700 text-white" 
+          class="w-full p-3 rounded bg-green-950 border border-green-700 text-white focus:outline-none focus:ring-2 focus:ring-green-500" 
         />
       )}
     </label>
   ))}
 
-  <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-xl transition-colors">
-    {tipo === 'inscripcion' ? 'Enviar inscripción' : 'Enviar mensaje'}
+  <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-bold transition-colors">
+    Enviar inscripción
   </button>
 </form>
-  
-  
