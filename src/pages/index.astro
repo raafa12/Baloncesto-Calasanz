@@ -6,23 +6,18 @@ import Hero from "../components/Hero.astro"
 import SectionContainer from "../components/SectionContainer.astro"
 import TitleSection from "../components/TitleSection.astro"
 import TeamIcon from "../assets/Teams.astro"
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout
   title="Club Baloncesto Calasanz"
-  description=""
+  description="Club de baloncesto con más de 50 años formando personas a través del deporte en el Colegio Calasanz-Escolapios de Santander."
 >
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
-      <Hero>
-      </slot>
-    </Hero>
+      <Hero />
     </SectionContainer>
     <div class="space-y-24">
-      <SectionContainer id="sobre-mi">
+      <SectionContainer id="sobre-nosotros">
         <TitleSection>
           <TeamIcon class="size-8" />
           Sobre nosotros
