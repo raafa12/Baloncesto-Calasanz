@@ -4,22 +4,22 @@ import SectionContainer from "../components/SectionContainer.astro";
 import TitleSection from "../components/TitleSection.astro";
 import ProfileCheck from "../assets/ProfileCheck.astro";
 import NewsCard from "../components/NewsCard.astro";
-import NewsForm from "../components/NewsForm.astro";
 
+// Datos de ejemplo para las noticias - estos deben coincidir con los de [id].astro
 const noticias = [
   {
+    id: "victoria-juvenil",
     titulo: '¡Victoria épica del equipo juvenil!',
     descripcion: 'El equipo juvenil ganó 85-82 en un partido increíble...',
     fecha: '15 abril 2025',
     imagen: '/images/noticia1.jpg',
-    formulario: false
   },
   {
+    id: "campus-verano",
     titulo: 'Campus de verano 2025: ¡Inscríbete ya!',
     descripcion: 'Ya están abiertas las inscripciones para nuestro campus.',
     fecha: '10 abril 2025',
     imagen: '/images/noticia2.jpg',
-    formulario: true
   }
 ];
 ---
@@ -30,11 +30,16 @@ const noticias = [
         <ProfileCheck class="size-8" />
         Noticias del club
       </TitleSection>
-      <div class="space-y-16">
-        {noticias.map((item) => (
-          <div class="space-y-6">
-            <NewsCard {...item} />
-            {item.formulario && <NewsForm />}
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+        {noticias.map((noticia) => (
+          <div class="flex flex-col h-full">
+            <NewsCard 
+              titulo={noticia.titulo}
+              descripcion={noticia.descripcion}
+              imagen={noticia.imagen}
+              fecha={noticia.fecha}
+              id={noticia.id}
+            />
           </div>
         ))}
       </div>
