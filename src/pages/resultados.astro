@@ -1,0 +1,49 @@
+---
+// src/pages/resultados.astro
+import Layout from '../layouts/Layout.astro';
+import SectionContainer from "../components/SectionContainer.astro";
+import TitleSection from "../components/TitleSection.astro";
+import TeamsIcon from "../assets/Teams.astro";
+import ResultadosJornada from '../components/ResultadosJornada.astro';
+import SelectorJornada from '../components/SelectorJornada.astro';
+import ActuacionesDestacadas from '../components/ActuacionesDestacadas.astro';
+
+// Obtener el parámetro de jornada de la URL, o usar "ultima" como valor predeterminado
+const jornadaParam = Astro.url.searchParams.get('jornada');
+const jornada = jornadaParam || "ultima";
+---
+
+<Layout title="Resultados | Club Baloncesto Calasanz" description="Resultados de las jornadas del Club Baloncesto Calasanz">
+  <main class="px-4 py-24">
+    <SectionContainer id="resultados">
+      <TitleSection>
+        <TeamsIcon class="size-8" />
+        Resultados de la Jornada
+      </TitleSection>
+      
+      <!-- Selector de Jornada -->
+      <div class="mt-8">
+        <SelectorJornada jornadaActual={jornada} />
+      </div>
+      
+      <!-- Resultados de la jornada -->
+      <div class="mt-8">
+        <div class="bg-green-950 border border-green-800 rounded-xl overflow-hidden shadow-lg">
+          <div class="p-6">
+            <ResultadosJornada jornadaSeleccionada={jornada} />
+          </div>
+        </div>
+      </div>
+      
+      <!-- Actuaciones Destacadas -->
+      <div class="mt-24">
+        <h2 class="text-3xl font-bold text-white text-center mb-8">Actuaciones Destacadas</h2>
+        <div class="bg-green-950 border border-green-800 rounded-xl overflow-hidden shadow-lg">
+          <div class="p-6">
+            <ActuacionesDestacadas jornadaSeleccionada={jornada} />
+          </div>
+        </div>
+      </div>
+    </SectionContainer>
+  </main>
+</Layout>

@@ -1,0 +1,216 @@
+---
+// src/components/ActuacionesDestacadas.astro
+const { jornadaSeleccionada = "ultima" } = Astro.props;
+
+// Base de datos con actuaciones destacadas de diferentes jornadas
+// En un caso real, estos datos vendrían de una base de datos
+const actuacionesData = {
+  "ultima": {
+    numero: 25,
+    fecha: "14/04/2025",
+    actuaciones: [
+      {
+        jugador: "Carlos Martínez",
+        equipo: "Junior Masculino",
+        estadisticas: "22 puntos, 8 rebotes, 5 asistencias",
+        destacado: "Máximo anotador del partido con un 65% en tiros de campo"
+      },
+      {
+        jugador: "Laura Sánchez",
+        equipo: "Junior Femenino",
+        estadisticas: "18 puntos, 12 rebotes, 3 tapones",
+        destacado: "Doble-doble decisivo para la victoria"
+      },
+      {
+        jugador: "Marina López",
+        equipo: "Cadete Femenino",
+        estadisticas: "16 puntos, 5 robos",
+        destacado: "5/7 en triples y defensa determinante"
+      },
+      {
+        jugador: "Javier González",
+        equipo: "Infantil Masculino",
+        estadisticas: "20 puntos, 6 asistencias",
+        destacado: "Gran rendimiento ofensivo a pesar de la derrota"
+      },
+      {
+        jugador: "Pablo Ruiz",
+        equipo: "Alevín Masculino",
+        estadisticas: "14 puntos, 8 rebotes",
+        destacado: "Lideró la remontada en el último cuarto"
+      },
+      {
+        jugador: "Ana García",
+        equipo: "Benjamín Femenino",
+        estadisticas: "12 puntos, 4 robos",
+        destacado: "Anotó los puntos decisivos en los últimos minutos"
+      }
+    ]
+  },
+  "24": {
+    numero: 24,
+    fecha: "07/04/2025",
+    actuaciones: [
+      {
+        jugador: "Manuel Pérez",
+        equipo: "Junior Masculino",
+        estadisticas: "25 puntos, 6 rebotes",
+        destacado: "7/10 en triples, nuevo récord personal"
+      },
+      {
+        jugador: "Carmen Díaz",
+        equipo: "Junior Femenino",
+        estadisticas: "15 puntos, 10 asistencias",
+        destacado: "Doble-doble con excelente dirección de juego"
+      },
+      {
+        jugador: "Lucía Fernández",
+        equipo: "Cadete Femenino",
+        estadisticas: "20 puntos, 8 rebotes",
+        destacado: "Dominó la pintura con 4 tapones"
+      },
+      {
+        jugador: "Marcos Jiménez",
+        equipo: "Infantil Masculino",
+        estadisticas: "16 puntos, 5 asistencias",
+        destacado: "Gran actuación pese a caer por solo 2 puntos"
+      },
+      {
+        jugador: "Daniel Moreno",
+        equipo: "Alevín Masculino",
+        estadisticas: "18 puntos, 5 robos",
+        destacado: "Defensa agresiva que generó contraataques"
+      },
+      {
+        jugador: "Sara Rodríguez",
+        equipo: "Benjamín Femenino",
+        estadisticas: "10 puntos, 6 rebotes",
+        destacado: "Gran trabajo en ambos lados de la pista"
+      }
+    ]
+  },
+  "23": {
+    numero: 23,
+    fecha: "31/03/2025",
+    actuaciones: [
+      {
+        jugador: "Adrián Gutiérrez",
+        equipo: "Junior Masculino",
+        estadisticas: "24 puntos, 7 rebotes",
+        destacado: "Perfecta combinación de tiros interiores y exteriores"
+      },
+      {
+        jugador: "Nuria Blanco",
+        equipo: "Junior Femenino",
+        estadisticas: "17 puntos, 9 rebotes, 4 asistencias",
+        destacado: "Lideró todos los aspectos del juego"
+      },
+      {
+        jugador: "Andrea Muñoz",
+        equipo: "Cadete Femenino",
+        estadisticas: "18 puntos, 6 robos",
+        destacado: "Defensa asfixiante que cambió el ritmo del partido"
+      },
+      {
+        jugador: "Miguel Torres",
+        equipo: "Infantil Masculino",
+        estadisticas: "22 puntos, 8 rebotes",
+        destacado: "Mejor partido de la temporada con un 70% en tiros"
+      },
+      {
+        jugador: "Jorge Sanz",
+        equipo: "Alevín Masculino",
+        estadisticas: "14 puntos, 6 asistencias",
+        destacado: "Gran visión de juego para encontrar a compañeros"
+      },
+      {
+        jugador: "Paula Castro",
+        equipo: "Benjamín Femenino",
+        estadisticas: "12 puntos, 5 robos",
+        destacado: "Energía defensiva que contagió al equipo"
+      }
+    ]
+  }
+};
+
+// Obtener las actuaciones de la jornada seleccionada
+const jornada = actuacionesData[jornadaSeleccionada] || actuacionesData["ultima"];
+
+// Separar actuaciones por género según el equipo
+const actuacionesMasculino = jornada.actuaciones.filter(a => a.equipo.includes("Masculino"));
+const actuacionesFemenino = jornada.actuaciones.filter(a => a.equipo.includes("Femenino"));
+---
+
+<div class="actuaciones-destacadas">
+  <div class="mb-6 flex justify-between items-center">
+    <h3 class="text-xl font-semibold text-green-300">Jornada {jornada.numero} - {jornada.fecha}</h3>
+  </div>
+  
+  <!-- SECCIÓN MASCULINA -->
+  <div class="mb-8">
+    <div class="flex items-center mb-4 border-b border-green-700 pb-2">
+      <div class="w-2 h-6 bg-blue-500 mr-3 rounded"></div>
+      <h4 class="text-lg font-semibold text-white">Sección Masculina</h4>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {actuacionesMasculino.map((actuacion) => (
+        <div class="bg-green-950 border border-green-800 rounded-xl overflow-hidden shadow-lg">
+          <div class="bg-green-800/50 px-4 py-2">
+            <span class="text-sm font-medium text-green-200">{actuacion.equipo}</span>
+          </div>
+          
+          <div class="p-4">
+            <div class="flex items-center mb-3">
+              <div class="w-12 h-12 bg-green-700 rounded-full flex items-center justify-center mr-3">
+                <span class="text-lg font-bold text-white">{actuacion.jugador.charAt(0)}</span>
+              </div>
+              <div>
+                <h5 class="font-bold text-white">{actuacion.jugador}</h5>
+                <p class="text-sm text-green-300">{actuacion.estadisticas}</p>
+              </div>
+            </div>
+            
+            <div class="mt-2 bg-green-800/30 p-3 rounded text-sm text-gray-300">
+              <span class="font-semibold text-green-400">Destacado:</span> {actuacion.destacado}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  
+  <!-- SECCIÓN FEMENINA -->
+  <div>
+    <div class="flex items-center mb-4 border-b border-green-700 pb-2">
+      <div class="w-2 h-6 bg-pink-500 mr-3 rounded"></div>
+      <h4 class="text-lg font-semibold text-white">Sección Femenina</h4>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {actuacionesFemenino.map((actuacion) => (
+        <div class="bg-green-950 border border-green-800 rounded-xl overflow-hidden shadow-lg">
+          <div class="bg-green-800/50 px-4 py-2">
+            <span class="text-sm font-medium text-green-200">{actuacion.equipo}</span>
+          </div>
+          
+          <div class="p-4">
+            <div class="flex items-center mb-3">
+              <div class="w-12 h-12 bg-green-700 rounded-full flex items-center justify-center mr-3">
+                <span class="text-lg font-bold text-white">{actuacion.jugador.charAt(0)}</span>
+              </div>
+              <div>
+                <h5 class="font-bold text-white">{actuacion.jugador}</h5>
+                <p class="text-sm text-green-300">{actuacion.estadisticas}</p>
+              </div>
+            </div>
+            
+            <div class="mt-2 bg-green-800/30 p-3 rounded text-sm text-gray-300">
+              <span class="font-semibold text-green-400">Destacado:</span> {actuacion.destacado}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

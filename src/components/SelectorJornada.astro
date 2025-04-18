@@ -1,0 +1,31 @@
+---
+// src/components/SelectorJornada.astro
+const { jornadaActual = "ultima" } = Astro.props;
+
+// Lista de jornadas disponibles
+// En un caso real, esto probablemente vendría de una base de datos
+const jornadas = [
+  { id: "ultima", nombre: "Última Jornada (J25)" },
+  { id: "24", nombre: "Jornada 24" },
+  { id: "23", nombre: "Jornada 23" }
+];
+---
+
+<div class="selector-jornada bg-green-950 border border-green-800 rounded-xl p-4 mb-8">
+  <h3 class="text-lg font-semibold text-white mb-4">Seleccionar Jornada:</h3>
+  
+  <div class="flex flex-wrap gap-2">
+    {jornadas.map((jornada) => (
+      <a 
+        href={`/resultados?jornada=${jornada.id}`}
+        class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+          jornadaActual === jornada.id 
+            ? "bg-green-600 text-white" 
+            : "bg-green-800 text-green-200 hover:bg-green-700 hover:text-white"
+        }`}
+      >
+        {jornada.nombre}
+      </a>
+    ))}
+  </div>
+</div>
