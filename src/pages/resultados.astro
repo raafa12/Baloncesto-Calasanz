@@ -3,7 +3,8 @@
 import Layout from '../layouts/Layout.astro';
 import SectionContainer from "../components/SectionContainer.astro";
 import TitleSection from "../components/TitleSection.astro";
-import TeamsIcon from "../assets/Teams.astro";
+import StatisticsIcon from "../assets/Statistics.astro";
+import FeaturedPlayerIcon from "../assets/FeaturedPlayer.astro";
 import ResultadosJornada from '../components/ResultadosJornada.astro';
 import SelectorJornada from '../components/SelectorJornada.astro';
 import ActuacionesDestacadas from '../components/ActuacionesDestacadas.astro';
@@ -17,7 +18,7 @@ const jornada = jornadaParam || "ultima";
   <main class="px-4 py-24">
     <SectionContainer id="resultados">
       <TitleSection>
-        <TeamsIcon class="size-8" />
+        <StatisticsIcon class="size-8" />
         Resultados de la Jornada
       </TitleSection>
       
@@ -37,8 +38,11 @@ const jornada = jornadaParam || "ultima";
       
       <!-- Actuaciones Destacadas -->
       <div class="mt-24">
-        <h2 class="text-3xl font-bold text-white text-center mb-8">Actuaciones Destacadas</h2>
-        <div class="bg-green-950 border border-green-800 rounded-xl overflow-hidden shadow-lg">
+        <TitleSection>
+          <FeaturedPlayerIcon class="size-8" />
+          Actuaciones Destacadas
+        </TitleSection>
+        <div class="mt-8 bg-green-950 border border-green-800 rounded-xl overflow-hidden shadow-lg">
           <div class="p-6">
             <ActuacionesDestacadas jornadaSeleccionada={jornada} />
           </div>
