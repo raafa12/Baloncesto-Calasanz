@@ -1,0 +1,38 @@
+---
+// src/components/SelectorSeccion.astro
+const { seccionActual = "masculina" } = Astro.props;
+
+// Las opciones disponibles para la sección
+const secciones = [
+  { id: "masculina", nombre: "Sección Masculina", color: "blue" },
+  { id: "femenina", nombre: "Sección Femenina", color: "pink" }
+];
+
+// Obtener el parámetro de jornada actual para mantenerlo en los enlaces
+const urlParams = new URL(Astro.request.url).searchParams;
+const jornadaActual = urlParams.get('jornada') || 'ultima';
+---
+
+<div class="selector-seccion mb-6">
+  <h3 class="text-lg font-semibold text-white mb-4">Seleccionar Sección:</h3>
+  
+  <div class="flex flex-wrap gap-2">
+    {secciones.map((seccion) => (
+      <a 
+        href={`/resultados?jornada=${jornadaActual}&seccion=${seccion.id}`}
+        class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-green-950 ${
+          seccionActual === seccion.id 
+            ? "text-white" 
+            : "text-green-200 hover:text-white"
+        } flex items-center`}
+      >
+        <div class={`w-2 h-4 rounded-full mr-3 ${
+          seccionActual === seccion.id 
+            ? seccion.color === "blue" ? "bg-blue-500" : "bg-pink-500"
+            : "bg-transparent"
+        }`}></div>
+        {seccion.nombre}
+      </a>
+    ))}
+  </div>
+</div>
