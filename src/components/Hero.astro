@@ -1,45 +1,51 @@
 ---
-import Badge from "../components/Badge.astro"
-import InstagramIcon from "../assets/Instagram.astro"
-import TwitterIcon from "../assets/Twitter.astro"
-import MailIcon from "../assets/Mail.astro"
-import PhoneIcon from "../assets/Phone.astro"
-import SocialPill from "../components/SocialPill.astro"
+import Badge from "../components/Badge.astro";
+import InstagramIcon from "../assets/Instagram.astro";
+import TwitterIcon from "../assets/Twitter.astro";
+import MailIcon from "../assets/Mail.astro";
+import PhoneIcon from "../assets/Phone.astro";
+import SocialPill from "../components/SocialPill.astro";
 ---
 
-<div class="max-w-xl mx-auto flex flex-col items-center text-center">
-  <div class="flex flex-col items-center text-center sm:text-left sm:flex-row gap-4 mb-6">
-    <img
-      class="rounded-full shadow-lg size-20 sm:size-24 ring-2 ring-green-500/30"
-      src="/images/LogoCalasanz.png"
-      alt="Logo Club Baloncesto Calasanz"
-    />
-    <h1
-      class="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl"
-    >
+<div class="max-w-4xl mx-auto">
+  <div class="flex flex-col items-center text-center mb-8">
+    <div class="relative inline-block mb-6">
+      <div class="absolute inset-0 bg-green-500 blur-xl opacity-20 rounded-full"></div>
+      <img
+        class="relative rounded-full shadow-lg size-24 sm:size-28 ring-2 ring-green-500/70"
+        src="/images/LogoCalasanz.png"
+        alt="Logo Club Baloncesto Calasanz"
+      />
+    </div>
+    
+    <h1 class="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white to-green-400">
       Club Baloncesto Calasanz
     </h1>
+    
+    <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto">
+      <span class="text-green-400 font-semibold">+50 años</span> formando personas a través del deporte
+    </p>
   </div>
 
-  <!-- Imagen de equipo femenino -->
-  <div class="relative w-full mt-2 mb-6 overflow-hidden rounded-lg shadow-xl">
-    <img href="/src/pages/equipos"
-      class="w-full object-cover"
-      src="/images/BanquilloFem.jpeg"
-      alt="Equipo femenino de baloncesto Calasanz"
-    />
-    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-    <div class="absolute bottom-3 left-4 text-white text-sm font-medium">
-      <span class="bg-green-600/80 px-2 py-1 rounded-md">Nuestros equipos</span> 
-    </div>
+  <!-- Imagen de equipo femenino con efecto hover y link a equipos -->
+  <div class="relative w-full mt-8 mb-10 overflow-hidden rounded-xl shadow-2xl group transition-all duration-300 transform hover:scale-[1.01]">
+    <a href="/equipos" class="block">
+      <img
+        class="w-full h-64 sm:h-80 md:h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+        src="/images/BanquilloFem.jpeg"
+        alt="Equipo femenino de baloncesto Calasanz"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-2 transition-transform duration-300 group-hover:translate-y-0">
+        <h3 class="text-xl sm:text-2xl font-bold mb-1">Descubre nuestros equipos</h3>
+        <p class="text-gray-300 text-sm sm:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Click para conocer a nuestros jugadores y categorías
+        </p>
+      </div>
+    </a>
   </div>
   
-  <p
-    class="mt-2 text-xl text-gray-300 [&>strong]:text-green-400 [&>strong]:font-semibold text-left"
-  >
-     +50 años <strong>formando personas</strong> a través del deporte.
-  </p>
-  <nav class="flex flex-wrap justify-center gap-4 mt-8">
+  <div class="flex flex-wrap justify-center gap-4 mt-10">
     <SocialPill href="mailto:clubdeportivocalasanzsantander@hotmail.com">
       <MailIcon class="size-4" />
       Escríbenos
@@ -56,5 +62,5 @@ import SocialPill from "../components/SocialPill.astro"
       <TwitterIcon class="size-4" />
       Twitter
     </SocialPill>
-  </nav>
+  </div>
 </div>
