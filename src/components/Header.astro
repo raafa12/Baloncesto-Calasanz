@@ -1,10 +1,9 @@
 ---
-
 const navItems = [
   {
     title: "Inicio",
     label: "inicio",
-    url: "/#",
+    url: "/",
   },
   {
     title: "Equipos",
@@ -29,18 +28,15 @@ const navItems = [
 ]
 ---
 
-<header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
->
-  <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
-  >
+<header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-1">
+  <nav class="flex px-2 py-1 text-xs sm:text-sm font-medium rounded-full text-gray-100 justify-center items-center transition-all duration-300 shadow-md">
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+          class="relative block px-1 sm:px-2 py-1 transition hover:text-green-300"
           aria-label={link.label}
           href={link.url}
+          data-nav-link={link.label}
         >
           {link.title}
         </a>
@@ -51,79 +47,180 @@ const navItems = [
 
 <script>
   document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("header nav a")
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
+    
+    // Get current path but handle special cases
+    let currentPath = window.location.pathname;
+    
+    // Remove trailing slash if present (except for root path)
+    if (currentPath !== "/" && currentPath.endsWith("/")) {
+      currentPath = currentPath.slice(0, -1);
+    }
+    
+    // Handle root path special case
+    if (currentPath === "" || currentPath === "/") {
+      // We're on the homepage
+      const homeLink = document.querySelector('[data-nav-link="inicio"]');
+      if (homeLink) {
+        homeLink.classList.add("text-green-300", "font-bold", "active-nav-item");
+      }
+    } else {
+      // We're on another page - loop through nav items and find the best match
+      let bestMatch = null;
+      let bestMatchLength = 0;
+      
+      navItems.forEach((item) => {
+        const itemUrl = item.getAttribute("href");
+        // Skip the homepage link when checking other pages
+        if (itemUrl === "/" && currentPath !== "/") return;
+        
+        // Clean the URL for comparison
+        let cleanItemUrl = itemUrl;
+        if (cleanItemUrl.endsWith("/")) {
+          cleanItemUrl = cleanItemUrl.slice(0, -1);
+        }
+        // Special case for homepage
+        if (cleanItemUrl === "") cleanItemUrl = "/";
+        
+        // Check if this path is part of the current URL
+        if (currentPath.includes(cleanItemUrl) && cleanItemUrl.length > bestMatchLength) {
+          bestMatch = item;
+          bestMatchLength = cleanItemUrl.length;
+        }
+      });
+      
+      // Apply active class to the best matching item
+      if (bestMatch) {
+        bestMatch.classList.add("text-green-300", "font-bold", "active-nav-item");
+      }
+    }
 
-    const callback = (entries: any[]) => {
+    // Section observation for scrolling - this works for within-page sections
+    const callback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          
           navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-green-500")
-            } else {
-              item.classList.remove("text-blue-500")
+            // Only apply this logic if we're on the homepage or a page with sections
+            if (currentPath === "/" || currentPath === "") {
+              if (item.getAttribute("aria-label") === sectionId) {
+                item.classList.add("text-green-300", "font-bold", "active-nav-item");
+              } else {
+                item.classList.remove("text-green-300", "font-bold", "active-nav-item");
+              }
             }
-          })
+          });
         }
-      })
-    }
+      });
+    };
 
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
       threshold: 0.3,
-    })
+    });
 
     sections.forEach((section) => {
-      observer.observe(section)
-    })
+      observer.observe(section);
+    });
 
     // Cleanup function
     document.onvisibilitychange = () => {
       if (document.visibilityState === "hidden") {
-        observer.disconnect()
+        observer.disconnect();
       } else {
         sections.forEach((section) => {
-          observer.observe(section)
-        })
+          observer.observe(section);
+        });
       }
-    }
-  })
+    };
+  });
 </script>
 
 <style>
   nav {
-    animation: nav-shadown 1s linear both;
+    animation: nav-shadow 1s linear both;
     animation-timeline: scroll();
     animation-range: 0 100px;
+    background-color: rgba(0, 50, 25, 0.9);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(10, 150, 50, 0.15);
+    max-width: 95%;
   }
 
-  nav {
-  background-color: #006633;
-  /* Add other styles you need */
-}
+  .dark nav {
+    background-color: rgba(0, 50, 25, 0.9);
+    border: 1px solid rgba(10, 150, 50, 0.15);
+  }
 
-.dark nav {
-  background-color: #006633;
-  /* Add other styles you need */
-}
+  /* Active indicator - smaller for mobile */
+  .active-nav-item {
+    position: relative;
+  }
+  
+  .active-nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 2px;
+    background-color: #4ade80;
+    border-radius: 1px;
+    animation: fade 0.3s ease-in-out;
+  }
 
-/* Also add your hover styles directly */
-nav a:hover {
-  color: #41f63bc1; /* This is approximately the blue-500 color */
-}
+  /* Mobile-optimized hover effects */
+  nav a {
+    position: relative;
+    transition: all 0.2s ease;
+  }
+  
+  @media (hover: hover) {
+    nav a:hover {
+      color: #4ade80;
+    }
+  }
 
-.dark nav a:hover {
-  color:  #41f63bc1;
-}
+  .dark nav a:hover {
+    color: #4ade80;
+  }
+
+  /* Ensure text doesn't wrap on small screens */
+  @media (max-width: 640px) {
+    nav {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    
+    nav a {
+      padding-left: 0.35rem;
+      padding-right: 0.35rem;
+      white-space: nowrap;
+      font-size: 0.7rem;
+    }
+  }
 
   @keyframes fade {
-  from {
-    opacity: 0;
+    from {
+      opacity: 0;
+      width: 0;
+    }
+    to {
+      opacity: 1;
+      width: 40%;
+    }
   }
-  to {
-    opacity: 100%;
+  
+  @keyframes nav-shadow {
+    from {
+      box-shadow: 0 0 0 rgba(0, 50, 25, 0);
+    }
+    to {
+      box-shadow: 0 2px 10px rgba(0, 50, 25, 0.4);
+    }
   }
-}
 </style>
-    
