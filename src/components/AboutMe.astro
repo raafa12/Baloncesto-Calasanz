@@ -3,7 +3,7 @@
 ---
 
 <article class="flex flex-col items-center justify-center gap-8 sm:gap-10 text-gray-300 md:flex-row">
-  <div class="[&>p]:mb-4 [&>p>strong]:text-green-400 [&>p>strong]:font-semibold text-pretty order-2 md:order-1 text-left max-w-xl leading-relaxed">
+  <div class="[&>p]:mb-4 [&>p>strong]:text-green-400 [&>p>strong]:font-semibold text-pretty text-left max-w-xl leading-relaxed w-full md:w-1/2">
     <p>
       El <strong>Club Deportivo Calasanz</strong> nace en el corazón del <strong>Colegio Calasanz-Escolapios</strong> de Santander como una extensión de nuestro compromiso con la <strong>formación integral</strong> de los jóvenes. Entendemos el baloncesto como una poderosa herramienta para transmitir los <strong>valores escolapios</strong> que definen nuestra identidad educativa.
     </p>
@@ -17,10 +17,18 @@
     </p>
   </div>
 
-  <img 
-    src="https://conviveyestudia.org/wp-content/uploads/2020/04/campo-colegio-calasanz-santander.jpg" 
-    alt={personalImageAlt} 
-    class="order-1 object-cover w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 p-1 md:order-2 lg:p-2 rounded-2xl bg-green-500/5 ring-2 ring-green-500/30 shadow-lg" 
-    style="object-position: 50% 50%"
-  >
+  <div class="relative w-full md:w-auto md:order-first group transition-all duration-300 transform hover:scale-[1.01]">
+    <a href="/contacto" class="block">
+      <img 
+        src="https://conviveyestudia.org/wp-content/uploads/2020/04/campo-colegio-calasanz-santander.jpg" 
+        alt={personalImageAlt} 
+        class="object-cover w-full h-72 sm:h-80 md:w-96 md:h-96 p-1 lg:p-2 rounded-2xl bg-green-500/5 ring-2 ring-green-500/30 shadow-lg transition-transform duration-700 group-hover:scale-105" 
+        style="object-position: 50% 50%"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-2xl"></div>
+      <div class="absolute bottom-3 left-4 text-white">
+        </div>
+      </div>
+    </a>
+  </div>
 </article>
