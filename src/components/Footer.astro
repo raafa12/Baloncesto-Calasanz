@@ -1,9 +1,24 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
 <style>
   .underline-text {
     text-decoration: underline;
   }
 </style>
 
-<footer class="mt-24 py-12 text-center text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700">
-  <p>© {new Date().getFullYear()} <a href="https://instagram.com/rafabasanta" rel="noopener noreferrer" class="underline-text">Rafael Basanta</a>. Todos los derechos reservados.</p>
+<footer class="mt-24 py-12 text-center text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700 transition-colors duration-300">
+  <p>
+    © {currentYear}
+    <a
+      href="https://instagram.com/rafabasanta"
+      rel="noopener noreferrer"
+      target="_blank"
+      class="underline-text hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+    >
+      Rafael Basanta
+    </a>.
+    Todos los derechos reservados.
+  </p>
 </footer>
