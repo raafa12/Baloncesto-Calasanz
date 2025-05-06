@@ -1,0 +1,93 @@
+{
+    "info": {
+      "numero": 23,
+      "fecha": "31/03/2025",
+      "temporada": "2024-2025"
+    },
+    "resultados": [
+      {
+        "categoria": "Junior Masculino",
+        "local": "CB Calasanz",
+        "visitante": "CB Getafe",
+        "puntosLocal": 82,
+        "puntosVisitante": 70,
+        "fecha": "31/03/2025",
+        "pabellon": "Pabellón Calasanz",
+        "actuacionDestacada": {
+          "jugador": "Adrián Gutiérrez",
+          "estadisticas": "24 puntos, 7 rebotes",
+          "destacado": "Perfecta combinación de tiros interiores y exteriores"
+        }
+      },
+      {
+        "categoria": "Junior Femenino",
+        "local": "CB Leganés",
+        "visitante": "CB Calasanz",
+        "puntosLocal": 65,
+        "puntosVisitante": 67,
+        "fecha": "30/03/2025",
+        "pabellon": "Polideportivo Leganés",
+        "actuacionDestacada": {
+          "jugador": "Nuria Blanco",
+          "estadisticas": "17 puntos, 9 rebotes, 4 asistencias",
+          "destacado": "Lideró todos los aspectos del juego"
+        }
+      },
+      {
+        "categoria": "Cadete Femenino",
+        "local": "CB Alcalá",
+        "visitante": "CB Calasanz",
+        "puntosLocal": 58,
+        "puntosVisitante": 64,
+        "fecha": "30/03/2025",
+        "pabellon": "Pabellón Municipal Alcalá",
+        "actuacionDestacada": {
+          "jugador": "Andrea Muñoz",
+          "estadisticas": "18 puntos, 6 robos",
+          "destacado": "Defensa asfixiante que cambió el ritmo del partido"
+        }
+      },
+      {
+        "categoria": "Infantil Masculino",
+        "local": "CB Calasanz",
+        "visitante": "CB Fuenlabrada",
+        "puntosLocal": 75,
+        "puntosVisitante": 60,
+        "fecha": "31/03/2025",
+        "pabellon": "Pabellón Calasanz",
+        "actuacionDestacada": {
+          "jugador": "Miguel Torres",
+          "estadisticas": "22 puntos, 8 rebotes",
+          "destacado": "Mejor partido de la temporada con un 70% en tiros"
+        }
+      },
+      {
+        "categoria": "Alevín Masculino",
+        "local": "CB Calasanz",
+        "visitante": "CB Madrid",
+        "puntosLocal": 46,
+        "puntosVisitante": 42,
+        "fecha": "31/03/2025",
+        "pabellon": "Pabellón Calasanz",
+        "actuacionDestacada": {
+          "jugador": "Jorge Sanz",
+          "estadisticas": "14 puntos, 6 asistencias",
+          "destacado": "Gran visión de juego para encontrar a compañeros"
+        }
+      },
+      {
+        "categoria": "Benjamín Femenino",
+        "local": "CB Móstoles",
+        "visitante": "CB Calasanz",
+        "puntosLocal": 36,
+        "puntosVisitante": 40,
+        "fecha": "30/03/2025",
+        "pabellon": "Polideportivo Móstoles",
+        "actuacionDestacada": {
+          "jugador": "Paula Castro",
+          "estadisticas": "12 puntos, 5 robos",
+          "destacado": "Energía defensiva que contagió al equipo"
+        }
+      }
+    ]
+  }

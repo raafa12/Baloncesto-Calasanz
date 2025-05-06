@@ -1,0 +1,11 @@
+---
+// src/components/ResultadosJornada/JornadaHeader.astro
+const { jornada } = Astro.props;
+---
+
+<div class="mb-6 flex justify-between items-center">
+  <h3 class="text-xl font-semibold text-green-300">
+    Jornada {jornada.info.numero} - {jornada.info.fecha}
+  </h3>
+  <span class="text-sm text-green-200">Temporada {jornada.info.temporada}</span>
+</div>

@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ResultadosJornadaConActuaciones from '../../components/ResultadosJornadaConActuaciones.astro';
+import SelectorJornada from '../../components/SelectorJornada.astro';
+import { obtenerJornadas } from '../../data/jornadas/temporadas';
+
+// Obtener todas las jornadas
+const jornadas = await obtenerJornadas();
+const ultimaJornada = jornadas[0];
+
+// Extraer parámetros de la URL
+const jornadaNumeroSeleccionada = Astro.url.searchParams.get('jornada') || "ultima";
+const seccionSeleccionada = Astro.url.searchParams.get('seccion') || "masculina";
+---
+
+<Layout title="Resultados - CB Calasanz">
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-green-200 mb-8">Resultados</h1>
+
+    <!-- Selector Jornada -->
+    <SelectorJornada 
+      jornadas={jornadas}
+      jornadaSeleccionada={jornadaNumeroSeleccionada}
+      seccion={seccionSeleccionada}
+    />
+
+    <!-- Pestañas de Sección -->
+    <div class="flex mb-6 border-b border-green-800">
+      <a href={`?jornada=${jornadaNumeroSeleccionada}&seccion=masculina`} class={`pb-2 px-4 font-medium ${
+        seccionSeleccionada !== 'femenina'
+          ? 'text-white border-b-2 border-blue-500'
+          : 'text-gray-400 hover:text-white'
+      }`}>
+        Sección Masculina
+      </a>
+      <a href={`?jornada=${jornadaNumeroSeleccionada}&seccion=femenina`} class={`pb-2 px-4 font-medium ${
+        seccionSeleccionada === 'femenina'
+          ? 'text-white border-b-2 border-pink-500'
+          : 'text-gray-400 hover:text-white'
+      }`}>
+        Sección Femenina
+      </a>
+    </div>
+
+    <!-- Resultados -->
+    <ResultadosJornadaConActuaciones 
+      jornadaNumero={jornadaNumeroSeleccionada} 
+      seccionSeleccionada={seccionSeleccionada}
+    />
+
+    <div class="mt-10 text-center">
+      <a href="/resultados/historico" class="text-green-400 hover:text-green-300 underline">
+        Ver histórico de resultados
+      </a>
+    </div>
+  </div>
+</Layout>

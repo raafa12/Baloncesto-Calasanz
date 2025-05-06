@@ -1,0 +1,163 @@
+{
+    "info": {
+      "numero": 25,
+      "fecha": "14/04/2025",
+      "temporada": "2024-2025"
+    },
+    "resultados": [
+      {
+        "categoria": "Junior Masculino",
+        "local": "CB Calasanz",
+        "visitante": "CB Estudiantes",
+        "puntosLocal": 78,
+        "puntosVisitante": 65,
+        "fecha": "14/04/2025",
+        "pabellon": "Pabellón Calasanz",
+        "actuacionDestacada": {
+          "jugador": "Carlos Martínez",
+          "estadisticas": "22 puntos, 8 rebotes, 5 asistencias",
+          "destacado": "Máximo anotador del partido con un 65% en tiros de campo"
+        }
+      },
+      {
+        "categoria": "Junior Femenino",
+        "local": "CB Fuenlabrada",
+        "visitante": "CB Calasanz",
+        "puntosLocal": 59,
+        "puntosVisitante": 67,
+        "fecha": "13/04/2025",
+        "pabellon": "Polideportivo Fuenlabrada",
+        "actuacionDestacada": {
+          "jugador": "Laura Sánchez",
+          "estadisticas": "18 puntos, 12 rebotes, 3 tapones",
+          "destacado": "Doble-doble decisivo para la victoria"
+        }
+      },
+      {
+        "categoria": "Cadete Femenino",
+        "local": "CB Valdemoro",
+        "visitante": "CB Calasanz",
+        "puntosLocal": 54,
+        "puntosVisitante": 62,
+        "fecha": "13/04/2025",
+        "pabellon": "Pabellón Municipal Valdemoro",
+        "actuacionDestacada": {
+          "jugador": "Ana Pérez",
+          "estadisticas": "16 puntos, 5 robos",
+          "destacado": "5/7 en triples y defensa determinante"
+        }
+      },
+      {
+        "categoria": "Cadete Masculino",
+        "local": "CB Valdemoro",
+        "visitante": "CB Calasanz",
+        "puntosLocal": 54,
+        "puntosVisitante": 62,
+        "fecha": "13/04/2025",
+        "pabellon": "Pabellón Municipal Valdemoro",
+        "actuacionDestacada": {
+          "jugador": "Marina López",
+          "estadisticas": "16 puntos, 5 robos",
+          "destacado": "5/7 en triples y defensa determinante"
+        }
+      },
+      {
+        "categoria": "Infantil Masculino",
+        "local": "CB Calasanz",
+        "visitante": "CB Alcalá",
+        "puntosLocal": 68,
+        "puntosVisitante": 72,
+        "fecha": "14/04/2025",
+        "pabellon": "Pabellón Calasanz",
+        "actuacionDestacada": {
+          "jugador": "Javier González",
+          "estadisticas": "20 puntos, 6 asistencias",
+          "destacado": "Gran rendimiento ofensivo a pesar de la derrota"
+        }
+      },
+      {
+        "categoria": "Infantil Femenino",
+        "local": "CB Calasanz",
+        "visitante": "CB Alcalá",
+        "puntosLocal": 68,
+        "puntosVisitante": 72,
+        "fecha": "14/04/2025",
+        "pabellon": "Pabellón Calasanz",
+        "actuacionDestacada": {
+          "jugador": "María López",
+          "estadisticas": "20 puntos, 6 asistencias",
+          "destacado": "Gran rendimiento ofensivo a pesar de la derrota"
+        }
+      },
+      {
+        "categoria": "Alevín Masculino",
+        "local": "CB Calasanz",
+        "visitante": "CB Leganés",
+        "puntosLocal": 45,
+        "puntosVisitante": 38,
+        "fecha": "14/04/2025",
+        "pabellon": "Pabellón Calasanz",
+        "actuacionDestacada": {
+          "jugador": "Pablo Ruiz",
+          "estadisticas": "14 puntos, 8 rebotes",
+          "destacado": "Lideró la remontada en el último cuarto"
+        }
+      },
+      {
+        "categoria": "Alevín Femenino",
+        "local": "CB Calasanz",
+        "visitante": "CB Leganés",
+        "puntosLocal": 45,
+        "puntosVisitante": 38,
+        "fecha": "14/04/2025",
+        "pabellon": "Pabellón Calasanz",
+        "actuacionDestacada": {
+          "jugador": "Lucía García",
+          "estadisticas": "14 puntos, 8 rebotes",
+          "destacado": "Lideró la remontada en el último cuarto"
+        }
+      },
+      {
+        "categoria": "Alevín Femenino B",
+        "local": "CB Calasanz",
+        "visitante": "CB Leganés",
+        "puntosLocal": 45,
+        "puntosVisitante": 38,
+        "fecha": "14/04/2025",
+        "pabellon": "Pabellón Calasanz",
+        "actuacionDestacada": {
+          "jugador": "Sara Fernández",
+          "estadisticas": "14 puntos, 8 rebotes",
+          "destacado": "Lideró la remontada en el último cuarto"
+        }
+      },
+      {
+        "categoria": "Benjamín Masculino",
+        "local": "CB Calasanz",
+        "visitante": "CB Parla",
+        "puntosLocal": 40,
+        "puntosVisitante": 28,
+        "fecha": "06/04/2025",
+        "pabellon": "Pabellón Calasanz",
+        "actuacionDestacada": {
+          "jugador": "Daniel García",
+          "estadisticas": "12 puntos, 4 robos",
+          "destacado": "Anotó los puntos decisivos en los últimos minutos"
+        }
+      },
+      {
+        "categoria": "Benjamín Femenino",
+        "local": "CB Getafe",
+        "visitante": "CB Calasanz",
+        "puntosLocal": 32,
+        "puntosVisitante": 36,
+        "fecha": "13/04/2025",
+        "pabellon": "Polideportivo Getafe",
+        "actuacionDestacada": {
+          "jugador": "Ana García",
+          "estadisticas": "12 puntos, 4 robos",
+          "destacado": "Anotó los puntos decisivos en los últimos minutos"
+        }
+      }
+    ]
+  }

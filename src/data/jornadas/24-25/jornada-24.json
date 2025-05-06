@@ -1,0 +1,93 @@
+{
+    "info": {
+      "numero": 24,
+      "fecha": "07/04/2025",
+      "temporada": "2024-2025"
+    },
+    "resultados": [
+      {
+        "categoria": "Junior Masculino",
+        "local": "CB Madrid",
+        "visitante": "CB Calasanz",
+        "puntosLocal": 62,
+        "puntosVisitante": 75,
+        "fecha": "07/04/2025",
+        "pabellon": "Pabellón Municipal Madrid",
+        "actuacionDestacada": {
+          "jugador": "Manuel Pérez",
+          "estadisticas": "25 puntos, 6 rebotes",
+          "destacado": "7/10 en triples, nuevo récord personal"
+        }
+      },
+      {
+        "categoria": "Junior Femenino",
+        "local": "CB Calasanz",
+        "visitante": "CB Alcorcón",
+        "puntosLocal": 70,
+        "puntosVisitante": 64,
+        "fecha": "06/04/2025",
+        "pabellon": "Pabellón Calasanz",
+        "actuacionDestacada": {
+          "jugador": "Carmen Díaz",
+          "estadisticas": "15 puntos, 10 asistencias",
+          "destacado": "Doble-doble con excelente dirección de juego"
+        }
+      },
+      {
+        "categoria": "Cadete Femenino",
+        "local": "CB Calasanz",
+        "visitante": "CB Móstoles",
+        "puntosLocal": 68,
+        "puntosVisitante": 55,
+        "fecha": "06/04/2025",
+        "pabellon": "Pabellón Calasanz",
+        "actuacionDestacada": {
+          "jugador": "Lucía Fernández",
+          "estadisticas": "20 puntos, 8 rebotes",
+          "destacado": "Dominó la pintura con 4 tapones"
+        }
+      },
+      {
+        "categoria": "Infantil Masculino",
+        "local": "CB Tres Cantos",
+        "visitante": "CB Calasanz",
+        "puntosLocal": 60,
+        "puntosVisitante": 58,
+        "fecha": "07/04/2025",
+        "pabellon": "Polideportivo Tres Cantos",
+        "actuacionDestacada": {
+          "jugador": "Marcos Jiménez",
+          "estadisticas": "16 puntos, 5 asistencias",
+          "destacado": "Gran actuación pese a caer por solo 2 puntos"
+        }
+      },
+      {
+        "categoria": "Alevín Masculino",
+        "local": "CB Pozuelo",
+        "visitante": "CB Calasanz",
+        "puntosLocal": 42,
+        "puntosVisitante": 50,
+        "fecha": "07/04/2025",
+        "pabellon": "Pabellón Pozuelo",
+        "actuacionDestacada": {
+          "jugador": "Daniel Moreno",
+          "estadisticas": "18 puntos, 5 robos",
+          "destacado": "Defensa agresiva que generó contraataques"
+        }
+      },
+      {
+        "categoria": "Benjamín Femenino",
+        "local": "CB Calasanz",
+        "visitante": "CB Parla",
+        "puntosLocal": 40,
+        "puntosVisitante": 28,
+        "fecha": "06/04/2025",
+        "pabellon": "Pabellón Calasanz",
+        "actuacionDestacada": {
+          "jugador": "Sara Rodríguez",
+          "estadisticas": "10 puntos, 6 rebotes",
+          "destacado": "Gran trabajo en ambos lados de la pista"
+        }
+      }
+    ]
+  }
