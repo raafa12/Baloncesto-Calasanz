@@ -6,112 +6,8 @@ import TitleSection from "../../components/TitleSection.astro";
 import FemIcon from "../../assets/Fem.astro";
 import TeamSection from "../../components/TeamSection.astro";
 
-// Datos de los equipos femeninos
-const equiposFemeninos = [
-  {
-    nombre: "Benjamín Femenino",
-    descripcion: "Jugadoras nacidas en los años 2014 y 2015.",
-    imagen: "/images/BenjaFem.jpeg",
-    entrenadores: [
-      { nombre: "Patricia Vázquez", rol: "Entrenadora Principal", foto: "/images/entrenadores/patricia_v.jpg" },
-      { nombre: "Daniel Ortega", rol: "Entrenador Asistente", foto: "/images/entrenadores/daniel_o.jpg" },
-    ],
-    miembros: [
-      { nombre: "Laura Martínez", rol: "Base", foto: "/images/jugadores/laura.jpg" },
-      { nombre: "Sara González", rol: "Alero", foto: "/images/jugadores/sara.jpg" },
-      { nombre: "Sofía Hernández", rol: "Pivot", foto: "/images/jugadores/sofia_h.jpg" },
-      { nombre: "Julia Torres", rol: "Escolta", foto: "/images/jugadores/julia_t.jpg" },
-      { nombre: "Carmen Vega", rol: "Ala-Pivot", foto: "/images/jugadores/carmen_v.jpg" },
-      // Añadir más jugadoras según sea necesario
-    ]
-  },
-  {
-    nombre: "Alevín Femenino",
-    descripcion: "Jugadoras nacidas en los años 2011 y 2013.",
-    imagen: "/images/AlevinFem.jpeg",
-    entrenadores: [
-      { nombre: "María Serrano", rol: "Entrenadora Principal", foto: "/images/entrenadores/maria_s.jpg" },
-      { nombre: "Jaime Navarro", rol: "Entrenador Asistente", foto: "/images/entrenadores/jaime_n.jpg" },
-    ],
-    miembros: [
-      { nombre: "Ana López", rol: "Pivot", foto: "/images/jugadores/ana.jpg" },
-      { nombre: "Marta Ruiz", rol: "Escolta", foto: "/images/jugadores/marta.jpg" },
-      { nombre: "Irene Blanco", rol: "Base", foto: "/images/jugadores/irene_b.jpg" },
-      { nombre: "Paula García", rol: "Alero", foto: "/images/jugadores/paula_g.jpg" },
-      { nombre: "Nuria Sanz", rol: "Ala-Pivot", foto: "/images/jugadores/nuria_s.jpg" },
-      // Añadir más jugadoras según sea necesario
-    ]
-  },
-  {
-    nombre: "Alevín Femenino B",
-    descripcion: "Jugadoras de 10 a 12 años.",
-    imagen: "/images/AlevinBFem.jpeg",
-    entrenadores: [
-      { nombre: "María Serrano", rol: "Entrenadora Principal", foto: "/images/entrenadores/maria_s.jpg" },
-      { nombre: "Jaime Navarro", rol: "Entrenador Asistente", foto: "/images/entrenadores/jaime_n.jpg" },
-    ],
-    miembros: [
-      { nombre: "Ana López", rol: "Pivot", foto: "/images/jugadores/ana.jpg" },
-      { nombre: "Marta Ruiz", rol: "Escolta", foto: "/images/jugadores/marta.jpg" },
-      { nombre: "Irene Blanco", rol: "Base", foto: "/images/jugadores/irene_b.jpg" },
-      { nombre: "Paula García", rol: "Alero", foto: "/images/jugadores/paula_g.jpg" },
-      { nombre: "Nuria Sanz", rol: "Ala-Pivot", foto: "/images/jugadores/nuria_s.jpg" },
-      // Añadir más jugadoras según sea necesario
-    ]
-  },
-  {
-    nombre: "Infantil Femenino",
-    descripcion: "Jugadoras de 12 a 14 años.",
-    imagen: "/images/InfantilFem.jpeg",
-    entrenadores: [
-      { nombre: "Lucía Montero", rol: "Entrenadora Principal", foto: "/images/entrenadores/lucia_m.jpg" },
-      { nombre: "Sofía Blasco", rol: "Preparadora Física", foto: "/images/entrenadores/sofia_b.jpg" },
-    ],
-    miembros: [
-      { nombre: "Claudia Fernández", rol: "Ala-Pivot", foto: "/images/jugadores/claudia.jpg" },
-      { nombre: "Natalia Torres", rol: "Base", foto: "/images/jugadores/natalia.jpg" },
-      { nombre: "Lucía Romero", rol: "Escolta", foto: "/images/jugadores/lucia_r.jpg" },
-      { nombre: "Alba Méndez", rol: "Alero", foto: "/images/jugadores/alba_m.jpg" },
-      { nombre: "Marina Castro", rol: "Pivot", foto: "/images/jugadores/marina_c.jpg" },
-      // Añadir más jugadoras según sea necesario
-    ]
-  },
-  {
-    nombre: "Cadete Femenino",
-    descripcion: "Jugadoras de 14 a 16 años.",
-    imagen: "/images/CadeteFem.jpeg",
-    entrenadores: [
-      { nombre: "Cristina Ramos", rol: "Entrenadora Principal", foto: "/images/entrenadores/cristina_r.jpg" },
-      { nombre: "Eduardo Soto", rol: "Entrenador Asistente", foto: "/images/entrenadores/eduardo_s.jpg" },
-    ],
-    miembros: [
-      { nombre: "Paula Moreno", rol: "Alero", foto: "/images/jugadores/paula.jpg" },
-      { nombre: "Carla Díaz", rol: "Pivot", foto: "/images/jugadores/carla.jpg" },
-      { nombre: "Andrea Navarro", rol: "Base", foto: "/images/jugadores/andrea_n.jpg" },
-      { nombre: "Cristina López", rol: "Escolta", foto: "/images/jugadores/cristina_l.jpg" },
-      { nombre: "Raquel Soto", rol: "Ala-Pivot", foto: "/images/jugadores/raquel_s.jpg" },
-      // Añadir más jugadoras según sea necesario
-    ]
-  },
-  {
-    nombre: "Junior Femenino",
-    descripcion: "Jugadoras de 16 a 18 años que compiten a nivel avanzado. Este equipo se centra en la preparación para competiciones de alto nivel, con una intensa preparación física, técnica y táctica. Se afinan los detalles del juego para lograr el máximo rendimiento deportivo.",
-    imagen: "/images/equipos/junior_f.jpg",
-    entrenadores: [
-      { nombre: "Eva Jiménez", rol: "Entrenadora Principal", foto: "/images/entrenadores/eva_j.jpg" },
-      { nombre: "Antonio Martín", rol: "Entrenador Asistente", foto: "/images/entrenadores/antonio_m.jpg" },
-      { nombre: "Carmen Luque", rol: "Preparadora Física", foto: "/images/entrenadores/carmen_l.jpg" },
-    ],
-    miembros: [
-      { nombre: "Lucía Gómez", rol: "Pivot", foto: "/images/jugadores/lucia.jpg" },
-      { nombre: "Elena Ruiz", rol: "Escolta", foto: "/images/jugadores/elena.jpg" },
-      { nombre: "María Jiménez", rol: "Base", foto: "/images/jugadores/maria_j.jpg" },
-      { nombre: "Silvia Ortega", rol: "Alero", foto: "/images/jugadores/silvia_o.jpg" },
-      { nombre: "Beatriz Martín", rol: "Ala-Pivot", foto: "/images/jugadores/beatriz_m.jpg" },
-      // Añadir más jugadoras según sea necesario
-    ]
-  }
-];
+// Importar datos de equipos femeninos desde el archivo JSON
+import equiposFemeninos from '../../data/equiposFemeninos.json';
 ---
 
 <Layout title="Equipos Femeninos | Club Baloncesto Calasanz" description="Conoce a nuestros equipos femeninos en sus diferentes categorías">
@@ -130,10 +26,6 @@ const equiposFemeninos = [
         <FemIcon class="size-8" />
         Sección Femenina
       </TitleSection>
-      
-      <div class="max-w-5xl mx-auto mt-8">
-        
-        </div>
         
         <!-- Navegación rápida entre equipos -->
         <div class="flex flex-wrap justify-center gap-2 mb-16">

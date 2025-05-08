@@ -1,0 +1,157 @@
+[
+    {
+      "nombre": "Benjamín Femenino",
+      "descripcion": "Jugadoras nacidas en los años 2015 y 2016.",
+      "imagen": "/images/equipos/femenino/BenjaFem.jpeg",
+      "entrenadores": [
+        { 
+          "nombre": "[Nombre Entrenador/a]", 
+          "rol": "Entrenador/a Principal", 
+          "foto": "[URL de la foto]" 
+        },
+        { 
+          "nombre": "[Nombre Asistente]", 
+          "rol": "Entrenador/a Asistente", 
+          "foto": "[URL de la foto]" 
+        }
+      ],
+      "miembros": [
+        { 
+          "nombre": "[Nombre Jugadora 1]", 
+          "rol": "Nacida en 2015", 
+          "foto": "[URL de la foto]" 
+        },
+        { 
+          "nombre": "[Nombre Jugadora 2]", 
+          "rol": "Nacida en 2016", 
+          "foto": "[URL de la foto]" 
+        }
+        
+      ]
+    },
+    {
+      "nombre": "Alevín Femenino",
+      "descripcion": "Jugadoras nacidas en los años 2013 y 2014.",
+      "imagen": "/images/equipos/femenino/AlevinFem.jpeg",
+      "entrenadores": [
+        { 
+          "nombre": "[Nombre Entrenador/a]", 
+          "rol": "Entrenador/a Principal", 
+          "foto": "[URL de la foto]" 
+        }
+      ],
+      "miembros": [
+        { 
+          "nombre": "[Nombre Jugadora 1]", 
+          "rol": "Nacida en 2013", 
+          "foto": "[URL de la foto]" 
+        },
+        { 
+          "nombre": "[Nombre Jugadora 2]", 
+          "rol": "Nacida en 2014", 
+          "foto": "[URL de la foto]" 
+        }
+        
+      ]
+    },
+    {
+      "nombre": "Alevín Femenino B",
+      "descripcion": "Jugadoras nacidas en los años 2013 y 2014.",
+      "imagen": "/images/equipos/femenino/AlevinBFem.jpeg",
+      "entrenadores": [
+        { 
+          "nombre": "[Nombre Entrenador/a]", 
+          "rol": "Entrenador/a Principal", 
+          "foto": "[URL de la foto]" 
+        }
+      ],
+      "miembros": [
+        { 
+          "nombre": "[Nombre Jugadora 1]", 
+          "rol": "Nacida en 2013", 
+          "foto": "[URL de la foto]" 
+        },
+        { 
+          "nombre": "[Nombre Jugadora 2]", 
+          "rol": "Nacida en 2014", 
+          "foto": "[URL de la foto]" 
+        }
+        
+      ]
+    },
+    {
+      "nombre": "Infantil Femenino",
+      "descripcion": "Jugadoras nacidas en los años 2011 y 2012.",
+      "imagen": "/images/equipos/femenino/InfantilFem.jpeg",
+      "entrenadores": [
+        { 
+          "nombre": "[Nombre Entrenador/a]", 
+          "rol": "Entrenador/a Principal", 
+          "foto": "[URL de la foto]" 
+        }
+      ],
+      "miembros": [
+        { 
+          "nombre": "[Nombre Jugadora 1]", 
+          "rol": "Nacida en 2011", 
+          "foto": "[URL de la foto]" 
+        },
+        { 
+          "nombre": "[Nombre Jugadora 2]", 
+          "rol": "Nacida en 2012", 
+          "foto": "[URL de la foto]" 
+        }
+        
+      ]
+    },
+    {
+        "nombre": "Cadete Femenino",
+        "descripcion": "Jugadoras nacidas en los años 2009 y 2010.",
+        "imagen": "/images/equipos/femenino/CadeteFem.jpeg",
+        "entrenadores": [
+          { 
+            "nombre": "[Nombre Entrenador/a]", 
+            "rol": "Entrenador/a Principal", 
+            "foto": "[URL de la foto]" 
+          }
+        ],
+        "miembros": [
+          { 
+            "nombre": "[Nombre Jugadora 1]", 
+            "rol": "Nacida en 2009", 
+            "foto": "[URL de la foto]" 
+          },
+          { 
+            "nombre": "[Nombre Jugadora 2]", 
+            "rol": "Nacida en 2010", 
+            "foto": "[URL de la foto]" 
+          }
+          
+        ]
+    },
+    {
+      "nombre": "Junior Femenino",
+      "descripcion": "Jugadoras nacidas en los años 2007 y 2008.",
+      "imagen": "/images/equipos/femenino/JuniorFem2024.jpg",
+      "entrenadores": [
+        { 
+          "nombre": "[Nombre Entrenador/a]", 
+          "rol": "Entrenador/a Principal", 
+          "foto": "[URL de la foto]" 
+        }
+      ],
+      "miembros": [
+        { 
+          "nombre": "[Nombre Jugadora 1]", 
+          "rol": "Nacida en 2007", 
+          "foto": "[URL de la foto]" 
+        },
+        { 
+          "nombre": "[Nombre Jugadora 2]", 
+          "rol": "Nacida en 2008", 
+          "foto": "[URL de la foto]" 
+        }
+        
+      ]
+    }
+  ]
