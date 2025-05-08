@@ -1,0 +1,74 @@
+---
+// Importamos los datos de los equipos
+import equiposMasculinos from '../../data/equiposMasculinos.json';
+
+
+const { jugadorNombre, equipo, seccion = "masculina", comentario } = Astro.props;
+
+// Función para buscar un jugador por nombre en los equipos
+function buscarJugador(nombre, seccion) {
+  // Seleccionamos el conjunto de equipos según la sección
+  const equipos = seccion === "masculina" ? equiposMasculinos : equiposFemeninos;
+  
+  // Buscamos en todos los equipos
+  for (const equipoData of equipos) {
+    // Primero buscamos en miembros (jugadores)
+    const jugador = equipoData.miembros?.find(
+      miembro => miembro.nombre.toLowerCase() === nombre.toLowerCase()
+    );
+    
+    if (jugador) {
+      return { 
+        ...jugador,
+        equipo: equipoData.nombre
+      };
+    }
+    
+    // Si no se encuentra, también buscamos en entrenadores
+    const entrenador = equipoData.entrenadores?.find(
+      entrenador => entrenador.nombre.toLowerCase() === nombre.toLowerCase()
+    );
+    
+    if (entrenador) {
+      return { 
+        ...entrenador,
+        equipo: equipoData.nombre
+      };
+    }
+  }
+  
+  // Si no se encuentra, devolvemos un objeto con datos mínimos
+  return { 
+    nombre: nombre,
+    foto: "/api/placeholder/150/150",
+    equipo: equipo || "Equipo no especificado"
+  };
+}
+
+// Buscar al jugador en los datos
+const jugador = buscarJugador(jugadorNombre, seccion);
+---
+
+<div class="bg-green-900 bg-opacity-20 rounded-lg p-4 mt-4">
+  <h3 class="text-green-400 font-semibold mb-2">Actuación Destacada</h3>
+  
+  <div class="flex items-center">
+    <div class="flex-shrink-0">
+      <img 
+        src={jugador.foto} 
+        alt={`Foto de ${jugador.nombre}`} 
+        class="w-16 h-16 object-cover rounded-full border-2 border-green-500"
+        onerror="this.src='/images/placeholder-player.png'"
+      />
+    </div>
+    
+    <div class="ml-4">
+      <h4 class="text-white font-medium">{jugador.nombre}</h4>
+      <p class="text-gray-300 text-sm">{jugador.equipo}</p>
+      
+      {comentario && (
+        <p class="text-gray-200 mt-2 italic">"{comentario}"</p>
+      )}
+    </div>
+  </div>
+</div>

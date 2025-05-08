@@ -53,7 +53,10 @@ if (jornada) {
       <div class="grid grid-cols-1 gap-8">
         {resultadosFiltrados.length > 0 ? (
           resultadosFiltrados.map((resultado) => (
-            <ResultadoCard resultado={resultado} />
+            <ResultadoCard 
+              resultado={resultado} 
+              seccion={seccionSeleccionada}
+            />
           ))
         ) : (
           <div class="text-gray-400 text-center py-8">

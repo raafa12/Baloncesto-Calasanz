@@ -1,93 +1,70 @@
 {
-    "info": {
-      "numero": 24,
-      "fecha": "07/04/2025",
-      "temporada": "2024-2025"
+  "info": {
+    "numero": 24,
+    "temporada": "24-25",
+    "fechaInicio": "04-05-2025",
+    "fechaFin": "04-05-2025"
+  },
+  "resultados": [
+    {
+      "categoria": "Benjamin Masculino",
+      "local": "CB Calasanz",
+      "visitante": "CB Torrelavega",
+      "puntosLocal": 34,
+      "puntosVisitante": 28,
+      "fecha": "04-05-2025",
+      "hora": "10:00",
+      "lugar": "Polideportivo Calasanz",
+      "jugadorDestacado": "Cesar Djaider",
+      "comentarioJugador": "Excelente partido con gran actitud defensiva"
     },
-    "resultados": [
-      {
-        "categoria": "Junior Masculino",
-        "local": "CB Madrid",
-        "visitante": "CB Calasanz",
-        "puntosLocal": 62,
-        "puntosVisitante": 75,
-        "fecha": "07/04/2025",
-        "pabellon": "Pabellón Municipal Madrid",
-        "actuacionDestacada": {
-          "jugador": "Manuel Pérez",
-          "estadisticas": "25 puntos, 6 rebotes",
-          "destacado": "7/10 en triples, nuevo récord personal"
-        }
-      },
-      {
-        "categoria": "Junior Femenino",
-        "local": "CB Calasanz",
-        "visitante": "CB Alcorcón",
-        "puntosLocal": 70,
-        "puntosVisitante": 64,
-        "fecha": "06/04/2025",
-        "pabellon": "Pabellón Calasanz",
-        "actuacionDestacada": {
-          "jugador": "Carmen Díaz",
-          "estadisticas": "15 puntos, 10 asistencias",
-          "destacado": "Doble-doble con excelente dirección de juego"
-        }
-      },
-      {
-        "categoria": "Cadete Femenino",
-        "local": "CB Calasanz",
-        "visitante": "CB Móstoles",
-        "puntosLocal": 68,
-        "puntosVisitante": 55,
-        "fecha": "06/04/2025",
-        "pabellon": "Pabellón Calasanz",
-        "actuacionDestacada": {
-          "jugador": "Lucía Fernández",
-          "estadisticas": "20 puntos, 8 rebotes",
-          "destacado": "Dominó la pintura con 4 tapones"
-        }
-      },
-      {
-        "categoria": "Infantil Masculino",
-        "local": "CB Tres Cantos",
-        "visitante": "CB Calasanz",
-        "puntosLocal": 60,
-        "puntosVisitante": 58,
-        "fecha": "07/04/2025",
-        "pabellon": "Polideportivo Tres Cantos",
-        "actuacionDestacada": {
-          "jugador": "Marcos Jiménez",
-          "estadisticas": "16 puntos, 5 asistencias",
-          "destacado": "Gran actuación pese a caer por solo 2 puntos"
-        }
-      },
-      {
-        "categoria": "Alevín Masculino",
-        "local": "CB Pozuelo",
-        "visitante": "CB Calasanz",
-        "puntosLocal": 42,
-        "puntosVisitante": 50,
-        "fecha": "07/04/2025",
-        "pabellon": "Pabellón Pozuelo",
-        "actuacionDestacada": {
-          "jugador": "Daniel Moreno",
-          "estadisticas": "18 puntos, 5 robos",
-          "destacado": "Defensa agresiva que generó contraataques"
-        }
-      },
-      {
-        "categoria": "Benjamín Femenino",
-        "local": "CB Calasanz",
-        "visitante": "CB Parla",
-        "puntosLocal": 40,
-        "puntosVisitante": 28,
-        "fecha": "06/04/2025",
-        "pabellon": "Pabellón Calasanz",
-        "actuacionDestacada": {
-          "jugador": "Sara Rodríguez",
-          "estadisticas": "10 puntos, 6 rebotes",
-          "destacado": "Gran trabajo en ambos lados de la pista"
-        }
-      }
-    ]
-  }
+    {
+      "categoria": "Alevín Masculino",
+      "local": "CB Solares",
+      "visitante": "CB Calasanz",
+      "puntosLocal": 45,
+      "puntosVisitante": 50,
+      "fecha": "04-05-2025",
+      "hora": "12:00",
+      "lugar": "Pabellón Solares",
+      "jugadorDestacado": "Marcos Zorrilla",
+      "comentarioJugador": "15 puntos y 7 rebotes en una gran actuación ofensiva"
+    },
+    {
+      "categoria": "Infantil Masculino",
+      "local": "CB Calasanz",
+      "visitante": "CB Astillero",
+      "puntosLocal": 40,
+      "puntosVisitante": 38,
+      "fecha": "04-05-2025",
+      "hora": "16:00",
+      "lugar": "Polideportivo Calasanz",
+      "jugadorDestacado": "Pablo Fernández",
+      "comentarioJugador": "Canasta ganadora en el último segundo"
+    },
+    {
+      "categoria": "Cadete Masculino",
+      "local": "CB Santoña",
+      "visitante": "CB Calasanz",
+      "puntosLocal": 55,
+      "puntosVisitante": 48,
+      "fecha": "04-05-2025",
+      "hora": "18:00",
+      "lugar": "Pabellón Municipal Santoña",
+      "jugadorDestacado": "Juan Diaz",
+      "comentarioJugador": "Gran defensa durante todo el partido"
+    },
+    {
+      "categoria": "Junior Masculino",
+      "local": "CB Calasanz",
+      "visitante": "CB Santander",
+      "puntosLocal": 67,
+      "puntosVisitante": 59,
+      "fecha": "04-05-2025",
+      "hora": "20:00",
+      "lugar": "Polideportivo Calasanz",
+      "jugadorDestacado": "Alexander Gomez",
+      "comentarioJugador": "20 puntos, 5 rebotes y 4 asistencias"
+    }
+  ]
+}

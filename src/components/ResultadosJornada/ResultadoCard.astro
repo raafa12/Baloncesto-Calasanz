@@ -1,88 +1,98 @@
 ---
-// src/components/ResultadosJornada/ResultadoCard.astro
-const { resultado } = Astro.props;
+import ActuacionDestacada from './ActuacionDestacada.astro';
 
-// Función para determinar si un equipo es ganador
-const esGanador = (resultado, esLocal) => {
-  if (esLocal) {
-    return resultado.puntosLocal > resultado.puntosVisitante;
-  } else {
-    return resultado.puntosVisitante > resultado.puntosLocal;
+const { resultado, seccion = "masculina" } = Astro.props;
+const {
+  categoria,
+  local,
+  visitante,
+  puntosLocal,
+  puntosVisitante,
+  fecha,
+  hora,
+  lugar,
+  jugadorDestacado,
+  comentarioJugador
+} = resultado;
+
+// Determinar si es victoria, derrota o no jugado
+let estado = "";
+let claseEstado = "";
+
+if (puntosLocal !== null && puntosVisitante !== null) {
+  const esCalasanzLocal = local.toLowerCase().includes('calasanz');
+  const puntosCalasanz = esCalasanzLocal ? puntosLocal : puntosVisitante;
+  const puntosRival = esCalasanzLocal ? puntosVisitante : puntosLocal;
+  
+  if (puntosCalasanz > puntosRival) {
+    estado = "VICTORIA";
+    claseEstado = "bg-green-700";
+  } else if (puntosCalasanz < puntosRival) {
+    estado = "DERROTA";
+    claseEstado = "bg-red-700";
+  } else if (puntosCalasanz === puntosRival) {
+    estado = "EMPATE";
+    claseEstado = "bg-yellow-700";
   }
-};
-
-// Función para determinar si un equipo es CB Calasanz
-const esCalasanz = (nombre) => nombre === "CB Calasanz";
+} else {
+  estado = "NO JUGADO";
+  claseEstado = "bg-gray-700";
+}
 ---
 
-<div class="bg-green-950 border border-green-800 rounded-xl overflow-hidden shadow-lg">
-  {/* Cabecera con la categoría y fecha */}
-  <div class="bg-green-800/50 px-4 py-2 flex justify-between items-center">
-    <span class="text-sm font-medium text-green-200">{resultado.categoria}</span>
-    <span class="text-xs text-green-300">{resultado.fecha}</span>
-  </div>
-  
-  <div class="p-5">
-    {/* Resultado del partido */}
-    <div class="mb-4">
-      {/* Equipo Local */}
-      <div class="flex justify-between items-center mb-2">
-        <div class="flex items-center">
-          <div class={`w-1 h-6 rounded-full mr-3 ${esCalasanz(resultado.local) ? "bg-green-400" : "bg-transparent"}`}></div>
-          <span class={`font-medium ${esGanador(resultado, true) ? "text-white" : "text-gray-400"}`}>
-            {resultado.local}
-          </span>
-        </div>
-        <span class={`text-2xl font-bold ${esGanador(resultado, true) ? "text-white" : "text-gray-400"}`}>
-          {resultado.puntosLocal}
-        </span>
-      </div>
-      
-      {/* Equipo Visitante */}
-      <div class="flex justify-between items-center">
-        <div class="flex items-center">
-          <div class={`w-1 h-6 rounded-full mr-3 ${esCalasanz(resultado.visitante) ? "bg-green-400" : "bg-transparent"}`}></div>
-          <span class={`font-medium ${esGanador(resultado, false) ? "text-white" : "text-gray-400"}`}>
-            {resultado.visitante}
-          </span>
-        </div>
-        <span class={`text-2xl font-bold ${esGanador(resultado, false) ? "text-white" : "text-gray-400"}`}>
-          {resultado.puntosVisitante}
-        </span>
-      </div>
-      
-      {/* Pabellón */}
-      <div class="mt-2 text-xs text-gray-400">
-        <span>{resultado.pabellon}</span>
+<div class="bg-green-950 rounded-lg overflow-hidden shadow-lg">
+  <div class="p-4">
+    <div class="flex justify-between items-center mb-3">
+      <h3 class="text-xl font-bold text-white">{categoria}</h3>
+      <div class={`${claseEstado} px-3 py-1 rounded text-white text-sm font-medium`}>
+        {estado}
       </div>
     </div>
     
-    {resultado.actuacionDestacada && (
-      <>
-        {/* Línea divisoria */}
-        <div class="border-t border-green-800 my-4"></div>
-        
-        {/* Actuación Destacada */}
-        <div class="mt-3">
-          <div class="flex items-center mb-2">
-            <span class="text-sm font-semibold text-green-400">Actuación Destacada</span>
+    <!-- Equipos y resultado -->
+    <div class="flex justify-between items-center bg-green-900 bg-opacity-30 p-3 rounded">
+      <div class="flex-1 text-left">
+        <p class={`font-semibold ${local.toLowerCase().includes('calasanz') ? 'text-green-400' : 'text-white'}`}>
+          {local}
+        </p>
+      </div>
+      
+      <div class="px-4 flex justify-center items-center">
+        {puntosLocal !== null && puntosVisitante !== null ? (
+          <div class="text-xl font-bold text-white">
+            {puntosLocal} - {puntosVisitante}
           </div>
-          
-          <div class="flex items-center mb-3">
-            <div class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center mr-3">
-              <span class="text-md font-bold text-white">{resultado.actuacionDestacada.jugador.charAt(0)}</span>
-            </div>
-            <div>
-              <h5 class="font-bold text-white">{resultado.actuacionDestacada.jugador}</h5>
-              <p class="text-sm text-green-300">{resultado.actuacionDestacada.estadisticas}</p>
-            </div>
+        ) : (
+          <div class="text-sm font-medium text-gray-400">
+            {fecha && hora ? `${fecha} - ${hora}` : 'Por determinar'}
           </div>
-          
-          <div class="bg-green-800/30 p-3 rounded text-sm text-gray-300">
-            <span class="font-semibold text-green-400">Destacado:</span> {resultado.actuacionDestacada.destacado}
-          </div>
-        </div>
-      </>
+        )}
+      </div>
+      
+      <div class="flex-1 text-right">
+        <p class={`font-semibold ${visitante.toLowerCase().includes('calasanz') ? 'text-green-400' : 'text-white'}`}>
+          {visitante}
+        </p>
+      </div>
+    </div>
+    
+    <!-- Información adicional -->
+    {(fecha || hora || lugar) && (
+      <div class="mt-3 text-sm text-gray-300">
+        {fecha && <span class="mr-3">{fecha}</span>}
+        {hora && <span class="mr-3">{hora}</span>}
+        {lugar && <span>{lugar}</span>}
+      </div>
+    )}
+    
+    <!-- Jugador destacado si existe -->
+    {jugadorDestacado && (
+      <ActuacionDestacada 
+        jugadorNombre={jugadorDestacado} 
+        equipo={categoria}
+        seccion={seccion}
+        comentario={comentarioJugador} 
+      />
     )}
   </div>
 </div>
