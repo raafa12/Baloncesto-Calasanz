@@ -1,0 +1,71 @@
+{
+    "info": {
+      "numero": 2,
+      "temporada": "24-25",
+      "fechaInicio": "10-05-2025",
+      "fechaFin": "11-05-2025",
+      "tipo": "Amistoso Final de Temporada"
+    },
+    "resultados": [
+      {
+        "categoria": "Benjamin Masculino",
+        "local": "CB Calasanz",
+        "visitante": "CB Torrelavega",
+        "puntosLocal": 34,
+        "puntosVisitante": 28,
+        "fecha": "03-05-2025",
+        "hora": "10:00",
+        "lugar": "Polideportivo Calasanz",
+        "jugadorDestacado": "Cesar Djaider",
+        "comentarioJugador": "Excelente partido con gran actitud defensiva"
+      },
+      {
+        "categoria": "Alevín Masculino",
+        "local": "CB Solares",
+        "visitante": "CB Calasanz",
+        "puntosLocal": 45,
+        "puntosVisitante": 50,
+        "fecha": "03-05-2025",
+        "hora": "12:00",
+        "lugar": "Pabellón Solares",
+        "jugadorDestacado": "Marcos Zorrilla",
+        "comentarioJugador": "15 puntos y 7 rebotes en una gran actuación ofensiva"
+      },
+      {
+        "categoria": "Infantil Masculino",
+        "local": "CB Calasanz",
+        "visitante": "CB Astillero",
+        "puntosLocal": 40,
+        "puntosVisitante": 38,
+        "fecha": "04-05-2025",
+        "hora": "16:00",
+        "lugar": "Polideportivo Calasanz",
+        "jugadorDestacado": "Pablo Fernández",
+        "comentarioJugador": "Canasta ganadora en el último segundo"
+      },
+      {
+        "categoria": "Cadete Masculino",
+        "local": "CB Santoña",
+        "visitante": "CB Calasanz",
+        "puntosLocal": 55,
+        "puntosVisitante": 48,
+        "fecha": "04-05-2025",
+        "hora": "18:00",
+        "lugar": "Pabellón Municipal Santoña",
+        "jugadorDestacado": "Juan Diaz",
+        "comentarioJugador": "Gran defensa durante todo el partido"
+      },
+      {
+        "categoria": "Junior Masculino",
+        "local": "CB Calasanz",
+        "visitante": "CB Santander",
+        "puntosLocal": 67,
+        "puntosVisitante": 59,
+        "fecha": "04-05-2025",
+        "hora": "20:00",
+        "lugar": "Polideportivo Calasanz",
+        "jugadorDestacado": "Alexander Gomez",
+        "comentarioJugador": "20 puntos, 5 rebotes y 4 asistencias"
+      }
+    ]
+  }
