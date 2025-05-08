@@ -21,13 +21,18 @@ const formatearFecha = (fechaStr) => {
 };
 ---
 
-<div class="selector-jornada bg-green-950 border border-green-800 rounded-xl p-4 mb-8">
-  <h3 class="text-lg font-semibold text-white mb-4">Seleccionar Jornada:</h3>
+<div class="selector-jornada">
+  <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+    </svg>
+    Seleccionar Jornada:
+  </h3>
 
   <div class="relative">
     <select
       id="jornada-selector"
-      class="w-full bg-green-900 text-white border border-green-700 rounded-lg py-2 px-4 appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-green-500"
+      class="w-full bg-green-900 text-white border border-green-700 rounded-lg py-3 px-4 appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300 hover:bg-green-800"
     >
       {jornadas.map((jornada) => {
         const esAmistoso = jornada.info.tipo?.toLowerCase().includes('amistoso');

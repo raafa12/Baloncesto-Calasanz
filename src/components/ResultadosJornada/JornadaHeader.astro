@@ -3,9 +3,26 @@
 const { jornada } = Astro.props;
 ---
 
-<div class="mb-6 flex justify-between items-center">
-  <h3 class="text-xl font-semibold text-green-300">
-    Jornada {jornada.info.numero} - {jornada.info.fecha}
-  </h3>
-  <span class="text-sm text-green-200">Temporada {jornada.info.temporada}</span>
+<div class="mb-8 bg-green-900 bg-opacity-20 rounded-lg p-4 shadow-md">
+  <div class="flex flex-col md:flex-row justify-between items-center">
+    <div class="flex items-center mb-3 md:mb-0">
+      <div class="bg-green-500 text-green-900 font-bold rounded-full w-12 h-12 flex items-center justify-center mr-3">
+        {jornada.info.numero}
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-green-300">
+          Jornada {jornada.info.numero}
+        </h3>
+        <p class="text-green-200 text-sm">
+          {jornada.info.fecha}
+        </p>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+      <span class="text-sm text-green-200">Temporada {jornada.info.temporada}</span>
+    </div>
+  </div>
 </div>
