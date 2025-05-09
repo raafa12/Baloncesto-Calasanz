@@ -165,7 +165,7 @@
   {
     "nombre": "Infantil Masculino",
     "descripcion": "Jugadores nacidos en los años 2012 y 2011.",
-    "imagen": "/images/equipos/infantil_m.jpeg",
+    "imagen": "/images/equipos/masculino/InfaMasc.jpg",
     "entrenadores": [
       { 
         "nombre": "Rafael Basanta", 
@@ -214,7 +214,7 @@
   {
     "nombre": "Cadete Masculino",
     "descripcion": "Jugadores nacidos en los años 2009 y 2010.",
-    "imagen": "/images/equipos/cadete_m.jpeg",
+    "imagen": "/images/equipos/masculino/CadeteMasc.jpg",
     "entrenadores": [
       { 
         "nombre": "David Aleson", 
@@ -308,7 +308,7 @@
     ],
     "miembros": [
       { 
-        "nombre": "Pablo Miguel", 
+        "nombre": "Pablo Miguel Zubieta", 
         "rol": "Nacido en 2008", 
         "foto": "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/bcaa220b-ae63-407d-be95-6d779fa25fad.jpg" 
       },

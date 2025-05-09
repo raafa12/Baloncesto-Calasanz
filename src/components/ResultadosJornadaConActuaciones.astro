@@ -27,9 +27,49 @@ let resultadosFiltrados = [];
 let seccion = secciones[seccionSeleccionada] || { nombre: "Sección", color: "gray-500" };
 
 if (jornada) {
+  // Función mejorada para determinar la sección
+  function detectarSeccion(categoria) {
+    if (!categoria) return null;
+    
+    // Convertimos a minúsculas para simplificar la comparación
+    const categoriaLower = categoria.toLowerCase();
+    
+    // Buscamos palabras clave para masculino
+    if (categoriaLower.includes("mascul") || 
+        categoriaLower.includes("macul") ||  // Para capturar errores como "maculina"
+        categoriaLower.endsWith(" m") || 
+        categoriaLower.includes(" m ")) {
+      return "masculina";
+    }
+    
+    // Buscamos palabras clave para femenino
+    if (categoriaLower.includes("femen") || 
+        categoriaLower.endsWith(" f") || 
+        categoriaLower.includes(" f ")) {
+      return "femenina";
+    }
+    
+    // Si no se detecta, devolvemos null para poder mostrarlo en ambas secciones
+    return null;
+  }
+
   resultadosFiltrados = jornada.resultados.filter(r => {
-    const esMasculina = seccionSeleccionada === "masculina";
-    return esMasculina ? r.categoria.includes("Masculino") : r.categoria.includes("Femenino");
+    const seccionDetectada = detectarSeccion(r.categoria);
+    
+    // Si la sección no se detecta, mostramos en ambas para evitar perder resultados
+    if (seccionDetectada === null) {
+      console.log(`⚠️ No se pudo detectar sección para: "${r.categoria}". Se mostrará en ambas secciones.`);
+      return true;
+    }
+    
+    // Comparamos con la sección seleccionada
+    const coincide = seccionDetectada === seccionSeleccionada;
+    
+    if (coincide) {
+      console.log(`✅ Mostrando resultado: ${r.categoria} (${r.local} vs ${r.visitante})`);
+    }
+    
+    return coincide;
   });
 
   console.log(`[ResultadosJornadaConActuaciones] Resultados encontrados (${seccionSeleccionada}): ${resultadosFiltrados.length}`);

@@ -15,20 +15,33 @@ function parseFecha(fechaStr) {
   return new Date(fechaStr);
 }
 
-export async function obtenerJornadas() {
+export async function obtenerJornadas(temporadaFiltro = null) {
   const jornadas = [];
 
   try {
-    const jornadasModulos = import.meta.glob('./**/*.json', { eager: true });
+    // Cambiamos eager: true a eager: false para evitar caching durante la compilación
+    const jornadasModulos = import.meta.glob('./**/*.json', { eager: false });
 
+    // Cargamos dinámicamente cada módulo
     for (const ruta in jornadasModulos) {
-      const jornada = jornadasModulos[ruta].default;
+      try {
+        const modulo = await jornadasModulos[ruta]();
+        const jornada = modulo.default;
 
-      // Solo incluir si tiene fechaInicio válida
-      if (jornada?.info?.fechaInicio) {
-        jornadas.push(jornada);
-      } else {
-        console.warn(`⚠️  Archivo ignorado por falta de info.fechaInicio: ${ruta}`);
+        // Filtramos por temporada si se especifica
+        if (temporadaFiltro && jornada?.info?.temporada && 
+            !jornada.info.temporada.includes(temporadaFiltro)) {
+          continue;
+        }
+
+        // Solo incluir si tiene fechaInicio válida
+        if (jornada?.info?.fechaInicio) {
+          jornadas.push(jornada);
+        } else {
+          console.warn(`⚠️  Archivo ignorado por falta de info.fechaInicio: ${ruta}`);
+        }
+      } catch (err) {
+        console.error(`❌ Error al cargar ${ruta}:`, err);
       }
     }
 
@@ -53,12 +66,12 @@ export async function obtenerJornadas() {
   }
 }
 
-export async function obtenerUltimaJornada() {
-  const jornadas = await obtenerJornadas();
+export async function obtenerUltimaJornada(temporada = null) {
+  const jornadas = await obtenerJornadas(temporada);
   return jornadas[0] || null;
 }
 
-export async function obtenerJornadaPorNumero(numero) {
-  const jornadas = await obtenerJornadas();
+export async function obtenerJornadaPorNumero(numero, temporada = null) {
+  const jornadas = await obtenerJornadas(temporada);
   return jornadas.find(j => j.info.numero == numero) || null;
 }
