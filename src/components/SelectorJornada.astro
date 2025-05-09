@@ -63,7 +63,7 @@ const formatearFecha = (fechaStr) => {
       {jornadas.map((jornada) => {
         const esAmistoso = jornada.info.tipo?.toLowerCase().includes('amistoso');
         const textoOpcion = esAmistoso
-          ? `Amistosos fin de temporada ${obtenerSemanaMes(jornada.info.fechaInicio)}`
+          ? `Amistosos final de temporada ${obtenerSemanaMes(jornada.info.fechaInicio)}`
           : `Jornada ${jornada.info.numero}`;
           
         return (

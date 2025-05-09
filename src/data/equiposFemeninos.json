@@ -1,157 +1,486 @@
 [
-    {
-      "nombre": "Benjamín Femenino",
-      "descripcion": "Jugadoras nacidas en los años 2015 y 2016.",
-      "imagen": "/images/equipos/femenino/BenjaFem.jpeg",
-      "entrenadores": [
-        { 
-          "nombre": "[Nombre Entrenador/a]", 
-          "rol": "Entrenador/a Principal", 
-          "foto": "[URL de la foto]" 
-        },
-        { 
-          "nombre": "[Nombre Asistente]", 
-          "rol": "Entrenador/a Asistente", 
-          "foto": "[URL de la foto]" 
-        }
-      ],
-      "miembros": [
-        { 
-          "nombre": "[Nombre Jugadora 1]", 
-          "rol": "Nacida en 2015", 
-          "foto": "[URL de la foto]" 
-        },
-        { 
-          "nombre": "[Nombre Jugadora 2]", 
-          "rol": "Nacida en 2016", 
-          "foto": "[URL de la foto]" 
-        }
-        
-      ]
-    },
-    {
-      "nombre": "Alevín Femenino",
-      "descripcion": "Jugadoras nacidas en los años 2013 y 2014.",
-      "imagen": "/images/equipos/femenino/AlevinFem.jpeg",
-      "entrenadores": [
-        { 
-          "nombre": "[Nombre Entrenador/a]", 
-          "rol": "Entrenador/a Principal", 
-          "foto": "[URL de la foto]" 
-        }
-      ],
-      "miembros": [
-        { 
-          "nombre": "[Nombre Jugadora 1]", 
-          "rol": "Nacida en 2013", 
-          "foto": "[URL de la foto]" 
-        },
-        { 
-          "nombre": "[Nombre Jugadora 2]", 
-          "rol": "Nacida en 2014", 
-          "foto": "[URL de la foto]" 
-        }
-        
-      ]
-    },
-    {
-      "nombre": "Alevín Femenino B",
-      "descripcion": "Jugadoras nacidas en los años 2013 y 2014.",
-      "imagen": "/images/equipos/femenino/AlevinBFem.jpeg",
-      "entrenadores": [
-        { 
-          "nombre": "[Nombre Entrenador/a]", 
-          "rol": "Entrenador/a Principal", 
-          "foto": "[URL de la foto]" 
-        }
-      ],
-      "miembros": [
-        { 
-          "nombre": "[Nombre Jugadora 1]", 
-          "rol": "Nacida en 2013", 
-          "foto": "[URL de la foto]" 
-        },
-        { 
-          "nombre": "[Nombre Jugadora 2]", 
-          "rol": "Nacida en 2014", 
-          "foto": "[URL de la foto]" 
-        }
-        
-      ]
-    },
-    {
-      "nombre": "Infantil Femenino",
-      "descripcion": "Jugadoras nacidas en los años 2011 y 2012.",
-      "imagen": "/images/equipos/femenino/InfantilFem.jpeg",
-      "entrenadores": [
-        { 
-          "nombre": "[Nombre Entrenador/a]", 
-          "rol": "Entrenador/a Principal", 
-          "foto": "[URL de la foto]" 
-        }
-      ],
-      "miembros": [
-        { 
-          "nombre": "[Nombre Jugadora 1]", 
-          "rol": "Nacida en 2011", 
-          "foto": "[URL de la foto]" 
-        },
-        { 
-          "nombre": "[Nombre Jugadora 2]", 
-          "rol": "Nacida en 2012", 
-          "foto": "[URL de la foto]" 
-        }
-        
-      ]
-    },
-    {
-        "nombre": "Cadete Femenino",
-        "descripcion": "Jugadoras nacidas en los años 2009 y 2010.",
-        "imagen": "/images/equipos/femenino/CadeteFem.jpeg",
-        "entrenadores": [
-          { 
-            "nombre": "[Nombre Entrenador/a]", 
-            "rol": "Entrenador/a Principal", 
-            "foto": "[URL de la foto]" 
-          }
-        ],
-        "miembros": [
-          { 
-            "nombre": "[Nombre Jugadora 1]", 
-            "rol": "Nacida en 2009", 
-            "foto": "[URL de la foto]" 
-          },
-          { 
-            "nombre": "[Nombre Jugadora 2]", 
-            "rol": "Nacida en 2010", 
-            "foto": "[URL de la foto]" 
-          }
-          
-        ]
-    },
-    {
-      "nombre": "Junior Femenino",
-      "descripcion": "Jugadoras nacidas en los años 2007 y 2008.",
-      "imagen": "/images/equipos/femenino/JuniorFem2024.jpg",
-      "entrenadores": [
-        { 
-          "nombre": "[Nombre Entrenador/a]", 
-          "rol": "Entrenador/a Principal", 
-          "foto": "[URL de la foto]" 
-        }
-      ],
-      "miembros": [
-        { 
-          "nombre": "[Nombre Jugadora 1]", 
-          "rol": "Nacida en 2007", 
-          "foto": "[URL de la foto]" 
-        },
-        { 
-          "nombre": "[Nombre Jugadora 2]", 
-          "rol": "Nacida en 2008", 
-          "foto": "[URL de la foto]" 
-        }
-        
-      ]
-    }
-  ]
+  {
+    "nombre": "Benjamín Femenino",
+    "descripcion": "Jugadoras nacidas en los años 2015 y 2016.",
+    "imagen": "/images/equipos/femenino/BenjaFem.jpeg",
+    "entrenadores": [
+      { 
+        "nombre": "Arturo Flores", 
+        "rol": "Entrenador Principal", 
+        "foto": "/images/equipos/entrenadores/ArturoFlores.jpg" 
+      },
+      { 
+        "nombre": "Marta Izaguirre", 
+        "rol": "Entrenadora Asistente", 
+        "foto": "/images/equipos/entrenadores/MartaIzaguirre.jpg" 
+      },
+      { 
+        "nombre": "Mencía Calzada", 
+        "rol": "Delegada de Equipo", 
+        "foto": "/images/equipos/entrenadores/MenciaCalzada.jpg" 
+      }
+    ],
+    "miembros": [
+      { 
+        "nombre": "Ines Peña", 
+        "rol": "Nacida en 2015", 
+        "foto": "/images/equipos/jugadoras/InesPena.jpg" 
+      },
+      { 
+        "nombre": "Blanca Pedrosa", 
+        "rol": "Nacida en 2016", 
+        "foto": "/images/equipos/jugadoras/BlancaPedrosa.jpg" 
+      },
+      { 
+        "nombre": "Berta Lopez", 
+        "rol": "Nacida en 2015", 
+        "foto": "/images/equipos/jugadoras/BertaLopez.jpg" 
+      },
+      { 
+        "nombre": "Laura Ballestero", 
+        "rol": "Nacida en 2016", 
+        "foto": "/images/equipos/jugadoras/LauraBallestero.jpg" 
+      },
+      { 
+        "nombre": "Noa Linares", 
+        "rol": "Nacida en 2015", 
+        "foto": "/images/equipos/jugadoras/NoaLinares.jpg" 
+      },
+      { 
+        "nombre": "Elena Cebrian", 
+        "rol": "Nacida en 2016", 
+        "foto": "/images/equipos/jugadoras/ElenaCebrian.jpg" 
+      },
+      { 
+        "nombre": "Irene Peñalba", 
+        "rol": "Nacida en 2015", 
+        "foto": "/images/equipos/jugadoras/IrenePenalba.jpg" 
+      },
+      { 
+        "nombre": "Lucia Viadero", 
+        "rol": "Nacida en 2016", 
+        "foto": "/images/equipos/jugadoras/LuciaViadero.jpg" 
+      },
+      { 
+        "nombre": "Carmen Rodriguez", 
+        "rol": "Nacida en 2015", 
+        "foto": "/images/equipos/jugadoras/CarmenRodriguez.jpg" 
+      },
+      { 
+        "nombre": "Vega Recio", 
+        "rol": "Nacida en 2016", 
+        "foto": "/images/equipos/jugadoras/VegaRecio.jpg" 
+      },
+      { 
+        "nombre": "Noemí Díez", 
+        "rol": "Nacida en 2015", 
+        "foto": "/images/equipos/jugadoras/NoemiDiez.jpg" 
+      }
+    ]
+  },
+  {
+    "nombre": "Alevín Femenino",
+    "descripcion": "Jugadoras nacidas en los años 2013 y 2014.",
+    "imagen": "/images/equipos/femenino/AlevinFem.jpeg",
+    "entrenadores": [
+      { 
+        "nombre": "Arturo Flores", 
+        "rol": "Entrenador Principal", 
+        "foto": "/images/equipos/entrenadores/ArturoFlores.jpg" 
+      },
+      { 
+        "nombre": "Ana Ruiz", 
+        "rol": "Entrenadora Asistente", 
+        "foto": "/images/equipos/entrenadores/AnaRuiz.jpg" 
+      },
+      { 
+        "nombre": "Maria Moxo", 
+        "rol": "Entrenadora Asistente", 
+        "foto": "/images/equipos/entrenadores/MariaMoxo.jpg" 
+      }
+    ],
+    "miembros": [
+      { 
+        "nombre": "Alba González", 
+        "rol": "Nacida en 2013", 
+        "foto": "/images/equipos/jugadoras/AlbaGonzalez.jpg" 
+      },
+      { 
+        "nombre": "Naia Gutierrez", 
+        "rol": "Nacida en 2014", 
+        "foto": "/images/equipos/jugadoras/NaiaGutierrez.jpg" 
+      },
+      { 
+        "nombre": "Mencia Jimenez", 
+        "rol": "Nacida en 2013", 
+        "foto": "/images/equipos/jugadoras/MenciaJimenez.jpg" 
+      },
+      { 
+        "nombre": "Ines Jimenez", 
+        "rol": "Nacida en 2014", 
+        "foto": "/images/equipos/jugadoras/InesJimenez.jpg" 
+      },
+      { 
+        "nombre": "Carlota Marcote", 
+        "rol": "Nacida en 2013", 
+        "foto": "/images/equipos/jugadoras/CarlotaMarcote.jpg" 
+      },
+      { 
+        "nombre": "Martina Vega", 
+        "rol": "Nacida en 2014", 
+        "foto": "/images/equipos/jugadoras/MartinaVega.jpg" 
+      },
+      { 
+        "nombre": "Nayara Carrasco", 
+        "rol": "Nacida en 2013", 
+        "foto": "/images/equipos/jugadoras/NayaraCarrasco.jpg" 
+      },
+      { 
+        "nombre": "Emma De", 
+        "rol": "Nacida en 2014", 
+        "foto": "/images/equipos/jugadoras/EmmaDe.jpg" 
+      }
+    ]
+  },
+  {
+    "nombre": "Alevín Femenino B",
+    "descripcion": "Jugadoras nacidas en los años 2013 y 2014.",
+    "imagen": "/images/equipos/femenino/AlevinBFem.jpeg",
+    "entrenadores": [
+      { 
+        "nombre": "Arturo Flores", 
+        "rol": "Entrenador Principal", 
+        "foto": "/images/equipos/entrenadores/ArturoFlores.jpg" 
+      },
+      { 
+        "nombre": "Alba Perez", 
+        "rol": "Entrenadora Asistente", 
+        "foto": "/images/equipos/entrenadores/AlbaPerez.jpg" 
+      },
+      { 
+        "nombre": "Sofia Bosque", 
+        "rol": "Entrenadora Asistente", 
+        "foto": "/images/equipos/entrenadores/SofiaBosque.jpg" 
+      }
+    ],
+    "miembros": [
+      { 
+        "nombre": "Paula Gonzalez", 
+        "rol": "Nacida en 2013", 
+        "foto": "/images/equipos/jugadoras/PaulaGonzalez.jpg" 
+      },
+      { 
+        "nombre": "Iris Freije", 
+        "rol": "Nacida en 2014", 
+        "foto": "/images/equipos/jugadoras/IrisFreije.jpg" 
+      },
+      { 
+        "nombre": "Carla Djaider", 
+        "rol": "Nacida en 2013", 
+        "foto": "/images/equipos/jugadoras/CarlaDjaider.jpg" 
+      },
+      { 
+        "nombre": "Ines Balbas", 
+        "rol": "Nacida en 2014", 
+        "foto": "/images/equipos/jugadoras/InesBalbas.jpg" 
+      },
+      { 
+        "nombre": "Veronica Gonzalez", 
+        "rol": "Nacida en 2013", 
+        "foto": "/images/equipos/jugadoras/VeronicaGonzalez.jpg" 
+      },
+      { 
+        "nombre": "Irene Diaz", 
+        "rol": "Nacida en 2014", 
+        "foto": "/images/equipos/jugadoras/IreneDiaz.jpg" 
+      },
+      { 
+        "nombre": "Lucia Diaz", 
+        "rol": "Nacida en 2013", 
+        "foto": "/images/equipos/jugadoras/LuciaDiaz.jpg" 
+      },
+      { 
+        "nombre": "Lucia Camus", 
+        "rol": "Nacida en 2014", 
+        "foto": "/images/equipos/jugadoras/LuciaCamus.jpg" 
+      },
+      { 
+        "nombre": "Jimena Ramos", 
+        "rol": "Nacida en 2013", 
+        "foto": "/images/equipos/jugadoras/JimenaRamos.jpg" 
+      },
+      { 
+        "nombre": "Alicia Becedoniz", 
+        "rol": "Nacida en 2014", 
+        "foto": "/images/equipos/jugadoras/AliciaBecedoniz.jpg" 
+      },
+      { 
+        "nombre": "Vera Garcia", 
+        "rol": "Nacida en 2013", 
+        "foto": "/images/equipos/jugadoras/VeraGarcia.jpg" 
+      },
+      { 
+        "nombre": "Maria Dolores Martin", 
+        "rol": "Nacida en 2014", 
+        "foto": "/images/equipos/jugadoras/MariaDolorasMartin.jpg" 
+      },
+      { 
+        "nombre": "Maria Gracia Portilla", 
+        "rol": "Nacida en 2013", 
+        "foto": "/images/equipos/jugadoras/MariaGraciaPortilla.jpg" 
+      },
+      { 
+        "nombre": "Ainara Rodriguez", 
+        "rol": "Nacida en 2014", 
+        "foto": "/images/equipos/jugadoras/AinaraRodriguez.jpg" 
+      },
+      { 
+        "nombre": "Elena Lopez", 
+        "rol": "Nacida en 2013", 
+        "foto": "/images/equipos/jugadoras/ElenaLopez.jpg" 
+      }
+    ]
+  },
+  {
+    "nombre": "Infantil Femenino",
+    "descripcion": "Jugadoras nacidas en los años 2011 y 2012.",
+    "imagen": "/images/equipos/femenino/InfantilFem.jpeg",
+    "entrenadores": [
+      { 
+        "nombre": "Arturo Flores", 
+        "rol": "Entrenador Principal", 
+        "foto": "/images/equipos/entrenadores/ArturoFlores.jpg" 
+      },
+      { 
+        "nombre": "Maria Moxo", 
+        "rol": "Delegada de Equipo", 
+        "foto": "/images/equipos/entrenadores/MariaMoxo.jpg" 
+      }
+    ],
+    "miembros": [
+      { 
+        "nombre": "Carla Saro", 
+        "rol": "Nacida en 2011", 
+        "foto": "/images/equipos/jugadoras/CarlaSaro.jpg" 
+      },
+      { 
+        "nombre": "Candela Moxo", 
+        "rol": "Nacida en 2012", 
+        "foto": "/images/equipos/jugadoras/CandelaMoxo.jpg" 
+      },
+      { 
+        "nombre": "Olivia Cañete", 
+        "rol": "Nacida en 2011", 
+        "foto": "/images/equipos/jugadoras/OliviaCañete.jpg" 
+      },
+      { 
+        "nombre": "Elena Largo", 
+        "rol": "Nacida en 2012", 
+        "foto": "/images/equipos/jugadoras/ElenaLargo.jpg" 
+      },
+      { 
+        "nombre": "Lucia Maroto", 
+        "rol": "Nacida en 2011", 
+        "foto": "/images/equipos/jugadoras/LuciaMaroto.jpg" 
+      },
+      { 
+        "nombre": "Paula Masa", 
+        "rol": "Nacida en 2012", 
+        "foto": "/images/equipos/jugadoras/PaulaMasa.jpg" 
+      },
+      { 
+        "nombre": "Amaya Aguado", 
+        "rol": "Nacida en 2011", 
+        "foto": "/images/equipos/jugadoras/AmayaAguado.jpg" 
+      },
+      { 
+        "nombre": "Mencía Calzada", 
+        "rol": "Nacida en 2012", 
+        "foto": "/images/equipos/jugadoras/MenciaCalzada.jpg" 
+      },
+      { 
+        "nombre": "Sandra Vivero", 
+        "rol": "Nacida en 2011", 
+        "foto": "/images/equipos/jugadoras/SandraVivero.jpg" 
+      },
+      { 
+        "nombre": "Vega Calvo", 
+        "rol": "Nacida en 2012", 
+        "foto": "/images/equipos/jugadoras/VegaCalvo.jpg" 
+      },
+      { 
+        "nombre": "Beatriz Del", 
+        "rol": "Nacida en 2011", 
+        "foto": "/images/equipos/jugadoras/BeatrizDel.jpg" 
+      },
+      { 
+        "nombre": "Berta Madrazo", 
+        "rol": "Nacida en 2012", 
+        "foto": "/images/equipos/jugadoras/BertaMadrazo.jpg" 
+      },
+      { 
+        "nombre": "Sofia Oses", 
+        "rol": "Nacida en 2011", 
+        "foto": "/images/equipos/jugadoras/SofiaOses.jpg" 
+      }
+    ]
+  },
+  {
+    "nombre": "Cadete Femenino",
+    "descripcion": "Jugadoras nacidas en los años 2009 y 2010.",
+    "imagen": "/images/equipos/femenino/CadeteFem.jpeg",
+    "entrenadores": [
+      { 
+        "nombre": "Javier Suarez-Olea", 
+        "rol": "Entrenador Principal", 
+        "foto": "/images/equipos/entrenadores/JavierSuarezOlea.jpg" 
+      },
+      { 
+        "nombre": "Ana Pombo", 
+        "rol": "Entrenadora Asistente", 
+        "foto": "/images/equipos/entrenadores/AnaPombo.jpg" 
+      },
+      { 
+        "nombre": "Marta Izaguirre", 
+        "rol": "Delegada de Equipo", 
+        "foto": "/images/equipos/entrenadores/MartaIzaguirre.jpg" 
+      }
+    ],
+    "miembros": [
+      { 
+        "nombre": "Rebeca Cebrian", 
+        "rol": "Nacida en 2009", 
+        "foto": "/images/equipos/jugadoras/RebecaCebrian.jpg" 
+      },
+      { 
+        "nombre": "Sofia Bosque", 
+        "rol": "Nacida en 2010", 
+        "foto": "/images/equipos/jugadoras/SofiaBosque.jpg" 
+      },
+      { 
+        "nombre": "Valeria Garcia", 
+        "rol": "Nacida en 2009", 
+        "foto": "/images/equipos/jugadoras/ValeriaGarcia.jpg" 
+      },
+      { 
+        "nombre": "Adina Crudu", 
+        "rol": "Nacida en 2010", 
+        "foto": "/images/equipos/jugadoras/AdinaCrudu.jpg" 
+      },
+      { 
+        "nombre": "Lara Pila", 
+        "rol": "Nacida en 2009", 
+        "foto": "/images/equipos/jugadoras/LaraPila.jpg" 
+      },
+      { 
+        "nombre": "Alba Sanchez", 
+        "rol": "Nacida en 2010", 
+        "foto": "/images/equipos/jugadoras/AlbaSanchez.jpg" 
+      },
+      { 
+        "nombre": "Maria Gonzalez", 
+        "rol": "Nacida en 2009", 
+        "foto": "/images/equipos/jugadoras/MariaGonzalez.jpg" 
+      },
+      { 
+        "nombre": "Celia Balbas", 
+        "rol": "Nacida en 2010", 
+        "foto": "/images/equipos/jugadoras/CeliaBalbas.jpg" 
+      },
+      { 
+        "nombre": "Edurne Gil", 
+        "rol": "Nacida en 2009", 
+        "foto": "/images/equipos/jugadoras/EdurneGil.jpg" 
+      },
+      { 
+        "nombre": "Ines Linares", 
+        "rol": "Nacida en 2010", 
+        "foto": "/images/equipos/jugadoras/InesLinares.jpg" 
+      },
+      { 
+        "nombre": "Maria Martinez", 
+        "rol": "Nacida en 2009", 
+        "foto": "/images/equipos/jugadoras/MariaMartinez.jpg" 
+      }
+    ]
+  },
+  {
+    "nombre": "Junior Femenino",
+    "descripcion": "Jugadoras nacidas en los años 2007 y 2008.",
+    "imagen": "/images/equipos/femenino/JuniorFem2024.jpg",
+    "entrenadores": [
+      { 
+        "nombre": "Javier Suarez-Olea", 
+        "rol": "Entrenador Principal", 
+        "foto": "/images/equipos/entrenadores/JavierSuarezOlea.jpg" 
+      },
+      { 
+        "nombre": "Arturo Flores", 
+        "rol": "Entrenador Asistente", 
+        "foto": "/images/equipos/entrenadores/ArturoFlores.jpg" 
+      },
+      { 
+        "nombre": "Ana Pombo", 
+        "rol": "Entrenadora Asistente", 
+        "foto": "/images/equipos/entrenadores/AnaPombo.jpg" 
+      },
+      { 
+        "nombre": "Marta Izaguirre", 
+        "rol": "Delegada de Equipo", 
+        "foto": "/images/equipos/entrenadores/MartaIzaguirre.jpg" 
+      }
+    ],
+    "miembros": [
+      { 
+        "nombre": "Estela Amo", 
+        "rol": "Nacida en 2007", 
+        "foto": "/images/equipos/jugadoras/EstelaAmo.jpg" 
+      },
+      { 
+        "nombre": "Laura Gonzalez", 
+        "rol": "Nacida en 2008", 
+        "foto": "/images/equipos/jugadoras/LauraGonzalez.jpg" 
+      },
+      { 
+        "nombre": "Jimena Cobo", 
+        "rol": "Nacida en 2007", 
+        "foto": "/images/equipos/jugadoras/JimenaCobo.jpg" 
+      },
+      { 
+        "nombre": "Maria Moxo", 
+        "rol": "Nacida en 2008", 
+        "foto": "/images/equipos/jugadoras/MariaMoxo.jpg" 
+      },
+      { 
+        "nombre": "Sara Perez", 
+        "rol": "Nacida en 2007", 
+        "foto": "/images/equipos/jugadoras/SaraPerez.jpg" 
+      },
+      { 
+        "nombre": "Alba Perez", 
+        "rol": "Nacida en 2008", 
+        "foto": "/images/equipos/jugadoras/AlbaPerez.jpg" 
+      },
+      { 
+        "nombre": "Andrea Gonzalez", 
+        "rol": "Nacida en 2007", 
+        "foto": "/images/equipos/jugadoras/AndreaGonzalez.jpg" 
+      },
+      { 
+        "nombre": "Ana Ruiz", 
+        "rol": "Nacida en 2008", 
+        "foto": "/images/equipos/jugadoras/AnaRuiz.jpg" 
+      },
+      { 
+        "nombre": "Jimena Balbas", 
+        "rol": "Nacida en 2007", 
+        "foto": "/images/equipos/jugadoras/JimenaBalbas.jpg" 
+      },
+      { 
+        "nombre": "Alba Linares", 
+        "rol": "Nacida en 2008", 
+        "foto": "/images/equipos/jugadoras/AlbaLinares.jpg" 
+      }
+    ]
+  }
+]
