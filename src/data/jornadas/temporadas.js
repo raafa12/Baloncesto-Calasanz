@@ -34,30 +34,30 @@ export async function obtenerJornadas(temporadaFiltro = null) {
           continue;
         }
 
-        // Solo incluir si tiene fechaInicio válida
-        if (jornada?.info?.fechaInicio) {
-          jornadas.push(jornada);
-        } else {
-          console.warn(`⚠️  Archivo ignorado por falta de info.fechaInicio: ${ruta}`);
-        }
+        // Añadimos todas las jornadas sin comprobar fechaInicio
+        jornadas.push(jornada);
       } catch (err) {
         console.error(`❌ Error al cargar ${ruta}:`, err);
       }
     }
 
-    // Ordenar por fecha de inicio descendente
+    // Ordenar por fecha de inicio descendente (si existe)
     return jornadas.sort((a, b) => {
-      const fechaA = parseFecha(a.info.fechaInicio);
-      const fechaB = parseFecha(b.info.fechaInicio);
+      const fechaA = a.info?.fechaInicio ? parseFecha(a.info.fechaInicio) : null;
+      const fechaB = b.info?.fechaInicio ? parseFecha(b.info.fechaInicio) : null;
 
+      // Si ambas tienen fecha, ordenar por fecha
       if (fechaA && fechaB) {
         const diff = fechaB - fechaA;
         if (diff !== 0) return diff;
       }
+      // Si sólo una tiene fecha, la que tiene fecha va primero
+      else if (fechaA) return -1;
+      else if (fechaB) return 1;
 
-      // Si empatan, ordenar por número si ambos lo tienen
-      const numA = a.info.numero ?? 0;
-      const numB = b.info.numero ?? 0;
+      // Si empatan o ninguna tiene fecha, ordenar por número si ambos lo tienen
+      const numA = a.info?.numero ?? 0;
+      const numB = b.info?.numero ?? 0;
       return numB - numA;
     });
   } catch (error) {
