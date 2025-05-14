@@ -1,0 +1,59 @@
+{
+    "info": {
+      "numero": 2,
+      "temporada": "24-25",
+      "fechaInicio": "10-05-2025",
+      "fechaFin": "10-05-2025",
+      "tipo": "Amistoso Final de Temporada"
+    },
+    "resultados": [
+      {
+        "categoria": "Benjamin Femenina",
+        "local": "VENTANAS ARSAN ASTILLERO",
+        "visitante": "CALASANZ",
+        "puntosLocal": 68,
+        "puntosVisitante": 49,
+        "fecha": "10-05-2025",
+        "hora": "9:30",
+        "lugar": "Pabellon la Cantabrica",
+        "jugadorDestacado": "",
+        "comentarioJugador": ""
+      },
+      {
+        "categoria": "Intantil Masculina",
+        "local": "CANTBASKET04 2012",
+        "visitante": "CALASANZ",
+        "puntosLocal": 45,
+        "puntosVisitante": 43,
+        "fecha": "10-05-2025",
+        "hora": "11:00",
+        "lugar": "Pabellon  Marcelino Botín",
+        "jugadorDestacado": "Mario Domínguez",
+        "comentarioJugador": "Solida aportación ofensiva con 18 puntos"
+      },
+      {
+        "categoria": "Alevin Femenina",
+        "local": "BEZANA B",
+        "visitante": "CALASANZ",
+        "puntosLocal": 68,
+        "puntosVisitante": 49,
+        "fecha": "10-05-2025",
+        "hora": "11:30",
+        "lugar": "Pabellon Mompia",
+        "jugadorDestacado": "",
+        "comentarioJugador": ""
+      },
+      {
+        "categoria": "Junior Masculina",
+        "local": "CALASANZ",
+        "visitante": "RAISAN ELOY VILLANUEVA",
+        "puntosLocal": 56,
+        "puntosVisitante": 69,
+        "fecha": "10-05-2025",
+        "hora": "12:30",
+        "lugar": "Pabellon Calasanz",
+        "jugadorDestacado": "Gonzalo Vega",
+        "comentarioJugador": "Eficiente en ambos lados de la cancha"
+      }
+    ]
+}
