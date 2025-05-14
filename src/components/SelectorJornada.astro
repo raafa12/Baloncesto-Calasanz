@@ -94,7 +94,7 @@ const formatearFecha = (fechaStr) => {
       const selected = this.value;
       const params = new URLSearchParams(window.location.search);
       params.set('jornada', selected);
-      window.location.search = params.toString();
+      window.location.href = `${window.location.pathname}?${params.toString()}`;
     });
   });
 </script>
