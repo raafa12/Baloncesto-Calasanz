@@ -1,6 +1,6 @@
 [
   {
-    "nombre": "Benjamín Femenino",
+    "nombre": "Benjamín Femenina",
     "descripcion": "Jugadoras nacidas en los años 2015 y 2016.",
     "imagen": "/images/equipos/femenino/BenjaFem.jpeg",
     "entrenadores": [
@@ -79,7 +79,7 @@
     ]
   },
   {
-    "nombre": "Alevín Femenino",
+    "nombre": "Alevín Femenina",
     "descripcion": "Jugadoras nacidas en los años 2013 y 2014.",
     "imagen": "/images/equipos/femenino/AlevinFem.jpeg",
     "entrenadores": [
@@ -138,7 +138,7 @@
     ]
   },
   {
-    "nombre": "Alevín Femenino B",
+    "nombre": "Alevín Femenina B",
     "descripcion": "Jugadoras nacidas en los años 2013 y 2014.",
     "imagen": "/images/equipos/femenino/AlevinBFem.jpeg",
     "entrenadores": [
@@ -205,7 +205,7 @@
         "foto": "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/d326c3c3-9277-4db7-a9c3-f9c7462a6c86.jpg" 
       },
       { 
-        "nombre": "Vera Garcia", 
+        "nombre": "Vera García", 
         "rol": "Nacida en 2014", 
         "foto": "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/85eca483-23af-456c-b46a-fa09fdb4d0b0.jpg" 
       },
@@ -232,7 +232,7 @@
     ]
   },
   {
-    "nombre": "Infantil Femenino",
+    "nombre": "Infantil Femenina",
     "descripcion": "Jugadoras nacidas en los años 2011 y 2012.",
     "imagen": "/images/equipos/femenino/InfantilFem.jpeg",
     "entrenadores": [
@@ -316,7 +316,7 @@
     ]
   },
   {
-    "nombre": "Cadete Femenino",
+    "nombre": "Cadete Femenina",
     "descripcion": "Jugadoras nacidas en los años 2009 y 2010.",
     "imagen": "/images/equipos/femenino/CadeteFem.jpeg",
     "entrenadores": [
@@ -395,7 +395,7 @@
     ]
   },
   {
-    "nombre": "Junior Femenino",
+    "nombre": "Junior Femenina",
     "descripcion": "Jugadoras nacidas en los años 2007 y 2008.",
     "imagen": "/images/equipos/femenino/JuniorFem2024.jpg",
     "entrenadores": [
