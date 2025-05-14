@@ -4,6 +4,13 @@ const { jornadas = [] } = Astro.props;
 const url = new URL(Astro.request.url);
 const jornadaActual = url.searchParams.get("jornada") || "ultima";
 
+// Determinar el valor de la jornada actual para la selección del dropdown
+// Si es "ultima", usaremos el número de la primera jornada (que es la más reciente, según la ordenación)
+let jornadaSeleccionadaNumero = jornadaActual;
+if (jornadaActual === "ultima" && jornadas.length > 0) {
+  jornadaSeleccionadaNumero = String(jornadas[0].info.numero);
+}
+
 // Función para determinar la semana del mes (1a, 2a, 3a, 4a, 5a)
 const obtenerSemanaMes = (fechaStr) => {
   try {
@@ -68,8 +75,8 @@ const formatearFecha = (fechaStr) => {
           
         return (
           <option 
-            value={jornada.info.numero}
-            selected={String(jornadaActual) === String(jornada.info.numero)}
+            value={String(jornada.info.numero)}
+            selected={String(jornadaSeleccionadaNumero) === String(jornada.info.numero)}
             data-es-amistoso={esAmistoso}
           >
             {textoOpcion}
@@ -92,13 +99,12 @@ const formatearFecha = (fechaStr) => {
     
     selector.addEventListener('change', function () {
       const selected = this.value;
-      const params = new URLSearchParams(window.location.search);
-      params.set('jornada', selected);
-      window.location.href = `${window.location.pathname}?${params.toString()}`;
+      const currentUrl = new URL(window.location.href);
+      currentUrl.searchParams.set('jornada', selected);
+      window.location.href = currentUrl.toString();
     });
   });
 </script>
-
 
 
 
