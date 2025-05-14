@@ -19,14 +19,13 @@ export async function obtenerJornadas(temporadaFiltro = null) {
   const jornadas = [];
 
   try {
-    // Cambiamos eager: true a eager: false para evitar caching durante la compilación
-    const jornadasModulos = import.meta.glob('./**/*.json', { eager: false });
+    // Cambiamos eager: false a eager: true para asegurar que los módulos se carguen en producción
+    const jornadasModulos = import.meta.glob('./**/*.json', { eager: true });
 
-    // Cargamos dinámicamente cada módulo
+    // Procesamos cada módulo ya cargado (no necesitamos awaits)
     for (const ruta in jornadasModulos) {
       try {
-        const modulo = await jornadasModulos[ruta]();
-        const jornada = modulo.default;
+        const jornada = jornadasModulos[ruta];
 
         // Filtramos por temporada si se especifica
         if (temporadaFiltro && jornada?.info?.temporada && 
