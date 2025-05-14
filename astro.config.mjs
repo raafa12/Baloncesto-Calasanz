@@ -10,7 +10,4 @@ export default defineConfig({
   adapter: netlify({
     edgeMiddleware: true
   }),
-  experimental: {
-    session: true
-  }
 });
