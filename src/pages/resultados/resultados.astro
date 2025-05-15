@@ -24,14 +24,6 @@ const seccionSeleccionada = Astro.url.searchParams.get('seccion') || "masculina"
       <div class="flex space-x-4">
       </div>
     </div>
-    <!-- Selector Jornada -->
-    <div class="bg-green-900 bg-opacity-20 rounded-xl p-6 mb-8 shadow-md">
-      <SelectorJornada 
-        jornadas={jornadas}
-        jornadaSeleccionada={jornadaNumeroSeleccionada}
-        seccion={seccionSeleccionada}
-      />
-    </div>
 
     <!-- Pestañas de Sección mejoradas -->
     <div class="flex mb-8 overflow-x-auto no-scrollbar">
@@ -59,6 +51,15 @@ const seccionSeleccionada = Astro.url.searchParams.get('seccion') || "masculina"
           Sección Femenina
         </div>
       </a>
+    </div>
+
+        <!-- Selector Jornada -->
+    <div class="bg-green-900 bg-opacity-20 rounded-xl p-6 mb-8 shadow-md">
+      <SelectorJornada 
+        jornadas={jornadas}
+        jornadaSeleccionada={jornadaNumeroSeleccionada}
+        seccion={seccionSeleccionada}
+      />
     </div>
 
     <!-- Resultados mejorados -->
