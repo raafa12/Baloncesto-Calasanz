@@ -4,31 +4,58 @@ import ResultadosJornadaConActuaciones from '../../../components/resultados/Resu
 import SelectorJornada from '../../../components/resultados/jornada/SelectorJornada.astro';
 import { obtenerJornadas } from '../../../data/jornadas/temporadas';
 
+// Definir interfaces para los tipos
+interface JornadaInfo {
+  numero: number;
+  fechaInicio?: string;
+  fechaFin?: string;
+  tipo?: string;
+  mensaje?: string;
+}
+
+interface Jornada {
+  info: JornadaInfo;
+  resultados: any[];
+}
+
 // Obtener todas las jornadas disponibles
-const jornadas = await obtenerJornadas();
+const jornadas = await obtenerJornadas() as Jornada[];
 
 // Parámetros de URL
 const jornadaNumeroSeleccionada = Astro.params.id || "ultima";
-const seccionSeleccionada = Astro.url.searchParams.get('seccion') || "masculina";
+const seccionSeleccionada = Astro.url.searchParams.get('seccion') || "todas";
+
+// Determinar el título de la página con el número de jornada
+let tituloPagina = "Resultados";
+if (jornadaNumeroSeleccionada !== "ultima") {
+  tituloPagina = `Resultados Jornada ${jornadaNumeroSeleccionada}`;
+} else if (jornadas.length > 0) {
+  tituloPagina = `Resultados Última Jornada`;
+}
 
 // Buscar la jornada específica de forma dinámica
-let jornadaSeleccionada = null;
+let jornadaSeleccionada: Jornada | { info: { numero: string | number; mensaje: string } } | null = null;
 if (jornadaNumeroSeleccionada !== "ultima") {
-  jornadaSeleccionada = jornadas.find(j => j.info.numero === parseInt(jornadaNumeroSeleccionada));
+  const jornadaEncontrada = jornadas.find((j: Jornada) => j.info.numero === parseInt(jornadaNumeroSeleccionada));
 
   // Si no se encuentra, mostrar un mensaje de error o redirigir
-  if (!jornadaSeleccionada) {
+  if (jornadaEncontrada) {
+    jornadaSeleccionada = jornadaEncontrada;
+  } else {
     jornadaSeleccionada = { info: { numero: jornadaNumeroSeleccionada, mensaje: "Jornada no encontrada" } };
   }
+} else if (jornadas.length > 0) {
+  // Si es "ultima", tomar la primera jornada (que ya está ordenada de mayor a menor)
+  jornadaSeleccionada = jornadas[0];
 }
 ---
 
-<Layout title={`Resultados J${jornadaNumeroSeleccionada} - CB Calasanz`}>
+<Layout title={`${tituloPagina} - CB Calasanz`} description="Resultados de la jornada del Club Baloncesto Calasanz">
   <div class="container mx-auto px-4 py-8">
     <!-- Header con animación -->
     <div class="flex flex-col md:flex-row justify-between items-center mb-16">
       <h1 class="text-3xl md:text-4xl font-bold text-green-200 mb-4 md:mb-0 relative">
-        Resultados
+        {tituloPagina}
         <span class="absolute -bottom-2 left-0 w-1/3 h-1 bg-green-400 rounded-full"></span>
       </h1>
 
@@ -42,7 +69,7 @@ if (jornadaNumeroSeleccionada !== "ultima") {
       </div>
     </div>
 
-    <!-- Selector Jornada -->
+    <!-- Selector Jornada con botones de sección integrados -->
     <div class="bg-green-900 bg-opacity-20 rounded-xl p-6 mb-12 shadow-md">
       <SelectorJornada 
         jornadas={jornadas}
@@ -51,43 +78,15 @@ if (jornadaNumeroSeleccionada !== "ultima") {
       />
     </div>
 
-    <!-- Pestañas de Sección mejoradas -->
-    <div class="flex mb-12 overflow-x-auto no-scrollbar">
-      <a href={`?seccion=masculina`} 
-         class={`flex-1 py-3 px-6 text-center rounded-t-lg transition-all duration-300 font-medium 
-                ${seccionSeleccionada !== 'femenina'
-                 ? 'bg-blue-500 bg-opacity-20 text-white border-b-2 border-blue-500'
-                 : 'text-gray-400 hover:text-white hover:bg-green-900 hover:bg-opacity-20'}`}>
-        <div class="flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-          </svg>
-          Sección Masculina
-        </div>
-      </a>
-      <a href={`?seccion=femenina`} 
-         class={`flex-1 py-3 px-6 text-center rounded-t-lg transition-all duration-300 font-medium
-                ${seccionSeleccionada === 'femenina'
-                 ? 'bg-pink-500 bg-opacity-20 text-white border-b-2 border-pink-500'
-                 : 'text-gray-400 hover:text-white hover:bg-green-900 hover:bg-opacity-20'}`}>
-        <div class="flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-          </svg>
-          Sección Femenina
-        </div>
-      </a>
-    </div>
-
     <!-- Resultados -->
-    {jornadaSeleccionada?.mensaje ? (
+    {(jornadaSeleccionada && 'mensaje' in jornadaSeleccionada.info) ? (
       <div class="bg-red-900 bg-opacity-70 text-white p-6 rounded-lg shadow-lg animate-pulse">
         <div class="flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mr-4 text-red-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
           </svg>
           <div>
-            <h3 class="text-xl font-bold mb-1">{jornadaSeleccionada.mensaje}</h3>
+            <h3 class="text-xl font-bold mb-1">{jornadaSeleccionada.info.mensaje}</h3>
             <p>Lo sentimos, no pudimos encontrar la jornada solicitada.</p>
           </div>
         </div>
@@ -95,8 +94,8 @@ if (jornadaNumeroSeleccionada !== "ultima") {
     ) : (
       <div class="transition-all duration-300 ease-in-out">
         <ResultadosJornadaConActuaciones 
-          jornadaNumero={jornadaNumeroSeleccionada}
-          seccionSeleccionada={seccionSeleccionada}
+          jornada={jornadaNumeroSeleccionada}
+          seccion={seccionSeleccionada}
         />
       </div>
     )}

@@ -3,16 +3,40 @@ import ResultadoCard from './ResultadoCard.astro';
 import { secciones } from '../../data/equipos';
 import { obtenerUltimaJornada, obtenerJornadaPorNumero } from '../../data/jornadas/temporadas';
 
+// Interfaces para tipado
+interface Resultado {
+  categoria: string;
+  [key: string]: any;
+}
+
+interface Jornada {
+  info: {
+    numero: string | number;
+    fechaInicio?: string;
+    fechaFin?: string;
+    [key: string]: any;
+  };
+  resultados: Resultado[];
+  [key: string]: any;
+}
+
+interface Props {
+  jornada?: string;
+  seccion?: string;
+}
+
 // Props
-let { jornada: jornadaNumero = "ultima", seccion: seccionSeleccionada = "masculina" } = Astro.props;
+let { jornada: jornadaNumero = "ultima", seccion: seccionSeleccionada = "todas" } = Astro.props as Props;
 
 // Estado inicial
-let jornada = null;
-let resultadosFiltrados = [];
+let jornada: Jornada | null = null;
+let resultadosFiltrados: Resultado[] = [];
+let resultadosMasculinos: Resultado[] = [];
+let resultadosFemeninos: Resultado[] = [];
 let seccion = { nombre: "Sección", color: "gray-500" };
 
 // Función para detectar la sección de una categoría
-function detectarSeccion(categoria) {
+function detectarSeccion(categoria: string | null): string | null {
   if (!categoria) return null;
   
   const categoriaLower = categoria.toLowerCase();
@@ -34,32 +58,49 @@ function detectarSeccion(categoria) {
 }
 
 // Función para obtener la jornada
-async function obtenerJornada() {
+async function obtenerJornada(): Promise<Jornada | null> {
   try {
     // Cargar la jornada
     if (jornadaNumero === "ultima") {
-      jornada = await obtenerUltimaJornada();
+      jornada = await obtenerUltimaJornada() as Jornada;
     } else {
-      jornada = await obtenerJornadaPorNumero(parseInt(jornadaNumero));
+      jornada = await obtenerJornadaPorNumero(parseInt(jornadaNumero)) as Jornada;
     }
 
     // Actualizar sección
-    seccion = secciones[seccionSeleccionada] || { nombre: "Sección", color: "gray-500" };
+    seccion = secciones[seccionSeleccionada as keyof typeof secciones] || { nombre: "Sección", color: "gray-500" };
 
     // Filtrar resultados por sección
     if (jornada) {
-      resultadosFiltrados = jornada.resultados.filter(r => {
+      // Filtrar resultados para la sección masculina
+      resultadosMasculinos = jornada.resultados.filter((r: Resultado) => {
         const seccionDetectada = detectarSeccion(r.categoria);
-        
-        // Si la sección no se detecta, mostramos solo si coincide con la sección actual
-        // para evitar duplicados entre ambas columnas
-        if (seccionDetectada === null) {
-          return seccionSeleccionada === "masculina";
-        }
-        
-        // Comparamos con la sección seleccionada
-        return seccionDetectada === seccionSeleccionada;
+        return seccionDetectada === "masculina" || (seccionDetectada === null);
       });
+      
+      // Filtrar resultados para la sección femenina
+      resultadosFemeninos = jornada.resultados.filter((r: Resultado) => {
+        const seccionDetectada = detectarSeccion(r.categoria);
+        return seccionDetectada === "femenina";
+      });
+      
+      // Asignar resultados filtrados según la sección seleccionada
+      if (seccionSeleccionada === "todas") {
+        resultadosFiltrados = jornada.resultados;
+      } else {
+        resultadosFiltrados = jornada.resultados.filter((r: Resultado) => {
+          const seccionDetectada = detectarSeccion(r.categoria);
+          
+          // Si la sección no se detecta, mostramos solo si coincide con la sección actual
+          // para evitar duplicados entre ambas columnas
+          if (seccionDetectada === null) {
+            return seccionSeleccionada === "masculina";
+          }
+          
+          // Comparamos con la sección seleccionada
+          return seccionDetectada === seccionSeleccionada;
+        });
+      }
     }
 
     return jornada;
@@ -73,7 +114,7 @@ async function obtenerJornada() {
 await obtenerJornada();
 
 // Formatear la fecha de la jornada
-function formatearFechaJornada(jornada) {
+function formatearFechaJornada(jornada: Jornada | null): string {
   if (!jornada?.info) return "";
   
   const { fechaInicio, fechaFin } = jornada.info;
@@ -81,7 +122,7 @@ function formatearFechaJornada(jornada) {
   if (!fechaInicio) return "";
   
   // Función para formatear una fecha individual
-  const formatearFecha = (fechaStr) => {
+  const formatearFecha = (fechaStr: string): string => {
     if (!fechaStr) return "";
     
     // Si es formato DD-MM-YYYY
@@ -105,7 +146,7 @@ function formatearFechaJornada(jornada) {
 }
 ---
 
-<script>
+<script define:vars={{ jornadaNumero, seccionSeleccionada }}>
   // Función para actualizar la URL
   function actualizarURL(nuevaJornada, nuevaSeccion) {
     const url = new URL(window.location.href);
@@ -118,16 +159,14 @@ function formatearFechaJornada(jornada) {
   // Escuchar cambios en la URL
   window.addEventListener('popstate', async () => {
     const nuevaJornada = new URLSearchParams(window.location.search).get('jornada') || "ultima";
-    const nuevaSeccion = new URLSearchParams(window.location.search).get('seccion') || "masculina";
+    const nuevaSeccion = new URLSearchParams(window.location.search).get('seccion') || "todas";
     
     // Actualizar props
     if (nuevaJornada !== jornadaNumero || nuevaSeccion !== seccionSeleccionada) {
-      jornadaNumero = nuevaJornada;
-      seccionSeleccionada = nuevaSeccion;
-      await obtenerJornada();
+      location.reload();
     }
   });
-</script>-
+</script>
 
 {!jornada ? (
   <div class="bg-red-900 text-white p-4 rounded">
@@ -135,22 +174,83 @@ function formatearFechaJornada(jornada) {
   </div>
 ) : (
   <div class="resultados-jornada">
-    <div class="grid grid-cols-1 gap-6">
-      {resultadosFiltrados.length > 0 ? (
-        resultadosFiltrados.map((resultado) => (
-          <ResultadoCard 
-            resultado={resultado} 
-            seccion={seccionSeleccionada}
-          />
-        ))
-      ) : (
-        <div class="text-gray-400 text-center py-6 bg-green-950 bg-opacity-40 rounded-lg">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <p>No hay resultados disponibles para esta sección en la jornada seleccionada.</p>
+    {seccionSeleccionada === "todas" ? (
+      <div>
+        <div class="grid md:grid-cols-2 gap-8 mb-6">
+          <div>
+            
+            {resultadosMasculinos.length > 0 ? (
+              <div class="grid grid-cols-1 gap-6">
+                {resultadosMasculinos.map((resultado) => (
+                  <ResultadoCard 
+                    resultado={resultado} 
+                    seccion="masculina"
+                  />
+                ))}
+              </div>
+            ) : (
+              <div class="text-gray-400 text-center py-6 bg-green-950 bg-opacity-40 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                No hay resultados disponibles
+              </div>
+            )}
+          </div>
+          
+          <div>
+            
+            {resultadosFemeninos.length > 0 ? (
+              <div class="grid grid-cols-1 gap-6">
+                {resultadosFemeninos.map((resultado) => (
+                  <ResultadoCard 
+                    resultado={resultado} 
+                    seccion="femenina"
+                  />
+                ))}
+              </div>
+            ) : (
+              <div class="text-gray-400 text-center py-6 bg-green-950 bg-opacity-40 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                No hay resultados disponibles
+              </div>
+            )}
+          </div>
         </div>
-      )}
-    </div>
+      </div>
+    ) : (
+      <div>
+        
+        <div class="grid grid-cols-1 gap-6">
+          {resultadosFiltrados.length > 0 ? (
+            resultadosFiltrados.map((resultado) => (
+              <ResultadoCard 
+                resultado={resultado} 
+                seccion={seccionSeleccionada}
+              />
+            ))
+          ) : (
+            <div class="text-gray-400 text-center py-6 bg-green-950 bg-opacity-40 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p>No hay resultados disponibles para esta sección en la jornada seleccionada.</p>
+            </div>
+          )}
+        </div>
+      </div>
+    )}
+    
+    {/* Mensaje cuando no hay resultados en ninguna sección (solo para "todas") */}
+    {seccionSeleccionada === "todas" && resultadosMasculinos.length === 0 && resultadosFemeninos.length === 0 && (
+      <div class="text-gray-400 text-center py-6 bg-green-950 bg-opacity-40 rounded-lg col-span-2 mt-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <p>No hay resultados disponibles para esta jornada.</p>
+      </div>
+    )}
   </div>
 )}
