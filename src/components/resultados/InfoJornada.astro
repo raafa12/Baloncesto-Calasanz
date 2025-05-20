@@ -1,0 +1,96 @@
+---
+import { obtenerUltimaJornada, obtenerJornadaPorNumero } from '../../data/jornadas/temporadas';
+
+// Props
+let { jornada: jornadaNumero = "ultima" } = Astro.props;
+
+// Estado inicial
+let jornada = null;
+
+// Función para obtener la jornada
+async function obtenerJornada() {
+  try {
+    // Cargar la jornada
+    if (jornadaNumero === "ultima") {
+      jornada = await obtenerUltimaJornada();
+    } else {
+      jornada = await obtenerJornadaPorNumero(parseInt(jornadaNumero));
+    }
+    return jornada;
+  } catch (err) {
+    console.error("Error cargando la jornada:", err);
+    return null;
+  }
+}
+
+// Cargar la jornada inicial
+await obtenerJornada();
+
+// Formatear la fecha de la jornada
+function formatearFechaJornada(jornada) {
+  if (!jornada?.info) return "";
+  
+  const { fechaInicio, fechaFin } = jornada.info;
+  
+  if (!fechaInicio) return "";
+  
+  // Función para formatear una fecha individual
+  const formatearFecha = (fechaStr) => {
+    if (!fechaStr) return "";
+    
+    // Si es formato DD-MM-YYYY
+    if (/^\d{2}-\d{2}-\d{4}$/.test(fechaStr)) {
+      const [dia, mes, anio] = fechaStr.split("-");
+      const meses = [
+        "enero", "febrero", "marzo", "abril", "mayo", "junio",
+        "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"
+      ];
+      return `${dia} de ${meses[parseInt(mes) - 1]}`;
+    }
+    
+    return fechaStr;
+  };
+  
+  if (fechaInicio && fechaFin && fechaInicio !== fechaFin) {
+    return `${formatearFecha(fechaInicio)} - ${formatearFecha(fechaFin)}`;
+  }
+  
+  return formatearFecha(fechaInicio);
+}
+---
+
+<script>
+  // Función para actualizar la URL
+  function actualizarURL(nuevaJornada) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('jornada', nuevaJornada || jornadaNumero);
+    window.history.pushState({}, '', url.toString());
+    window.dispatchEvent(new PopStateEvent('popstate'));
+  }
+
+  // Escuchar cambios en la URL
+  window.addEventListener('popstate', async () => {
+    const nuevaJornada = new URLSearchParams(window.location.search).get('jornada') || "ultima";
+    
+    if (nuevaJornada !== jornadaNumero) {
+      jornadaNumero = nuevaJornada;
+      await obtenerJornada();
+    }
+  });
+</script>
+
+{!jornada ? (
+  <div class="bg-red-900 text-white p-4 rounded">
+    No se encontraron datos para la jornada seleccionada. (Jornada: {jornadaNumero})
+  </div>
+) : (
+  <div class="info-jornada mb-8 text-center">
+    <div class="bg-green-800 bg-opacity-30 rounded-lg inline-block px-6 py-4">
+      <h3 class="text-xl font-bold text-white">
+        Jornada {jornada.info.numero}
+        {jornada.info.tipo && <span class="block text-sm font-normal text-green-300">{jornada.info.tipo}</span>}
+      </h3>
+      <p class="text-green-200 mt-1">{formatearFechaJornada(jornada)}</p>
+    </div>
+  </div>
+)}

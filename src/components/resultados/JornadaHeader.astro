@@ -1,0 +1,25 @@
+---
+interface Props {
+  jornada: any;
+  seccion: string;
+}
+
+const { jornada, seccion } = Astro.props;
+---
+
+<div class="bg-gray-800/50 rounded-lg p-6 mb-8">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-2xl font-bold text-green-200">
+      Jornada {jornada.info.numero}
+    </h2>
+    <span class="text-gray-400">
+      {jornada.info.fecha}
+    </span>
+  </div>
+  
+  <div class="flex items-center gap-4">
+    <span class="text-green-400">
+      {seccion === 'masculina' ? 'Sección Masculina' : 'Sección Femenina'}
+    </span>
+  </div>
+</div>

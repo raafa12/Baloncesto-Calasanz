@@ -1,0 +1,200 @@
+---
+const { jornadas = [], jornadaSeleccionada = "ultima", seccionSeleccionada = "masculina" } = Astro.props;
+
+// Asegurarse de que las jornadas estén en el formato correcto
+jornadas.sort((a, b) => {
+  const numA = a?.info?.numero || 0;
+  const numB = b?.info?.numero || 0;
+  return numB - numA;
+});
+
+// Función para obtener el texto a mostrar de una jornada
+const obtenerTextoJornada = (jornada) => {
+  const { info } = jornada;
+  
+  // Comprobar si hay información de la jornada
+  if (!info) return "Jornada sin información";
+  
+  let texto = `Jornada ${info.numero}`;
+  
+  // Añadir información de fechas si están disponibles
+  if (info.fechaInicio) {
+    const formatoFecha = (fecha) => {
+      if (!fecha) return "";
+      // Convertir formato DD-MM-YYYY a DD/MM
+      if (/^\d{2}-\d{2}-\d{4}$/.test(fecha)) {
+        const [dia, mes] = fecha.split("-");
+        return `${dia}/${mes}`;
+      }
+      return fecha;
+    };
+    
+    texto += ` (${formatoFecha(info.fechaInicio)}`;
+    
+    if (info.fechaFin && info.fechaFin !== info.fechaInicio) {
+      texto += ` - ${formatoFecha(info.fechaFin)}`;
+    }
+    
+    texto += ")";
+  }
+  
+  // Añadir tipo de jornada si está disponible
+  if (info.tipo) {
+    texto += ` - ${info.tipo}`;
+  }
+  
+  return texto;
+};
+
+// Función para ir a una jornada
+const irAJornada = (numeroJornada) => {
+  const url = new URL(window.location.href);
+  url.searchParams.set('jornada', numeroJornada);
+  window.location.href = url.toString();
+};
+
+// Ordenar jornadas por número (de mayor a menor)
+const jornadasOrdenadas = jornadas.sort((a, b) => {
+  return (b?.info?.numero || 0) - (a?.info?.numero || 0);
+});
+
+// Determinar la jornada actual
+const jornadaActual = jornadaSeleccionada === "ultima" 
+  ? jornadas[0]?.info?.numero 
+  : parseInt(jornadaSeleccionada) || jornadas[0]?.info?.numero;
+
+---
+
+<div class="selector-jornada">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <!-- Botón Jornada Anterior -->
+    <button 
+      id="btn-jornada-anterior"
+      class="flex items-center justify-center bg-green-800 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+      onclick="cambiarJornada('anterior')"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      Jornada Anterior
+    </button>
+    
+    <!-- Selector de Jornada -->
+    <div class="relative">
+      <select 
+        id="select-jornada"
+        class="block w-full bg-green-950 text-white border border-green-700 rounded-lg py-2 px-4 appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-green-500"
+      >
+        {jornadasOrdenadas.map((jornada) => (
+          <option 
+            value={jornada.info.numero} 
+            selected={jornadaActual === jornada.info.numero}
+          >
+            {obtenerTextoJornada(jornada)}
+          </option>
+        ))}
+      </select>
+      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
+        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+        </svg>
+      </div>
+    </div>
+    
+    <!-- Botón Jornada Siguiente -->
+    <button 
+      id="btn-jornada-siguiente"
+      class="flex items-center justify-center bg-green-800 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+      onclick="cambiarJornada('siguiente')"
+    >
+      <span>Jornada Siguiente</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  // Obtener números de jornadas disponibles
+  const jornadasDisponibles = jornadas.map(j => j.info?.numero).filter(n => n !== undefined);
+  
+  // Función para cambiar de jornada
+  function cambiarJornada(direccion) {
+    const selectElement = document.getElementById('select-jornada');
+    const jornadaActual = parseInt(selectElement.value);
+    
+    if (!jornadaActual) return;
+    
+    // Encontrar índice actual
+    const indiceActual = jornadasDisponibles.indexOf(jornadaActual);
+    
+    if (indiceActual === -1) return;
+    
+    let nuevoIndice;
+    if (direccion === 'anterior') {
+      // Si estamos en la primera jornada, ir a la última
+      if (indiceActual === 0) {
+        nuevoIndice = jornadasDisponibles.length - 1;
+      } else {
+        nuevoIndice = indiceActual - 1;
+      }
+    } else {
+      // Si estamos en la última jornada, ir a la primera
+      if (indiceActual === jornadasDisponibles.length - 1) {
+        nuevoIndice = 0;
+      } else {
+        nuevoIndice = indiceActual + 1;
+      }
+    }
+    
+    // Obtener la nueva jornada
+    const nuevaJornada = jornadasDisponibles[nuevoIndice];
+    
+    // Actualizar URL y contenido
+    actualizarURL(nuevaJornada);
+  }
+  
+  // Configurar el manejador de cambios para el selector
+  document.getElementById('select-jornada').addEventListener('change', function() {
+    const jornadaSeleccionada = this.value;
+    const url = new URL(window.location.href);
+    url.searchParams.set('jornada', jornadaSeleccionada);
+    window.location.href = url.toString();
+  });
+  
+  // Actualizar estado de los botones
+  function actualizarEstadoBotones() {
+    const selectElement = document.getElementById('select-jornada');
+    const jornadaActual = parseInt(selectElement.value);
+    const indiceActual = jornadasDisponibles.indexOf(jornadaActual);
+    
+    const btnAnterior = document.getElementById('btn-jornada-anterior');
+    const btnSiguiente = document.getElementById('btn-jornada-siguiente');
+    
+    // Los botones siempre estarán habilitados
+    btnAnterior.disabled = false;
+    btnSiguiente.disabled = false;
+  }
+  
+  // Ejecutar cuando se carga la página
+  document.addEventListener('DOMContentLoaded', () => {
+    const selectElement = document.getElementById('select-jornada');
+    if (selectElement) {
+      selectElement.value = jornadaActual;
+      actualizarEstadoBotones();
+    }
+  });
+
+  // Actualizar estado de los botones cuando cambia el select
+  const selectElement = document.getElementById('select-jornada');
+  if (selectElement) {
+    selectElement.addEventListener('change', actualizarEstadoBotones);
+    
+    // Actualizar URL cuando cambia el select
+    selectElement.addEventListener('change', function() {
+      actualizarURL(this.value);
+    });
+  }
+</script>
+
