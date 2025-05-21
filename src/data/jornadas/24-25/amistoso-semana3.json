@@ -1,0 +1,71 @@
+{
+  "info": {
+    "numero": 3,
+    "temporada": "24-25",
+    "fechaInicio": "16-05-2025",
+    "fechaFin": "18-05-2025",
+    "tipo": "Amistosos Final de Temporada"
+  },
+  "resultados": [
+    {
+      "categoria": "Junior Masculina",
+      "local": "CANBASKET B",
+      "visitante": "CB Calasanz",
+      "puntosLocal": 77,
+      "puntosVisitante": 76,
+      "fecha": "16-05-2025",
+      "hora": "19:40",
+      "lugar": "PABELLON NUMANCIA",
+      "jugadorDestacado": "",
+      "comentarioJugador": ""
+    },
+    {
+      "categoria": "Alevin Femenina",
+      "local": "CB Calasanz B",
+      "visitante": "AGUSTINOS ROJO",
+      "puntosLocal": 34,
+      "puntosVisitante": 76,
+      "fecha": "17-05-2025",
+      "hora": "9:30",
+      "lugar": "Pabellón Calasanz",
+      "jugadorDestacado": "",
+      "comentarioJugador": ""
+    },
+    {
+      "categoria": "Cadete Masculino",
+      "local": "CB Calasanz",
+      "visitante": "MEDIO CUDEYO BLANCO",
+      "puntosLocal": 33,
+      "puntosVisitante": 43,
+      "fecha": "17-05-2025",
+      "hora": "11:15",
+      "lugar": "Pabellón Calasanz",
+      "jugadorDestacado": "",
+      "comentarioJugador": ""
+    },
+    {
+      "categoria": "Infantil Masculina",
+      "local": "CB Calasanz",
+      "visitante": "ADB SANTOÑA ARGENFRIO",
+      "puntosLocal": 56,
+      "puntosVisitante": 35,
+      "fecha": "17-05-2025",
+      "hora": "13:00",
+      "lugar": "Pabellón Calasanz",
+      "jugadorDestacado": "Mario Domínguez",
+      "comentarioJugador": "22 puntos en 24 minutos con buenos porcentajes"
+    },
+    {
+      "categoria": "Infantil Femenina",
+      "local": "CB Calasanz",
+      "visitante": "MEDIO CUDEYO ROJO",
+      "puntosLocal": 31,
+      "puntosVisitante": 69,
+      "fecha": "18-05-2025",
+      "hora": "9:30",
+      "lugar": "Pabellón Calasanz",
+      "jugadorDestacado": "",
+      "comentarioJugador": ""
+    }
+  ]
+}
