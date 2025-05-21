@@ -113,35 +113,40 @@ const jornadaActual = jornadaSeleccionada === "ultima"
       </form>
     </div>
     
-    <!-- Botones de Sección -->
-    <div class="grid grid-cols-3 gap-4 mt-4">
-      <a 
-        href={`/resultados/jornada/${jornadaActual}?seccion=masculina`}
-        class={`flex items-center justify-center py-2 px-4 rounded-lg transition-colors shadow-md text-white font-medium ${seccion === 'masculina' ? 'bg-blue-600 hover:bg-blue-700' : 'bg-green-800 hover:bg-green-700'}`}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-        </svg>
-        Masculina
-      </a>
-      <a 
-        href={`/resultados/jornada/${jornadaActual}?seccion=todas`}
-        class={`flex items-center justify-center py-2 px-4 rounded-lg transition-colors shadow-md text-white font-medium ${seccion === 'todas' ? 'bg-green-600 hover:bg-green-700' : 'bg-green-800 hover:bg-green-700'}`}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
-        </svg>
-        Todas
-      </a>
-      <a 
-        href={`/resultados/jornada/${jornadaActual}?seccion=femenina`}
-        class={`flex items-center justify-center py-2 px-4 rounded-lg transition-colors shadow-md text-white font-medium ${seccion === 'femenina' ? 'bg-pink-600 hover:bg-pink-700' : 'bg-green-800 hover:bg-green-700'}`}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-        </svg>
-        Femenina
-      </a>
+    <!-- Botones de Sección (optimizado para móvil) -->
+    <div class="mt-4">
+      <div class="flex justify-center mb-2">
+        <span class="text-white text-sm font-medium">Filtrar por sección:</span>
+      </div>
+      <div class="grid grid-cols-3 gap-2 sm:gap-4">
+        <a 
+          href={`/resultados/jornada/${jornadaActual}?seccion=masculina`}
+          class={`flex flex-col sm:flex-row items-center justify-center py-3 px-2 sm:px-4 rounded-lg transition-colors shadow-md text-white font-medium ${seccion === 'masculina' ? 'bg-blue-600 hover:bg-blue-700' : 'bg-green-800 hover:bg-green-700'}`}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mb-1 sm:mb-0 sm:mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+          <span class="text-xs sm:text-base">Masculina</span>
+        </a>
+        <a 
+          href={`/resultados/jornada/${jornadaActual}?seccion=todas`}
+          class={`flex flex-col sm:flex-row items-center justify-center py-3 px-2 sm:px-4 rounded-lg transition-colors shadow-md text-white font-medium ${seccion === 'todas' ? 'bg-green-600 hover:bg-green-700' : 'bg-green-800 hover:bg-green-700'}`}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mb-1 sm:mb-0 sm:mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+          </svg>
+          <span class="text-xs sm:text-base">Todas</span>
+        </a>
+        <a 
+          href={`/resultados/jornada/${jornadaActual}?seccion=femenina`}
+          class={`flex flex-col sm:flex-row items-center justify-center py-3 px-2 sm:px-4 rounded-lg transition-colors shadow-md text-white font-medium ${seccion === 'femenina' ? 'bg-pink-600 hover:bg-pink-700' : 'bg-green-800 hover:bg-green-700'}`}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mb-1 sm:mb-0 sm:mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+          <span class="text-xs sm:text-base">Femenina</span>
+        </a>
+      </div>
     </div>
     
     <!-- Elemento oculto para pasar jornadaActual al script -->

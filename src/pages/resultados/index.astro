@@ -14,14 +14,14 @@ const jornadaNumero = Astro.url.searchParams.get('jornada') || "ultima";
 ---
 
 <Layout title="Resultados - CB Calasanz">
-  <div class="container mx-auto px-4 py-12">
+  <div class="container mx-auto px-3 sm:px-4 py-6 sm:py-12">
 
 
-    <!-- Selector Jornada -->
-    <div class="bg-green-900 bg-opacity-20 rounded-xl p-4 md:p-6 mb-8 shadow-md">
-      <div class="mb-4">
-        <h3 class="text-lg font-semibold text-white flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <!-- Selector Jornada (optimizado para móvil) -->
+    <div class="bg-green-900 bg-opacity-20 rounded-xl p-3 sm:p-4 md:p-6 mb-6 sm:mb-8 shadow-md">
+      <div class="mb-3 sm:mb-4">
+        <h3 class="text-base sm:text-lg font-semibold text-white flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
           Seleccionar Jornada
@@ -37,8 +37,8 @@ const jornadaNumero = Astro.url.searchParams.get('jornada') || "ultima";
     <!-- Información de la jornada -->
     <InfoJornada jornada={jornadaNumero} />
 
-    <!-- Contenedor para ambas secciones en paralelo -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <!-- Contenedor para ambas secciones (optimizado para móvil) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
       <!-- Sección Masculina -->
       <div class="bg-green-900 bg-opacity-20 rounded-xl p-4 md:p-6 shadow-md">
         <div class="flex items-center mb-4 border-b border-green-700 pb-2">
