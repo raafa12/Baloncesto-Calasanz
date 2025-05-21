@@ -10,7 +10,7 @@
     {
       "categoria": "Junior Masculina",
       "local": "CANBASKET B",
-      "visitante": "CB Calasanz",
+      "visitante": "CALASANZ",
       "puntosLocal": 77,
       "puntosVisitante": 76,
       "fecha": "16-05-2025",
@@ -21,7 +21,7 @@
     },
     {
       "categoria": "Alevin Femenina",
-      "local": "CB Calasanz B",
+      "local": "CALASANZ B",
       "visitante": "AGUSTINOS ROJO",
       "puntosLocal": 34,
       "puntosVisitante": 76,
@@ -33,7 +33,7 @@
     },
     {
       "categoria": "Cadete Masculino",
-      "local": "CB Calasanz",
+      "local": "CALASANZ",
       "visitante": "MEDIO CUDEYO BLANCO",
       "puntosLocal": 33,
       "puntosVisitante": 43,
@@ -45,7 +45,7 @@
     },
     {
       "categoria": "Infantil Masculina",
-      "local": "CB Calasanz",
+      "local": "CALASANZ",
       "visitante": "ADB SANTOÑA ARGENFRIO",
       "puntosLocal": 56,
       "puntosVisitante": 35,
@@ -57,7 +57,7 @@
     },
     {
       "categoria": "Infantil Femenina",
-      "local": "CB Calasanz",
+      "local": "CALASANZ",
       "visitante": "MEDIO CUDEYO ROJO",
       "puntosLocal": 31,
       "puntosVisitante": 69,

@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import PageContainer from "../../components/common/PageContainer.astro";
 import ResultadosJornadaConActuaciones from '../../components/resultados/ResultadosJornadaConActuaciones.astro';
 import SelectorJornada from '../../components/resultados/jornada/SelectorJornada.astro';
 import InfoJornada from '../../components/resultados/InfoJornada.astro';
@@ -14,7 +15,7 @@ const jornadaNumero = Astro.url.searchParams.get('jornada') || "ultima";
 ---
 
 <Layout title="Resultados - CB Calasanz">
-  <div class="container mx-auto px-8 sm:px-16 md:px-24 lg:px-32 pt-16 sm:pt-20 pb-6 sm:pb-12 overflow-x-hidden w-full max-w-6xl">
+  <PageContainer>
 
 
     <!-- Selector Jornada (optimizado para móvil) -->
@@ -38,9 +39,9 @@ const jornadaNumero = Astro.url.searchParams.get('jornada') || "ultima";
     <InfoJornada jornada={jornadaNumero} />
 
     <!-- Contenedor para ambas secciones (optimizado para móvil) -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-10 xl:gap-12">
       <!-- Sección Masculina -->
-      <div class="bg-green-900 bg-opacity-20 rounded-xl p-4 md:p-6 shadow-md">
+      <div class="bg-green-900 bg-opacity-20 rounded-xl p-4 md:p-6 lg:p-8 xl:p-10 shadow-md">
         <div class="flex items-center mb-4 border-b border-green-700 pb-2">
           <div class="w-2 h-6 bg-blue-500 mr-3 rounded"></div>
           <h4 class="text-lg font-semibold text-white flex items-center">
@@ -58,7 +59,7 @@ const jornadaNumero = Astro.url.searchParams.get('jornada') || "ultima";
       </div>
       
       <!-- Sección Femenina -->
-      <div class="bg-green-900 bg-opacity-20 rounded-xl p-4 md:p-6 shadow-md">
+      <div class="bg-green-900 bg-opacity-20 rounded-xl p-4 md:p-6 lg:p-8 xl:p-10 shadow-md">
         <div class="flex items-center mb-4 border-b border-green-700 pb-2">
           <div class="w-2 h-6 bg-pink-500 mr-3 rounded"></div>
           <h4 class="text-lg font-semibold text-white flex items-center">
@@ -84,7 +85,7 @@ const jornadaNumero = Astro.url.searchParams.get('jornada') || "ultima";
         Ver histórico de resultados
       </a>
     </div>
-  </div>
+  </PageContainer>
 </Layout>
 
 <style>

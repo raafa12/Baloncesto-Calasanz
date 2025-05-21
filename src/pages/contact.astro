@@ -2,12 +2,13 @@
 // src/pages/contact.astro
 import Layout from '../layouts/Layout.astro';
 import SectionContainer from "../components/common/SectionContainer.astro";
+import PageContainer from "../components/common/PageContainer.astro";
 import TitleSection from "../components/common/TitleSection.astro";
 import CodeIcon from "../assets/Code.astro";
 ---
 
 <Layout title="Contacto" description="Contáctanos para cualquier duda o sugerencia.">
-  <main class="px-4 py-24 space-y-24">
+  <PageContainer class="space-y-24">
     <SectionContainer id="contacto">
       <TitleSection>
         <CodeIcon class="size-8" />
@@ -40,5 +41,5 @@ import CodeIcon from "../assets/Code.astro";
         </div>
       </div>
     </SectionContainer>
-  </main>
+  </PageContainer>
 </Layout>
