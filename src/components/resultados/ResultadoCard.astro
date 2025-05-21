@@ -21,7 +21,7 @@ let estado = "";
 let claseEstado = "";
 
 if (puntosLocal !== null && puntosVisitante !== null) {
-  const esCalasanzLocal = local.toLowerCase().includes('calasanz');
+  const esCalasanzLocal = local.includes('CALASANZ');
   const puntosCalasanz = esCalasanzLocal ? puntosLocal : puntosVisitante;
   const puntosRival = esCalasanzLocal ? puntosVisitante : puntosLocal;
   
@@ -59,7 +59,7 @@ if (puntosLocal !== null && puntosVisitante !== null) {
         <div class="flex flex-col space-y-3">
           <!-- Equipo local con marcador -->
           <div class="flex items-center justify-between">
-            <p class={`text-sm sm:text-base font-semibold flex-grow ${local.toLowerCase().includes('calasanz') ? 'text-green-400' : 'text-white'}`}>
+            <p class={`text-sm sm:text-base font-semibold flex-grow ${local.includes('CALASANZ') ? 'text-green-400' : 'text-white'}`}>
               {local}
             </p>
             {puntosLocal !== null && puntosVisitante !== null ? (
@@ -75,7 +75,7 @@ if (puntosLocal !== null && puntosVisitante !== null) {
           
           <!-- Equipo visitante con marcador -->
           <div class="flex items-center justify-between">
-            <p class={`text-sm sm:text-base font-semibold flex-grow ${visitante.toLowerCase().includes('calasanz') ? 'text-green-400' : 'text-white'}`}>
+            <p class={`text-sm sm:text-base font-semibold flex-grow ${visitante.includes('CALASANZ') ? 'text-green-400' : 'text-white'}`}>
               {visitante}
             </p>
             {puntosLocal !== null && puntosVisitante !== null ? (
@@ -94,7 +94,7 @@ if (puntosLocal !== null && puntosVisitante !== null) {
       <!-- Layout para escritorio (fila) -->
       <div class="hidden md:flex flex-row justify-between items-center">
         <div class="flex-1 text-left">
-          <p class={`text-xl font-semibold ${local.toLowerCase().includes('calasanz') ? 'text-green-400' : 'text-white'}`}>
+          <p class={`text-xl font-semibold ${local.includes('CALASANZ') ? 'text-green-400' : 'text-white'}`}>
             {local}
           </p>
         </div>
@@ -112,7 +112,7 @@ if (puntosLocal !== null && puntosVisitante !== null) {
         </div>
         
         <div class="flex-1 text-right">
-          <p class={`text-xl font-semibold ${visitante.toLowerCase().includes('calasanz') ? 'text-green-400' : 'text-white'}`}>
+          <p class={`text-xl font-semibold ${visitante.includes('CALASANZ') ? 'text-green-400' : 'text-white'}`}>
             {visitante}
           </p>
         </div>
