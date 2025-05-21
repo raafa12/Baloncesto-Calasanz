@@ -49,6 +49,8 @@ const { description, title } = Astro.props
         flex-direction: column;
         min-height: 100vh;
         overscroll-behavior: none;
+        overflow-x: hidden; /* Prevenir desbordamiento horizontal */
+        width: 100%;
       }
 
       @media (prefers-reduced-motion: reduce) {
