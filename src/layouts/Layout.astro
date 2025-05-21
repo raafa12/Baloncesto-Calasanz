@@ -14,7 +14,7 @@ const { description, title } = Astro.props
 ---
 
 <!doctype html>
-<html lang="es" class="dark">
+<html lang="es" class="dark overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -25,7 +25,7 @@ const { description, title } = Astro.props
     <ViewTransitions />
   </head>
 
-  <body class="relative text-white">
+  <body class="relative text-white max-w-[100vw] overflow-x-hidden">
     <div
       class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-green-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(50,200,100,0.6),rgba(255,255,255,0))]"
     >
@@ -41,6 +41,8 @@ const { description, title } = Astro.props
       html {
         font-family: "Onest Variable", system-ui, sans-serif;
         scroll-behavior: smooth;
+        overflow-x: hidden;
+        max-width: 100%;
       }
 
       body {
@@ -49,8 +51,17 @@ const { description, title } = Astro.props
         flex-direction: column;
         min-height: 100vh;
         overscroll-behavior: none;
-        overflow-x: hidden; /* Prevenir desbordamiento horizontal */
+        overflow-x: hidden !important; /* Prevenir desbordamiento horizontal */
+        max-width: 100vw;
         width: 100%;
+        position: relative;
+      }
+      
+      /* Asegurar que todos los contenedores principales respeten el ancho */
+      .container {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
       }
 
       @media (prefers-reduced-motion: reduce) {

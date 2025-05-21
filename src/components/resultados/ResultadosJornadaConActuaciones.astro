@@ -173,7 +173,7 @@ function formatearFechaJornada(jornada: Jornada | null): string {
     No se encontraron datos para la jornada seleccionada. (Jornada: {jornadaNumero})
   </div>
 ) : (
-  <div class="resultados-jornada">
+  <div class="resultados-jornada overflow-x-hidden w-full">
     {seccionSeleccionada === "todas" ? (
       <div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
