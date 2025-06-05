@@ -2,6 +2,10 @@
 
 Una página web moderna y responsiva para el Club de Baloncesto Calasanz de Santander, desarrollada con tecnologías web de última generación.
 
+## 🌐 Demo
+
+Puedes ver la página web en funcionamiento en: [Enlace a la demo](https://baloncestocalasanz.netlify.app/)
+
 ![Image](https://github.com/user-attachments/assets/bc7432e8-b106-4a18-b396-909881796631)
 
 ## ✨ Características
@@ -26,10 +30,6 @@ Una página web moderna y responsiva para el Club de Baloncesto Calasanz de Sant
 - **Resultados** - Resultados de partidos y clasificaciones
 - **Noticias** - Últimas noticias y novedades del club
 - **Contacto** - Información de contacto y ubicación
-
-## 🌐 Demo
-
-Puedes ver la página web en funcionamiento en: [Enlace a la demo](https://baloncestocalasanz.netlify.app/)
 
 ## 📞 Contacto
 
