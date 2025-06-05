@@ -1,48 +1,48 @@
-# Astro Starter Kit: Basics
+# 🏀 Club de Baloncesto Calasanz
 
-```sh
-npm create astro@latest -- --template basics
-```
+Una página web moderna y responsiva para el Club de Baloncesto Calasanz de Santander, desarrollada con tecnologías web de última generación.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🌐 Demo
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Puedes ver la página web en funcionamiento en: [Enlace a la demo](https://baloncestocalasanz.netlify.app/)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+![Image](https://github.com/user-attachments/assets/bc7432e8-b106-4a18-b396-909881796631)
 
-## 🚀 Project Structure
+## ✨ Características
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Diseño moderno y atractivo** con temática deportiva
+- **Totalmente responsivo** - se adapta a todos los dispositivos
+- **Navegación intuitiva** con secciones organizadas
+- **Información completa** sobre equipos, resultados y noticias
+- **Optimizada para rendimiento** y experiencia de usuario
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🚀 Tecnologías Utilizadas
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- 🚀 **[Astro](https://astro.build/)** - Framework web moderno para sitios rápidos
+- 🎨 **[Tailwind CSS](https://tailwindcss.com/)** - Framework de CSS utilitario
+- 🌐 **HTML5 & CSS3** - Estándares web modernos
+- ⚡ **JavaScript** - Interactividad y funcionalidad dinámica
 
-## 🧞 Commands
+## 📱 Secciones
 
-All commands are run from the root of the project, from a terminal:
+- **Inicio** - Presentación del club y información principal
+- **Equipos** - Información sobre todos los equipos del club
+- **Resultados** - Resultados de partidos y clasificaciones
+- **Noticias** - Últimas noticias y novedades del club
+- **Contacto** - Información de contacto y ubicación
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 📞 Contacto
 
-## 👀 Want to learn more?
+**Rafael Basanta González**
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- 📧 Email: [rafabasanta@hotmail.com](mailto:rafabasanta@hotmail.com)
+- 📱 Instagram: [@rafabasanta](https://instagram.com/rafabasanta)
+- 💼 LinkedIn: [Rafael Basanta González](https://www.linkedin.com/in/rafael-basanta-gonz%C3%A1lez-755b092a6/)
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+---
+
+**Club de Baloncesto Calasanz** - Más de 50 años formando personas a través del deporte en Santander 🏀
