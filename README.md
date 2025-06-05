@@ -2,7 +2,7 @@
 
 Una página web moderna y responsiva para el Club de Baloncesto Calasanz de Santander, desarrollada con tecnologías web de última generación.
 
-![Calasanz Basketball Club](public/images/WebCala.png)
+![Image](https://github.com/user-attachments/assets/bc7432e8-b106-4a18-b396-909881796631)
 
 ## ✨ Características
 
