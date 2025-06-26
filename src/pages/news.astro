@@ -5,8 +5,17 @@ import PageContainer from "../components/common/PageContainer.astro";
 import TitleSection from "../components/common/TitleSection.astro";
 import NewsIcon from "../assets/News.astro";
 
-// Lista de noticias (solo queda una)
+// Lista de noticias
 const noticias = [
+  {
+    id: "equipos-temporada-25-26",
+    titulo: '¡Conoce los equipos de la temporada 25/26!',
+    descripcion: 'Ya están disponibles los equipos del CB Calasanz para la próxima temporada. ¡Descubre a nuestros jugadores y jugadoras en todas las categorías!',
+    fecha: '26 junio 2025',
+    imagen: '/images/BenjaKids.JPG',
+    categoria: 'Equipos',
+    destacado: true
+  },
   {
     id: "campus-verano",
     titulo: 'Campus de verano 2025: ¡Inscríbete ya!',
@@ -14,7 +23,7 @@ const noticias = [
     fecha: '10 abril 2025',
     imagen: '/images/basket.JPEG',
     categoria: 'Eventos',
-    destacado: true
+    destacado: false
   }
 ];
 ---

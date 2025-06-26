@@ -1,0 +1,663 @@
+---
+// Definir tipos
+interface Jugador {
+  name: string;
+  birth: number;
+  year: string;
+  phone: string;
+  email: string;
+}
+
+interface CategoriaJugadores {
+  [categoria: string]: Jugador[];
+}
+
+interface PlayersData {
+  masculino: CategoriaJugadores;
+  femenino: CategoriaJugadores;
+}
+
+// Datos de los jugadores
+const playersData: PlayersData = {
+  masculino: {
+    benjamin: [
+      {
+        name: "Hugo Fernández Gastañaga",
+        birth: 2017,
+        year: "1er año Benjamín",
+        phone: "679875853",
+        email: "a.fernandezsalas@hotmail.com"
+      },
+      {
+        name: "Borja Fernández Agüero",
+        birth: 2017,
+        year: "1er año Benjamín",
+        phone: "606370867",
+        email: "borjafgc@gmail.com"
+      },
+      {
+        name: "Alonso Gallegos Sánchez",
+        birth: 2016,
+        year: "2º año Benjamín",
+        phone: "646515198",
+        email: "raquelmanjon@gmail.com"
+      },
+      {
+        name: "Mario Gallegos Sánchez",
+        birth: 2016,
+        year: "2º año Benjamín",
+        phone: "646515198",
+        email: "raquelmanjon@gmail.com"
+      },
+      {
+        name: "Javi González Odriozola",
+        birth: 2016,
+        year: "2º año Benjamín",
+        phone: "679600610",
+        email: "modriozola@icacantabria.es"
+      },
+      {
+        name: "Javier Gonzalez Odriozola",
+        birth: 2016,
+        year: "2º año Benjamín",
+        phone: "699032869",
+        email: "chiscogg@hotmail.com"
+      },
+      {
+        name: "Julen González Presmanes",
+        birth: 2016,
+        year: "2º año Benjamín",
+        phone: "659729076",
+        email: "presmanes_1987@hotmail.com"
+      },
+      {
+        name: "Pablo del Portillo Iribarnegaray",
+        birth: 2016,
+        year: "2º año Benjamín",
+        phone: "619044080",
+        email: "martairib@hotmail.com"
+      },
+      {
+        name: "César Djaider Gonzalez",
+        birth: 2016,
+        year: "2º año Benjamín",
+        phone: "607453290",
+        email: "cgonzalezlastra@icpcantabria.es"
+      },
+      {
+        name: "Javier Pérez Peña",
+        birth: 2016,
+        year: "2º año Benjamín",
+        phone: "696148987",
+        email: "perez_pena@hotmail.es"
+      },
+      {
+        name: "Álvaro Arbide Gómez",
+        birth: 2016,
+        year: "2º año Benjamín",
+        phone: "650694597",
+        email: "Rakylamejor@hotmail.com"
+      }
+    ],
+    alevin: [
+      {
+        name: "Nicolás Calleja Diaz",
+        birth: 2014,
+        year: "2º año Alevín",
+        phone: "626082643",
+        email: "valvanuzdiazgonzalez@gmail.com"
+      },
+      {
+        name: "Marcos Zorrilla Merino",
+        birth: 2014,
+        year: "2º año Alevín",
+        phone: "652587900",
+        email: "diegozmartinez@yahoo.es"
+      },
+      {
+        name: "Zhuoxiang Lin",
+        birth: 2014,
+        year: "2º año Alevín",
+        phone: "662499438",
+        email: "504519433lxy@gmail.com"
+      }
+    ],
+    infantil: [
+      {
+        name: "Jesús Fernández García",
+        birth: 2013,
+        year: "1er año Infantil",
+        phone: "669450270",
+        email: "agarbur75@gmail.com"
+      },
+      {
+        name: "Alejandro Lozano Mier",
+        birth: 2013,
+        year: "1er año Infantil",
+        phone: "638191724",
+        email: "carmen_2630@hotmail.com"
+      },
+      {
+        name: "Nicolás Grande Rosell",
+        birth: 2013,
+        year: "1er año Infantil",
+        phone: "664436975",
+        email: "Kalixti20@gmail.com"
+      },
+      {
+        name: "Carlos Matesanz Espurz",
+        birth: 2013,
+        year: "1er año Infantil",
+        phone: "636268993",
+        email: "nataliaespurz@gmail.com"
+      },
+      {
+        name: "Rafael de Andres Felguera",
+        birth: 2012,
+        year: "2º año Infantil",
+        phone: "646242291",
+        email: "Rdeandres@gmail.com"
+      },
+      {
+        name: "Gael Prieto Maryinez Aedo",
+        birth: 2012,
+        year: "2º año Infantil",
+        phone: "657186416",
+        email: "croki24@hotmail.com"
+      },
+      {
+        name: "Darío Peñalba Mantecon",
+        birth: 2012,
+        year: "2º año Infantil",
+        phone: "645888386",
+        email: "hectorylara@gmail.com"
+      },
+      {
+        name: "Marcos Benéitez Fuentevilla",
+        birth: 2012,
+        year: "2º año Infantil",
+        phone: "690095090",
+        email: "laura.fuentevilla@gmail.com"
+      },
+      {
+        name: "Mateo Díaz Freije",
+        birth: 2012,
+        year: "2º año Infantil",
+        phone: "672385955",
+        email: "teo_00@hotmail.com"
+      },
+      {
+        name: "Jorge Bustamante Antón",
+        birth: 2012,
+        year: "2º año Infantil",
+        phone: "676007238",
+        email: "Pedrobustamantecasuso@gmail.com"
+      },
+      {
+        name: "Mario Pina López",
+        birth: 2012,
+        year: "2º año Infantil",
+        phone: "616226921",
+        email: "alicantrino@hotmail.com"
+      },
+      {
+        name: "Pablo Fernández Agüero",
+        birth: 2012,
+        year: "2º año Infantil",
+        phone: "606370867",
+        email: "borjafgc@gmail.com"
+      }
+    ],
+    cadete: [
+      {
+        name: "Iván Díaz Allende",
+        birth: 2011,
+        year: "1er año Cadete",
+        phone: "680953394",
+        email: "zoriallen2011@gmail.com"
+      },
+      {
+        name: "Mario Domínguez Mesones",
+        birth: 2011,
+        year: "1er año Cadete",
+        phone: "601399749",
+        email: "mesones.torrec@gmail.com"
+      },
+      {
+        name: "Ángel Cuesta Peña",
+        birth: 2010,
+        year: "2º año Cadete",
+        phone: "601196862",
+        email: "rakepf2014@gmail.com"
+      },
+      {
+        name: "Jorge Moreno Vega",
+        birth: 2010,
+        year: "2º año Cadete",
+        phone: "636848123",
+        email: "rosanavega7@gmail.com"
+      }
+    ],
+    junior: [
+      {
+        name: "Sergio Llamas Roque",
+        birth: 2009,
+        year: "1er año Junior",
+        phone: "639894053",
+        email: "mayalen.roque@gmail.com"
+      },
+      {
+        name: "Daniel Díez Carmona",
+        birth: 2009,
+        year: "1er año Junior",
+        phone: "Belén Carmona",
+        email: "belencarmonamoro@hotmail.com"
+      },
+      {
+        name: "Marcos Seoane Santos",
+        birth: 2009,
+        year: "1er año Junior",
+        phone: "678465094",
+        email: "miguelseoane@icloud.com"
+      },
+      {
+        name: "Nicolás Herrero Pérez",
+        birth: 2009,
+        year: "1er año Junior",
+        phone: "607454966",
+        email: "antonio.herrero@gmail.com"
+      },
+      {
+        name: "Pablo Miguel Zubieta",
+        birth: 2008,
+        year: "2º año Junior",
+        phone: "636130612",
+        email: "pablomiguel1926@gmail.com"
+      }
+    ]
+  },
+  femenino: {
+    benjamin: [
+      {
+        name: "Vega Recio Fernández-Regatillo",
+        birth: 2017,
+        year: "1er año Benjamín",
+        phone: "651323064",
+        email: "vfernandez.regatillo@gmail.com"
+      },
+      {
+        name: "Cecilia Grande Rosell",
+        birth: 2017,
+        year: "1er año Benjamín",
+        phone: "664436975",
+        email: "Kalixti20@gmail.com"
+      },
+      {
+        name: "Irene Peñalba Mantecon",
+        birth: 2016,
+        year: "2º año Benjamín",
+        phone: "645888386",
+        email: "hectorylara@gmail.com"
+      },
+      {
+        name: "Lucia Viadero Gutiérrez",
+        birth: 2016,
+        year: "2º año Benjamín",
+        phone: "637434166",
+        email: "satiguti6@hotmail.com"
+      },
+      {
+        name: "Carmen Rodríguez González",
+        birth: 2016,
+        year: "2º año Benjamín",
+        phone: "625668570",
+        email: "esteluca_2007@hotmail.com"
+      },
+      {
+        name: "Elana Cebrián Izaguirre",
+        birth: 2016,
+        year: "2º año Benjamín",
+        phone: "661512418",
+        email: "martaizaguirre@me.com"
+      }
+    ],
+    alevin: [
+      {
+        name: "Inés Peña Casado",
+        birth: 2015,
+        year: "1er año Alevín",
+        phone: "649795134",
+        email: "silviacasadocasuso@gmail.com"
+      },
+      {
+        name: "Blanca Pedrosa Ortiz",
+        birth: 2015,
+        year: "1er año Alevín",
+        phone: "626335728",
+        email: "Cubas15@hotmail.com"
+      },
+      {
+        name: "Noa Linares Mangue",
+        birth: 2015,
+        year: "1er año Alevín",
+        phone: "699083042",
+        email: "javilincel@gmail.com"
+      },
+      {
+        name: "Noemí Diez Campos",
+        birth: 2015,
+        year: "1er año Alevín",
+        phone: "685193604",
+        email: "colibri1010@hotmail.com"
+      },
+      {
+        name: "Laura Ballestero Madrigal",
+        birth: 2015,
+        year: "1er año Alevín",
+        phone: "652663718",
+        email: "c.madrigaldiez@yahoo.es"
+      },
+      {
+        name: "Berta López García de Soto",
+        birth: 2015,
+        year: "1er año Alevín",
+        phone: "606553693",
+        email: "Crisgsl@hotmail.com"
+      }
+    ],
+    infantil: [
+      {
+        name: "Carla Djaider Gonzalez",
+        birth: 2013,
+        year: "1er año Infantil",
+        phone: "607453290",
+        email: "cgonzalezlastra@icpcantabria.es"
+      }
+    ],
+    cadete: [
+      {
+        name: "Sofía Osés Fernández",
+        birth: 2011,
+        year: "1er año Cadete",
+        phone: "676942407",
+        email: "evafernandez0809@gmail.com"
+      },
+      {
+        name: "Candela Moxó García",
+        birth: 2011,
+        year: "1er año Cadete",
+        phone: "686377854",
+        email: "candelamoxo@gmail.com"
+      },
+      {
+        name: "Olivia Cañete Núñez",
+        birth: 2011,
+        year: "1er año Cadete",
+        phone: "685944177",
+        email: "olivares1112c@gmail.com"
+      },
+      {
+        name: "Carla Duart Carreres",
+        birth: 2011,
+        year: "1er año Cadete",
+        phone: "619105858",
+        email: "duartgomez@hotmail.com"
+      },
+      {
+        name: "Vega Calvo Diego",
+        birth: 2011,
+        year: "1er año Cadete",
+        phone: "687708777 / 626021205",
+        email: "gdiegohazas@educantabria.es"
+      },
+      {
+        name: "Amaya Aguado Romero",
+        birth: 2011,
+        year: "1er año Cadete",
+        phone: "636940033",
+        email: "m.romero07@yahoo.es"
+      },
+      {
+        name: "Sandra Vivero Núñez",
+        birth: 2011,
+        year: "1er año Cadete",
+        phone: "627393605",
+        email: "viveronunezsandra@gmail.com"
+      },
+      {
+        name: "Celia Balbás Motta",
+        birth: 2010,
+        year: "2º año Cadete",
+        phone: "666182232",
+        email: "r_balbas@hotmail.com"
+      },
+      {
+        name: "Lara Pila Serrano",
+        birth: 2010,
+        year: "2º año Cadete",
+        phone: "652647769",
+        email: "rosaliaserrano@gmail.com"
+      },
+      {
+        name: "María Martínez López-Tormos",
+        birth: 2010,
+        year: "2º año Cadete",
+        phone: "676745064",
+        email: "mariamltrp@gmail.com"
+      },
+      {
+        name: "María González Odriozola",
+        birth: 2010,
+        year: "2º año Cadete",
+        phone: "679600610",
+        email: "mariaglzodriozola@gmail.com"
+      },
+      {
+        name: "Alba Sánchez Bolado",
+        birth: 2010,
+        year: "2º año Cadete",
+        phone: "696235926",
+        email: "evalabola@hotmail.com"
+      }
+    ],
+    junior: [
+      {
+        name: "Valeria García Abad",
+        birth: 2009,
+        year: "1er año Junior",
+        phone: "657787297",
+        email: "Silanbell@hotmail.com"
+      },
+      {
+        name: "Sofía Bosque Cano",
+        birth: 2009,
+        year: "1er año Junior",
+        phone: "653918458",
+        email: "sofiabosquecano@gmail.com"
+      },
+      {
+        name: "Ana Ruiz Odriozola",
+        birth: 2008,
+        year: "2º año Junior",
+        phone: "676772282",
+        email: "ana.ruiz.odriozola@gmail.com"
+      }
+    ]
+  }
+};
+
+// Definir tipos
+type CategoriaStats = {
+  masculino: number;
+  femenino: number;
+};
+
+type Stats = {
+  total: number;
+  masculino: number;
+  femenino: number;
+  categorias: {
+    [key: string]: CategoriaStats;
+  };
+};
+
+// Calcular estadísticas
+const stats: Stats = {
+  total: 0,
+  masculino: 0,
+  femenino: 0,
+  categorias: {}
+};
+
+// Procesar estadísticas
+Object.entries(playersData).forEach(([genero, categorias]) => {
+  // Type assertion for categorias
+  const categoriasData = categorias as CategoriaJugadores;
+  
+  Object.entries(categoriasData).forEach(([categoria, jugadores]) => {
+    stats.total += jugadores.length;
+    
+    if (genero === 'masculino' || genero === 'femenino') {
+      // Type assertion for stats[genero]
+      (stats[genero as keyof Omit<Stats, 'total' | 'categorias'>] as number) += jugadores.length;
+    }
+    
+    if (!stats.categorias[categoria]) {
+      stats.categorias[categoria] = { masculino: 0, femenino: 0 };
+    }
+    
+    if (genero === 'masculino' || genero === 'femenino') {
+      stats.categorias[categoria][genero as keyof CategoriaStats] = jugadores.length;
+    }
+  });
+});
+---
+
+<div class="equipos-temporada">
+  <div class="header bg-green-900/50 p-6 rounded-xl mb-8 border border-green-800/30">
+    <h1 class="text-3xl font-bold text-center mb-2">🏀 CALASANZ EQUIPOS</h1>
+    <p class="text-center text-green-300">Temporada 2025/2026 - Informe de Jugadores</p>
+  </div>
+
+  <!-- Estadísticas -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="bg-green-900/50 p-6 rounded-lg border border-green-800/30">
+      <div class="text-3xl font-bold text-green-400" id="total-players">{stats.total}</div>
+      <div class="text-gray-300">Total Jugadores</div>
+    </div>
+    <div class="bg-green-900/50 p-6 rounded-lg border border-green-800/30">
+      <div class="text-3xl font-bold text-blue-400" id="male-players">{stats.masculino}</div>
+      <div class="text-gray-300">Jugadores Masculinos</div>
+    </div>
+    <div class="bg-green-900/50 p-6 rounded-lg border border-green-800/30">
+      <div class="text-3xl font-bold text-pink-400" id="female-players">{stats.femenino}</div>
+      <div class="text-gray-300">Jugadoras Femeninas</div>
+    </div>
+  </div>
+
+  <!-- Sección de Equipos -->
+  <div class="space-y-12">
+    <!-- Sección Masculina -->
+    <div class="bg-green-950/50 rounded-xl overflow-hidden border border-green-800/30">
+      <div class="bg-green-900/70 p-4 border-b border-green-800/30">
+        <h2 class="text-xl font-bold flex items-center gap-2">
+          <span class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center">♂</span>
+          SECCIÓN MASCULINA
+        </h2>
+      </div>
+      
+      <div class="space-y-4 p-4">
+        {Object.entries(playersData.masculino).map(([categoria, jugadores]: [string, Jugador[]]) => (
+          <div class="mb-6">
+            <div class="flex justify-between items-center bg-green-900/30 p-3 rounded-lg cursor-pointer" 
+                 onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <h3 class="font-semibold">{categoria.charAt(0).toUpperCase() + categoria.slice(1)}</h3>
+              <span class="text-green-400">▼</span>
+            </div>
+            <div class="hidden mt-2 bg-green-900/20 p-4 rounded-lg">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {jugadores.map(jugador => (
+                  <div class="bg-green-900/30 p-4 rounded border border-green-800/30">
+                    <h4 class="font-medium">{jugador.name}</h4>
+                    <p class="text-sm text-gray-400">Nacimiento: {jugador.birth} ({jugador.year})</p>
+                    <div class="mt-2 pt-2 border-t border-green-800/30 text-sm">
+                      <p>📞 {jugador.phone}</p>
+                      <p class="truncate" title={jugador.email}>📧 {jugador.email}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Sección Femenina -->
+    <div class="bg-green-950/50 rounded-xl overflow-hidden border border-green-800/30">
+      <div class="bg-pink-900/70 p-4 border-b border-pink-800/30">
+        <h2 class="text-xl font-bold flex items-center gap-2">
+          <span class="bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center">♀</span>
+          SECCIÓN FEMENINA
+        </h2>
+      </div>
+      
+      <div class="space-y-4 p-4">
+        {Object.entries(playersData.femenino).map(([categoria, jugadoras]: [string, Jugador[]]) => (
+          <div class="mb-6">
+            <div class="flex justify-between items-center bg-pink-900/30 p-3 rounded-lg cursor-pointer"
+                 onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <h3 class="font-semibold">{categoria.charAt(0).toUpperCase() + categoria.slice(1)}</h3>
+              <span class="text-pink-400">▼</span>
+            </div>
+            <div class="hidden mt-2 bg-pink-900/20 p-4 rounded-lg">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {jugadoras.map((jugadora) => (
+                  <div class="bg-pink-900/30 p-4 rounded border border-pink-800/30">
+                    <h4 class="font-medium">{jugadora.name}</h4>
+                    <p class="text-sm text-gray-400">Nacimiento: {jugadora.birth} ({jugadora.year})</p>
+                    <div class="mt-2 pt-2 border-t border-pink-800/30 text-sm">
+                      <p>📞 {jugadora.phone}</p>
+                      <p class="truncate" title={jugadora.email}>📧 {jugadora.email}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .equipos-temporada {
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .equipos-temporada h1 {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .equipos-temporada .stat-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .equipos-temporada .stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .equipos-temporada .player-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .equipos-temporada .player-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+</style>

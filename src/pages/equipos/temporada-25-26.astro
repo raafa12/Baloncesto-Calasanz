@@ -1,0 +1,153 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionContainer from "../../components/common/SectionContainer.astro";
+import PageContainer from "../../components/common/PageContainer.astro";
+import TitleSection from "../../components/common/TitleSection.astro";
+
+// Datos de los jugadores
+const playersData = {
+  masculino: {
+    benjamin: [
+      {
+        name: "Hugo Fernández Gastañaga",
+        birth: 2017,
+        year: "1er año",
+        phone: "679875853",
+        email: "a.fernandezsalas@hotmail.com"
+      },
+      // ... (resto de jugadores masculinos)
+    ],
+    // ... (resto de categorías masculinas)
+  },
+  femenino: {
+    // ... (jugadoras femeninas)
+  }
+};
+
+// Calcular estadísticas
+const stats = {
+  total: 0,
+  masculino: 0,
+  femenino: 0,
+  categorias: {}
+};
+
+// Procesar estadísticas
+Object.entries(playersData).forEach(([genero, categorias]) => {
+  Object.entries(categorias).forEach(([categoria, jugadores]) => {
+    stats.total += jugadores.length;
+    stats[genero] += jugadores.length;
+    
+    if (!stats.categorias[categoria]) {
+      stats.categorias[categoria] = { masculino: 0, femenino: 0 };
+    }
+    stats.categorias[categoria][genero] = jugadores.length;
+  });
+});
+---
+
+<Layout title="Equipos Temporada 25/26 | CB Calasanz" description="Lista de jugadores del CB Calasanz para la temporada 2025/2026">
+  <PageContainer>
+    <SectionContainer id="equipos-temporada" class="mb-12">
+      <TitleSection>
+        🏀 Equipos Temporada 2025/2026
+      </TitleSection>
+
+      <!-- Estadísticas -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-green-900/50 p-6 rounded-lg border border-green-800/30">
+          <h3 class="text-2xl font-bold text-green-400">{stats.total}</h3>
+          <p class="text-gray-300">Total Jugadores</p>
+        </div>
+        <div class="bg-green-900/50 p-6 rounded-lg border border-green-800/30">
+          <h3 class="text-2xl font-bold text-blue-400">{stats.masculino}</h3>
+          <p class="text-gray-300">Jugadores Masculinos</p>
+        </div>
+        <div class="bg-green-900/50 p-6 rounded-lg border border-green-800/30">
+          <h3 class="text-2xl font-bold text-pink-400">{stats.femenino}</h3>
+          <p class="text-gray-300">Jugadoras Femeninas</p>
+        </div>
+      </div>
+
+      <!-- Sección de Equipos -->
+      <div class="space-y-12">
+        <!-- Sección Masculina -->
+        <div>
+          <h2 class="text-2xl font-bold mb-6 pb-2 border-b border-green-800/50 flex items-center gap-2">
+            <span class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center">♂</span>
+            Sección Masculina
+          </h2>
+          
+          <div class="space-y-6">
+            {Object.entries(playersData.masculino).map(([categoria, jugadores]) => (
+              <div class="bg-green-950/50 rounded-lg overflow-hidden border border-green-800/30">
+                <div class="bg-green-900/50 p-4 border-b border-green-800/30">
+                  <h3 class="text-lg font-semibold flex justify-between items-center">
+                    <span>{categoria.charAt(0).toUpperCase() + categoria.slice(1)}</span>
+                    <span class="text-sm text-gray-400">{jugadores.length} jugadores</span>
+                  </h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+                  {jugadores.map(jugador => (
+                    <div class="bg-green-900/30 p-4 rounded border border-green-800/30">
+                      <h4 class="font-medium">{jugador.name}</h4>
+                      <p class="text-sm text-gray-400">Nacimiento: {jugador.birth} ({jugador.year})</p>
+                      <div class="mt-2 pt-2 border-t border-green-800/30 text-sm">
+                        <p>📞 {jugador.phone}</p>
+                        <p class="truncate" title={jugador.email}>📧 {jugador.email}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Sección Femenina -->
+        <div>
+          <h2 class="text-2xl font-bold mb-6 pb-2 border-b border-green-800/50 flex items-center gap-2">
+            <span class="bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center">♀</span>
+            Sección Femenina
+          </h2>
+          
+          <div class="space-y-6">
+            {Object.entries(playersData.femenino).map(([categoria, jugadoras]) => (
+              <div class="bg-green-950/50 rounded-lg overflow-hidden border border-green-800/30">
+                <div class="bg-green-900/50 p-4 border-b border-green-800/30">
+                  <h3 class="text-lg font-semibold flex justify-between items-center">
+                    <span>{categoria.charAt(0).toUpperCase() + categoria.slice(1)}</span>
+                    <span class="text-sm text-gray-400">{jugadoras.length} jugadoras</span>
+                  </h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+                  {jugadoras.map(jugadora => (
+                    <div class="bg-green-900/30 p-4 rounded border border-green-800/30">
+                      <h4 class="font-medium">{jugadora.name}</h4>
+                      <p class="text-sm text-gray-400">Nacimiento: {jugadora.birth} ({jugadora.year})</p>
+                      <div class="mt-2 pt-2 border-t border-green-800/30 text-sm">
+                        <p>📞 {jugadora.phone}</p>
+                        <p class="truncate" title={jugadora.email}>📧 {jugadora.email}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </SectionContainer>
+  </PageContainer>
+</Layout>
+
+<style>
+  /* Estilos específicos para esta página */
+  .player-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .player-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+</style>
