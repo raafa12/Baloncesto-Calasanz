@@ -314,7 +314,7 @@ const playersData: PlayersData = {
         email: "esteluca_2007@hotmail.com"
       },
       {
-        name: "Elana Cebrián Izaguirre",
+        name: "Elena Cebrián Izaguirre",
         birth: 2016,
         year: "2º año Benjamín",
         phone: "661512418",
@@ -363,6 +363,55 @@ const playersData: PlayersData = {
         year: "1er año Alevín",
         phone: "606553693",
         email: "Crisgsl@hotmail.com"
+      },
+      {
+        name: "Lucía Camus Diez",
+        birth: 2014,
+        year: "2º año Alevín",
+        phone: "647581217",
+        email: "silviadiezpico@hotmail.com"
+      },
+      {
+        name: "María Gracia Portilla Valle",
+        birth: 2014,
+        year: "2º año Alevín",
+        phone: "611443611",
+        email: "fvallelista27@gmail.com"
+      },
+      {
+        name: "Jimena Ramos Sebrango",
+        birth: 2014,
+        year: "2º año Alevín",
+        phone: "653786251",
+        email: "maykesebrango@gmail.com"
+      },
+      {
+        name: "Vera Garcia Carral",
+        birth: 2014,
+        year: "2º año Alevín",
+        phone: "646002421",
+        email: "martacarral@hotmail.com"
+      },
+      {
+        name: "Inés Balbás Motta",
+        birth: 2014,
+        year: "2º año Alevín",
+        phone: "666182232",
+        email: "lulamotta@hotmail.com"
+      },
+      {
+        name: "Elena López Díaz",
+        birth: 2014,
+        year: "2º año Alevín",
+        phone: "600249443 / 686385537",
+        email: "silviadiazpalazuelos@gmail.com"
+      },
+      {
+        name: "Alicia Becedoniz Coterillo",
+        birth: 2014,
+        year: "2º año Alevín",
+        phone: "620085207",
+        email: "vcoterillo@hotmail.com"
       }
     ],
     infantil: [
@@ -372,6 +421,20 @@ const playersData: PlayersData = {
         year: "1er año Infantil",
         phone: "607453290",
         email: "cgonzalezlastra@icpcantabria.es"
+      },
+      {
+        name: "Paula González Cortés del Valle",
+        birth: 2013,
+        year: "1er año Infantil",
+        phone: "679383824",
+        email: "Naria21@hotmail.com"
+      },
+      {
+        name: "Ainara Rodríguez Merino",
+        birth: 2013,
+        year: "1er año Infantil",
+        phone: "603546085",
+        email: "tomas_gsi@hotmail.com"
       }
     ],
     cadete: [
@@ -423,6 +486,13 @@ const playersData: PlayersData = {
         year: "1er año Cadete",
         phone: "627393605",
         email: "viveronunezsandra@gmail.com"
+      },
+      {
+        name: "Mencía Calzada Cuevas",
+        birth: 2011,
+        year: "1er año Cadete",
+        phone: "636299006 / 659645626",
+        email: "calzadaabogado@hotmail.com"
       },
       {
         name: "Celia Balbás Motta",
@@ -481,6 +551,13 @@ const playersData: PlayersData = {
         year: "2º año Junior",
         phone: "676772282",
         email: "ana.ruiz.odriozola@gmail.com"
+      },
+      {
+        name: "Andrea Gonzalez Odriozola",
+        birth: 2008,
+        year: "2º año Junior",
+        phone: "679600610",
+        email: "andreaglzodri@gmail.com"
       }
     ]
   }
@@ -575,7 +652,10 @@ Object.entries(playersData).forEach(([genero, categorias]) => {
           <div class="mb-6">
             <div class="flex justify-between items-center bg-green-900/30 p-3 rounded-lg cursor-pointer" 
                  onclick="this.nextElementSibling.classList.toggle('hidden')">
-              <h3 class="font-semibold">{categoria.charAt(0).toUpperCase() + categoria.slice(1)}</h3>
+              <h3 class="font-semibold">
+                {categoria.charAt(0).toUpperCase() + categoria.slice(1)} 
+                <span class="text-sm font-normal text-green-400 ml-2">({jugadores.length} jugadores)</span>
+              </h3>
               <span class="text-green-400">▼</span>
             </div>
             <div class="hidden mt-2 bg-green-900/20 p-4 rounded-lg">
@@ -611,7 +691,10 @@ Object.entries(playersData).forEach(([genero, categorias]) => {
           <div class="mb-6">
             <div class="flex justify-between items-center bg-pink-900/30 p-3 rounded-lg cursor-pointer"
                  onclick="this.nextElementSibling.classList.toggle('hidden')">
-              <h3 class="font-semibold">{categoria.charAt(0).toUpperCase() + categoria.slice(1)}</h3>
+              <h3 class="font-semibold">
+                {categoria.charAt(0).toUpperCase() + categoria.slice(1)}
+                <span class="text-sm font-normal text-pink-400 ml-2">({jugadoras.length} jugadoras)</span>
+              </h3>
               <span class="text-pink-400">▼</span>
             </div>
             <div class="hidden mt-2 bg-pink-900/20 p-4 rounded-lg">
