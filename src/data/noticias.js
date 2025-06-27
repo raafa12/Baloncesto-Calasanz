@@ -1,10 +1,7 @@
 export const noticias = [
   {
     id: "equipos-temporada-25-26",
-    titulo: '🏀 CALASANZ EQUIPOS - Temporada 2025/2026',
-    descripcion: '',
     contenido: null,
-    fecha: '26 junio 2025',
     imagen: '/images/BenjaKids.JPG',
     categoria: 'Equipos',
     destacado: true,
@@ -12,8 +9,6 @@ export const noticias = [
   },
   {
     id: "jornadas-tecnificacion-2025",
-    titulo: '🏀 JORNADAS DE TECNIFICACIÓN 2025',
-    descripcion: 'Del 18 al 31 de agosto - 2 semanas intensivas de baloncesto para todas las categorías',
     contenido: `
       <div class="bg-gradient-to-br from-green-600 to-green-700 text-white p-6 rounded-xl mb-6">
         <h1 class="text-2xl font-bold text-center mb-2">🏀 JORNADAS DE TECNIFICACIÓN</h1>
@@ -57,65 +52,6 @@ export const noticias = [
       </div>
 
       <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
-        <h3 class="text-green-700 text-xl font-bold mb-6 text-center">🏀 PROGRAMACIÓN FUNDAMENTOS</h3>
-        <p class="text-center text-gray-600 mb-6">📚 Adaptable a todas las categorías • Progresión personalizada</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-          <div class="bg-green-600 text-white p-4 text-center font-bold">📅 SEMANA 1</div>
-          <div class="p-4 space-y-3">
-            <div class="p-4 bg-red-50 rounded-lg border-l-4 border-red-500">
-              <div class="font-bold text-red-700">LUNES 18/08: DÍA EVALUACIÓN</div>
-              <p class="text-sm text-gray-600 mt-1">Evaluación técnica inicial • Fundamentos de boteo • Coordinación y agilidad • Presentación de objetivos</p>
-            </div>
-            <div class="p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
-              <div class="font-bold text-blue-700">MARTES 19/08: DÍA PASE</div>
-              <p class="text-sm text-gray-600 mt-1">Técnica de pase básico • Pases en movimiento • Recepción y control • Juegos de pase</p>
-            </div>
-            <div class="p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
-              <div class="font-bold text-yellow-700">MIÉRCOLES 20/08: DÍA TIRO</div>
-              <p class="text-sm text-gray-600 mt-1">Mecánica de tiro • Tiro libre • Tiro desde diferentes posiciones • Competición de tiro</p>
-            </div>
-            <div class="p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
-              <div class="font-bold text-green-700">JUEVES 21/08: DÍA DEFENSA</div>
-              <p class="text-sm text-gray-600 mt-1">Posición defensiva • Desplazamientos defensivos • Defensa del balón • Situaciones 1x1</p>
-            </div>
-            <div class="p-4 bg-purple-50 rounded-lg border-l-4 border-purple-500">
-              <div class="font-bold text-purple-700">VIERNES 22/08: DÍA COMPETICIÓN</div>
-              <p class="text-sm text-gray-600 mt-1">Repaso fundamentos • Evaluación semanal • Torneo de habilidades • Análisis de progreso</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-          <div class="bg-green-600 text-white p-4 text-center font-bold">📅 SEMANA 2</div>
-          <div class="p-4 space-y-3">
-            <div class="p-4 bg-orange-50 rounded-lg border-l-4 border-orange-500">
-              <div class="font-bold text-orange-700">LUNES 25/08: DÍA COMBINACIONES</div>
-              <p class="text-sm text-gray-600 mt-1">Boteo + Pase • Tiro + Rebote • Movimientos combinados • Fluidez técnica</p>
-            </div>
-            <div class="p-4 bg-teal-50 rounded-lg border-l-4 border-teal-500">
-              <div class="font-bold text-teal-700">MARTES 26/08: DÍA MOVIMIENTO</div>
-              <p class="text-sm text-gray-600 mt-1">Finalizaciones • Entradas a canasta • Cambios de ritmo • Trabajo de pies</p>
-            </div>
-            <div class="p-4 bg-gray-800 text-white rounded-lg border-l-4 border-gray-600">
-              <div class="font-bold">MIÉRCOLES 27/08: DÍA EQUIPO</div>
-              <p class="text-sm text-gray-200 mt-1">Juego colectivo • Espacios y tiempos • Comunicación • Mini partidos</p>
-            </div>
-            <div class="p-4 bg-red-50 rounded-lg border-l-4 border-red-400">
-              <div class="font-bold text-red-700">JUEVES 28/08: DÍA INTENSIDAD</div>
-              <p class="text-sm text-gray-600 mt-1">Técnica bajo presión • Situaciones reales • Competición interna • Resistencia técnica</p>
-            </div>
-            <div class="p-4 bg-purple-100 rounded-lg border-l-4 border-purple-400">
-              <div class="font-bold text-purple-700">VIERNES 29/08: DÍA CLAUSURA</div>
-              <p class="text-sm text-gray-600 mt-1">Evaluación final • Muestra de habilidades • Torneo de clausura • Entrega de diplomas</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
         <h3 class="text-green-700 text-xl font-bold mb-6 text-center">📊 ADAPTACIÓN POR CATEGORÍAS</h3>
         <div class="space-y-4">
           <div class="flex flex-col md:flex-row md:justify-between md:items-center bg-gradient-to-r from-green-50 to-green-100 p-5 rounded-xl border-l-4 border-green-500">
@@ -145,10 +81,10 @@ export const noticias = [
         <h3 class="text-xl font-bold mb-6 text-center">💰 PRECIOS 2025</h3>
         <div class="space-y-4">
           <div class="bg-white/20 p-5 rounded-xl text-center font-bold text-lg">
-            🏆 OPCIÓN COMPLETA (2 semanas): 90€
+            🏆 OPCIÓN COMPLETA (2 semanas): 100€
           </div>
           <div class="bg-white/20 p-5 rounded-xl text-center font-bold text-lg">
-            ⚡ OPCIÓN SEMANAL (1 semana): 50€
+            ⚡ OPCIÓN SEMANAL (1 semana): 60€
           </div>
         </div>
       </div>
@@ -167,21 +103,21 @@ export const noticias = [
             <span class="bg-green-100 text-green-700 rounded-full p-2 mr-3 mt-1">✓</span>
             <div>
               <h4 class="font-bold text-gray-800">Desayuno completo y saludable</h4>
-              <p class="text-sm text-gray-600">Incluye fruta, lácteos, zumo y bocadillo</p>
+              <p class="text-sm text-gray-600">Incluye fruta, lácteos, zumo y sandwiches</p>
             </div>
           </div>
           <div class="flex items-start">
             <span class="bg-green-100 text-green-700 rounded-full p-2 mr-3 mt-1">✓</span>
             <div>
               <h4 class="font-bold text-gray-800">Evaluación técnica personalizada</h4>
-              <p class="text-sm text-gray-600">Informe detallado del progreso del jugador/a</p>
+              <p class="text-sm text-gray-600">Adaptado al progreso del jugador/a</p>
             </div>
           </div>
           <div class="flex items-start">
             <span class="bg-green-100 text-green-700 rounded-full p-2 mr-3 mt-1">✓</span>
             <div>
-              <h4 class="font-bold text-gray-800">Diploma de participación oficial</h4>
-              <p class="text-sm text-gray-600">Acreditativo de la formación recibida</p>
+              <h4 class="font-bold text-gray-800">Camiseta de participación oficial</h4>
+              <p class="text-sm text-gray-600">Para cada jugador</p>
             </div>
           </div>
           <div class="flex items-start">
@@ -204,7 +140,7 @@ export const noticias = [
             </li>
             <li class="flex items-start">
               <span class="text-green-500 mr-2">•</span>
-              <span class="text-gray-700">Bocadillo completo variado</span>
+              <span class="text-gray-700">Sandwiches variados</span>
             </li>
             <li class="flex items-start">
               <span class="text-green-500 mr-2">•</span>
@@ -243,10 +179,6 @@ export const noticias = [
               <span class="text-green-500 mr-2">•</span>
               <span class="text-gray-700">Ropa de cambio</span>
             </li>
-            <li class="flex items-start">
-              <span class="text-green-500 mr-2">•</span>
-              <span class="text-gray-700">Protección solar</span>
-            </li>
           </ul>
         </div>
       </div>
@@ -256,15 +188,15 @@ export const noticias = [
         <div class="space-y-4 text-lg">
           <p class="flex items-center justify-center">
             <span class="mr-2">📧</span>
-            <a href="mailto:info@clubcalasanz.es" class="hover:underline">info@clubcalasanz.es</a>
+            <a href="mailto:clubcalasanzbaloncesto@gmail.com" class="hover:underline">info@clubcalasanz.es</a>
           </p>
           <p class="flex items-center justify-center">
             <span class="mr-2">📱</span>
-            <span>+34 123 456 789</span>
+            <span>+34 690342138</span>
           </p>
           <p class="flex items-center justify-center">
             <span class="mr-2">📍</span>
-            <span>Pabellón Calasanz, C/ Ejemplo 123, Zaragoza</span>
+            <span>Pabellón Calasanz, C/ P.º Canalejas, 8, 39004 Santander, Cantabria</span>
           </p>
         </div>
       </div>
@@ -273,7 +205,6 @@ export const noticias = [
         🏀 ¡EMPIEZA LA TEMPORADA A TOPE! 💪
       </div>
     `,
-    fecha: '27 junio 2025',
     imagen: '/images/basket.JPEG',
     categoria: 'Eventos',
     destacado: true,
