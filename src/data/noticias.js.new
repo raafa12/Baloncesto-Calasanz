@@ -2,8 +2,11 @@ export const noticias = [
   {
     id: "equipos-temporada-25-26",
     titulo: '🏀 CALASANZ EQUIPOS - Temporada 2025/2026',
-    descripcion: '',
-    contenido: null,
+    descripcion: 'Informe completo de jugadores y equipos del CB Calasanz para la próxima temporada',
+    contenido: `
+      <h1 class="text-3xl font-bold mb-6">🏀 CALASANZ EQUIPOS</h1>
+      <h2 class="text-2xl font-semibold mb-6">Temporada 2025/2026 - Informe de Jugadores</h2>
+    `,
     fecha: '26 junio 2025',
     imagen: '/images/BenjaKids.JPG',
     categoria: 'Equipos',
