@@ -70,10 +70,9 @@ export const noticias = [
                   <span class="font-bold text-lg block text-green-300">11:00 - 11:30</span>
                   <span class="text-green-100 font-semibold">DESAYUNO</span>
                 </div>
-                <span class="text-2xl animate-pulse">✨</span>
               </div>
               <div class="bg-green-800/40 border border-green-700/50 rounded-xl p-5 flex items-center space-x-4 hover:bg-green-800/60 transition-colors">
-                <span class="text-3xl">🎯</span>
+                <span class="text-3xl">🏀</span>
                 <div class="flex-1">
                   <span class="font-bold text-lg block text-green-300">11:30 - 13:30</span>
                   <span class="text-green-100">Técnica individual (2ª parte)</span>
@@ -142,17 +141,6 @@ export const noticias = [
                 <p class="text-red-200 mb-3">16-18 años</p>
                 <p class="text-sm bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 inline-flex items-center">
                   <span class="mr-2">💪</span> Alto rendimiento
-                </p>
-              </div>
-              
-              <div class="bg-gradient-to-br from-indigo-800/80 to-indigo-900/90 text-white rounded-xl p-5 border border-indigo-700/50 shadow-lg hover:shadow-indigo-500/20 hover:-translate-y-1 transition-all">
-                <div class="flex items-center space-x-3 mb-3">
-                  <span class="text-3xl">👑</span>
-                  <h4 class="font-bold text-xl text-indigo-300">SENIOR</h4>
-                </div>
-                <p class="text-indigo-200 mb-3">+18 años</p>
-                <p class="text-sm bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 inline-flex items-center">
-                  <span class="mr-2">🏅</span> Competición
                 </p>
               </div>
             </div>
@@ -304,11 +292,6 @@ export const noticias = [
         <h3 class="text-2xl font-bold text-center text-indigo-100">📞 CONTACTO E INSCRIPCIONES</h3>
       </div>
       
-           <div class="bg-gradient-to-r from-amber-800/30 to-amber-900/30 border border-amber-800/50 rounded-xl p-4 text-center">
-          <p class="text-amber-200 text-sm">
-            <span class="font-medium">¡Plazas limitadas!</span> Inscríbete antes del 18 de julio para asegurar tu plaza.
-          </p>
-        </div>
 
         <!-- Formulario de Inscripción -->
         <div class="bg-gray-800/40 rounded-xl border border-gray-700/50 p-6 space-y-6">
