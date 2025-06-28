@@ -1,7 +1,7 @@
 export const noticias = [
   {
     id: "equipos-temporada-25-26",
-    titulo: '🏀 CALASANZ EQUIPOS - Temporada 2025/2026',
+    titulo: 'CALASANZ EQUIPOS - Temporada 2025/2026',
     contenido: null,
     imagen: '/images/BenjaKids.JPG',
     categoria: 'Equipos',
@@ -10,7 +10,7 @@ export const noticias = [
   },
   {
     id: "jornadas-tecnificacion-2025",
-    titulo: '🏀 Jornadas de Tecnificación 2025',
+    titulo: 'Jornadas de Tecnificación 2025 - Pretemporada',
     contenido: `
     <div class="bg-[#0a1f1c] text-white">
       <!-- Hero Section Optimizado para móvil -->
