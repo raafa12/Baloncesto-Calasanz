@@ -30,7 +30,7 @@ export const noticias = [
             </div>
             <div class="bg-green-900/50 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-800/50 hover:transform hover:scale-105 transition-transform duration-200">
               <p class="font-bold text-sm sm:text-base text-green-300 leading-tight">8:30-13:30h</p>
-              <p class="text-xs sm:text-sm text-green-200 mt-1">lun-vie</p>
+              <p class="text-xs sm:text-sm text-green-200 mt-1">lunes a viernes</p>
             </div>
             <div class="bg-green-900/50 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-800/50 hover:transform hover:scale-105 transition-transform duration-200">
               <p class="font-bold text-sm sm:text-base text-green-300 leading-tight">2 semanas</p>
@@ -70,7 +70,7 @@ export const noticias = [
                 <span class="text-3xl sm:text-4xl flex-shrink-0">🥪</span>
                 <div class="flex-1 min-w-0">
                   <span class="font-bold text-base sm:text-lg block text-green-300 truncate">11:00 - 11:30</span>
-                  <span class="text-green-100 font-semibold text-sm sm:text-base">DESAYUNO</span>
+                  <span class="text-green-100 font-semibold text-sm sm:text-base">Desayuno</span>
                 </div>
               </div>
               <div class="bg-green-800/40 border border-green-700/50 rounded-xl p-4 sm:p-5 flex items-center space-x-4 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
