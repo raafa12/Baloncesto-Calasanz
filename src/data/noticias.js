@@ -10,7 +10,7 @@ export const noticias = [
   },
   {
     id: "jornadas-tecnificacion-2025",
-    titulo: '🏀 JORNADAS DE TECNIFICACIÓN PRETEMPORADA 2025',
+    titulo: '🏀 Jornadas de Tecnificación 2025',
     contenido: `
     <div class="bg-[#0a1f1c] text-white">
       <!-- Hero Section Optimizado para móvil -->
