@@ -16,68 +16,68 @@ export const noticias = [
       <!-- Hero Section Optimizado para móvil -->
       <div class="relative overflow-hidden bg-gradient-to-br from-green-900/80 via-green-800/90 to-green-900/80">
         <div class="absolute inset-0 bg-black/20"></div>
-        <div class="relative px-3 py-6 text-center">
-          <div class="animate-bounce mb-3">
-            <span class="text-3xl sm:text-4xl">🏀</span>
+        <div class="relative px-4 py-8 sm:py-12 text-center">
+          <div class="animate-bounce mb-4 sm:mb-6">
+            <span class="text-4xl sm:text-5xl">🏀</span>
           </div>
-          <p class="text-base sm:text-lg font-semibold mb-4 text-green-300">CLUB CALASANZ</p>
+          <p class="text-lg sm:text-xl font-semibold mb-6 text-green-300 tracking-wider">CLUB CALASANZ</p>
           
           <!-- Info Cards optimizadas para móvil -->
-          <div class="grid grid-cols-2 gap-2 max-w-xs mx-auto sm:max-w-2xl sm:grid-cols-4 sm:gap-4">
-            <div class="bg-green-900/50 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-green-800/50">
-              <p class="font-bold text-xs sm:text-sm text-green-300">18-31 Agosto</p>
-              <p class="text-xs text-green-200">2025</p>
+          <div class="grid grid-cols-2 gap-3 max-w-md mx-auto sm:max-w-4xl sm:grid-cols-4 sm:gap-4">
+            <div class="bg-green-900/50 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-800/50 hover:transform hover:scale-105 transition-transform duration-200">
+              <p class="font-bold text-sm sm:text-base text-green-300 leading-tight">18-31 Agosto</p>
+              <p class="text-xs sm:text-sm text-green-200 mt-1">2025</p>
             </div>
-            <div class="bg-green-900/50 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-green-800/50">
-              <p class="font-bold text-xs sm:text-sm text-green-300">8:30-13:30h</p>
-              <p class="text-xs text-green-200">lun-vie</p>
+            <div class="bg-green-900/50 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-800/50 hover:transform hover:scale-105 transition-transform duration-200">
+              <p class="font-bold text-sm sm:text-base text-green-300 leading-tight">8:30-13:30h</p>
+              <p class="text-xs sm:text-sm text-green-200 mt-1">lun-vie</p>
             </div>
-            <div class="bg-green-900/50 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-green-800/50">
-              <p class="font-bold text-xs sm:text-sm text-green-300">2 semanas</p>
-              <p class="text-xs text-green-200">Intensivas</p>
+            <div class="bg-green-900/50 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-800/50 hover:transform hover:scale-105 transition-transform duration-200">
+              <p class="font-bold text-sm sm:text-base text-green-300 leading-tight">2 semanas</p>
+              <p class="text-xs sm:text-sm text-green-200 mt-1">Intensivas</p>
             </div>
-            <div class="bg-green-900/50 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-green-800/50">
-              <p class="font-bold text-xs sm:text-sm text-green-300">8-18 años</p>
-              <p class="text-xs text-green-200">5 categorías</p>
+            <div class="bg-green-900/50 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-800/50 hover:transform hover:scale-105 transition-transform duration-200">
+              <p class="font-bold text-sm sm:text-base text-green-300 leading-tight">8-18 años</p>
+              <p class="text-xs sm:text-sm text-green-200 mt-1">5 categorías</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="px-4 py-6 space-y-6 max-w-6xl mx-auto">
+      <div class="px-4 sm:px-6 py-8 sm:py-12 space-y-8 max-w-6xl mx-auto">
         <!-- Schedule Section -->
-        <div class="bg-green-900/30 rounded-xl overflow-hidden border border-green-800/50">
-          <div class="bg-gradient-to-r from-green-700/80 to-green-800/90 p-4">
-            <h3 class="text-2xl font-bold text-center text-green-100">HORARIO DIARIO</h3>
+        <div class="bg-green-900/30 rounded-2xl overflow-hidden border border-green-800/50 shadow-lg">
+          <div class="bg-gradient-to-r from-green-700/80 to-green-800/90 p-4 sm:p-5">
+            <h3 class="text-2xl sm:text-3xl font-bold text-center text-green-100 tracking-tight">HORARIO DIARIO</h3>
           </div>
-          <div class="p-6">
-            <div class="space-y-4">
-              <div class="bg-green-800/40 border border-green-700/50 rounded-xl p-5 flex items-center space-x-4 hover:bg-green-800/60 transition-colors">
-                <span class="text-3xl">🏃‍♂️</span>
-                <div class="flex-1">
-                  <span class="font-bold text-lg block text-green-300">8:30 - 9:00</span>
-                  <span class="text-green-100">Recepción y calentamiento</span>
+          <div class="p-4 sm:p-6">
+            <div class="space-y-3 sm:space-y-4">
+              <div class="bg-green-800/40 border border-green-700/50 rounded-xl p-4 sm:p-5 flex items-center space-x-4 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+                <span class="text-3xl sm:text-4xl flex-shrink-0">🏃‍♂️</span>
+                <div class="flex-1 min-w-0">
+                  <span class="font-bold text-base sm:text-lg block text-green-300 truncate">8:30 - 9:00</span>
+                  <span class="text-green-100 text-sm sm:text-base">Recepción y calentamiento</span>
                 </div>
               </div>
-              <div class="bg-green-800/40 border border-green-700/50 rounded-xl p-5 flex items-center space-x-4 hover:bg-green-800/60 transition-colors">
-                <span class="text-3xl">🏀</span>
-                <div class="flex-1">
-                  <span class="font-bold text-lg block text-green-300">9:00 - 11:00</span>
-                  <span class="text-green-100">Técnica individual (1ª parte)</span>
+              <div class="bg-green-800/40 border border-green-700/50 rounded-xl p-4 sm:p-5 flex items-center space-x-4 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+                <span class="text-3xl sm:text-4xl flex-shrink-0">🏀</span>
+                <div class="flex-1 min-w-0">
+                  <span class="font-bold text-base sm:text-lg block text-green-300 truncate">9:00 - 11:00</span>
+                  <span class="text-green-100 text-sm sm:text-base">Técnica individual (1ª parte)</span>
                 </div>
               </div>
-              <div class="bg-green-800/40 border border-green-700/50 rounded-xl p-5 flex items-center space-x-4 hover:bg-green-800/60 transition-colors">
-                <span class="text-3xl">🥪</span>
-                <div class="flex-1">
-                  <span class="font-bold text-lg block text-green-300">11:00 - 11:30</span>
-                  <span class="text-green-100 font-semibold">DESAYUNO</span>
+              <div class="bg-green-800/40 border border-green-700/50 rounded-xl p-4 sm:p-5 flex items-center space-x-4 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+                <span class="text-3xl sm:text-4xl flex-shrink-0">🥪</span>
+                <div class="flex-1 min-w-0">
+                  <span class="font-bold text-base sm:text-lg block text-green-300 truncate">11:00 - 11:30</span>
+                  <span class="text-green-100 font-semibold text-sm sm:text-base">DESAYUNO</span>
                 </div>
               </div>
-              <div class="bg-green-800/40 border border-green-700/50 rounded-xl p-5 flex items-center space-x-4 hover:bg-green-800/60 transition-colors">
-                <span class="text-3xl">🏀</span>
-                <div class="flex-1">
-                  <span class="font-bold text-lg block text-green-300">11:30 - 13:30</span>
-                  <span class="text-green-100">Técnica individual (2ª parte)</span>
+              <div class="bg-green-800/40 border border-green-700/50 rounded-xl p-4 sm:p-5 flex items-center space-x-4 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+                <span class="text-3xl sm:text-4xl flex-shrink-0">🏀</span>
+                <div class="flex-1 min-w-0">
+                  <span class="font-bold text-base sm:text-lg block text-green-300 truncate">11:30 - 13:30</span>
+                  <span class="text-green-100 text-sm sm:text-base">Técnica individual (2ª parte)</span>
                 </div>
               </div>
             </div>
@@ -85,31 +85,31 @@ export const noticias = [
         </div>
 
         <!-- Categories Section -->
-        <div class="bg-green-900/30 rounded-xl overflow-hidden border border-green-800/50">
-          <div class="bg-gradient-to-r from-purple-700/80 to-purple-800/90 p-4">
-            <h3 class="text-2xl font-bold text-center text-purple-100">CATEGORÍAS</h3>
+        <div class="bg-green-900/30 rounded-2xl overflow-hidden border border-green-800/50 shadow-lg">
+          <div class="bg-gradient-to-r from-purple-700/80 to-purple-800/90 p-4 sm:p-5">
+            <h3 class="text-2xl sm:text-3xl font-bold text-center text-purple-100 tracking-tight">CATEGORÍAS</h3>
           </div>
-          <div class="p-6">
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              <div class="bg-green-900/50 text-center p-4 rounded-lg border border-green-700/50">
-                <h4 class="font-bold text-lg text-green-300">BENJAMÍN</h4>
-                <p class="text-green-200">8-10 años</p>
+          <div class="p-4 sm:p-6">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+              <div class="bg-green-900/50 text-center p-3 sm:p-4 rounded-xl border border-green-700/50 hover:transform hover:scale-105 transition-transform duration-200 hover:shadow-md">
+                <h4 class="font-bold text-base sm:text-lg text-green-300">BENJAMÍN</h4>
+                <p class="text-green-200 text-sm sm:text-base">8-10 años</p>
               </div>
-              <div class="bg-green-900/50 text-center p-4 rounded-lg border border-green-700/50">
-                <h4 class="font-bold text-lg text-green-300">ALEVÍN</h4>
-                <p class="text-green-200">10-12 años</p>
+              <div class="bg-green-900/50 text-center p-3 sm:p-4 rounded-xl border border-green-700/50 hover:transform hover:scale-105 transition-transform duration-200 hover:shadow-md">
+                <h4 class="font-bold text-base sm:text-lg text-green-300">ALEVÍN</h4>
+                <p class="text-green-200 text-sm sm:text-base">10-12 años</p>
               </div>
-              <div class="bg-green-900/50 text-center p-4 rounded-lg border border-green-700/50">
-                <h4 class="font-bold text-lg text-green-300">INFANTIL</h4>
-                <p class="text-green-200">12-14 años</p>
+              <div class="bg-green-900/50 text-center p-3 sm:p-4 rounded-xl border border-green-700/50 hover:transform hover:scale-105 transition-transform duration-200 hover:shadow-md">
+                <h4 class="font-bold text-base sm:text-lg text-green-300">INFANTIL</h4>
+                <p class="text-green-200 text-sm sm:text-base">12-14 años</p>
               </div>
-              <div class="bg-green-900/50 text-center p-4 rounded-lg border border-green-700/50">
-                <h4 class="font-bold text-lg text-green-300">CADETE</h4>
-                <p class="text-green-200">14-16 años</p>
+              <div class="bg-green-900/50 text-center p-3 sm:p-4 rounded-xl border border-green-700/50 hover:transform hover:scale-105 transition-transform duration-200 hover:shadow-md">
+                <h4 class="font-bold text-base sm:text-lg text-green-300">CADETE</h4>
+                <p class="text-green-200 text-sm sm:text-base">14-16 años</p>
               </div>
-              <div class="bg-green-900/50 text-center p-4 rounded-lg border border-green-700/50">
-                <h4 class="font-bold text-lg text-green-300">JUVENIL</h4>
-                <p class="text-green-200">16-18 años</p>
+              <div class="bg-green-900/50 text-center p-3 sm:p-4 rounded-xl border border-green-700/50 hover:transform hover:scale-105 transition-transform duration-200 hover:shadow-md">
+                <h4 class="font-bold text-base sm:text-lg text-green-300">JUVENIL</h4>
+                <p class="text-green-200 text-sm sm:text-base">16-18 años</p>
               </div>
             </div>
           </div>
@@ -117,70 +117,72 @@ export const noticias = [
 
         <!-- Pricing Cards -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="bg-gradient-to-br from-green-800/80 to-green-900/90 text-white rounded-xl p-8 border border-green-700/50 shadow-lg hover:shadow-green-500/20 hover:-translate-y-1 transition-all">
-            <div class="text-center">
-              <h3 class="text-2xl font-bold mb-3 text-green-300">OPCIÓN COMPLETA</h3>
-              <p class="text-4xl font-bold mb-2 text-white">100€</p>
-              <p class="text-green-200">2 semanas intensivas</p>
+          <div class="bg-gradient-to-br from-green-800/80 to-green-900/90 text-white rounded-2xl p-6 sm:p-8 border border-green-700/50 shadow-lg hover:shadow-green-500/20 hover:-translate-y-1 transition-all duration-300 transform hover:scale-[1.02]">
+            <div class="text-center h-full flex flex-col">
+              <h3 class="text-xl sm:text-2xl font-bold mb-3 text-green-300">OPCIÓN COMPLETA</h3>
+              <div class="flex-grow flex flex-col justify-center">
+                <p class="text-4xl sm:text-5xl font-bold mb-2 text-white">100€</p>
+                <p class="text-green-200 text-base sm:text-lg">2 semanas intensivas</p>
+              </div>
               <div class="mt-4 pt-4 border-t border-green-700/50">
-                <p class="text-green-100 text-sm">Ahorra 20€ con la opción completa</p>
+                <p class="text-green-100 text-sm sm:text-base">Ahorra 20€ con la opción completa</p>
               </div>
             </div>
           </div>
-          <div class="bg-gradient-to-br from-blue-800/80 to-blue-900/90 text-white rounded-xl p-8 border border-blue-700/50 shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1 transition-all">
-            <div class="text-center">
-              <h3 class="text-2xl font-bold mb-3 text-blue-300">OPCIÓN SEMANAL</h3>
-              <p class="text-4xl font-bold mb-2 text-white">60€</p>
-              <p class="text-blue-200">1 semana de entrenamiento</p>
+          <div class="bg-gradient-to-br from-blue-800/80 to-blue-900/90 text-white rounded-2xl p-6 sm:p-8 border border-blue-700/50 shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300 transform hover:scale-[1.02]">
+            <div class="text-center h-full flex flex-col">
+              <h3 class="text-xl sm:text-2xl font-bold mb-3 text-blue-300">OPCIÓN SEMANAL</h3>
+              <div class="flex-grow flex flex-col justify-center">
+                <p class="text-4xl sm:text-5xl font-bold mb-2 text-white">60€</p>
+                <p class="text-blue-200 text-base sm:text-lg">1 semana de entrenamiento</p>
+              </div>
               <div class="mt-4 pt-4 border-t border-blue-700/50">
-                <p class="text-blue-100 text-sm">Ideal para probar la experiencia</p>
+                <p class="text-blue-100 text-sm sm:text-base">Ideal para probar la experiencia</p>
               </div>
             </div>
           </div>
         </div>
 
         <!-- What's Included -->
-        <div class="bg-green-900/30 rounded-xl overflow-hidden border border-green-800/50">
-          <div class="bg-gradient-to-r from-blue-700/80 to-blue-800/90 p-4">
-            <h3 class="text-2xl font-bold text-center text-blue-100">¿QUÉ INCLUYE?</h3>
+        <div class="bg-green-900/30 rounded-2xl overflow-hidden border border-green-800/50 shadow-lg">
+          <div class="bg-gradient-to-r from-blue-700/80 to-blue-800/90 p-4 sm:p-5">
+            <h3 class="text-2xl sm:text-3xl font-bold text-center text-blue-100 tracking-tight">¿QUÉ INCLUYE?</h3>
           </div>
-          <div class="p-6">
-            <div class="space-y-4">
-              <div class="flex items-start space-x-4 p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-colors">
-                <span class="text-2xl text-green-400">✓</span>
+          <div class="p-4 sm:p-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+              <div class="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+                <span class="text-2xl text-green-400 flex-shrink-0">✓</span>
                 <div>
-                  <span class="font-medium text-green-100">4 horas de entrenamiento técnico diario</span>
-                  <p class="text-sm text-green-300 mt-1">Con entrenadores titulados y experimentados</p>
+                  <span class="font-medium text-sm sm:text-base text-green-100">4 horas de entrenamiento técnico diario</span>
+                  <p class="text-xs sm:text-sm text-green-300 mt-1">Con entrenadores titulados y experimentados</p>
                 </div>
               </div>
-              <div class="flex items-start space-x-4 p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-colors">
-                <span class="text-2xl text-green-400">✓</span>
+              <div class="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+                <span class="text-2xl text-green-400 flex-shrink-0">✓</span>
                 <div>
-                  <span class="font-medium text-green-100">Seguro de accidentes incluido</span>
-                  <p class="text-sm text-green-300 mt-1">Cobertura durante las actividades</p>
+                  <span class="font-medium text-sm sm:text-base text-green-100">Seguro de accidentes incluido</span>
+                  <p class="text-xs sm:text-sm text-green-300 mt-1">Cobertura durante las actividades</p>
                 </div>
               </div>
-
-              <div class="flex items-start space-x-4 p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-colors">
-                <span class="text-2xl text-green-400">✓</span>
+              <div class="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+                <span class="text-2xl text-green-400 flex-shrink-0">✓</span>
                 <div>
-                  <span class="font-medium text-green-100">Desayuno saludable incluido</span>
-                  <p class="text-sm text-green-300 mt-1">Para reponer energías a media mañana</p>
+                  <span class="font-medium text-sm sm:text-base text-green-100">Desayuno saludable incluido</span>
+                  <p class="text-xs sm:text-sm text-green-300 mt-1">Para reponer energías a media mañana</p>
                 </div>
               </div>
-
-              <div class="flex items-start space-x-4 p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-colors">
-                <span class="text-2xl text-green-400">✓</span>
+              <div class="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+                <span class="text-2xl text-green-400 flex-shrink-0">✓</span>
                 <div>
-                  <span class="font-medium text-green-100">Camiseta de participación oficial</span>
-                  <p class="text-sm text-green-300 mt-1">Diseño exclusivo 2025</p>
+                  <span class="font-medium text-sm sm:text-base text-green-100">Camiseta de participación oficial</span>
+                  <p class="text-xs sm:text-sm text-green-300 mt-1">Diseño exclusivo 2025</p>
                 </div>
               </div>
-              <div class="flex items-start space-x-4 p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-colors">
-                <span class="text-2xl text-green-400">✓</span>
+              <div class="md:col-span-2 flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+                <span class="text-2xl text-green-400 flex-shrink-0">✓</span>
                 <div>
-                  <span class="font-medium text-green-100">Evaluación técnica personalizada</span>
-                  <p class="text-sm text-green-300 mt-1">Adaptación progresiva según las necesidades del jugador</p>
+                  <span class="font-medium text-sm sm:text-base text-green-100">Evaluación técnica personalizada</span>
+                  <p class="text-xs sm:text-sm text-green-300 mt-1">Adaptación progresiva según las necesidades del jugador</p>
                 </div>
               </div>
             </div>
@@ -189,19 +191,19 @@ export const noticias = [
       </div>
 
     <!-- Sección de Contacto -->
-    <div class="bg-green-900/30 rounded-xl overflow-hidden border border-green-800/50 shadow-xl mt-8">
-      <div class="bg-gradient-to-r from-indigo-700/80 to-indigo-800/90 p-4">
-        <h3 class="text-2xl font-bold text-center text-indigo-100">📞 CONTACTO E INSCRIPCIONES</h3>
+    <div class="bg-green-900/30 rounded-2xl overflow-hidden border border-green-800/50 shadow-xl mt-8 sm:mt-10">
+      <div class="bg-gradient-to-r from-indigo-700/80 to-indigo-800/90 p-4 sm:p-5">
+        <h3 class="text-2xl sm:text-3xl font-bold text-center text-indigo-100 tracking-tight">📞 CONTACTO E INSCRIPCIONES</h3>
       </div>
       
       <!-- Formulario de Inscripción -->
-      <div class="bg-gray-800/40 rounded-xl border border-gray-700/50 p-6 space-y-6">
-        <h3 class="text-xl font-bold text-center text-white mb-2">Formulario de Inscripción</h3>
-        <form id="inscripcionForm" class="space-y-4" onsubmit="event.preventDefault(); enviarWhatsApp()">
+      <div class="bg-gray-800/40 rounded-xl border border-gray-700/50 p-4 sm:p-6 space-y-6">
+        <h3 class="text-xl sm:text-2xl font-bold text-center text-white mb-4">Formulario de Inscripción</h3>
+        <form id="inscripcionForm" class="space-y-4 sm:space-y-5" onsubmit="event.preventDefault(); enviarWhatsApp()">
           <!-- Género -->
           <div>
-            <label for="genero" class="block text-sm font-medium text-gray-300 mb-1">Género</label>
-            <select id="genero" name="genero" class="w-full px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
+            <label for="genero" class="block text-sm sm:text-base font-medium text-gray-300 mb-1.5">Género</label>
+            <select id="genero" name="genero" class="w-full px-4 py-2.5 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm sm:text-base">
               <option value="" disabled selected>Selecciona una opción</option>
               <option value="masculino">Masculino</option>
               <option value="femenino">Femenino</option>
@@ -210,8 +212,8 @@ export const noticias = [
 
           <!-- Categoría -->
           <div>
-            <label for="categoria" class="block text-sm font-medium text-gray-300 mb-1">Categoría</label>
-            <select id="categoria" name="categoria" required class="w-full px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
+            <label for="categoria" class="block text-sm sm:text-base font-medium text-gray-300 mb-1.5">Categoría</label>
+            <select id="categoria" name="categoria" required class="w-full px-4 py-2.5 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm sm:text-base">
               <option value="" disabled selected>Selecciona tu categoría</option>
               <option value="Benjamín (8-10 años)">Benjamín (8-10 años)</option>
               <option value="Alevín (10-12 años)">Alevín (10-12 años)</option>
@@ -223,39 +225,45 @@ export const noticias = [
 
           <!-- Nombre y Apellidos -->
           <div>
-            <label for="nombre" class="block text-sm font-medium text-gray-300 mb-1">Nombre y Apellidos del Jugador/a</label>
-            <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-emerald-500 focus:border-transparent" placeholder="Nombre completo">
+            <label for="nombre" class="block text-sm sm:text-base font-medium text-gray-300 mb-1.5">Nombre y Apellidos del Jugador/a</label>
+            <input type="text" id="nombre" name="nombre" required 
+                   class="w-full px-4 py-2.5 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm sm:text-base" 
+                   placeholder="Nombre completo">
           </div>
 
           <!-- Teléfono de Contacto -->
           <div>
-            <label for="telefono" class="block text-sm font-medium text-gray-300 mb-1">Teléfono de Contacto</label>
-            <input type="tel" id="telefono" name="telefono" required class="w-full px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-emerald-500 focus:border-transparent" placeholder="+34 600 000 000">
+            <label for="telefono" class="block text-sm sm:text-base font-medium text-gray-300 mb-1.5">Teléfono de Contacto</label>
+            <input type="tel" id="telefono" name="telefono" required 
+                   class="w-full px-4 py-2.5 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm sm:text-base" 
+                   placeholder="+34 600 000 000"
+                   pattern="[0-9+\-\s()]{9,20}"
+                   title="Por favor, introduce un número de teléfono válido">
           </div>
 
           <!-- Opción de Semanas -->
           <div>
-            <label class="block text-sm font-medium text-gray-300 mb-2">Duración</label>
+            <label class="block text-sm sm:text-base font-medium text-gray-300 mb-3">Duración</label>
             <div class="grid grid-cols-2 gap-3">
               <div class="relative">
                 <input type="radio" id="semana1" name="semanas" value="1" class="hidden peer" required>
-                <label for="semana1" class="flex items-center justify-center p-4 bg-gray-700/50 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-600/50 peer-checked:border-emerald-500 peer-checked:bg-emerald-900/20 peer-checked:ring-1 peer-checked:ring-emerald-500 transition-all">
-                  <span class="text-white font-medium">1 Semana</span>
+                <label for="semana1" class="flex items-center justify-center p-3 sm:p-4 bg-gray-700/50 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-600/50 peer-checked:border-emerald-500 peer-checked:bg-emerald-900/20 peer-checked:ring-1 peer-checked:ring-emerald-500 transition-all duration-200 hover:shadow-md">
+                  <span class="text-white font-medium text-sm sm:text-base">1 Semana</span>
                 </label>
               </div>
               <div class="relative">
                 <input type="radio" id="semanas2" name="semanas" value="2" class="hidden peer">
-                <label for="semanas2" class="flex items-center justify-center p-4 bg-gray-700/50 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-600/50 peer-checked:border-emerald-500 peer-checked:bg-emerald-900/20 peer-checked:ring-1 peer-checked:ring-emerald-500 transition-all">
-                  <span class="text-white font-medium">2 Semanas</span>
+                <label for="semanas2" class="flex items-center justify-center p-3 sm:p-4 bg-gray-700/50 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-600/50 peer-checked:border-emerald-500 peer-checked:bg-emerald-900/20 peer-checked:ring-1 peer-checked:ring-emerald-500 transition-all duration-200 hover:shadow-md">
+                  <span class="text-white font-medium text-sm sm:text-base">2 Semanas</span>
                 </label>
               </div>
             </div>
           </div>
 
           <!-- Botón de Envío -->
-          <button type="submit" class="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-500/20 flex items-center justify-center space-x-2">
+          <button type="submit" class="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-medium py-3.5 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-500/20 flex items-center justify-center space-x-2 text-base sm:text-lg">
             <span>Enviar Inscripción</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
           </button>
@@ -307,49 +315,40 @@ export const noticias = [
     </div>
 
     <!-- ¿Qué debes traer? -->
-    <div class="bg-green-900/30 rounded-xl overflow-hidden border border-green-800/50 shadow-xl mt-8">
-      <div class="bg-gradient-to-r from-orange-700/80 to-orange-800/90 p-4">
-        <h3 class="text-2xl font-bold text-center text-orange-100">🎒 ¿QUÉ DEBES TRAER?</h3>
+    <div class="bg-green-900/30 rounded-2xl overflow-hidden border border-green-800/50 shadow-xl mt-8 sm:mt-10">
+      <div class="bg-gradient-to-r from-orange-700/80 to-orange-800/90 p-4 sm:p-5">
+        <h3 class="text-2xl sm:text-3xl font-bold text-center text-orange-100 tracking-tight">🎒 ¿QUÉ DEBES TRAER?</h3>
       </div>
-      <div class="p-6">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="flex items-center space-x-3 p-3 bg-orange-900/20 rounded-lg hover:bg-orange-900/30 transition-colors">
-            <span class="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0">
-              <span class="text-orange-400">👕</span>
+      <div class="p-4 sm:p-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+          <div class="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-orange-900/20 rounded-xl hover:bg-orange-900/30 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+            <span class="w-9 h-9 sm:w-10 sm:h-10 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-orange-400 text-lg sm:text-xl">👕</span>
             </span>
-            <span class="text-orange-100">Ropa deportiva cómoda</span>
+            <span class="text-orange-100 text-sm sm:text-base">Ropa deportiva cómoda</span>
           </div>
-          <div class="flex items-center space-x-3 p-3 bg-orange-900/20 rounded-lg hover:bg-orange-900/30 transition-colors">
-            <span class="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0">
-              <span class="text-orange-400">👟</span>
+          <div class="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-orange-900/20 rounded-xl hover:bg-orange-900/30 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+            <span class="w-9 h-9 sm:w-10 sm:h-10 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-orange-400 text-lg sm:text-xl">👟</span>
             </span>
-            <span class="text-orange-100">Zapatillas de baloncesto</span>
+            <span class="text-orange-100 text-sm sm:text-base">Zapatillas de baloncesto</span>
           </div>
-          <div class="flex items-center space-x-3 p-3 bg-orange-900/20 rounded-lg hover:bg-orange-900/30 transition-colors">
-            <span class="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0">
-              <span class="text-orange-400">🧴</span>
+          <div class="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-orange-900/20 rounded-xl hover:bg-orange-900/30 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+            <span class="w-9 h-9 sm:w-10 sm:h-10 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-orange-400 text-lg sm:text-xl">🧴</span>
             </span>
-            <span class="text-orange-100">Toalla y ropa de recambio</span>
+            <span class="text-orange-100 text-sm sm:text-base">Toalla y ropa de recambio</span>
           </div>
-          <div class="flex items-center space-x-3 p-3 bg-orange-900/20 rounded-lg hover:bg-orange-900/30 transition-colors">
-            <span class="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0">
-              <span class="text-orange-400">💧</span>
+          <div class="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-orange-900/20 rounded-xl hover:bg-orange-900/30 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+            <span class="w-9 h-9 sm:w-10 sm:h-10 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-orange-400 text-lg sm:text-xl">🧠</span>
             </span>
-            <span class="text-orange-100">Botella de agua reutilizable</span>
+            <span class="text-orange-100 text-sm sm:text-base">¡Muchas ganas de aprender!</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Call to Action -->
-    <div class="bg-gradient-to-r from-green-600/90 to-green-700/90 text-white rounded-xl shadow-xl p-8 text-center border border-green-500/20 hover:shadow-green-500/20 transition-all hover:-translate-y-1">
-      <h3 class="text-2xl font-bold mb-4">
-        <span class="mr-3">🏀</span>
-        ¡EMPIEZA LA TEMPORADA A TOPE!
-        <span class="ml-3">💪</span>
-      </h3>
-      <p class="text-green-100 max-w-2xl mx-auto">No pierdas la oportunidad de formar parte de nuestras jornadas de tecnificación.</p>
-    </div>
   </div>
 `,
     imagen: '/images/basket.JPEG',
