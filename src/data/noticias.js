@@ -13,31 +13,31 @@ export const noticias = [
     titulo: '🏀 JORNADAS DE TECNIFICACIÓN PRETEMPORADA 2025',
     contenido: `
     <div class="bg-[#0a1f1c] text-white">
-      <!-- Hero Section Compacto -->
+      <!-- Hero Section Optimizado para móvil -->
       <div class="relative overflow-hidden bg-gradient-to-br from-green-900/80 via-green-800/90 to-green-900/80">
         <div class="absolute inset-0 bg-black/20"></div>
-        <div class="relative px-4 py-8 text-center">
-          <div class="animate-bounce mb-4">
-            <span class="text-4xl">🏀</span>
+        <div class="relative px-3 py-6 text-center">
+          <div class="animate-bounce mb-3">
+            <span class="text-3xl sm:text-4xl">🏀</span>
           </div>
-          <p class="text-lg font-semibold mb-6 text-green-300">CLUB CALASANZ</p>
+          <p class="text-base sm:text-lg font-semibold mb-4 text-green-300">CLUB CALASANZ</p>
           
-          <!-- Info Cards en Grid 2x2 para móvil -->
-          <div class="grid grid-cols-2 gap-3 max-w-sm mx-auto sm:max-w-4xl sm:grid-cols-4">
-            <div class="bg-green-900/50 backdrop-blur-sm rounded-lg p-3 border border-green-800/50">
-              <p class="font-bold text-sm text-green-300">18-31 Agosto</p>
+          <!-- Info Cards optimizadas para móvil -->
+          <div class="grid grid-cols-2 gap-2 max-w-xs mx-auto sm:max-w-2xl sm:grid-cols-4 sm:gap-4">
+            <div class="bg-green-900/50 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-green-800/50">
+              <p class="font-bold text-xs sm:text-sm text-green-300">18-31 Agosto</p>
               <p class="text-xs text-green-200">2025</p>
             </div>
-            <div class="bg-green-900/50 backdrop-blur-sm rounded-lg p-3 border border-green-800/50">
-              <p class="font-bold text-sm text-green-300">8:30-13:30h</p>
-              <p class="text-xs text-green-200">lunes a viernes</p>
+            <div class="bg-green-900/50 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-green-800/50">
+              <p class="font-bold text-xs sm:text-sm text-green-300">8:30-13:30h</p>
+              <p class="text-xs text-green-200">lun-vie</p>
             </div>
-            <div class="bg-green-900/50 backdrop-blur-sm rounded-lg p-3 border border-green-800/50">
-              <p class="font-bold text-sm text-green-300">2 semanas</p>
+            <div class="bg-green-900/50 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-green-800/50">
+              <p class="font-bold text-xs sm:text-sm text-green-300">2 semanas</p>
               <p class="text-xs text-green-200">Intensivas</p>
             </div>
-            <div class="bg-green-900/50 backdrop-blur-sm rounded-lg p-3 border border-green-800/50">
-              <p class="font-bold text-sm text-green-300">8-18 años</p>
+            <div class="bg-green-900/50 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-green-800/50">
+              <p class="font-bold text-xs sm:text-sm text-green-300">8-18 años</p>
               <p class="text-xs text-green-200">5 categorías</p>
             </div>
           </div>
@@ -164,6 +164,14 @@ export const noticias = [
               <div class="flex items-start space-x-4 p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-colors">
                 <span class="text-2xl text-green-400">✓</span>
                 <div>
+                  <span class="font-medium text-green-100">Desayuno saludable incluido</span>
+                  <p class="text-sm text-green-300 mt-1">Para reponer energías a media mañana</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4 p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-colors">
+                <span class="text-2xl text-green-400">✓</span>
+                <div>
                   <span class="font-medium text-green-100">Camiseta de participación oficial</span>
                   <p class="text-sm text-green-300 mt-1">Diseño exclusivo 2025</p>
                 </div>
@@ -178,15 +186,7 @@ export const noticias = [
             </div>
           </div>
         </div>
-
-
-
-
-        </div>
       </div>
-    </div>
-      </div>
-    </div>
 
     <!-- Sección de Contacto -->
     <div class="bg-green-900/30 rounded-xl overflow-hidden border border-green-800/50 shadow-xl mt-8">
@@ -197,7 +197,7 @@ export const noticias = [
       <!-- Formulario de Inscripción -->
       <div class="bg-gray-800/40 rounded-xl border border-gray-700/50 p-6 space-y-6">
         <h3 class="text-xl font-bold text-center text-white mb-2">Formulario de Inscripción</h3>
-        <form class="space-y-4">
+        <form id="inscripcionForm" class="space-y-4" onsubmit="event.preventDefault(); enviarWhatsApp()">
           <!-- Género -->
           <div>
             <label for="genero" class="block text-sm font-medium text-gray-300 mb-1">Género</label>
@@ -205,6 +205,19 @@ export const noticias = [
               <option value="" disabled selected>Selecciona una opción</option>
               <option value="masculino">Masculino</option>
               <option value="femenino">Femenino</option>
+            </select>
+          </div>
+
+          <!-- Categoría -->
+          <div>
+            <label for="categoria" class="block text-sm font-medium text-gray-300 mb-1">Categoría</label>
+            <select id="categoria" name="categoria" required class="w-full px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
+              <option value="" disabled selected>Selecciona tu categoría</option>
+              <option value="Benjamín (8-10 años)">Benjamín (8-10 años)</option>
+              <option value="Alevín (10-12 años)">Alevín (10-12 años)</option>
+              <option value="Infantil (12-14 años)">Infantil (12-14 años)</option>
+              <option value="Cadete (14-16 años)">Cadete (14-16 años)</option>
+              <option value="Juvenil (16-18 años)">Juvenil (16-18 años)</option>
             </select>
           </div>
 
@@ -249,6 +262,9 @@ export const noticias = [
         </form>
       </div>
     </div>
+
+    <!-- Script moved to public/whatsapp-form.js -->
+    <script src="/whatsapp-form.js"></script>
 
     <!-- Ubicación y Contacto -->
     <div class="mt-10 space-y-6">
@@ -325,9 +341,6 @@ export const noticias = [
       </div>
     </div>
 
-
-   
-
     <!-- Call to Action -->
     <div class="bg-gradient-to-r from-green-600/90 to-green-700/90 text-white rounded-xl shadow-xl p-8 text-center border border-green-500/20 hover:shadow-green-500/20 transition-all hover:-translate-y-1">
       <h3 class="text-2xl font-bold mb-4">
@@ -335,11 +348,9 @@ export const noticias = [
         ¡EMPIEZA LA TEMPORADA A TOPE!
         <span class="ml-3">💪</span>
       </h3>
-      <p class="text-green-100 max-w-2xl mx-auto">No pierdas la oportunidad de formar parte de nuestras jornadas de tecnificación.</p>    </div>
-</div>
-</div>
-</div>
-</div>
+      <p class="text-green-100 max-w-2xl mx-auto">No pierdas la oportunidad de formar parte de nuestras jornadas de tecnificación.</p>
+    </div>
+  </div>
 `,
     imagen: '/images/basket.JPEG',
     categoria: 'Eventos',
