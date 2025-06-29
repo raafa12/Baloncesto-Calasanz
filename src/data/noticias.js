@@ -354,6 +354,9 @@ export const noticias = [
     </div>
   </div>
 
+  <!-- Script para el formulario de WhatsApp -->
+  <script src="/whatsapp-form.js"></script>
+
   <!-- Sección ¿Qué debes traer? -->
   <div class="py-8">
     <div class="bg-green-900/30 rounded-2xl overflow-hidden border border-green-800/50 shadow-xl">
