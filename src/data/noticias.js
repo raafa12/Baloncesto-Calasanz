@@ -264,7 +264,7 @@ export const noticias = [
         </div>
 
         <!-- Mensaje de inscripciones abiertas -->
-        <div class="pt-0 pb-2 px-4 sm:px-6">
+        <div class="pt-0 pb-1 px-4 sm:px-6">
           <div class="bg-gradient-to-r from-green-700/90 to-green-800/90 rounded-2xl p-4 sm:p-5 border border-green-600/50 shadow-lg transform hover:scale-[1.01] transition-all duration-300">
             <div class="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0 sm:space-x-4">
               <div class="flex items-center space-x-3">
@@ -280,7 +280,7 @@ export const noticias = [
         </div>
 
         <!-- Sección de Contacto -->
-        <div class="pt-8 pb-16">
+        <div class="pt-4 pb-8">
           <div class="bg-green-900/30 rounded-2xl overflow-hidden border border-green-800/50 shadow-xl">
             <div class="bg-gradient-to-r from-indigo-700/80 to-indigo-800/90 p-4 sm:p-5">
               <h3 class="text-2xl sm:text-3xl font-bold text-center text-indigo-100 tracking-tight">📞 CONTACTO E INSCRIPCIONES</h3>
@@ -386,7 +386,7 @@ export const noticias = [
   <script src="/whatsapp-form.js"></script>
 
   <!-- Sección ¿Qué debes traer? -->
-  <div class="py-8">
+  <div class="pt-4 pb-8">
     <div class="bg-green-900/30 rounded-2xl overflow-hidden border border-green-800/50 shadow-xl">
       <div class="bg-gradient-to-r from-orange-700/80 to-orange-800/90 p-4 sm:p-5">
         <h3 class="text-2xl sm:text-3xl font-bold text-center text-orange-100 tracking-tight">🎒 ¿QUÉ DEBES TRAER?</h3>
