@@ -135,39 +135,44 @@ export const noticias = [
           </div>
           <div class="p-4 sm:p-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
-              <div class="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
-                <span class="text-2xl text-green-400 flex-shrink-0">✓</span>
-                <div>
+              <!-- Primera fila -->
+              <div class="flex items-start space-x-3 sm:space-x-4 p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 h-full">
+                <span class="text-2xl text-green-400 flex-shrink-0 mt-0.5">✓</span>
+                <div class="flex-1">
                   <span class="font-medium text-sm sm:text-base text-green-100">4 horas de entrenamiento técnico diario</span>
                   <p class="text-xs sm:text-sm text-green-300 mt-1">Con entrenadores titulados y experimentados</p>
                 </div>
               </div>
-              <div class="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
-                <span class="text-2xl text-green-400 flex-shrink-0">✓</span>
-                <div>
-                  <span class="font-medium text-sm sm:text-base text-green-100">Seguro de accidentes incluido</span>
+              <div class="flex items-start space-x-3 sm:space-x-4 p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 h-full">
+                <span class="text-2xl text-green-400 flex-shrink-0 mt-0.5">✓</span>
+                <div class="flex-1">
+                  <span class="font-medium text-sm sm:text-base text-green-100">Seguro de accidentes</span>
                   <p class="text-xs sm:text-sm text-green-300 mt-1">Cobertura durante las actividades</p>
                 </div>
               </div>
-              <div class="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
-                <span class="text-2xl text-green-400 flex-shrink-0">✓</span>
-                <div>
+              
+              <!-- Segunda fila -->
+              <div class="flex items-start space-x-3 sm:space-x-4 p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 h-full">
+                <span class="text-2xl text-green-400 flex-shrink-0 mt-0.5">✓</span>
+                <div class="flex-1">
                   <span class="font-medium text-sm sm:text-base text-green-100">Desayuno saludable incluido</span>
                   <p class="text-xs sm:text-sm text-green-300 mt-1">Para reponer energías a media mañana</p>
                 </div>
               </div>
-              <div class="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
-                <span class="text-2xl text-green-400 flex-shrink-0">✓</span>
-                <div>
-                  <span class="font-medium text-sm sm:text-base text-green-100">Camiseta de participación oficial</span>
-                  <p class="text-xs sm:text-sm text-green-300 mt-1">Diseño exclusivo 2025</p>
+              <div class="flex items-start space-x-3 sm:space-x-4 p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 h-full">
+                <span class="text-2xl text-green-400 flex-shrink-0 mt-0.5">✓</span>
+                <div class="flex-1">
+                  <span class="font-medium text-sm sm:text-base text-green-100">Trabajo en grupos reducidos</span>
+                  <p class="text-xs sm:text-sm text-green-300 mt-1">Adaptación progresiva según necesidades</p>
                 </div>
               </div>
-              <div class="md:col-span-2 flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
-                <span class="text-2xl text-green-400 flex-shrink-0">✓</span>
-                <div>
-                  <span class="font-medium text-sm sm:text-base text-green-100">Trabajo en grupos reducidos</span>
-                  <p class="text-xs sm:text-sm text-green-300 mt-1">Adaptación progresiva según las necesidades del jugador</p>
+              
+              <!-- Tercera fila - ocupa dos columnas -->
+              <div class="md:col-span-2 flex items-start space-x-3 sm:space-x-4 p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+                <span class="text-2xl text-green-400 flex-shrink-0 mt-0.5">✓</span>
+                <div class="flex-1">
+                  <span class="font-medium text-sm sm:text-base text-green-100">Camiseta de participación oficial</span>
+                  <p class="text-xs sm:text-sm text-green-300 mt-1">Diseño exclusivo 2025</p>
                 </div>
               </div>
             </div>
