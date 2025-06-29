@@ -11,7 +11,7 @@ export const noticias = [
   },
   {
     id: "jornadas-tecnificacion-2025",
-    titulo: 'Jornadas de Tecnificación 2025 - Pretemporada',
+    titulo: 'Jornadas de Tecnificación 2025',
     contenido: `
     <div class="min-h-screen bg-gradient-to-br from-green-950 via-gray-900 to-green-950 text-white relative overflow-hidden">
       <!-- Patrón de puntos sutiles -->
