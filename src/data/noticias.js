@@ -139,7 +139,7 @@ export const noticias = [
               <div class="flex items-start space-x-3 sm:space-x-4 p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 h-full">
                 <span class="text-2xl text-green-400 flex-shrink-0 mt-0.5">✓</span>
                 <div class="flex-1">
-                  <span class="font-medium text-sm sm:text-base text-green-100">4 horas de entrenamiento técnico diario</span>
+                  <span class="font-medium text-sm sm:text-base text-green-100">4 horas de entrenamiento técnico-táctico diario</span>
                   <p class="text-xs sm:text-sm text-green-300 mt-1">Con entrenadores titulados y experimentados</p>
                 </div>
               </div>
@@ -155,7 +155,7 @@ export const noticias = [
               <div class="flex items-start space-x-3 sm:space-x-4 p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 h-full">
                 <span class="text-2xl text-green-400 flex-shrink-0 mt-0.5">✓</span>
                 <div class="flex-1">
-                  <span class="font-medium text-sm sm:text-base text-green-100">Desayuno saludable incluido</span>
+                  <span class="font-medium text-sm sm:text-base text-green-100">Desayuno saludable</span>
                   <p class="text-xs sm:text-sm text-green-300 mt-1">Para reponer energías a media mañana</p>
                 </div>
               </div>
