@@ -86,6 +86,13 @@ export const noticias = [
                   <span class="text-green-100 text-sm sm:text-base">Técnica individual (2ª parte)</span>
                 </div>
               </div>
+              <div class="bg-green-800/40 border border-green-700/50 rounded-xl p-4 sm:p-5 flex items-center space-x-4 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+                <span class="text-3xl sm:text-4xl flex-shrink-0">👋</span>
+                <div class="flex-1 min-w-0">
+                  <span class="font-bold text-base sm:text-lg block text-green-300 truncate">13:30 - 14:00</span>
+                  <span class="text-green-100 text-sm sm:text-base">Recogida de participantes</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
