@@ -159,7 +159,7 @@ export const noticias = [
               <div class="md:col-span-2 flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 bg-green-800/40 rounded-xl border border-green-700/50 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
                 <span class="text-2xl text-green-400 flex-shrink-0">✓</span>
                 <div>
-                  <span class="font-medium text-sm sm:text-base text-green-100">Evaluación técnica en grupos reducidos</span>
+                  <span class="font-medium text-sm sm:text-base text-green-100">Trabajo en grupos reducidos</span>
                   <p class="text-xs sm:text-sm text-green-300 mt-1">Adaptación progresiva según las necesidades del jugador</p>
                 </div>
               </div>
