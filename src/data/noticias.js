@@ -263,6 +263,22 @@ export const noticias = [
           </div>
         </div>
 
+        <!-- Mensaje de inscripciones abiertas -->
+        <div class="pt-0 pb-2 px-4 sm:px-6">
+          <div class="bg-gradient-to-r from-green-700/90 to-green-800/90 rounded-2xl p-4 sm:p-5 border border-green-600/50 shadow-lg transform hover:scale-[1.01] transition-all duration-300">
+            <div class="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0 sm:space-x-4">
+              <div class="flex items-center space-x-3">
+                <span class="text-2xl sm:text-3xl">🏀</span>
+                <h3 class="text-lg sm:text-xl font-bold text-white">¡INSCRIPCIONES ABIERTAS!</h3>
+              </div>
+              <div class="text-center sm:text-right">
+                <p class="text-sm sm:text-base text-green-100">Plazo límite: <span class="font-bold text-white">1 de Agosto de 2025</span></p>
+                <p class="text-xs sm:text-sm text-green-200 mt-1">¡No te quedes sin tu plaza! Plazas limitadas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Sección de Contacto -->
         <div class="pt-8 pb-16">
           <div class="bg-green-900/30 rounded-2xl overflow-hidden border border-green-800/50 shadow-xl">
@@ -368,22 +384,6 @@ export const noticias = [
 
   <!-- Script para el formulario de WhatsApp -->
   <script src="/whatsapp-form.js"></script>
-
-  <!-- Mensaje de inscripciones abiertas -->
-  <div class="pt-0 pb-2 px-4 sm:px-6">
-    <div class="bg-gradient-to-r from-green-700/90 to-green-800/90 rounded-2xl p-4 sm:p-5 border border-green-600/50 shadow-lg transform hover:scale-[1.01] transition-all duration-300">
-      <div class="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0 sm:space-x-4">
-        <div class="flex items-center space-x-3">
-          <span class="text-2xl sm:text-3xl">🏀</span>
-          <h3 class="text-lg sm:text-xl font-bold text-white">¡INSCRIPCIONES ABIERTAS!</h3>
-        </div>
-        <div class="text-center sm:text-right">
-          <p class="text-sm sm:text-base text-green-100">Plazo límite: <span class="font-bold text-white">1 de Agosto de 2025</span></p>
-          <p class="text-xs sm:text-sm text-green-200 mt-1">¡No te quedes sin tu plaza! Plazas limitadas</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Sección ¿Qué debes traer? -->
   <div class="py-8">
