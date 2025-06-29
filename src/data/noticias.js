@@ -250,15 +250,13 @@ export const noticias = [
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Sección de Contacto -->
-    <div class="pt-8 pb-16">
-      <div class="bg-green-900/30 rounded-2xl overflow-hidden border border-green-800/50 shadow-xl">
-      <div class="bg-gradient-to-r from-indigo-700/80 to-indigo-800/90 p-4 sm:p-5">
-        <h3 class="text-2xl sm:text-3xl font-bold text-center text-indigo-100 tracking-tight">📞 CONTACTO E INSCRIPCIONES</h3>
-      </div>
+        <!-- Sección de Contacto -->
+        <div class="pt-8 pb-16">
+          <div class="bg-green-900/30 rounded-2xl overflow-hidden border border-green-800/50 shadow-xl">
+            <div class="bg-gradient-to-r from-indigo-700/80 to-indigo-800/90 p-4 sm:p-5">
+              <h3 class="text-2xl sm:text-3xl font-bold text-center text-indigo-100 tracking-tight">📞 CONTACTO E INSCRIPCIONES</h3>
+            </div>
       
       <!-- Formulario de Inscripción -->
       <div class="bg-gray-800/40 rounded-xl border border-gray-700/50 p-4 sm:p-6 space-y-6">
@@ -325,69 +323,45 @@ export const noticias = [
           </div>
 
           <!-- Botón de Envío -->
-          <button type="submit" class="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-medium py-3.5 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-500/20 flex items-center justify-center space-x-2 text-base sm:text-lg">
+          <button type="submit" class="w-full bg-gradient-to-r from-green-700 to-green-800 hover:from-green-800 hover:to-green-900 text-white font-medium py-3.5 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-500/20 flex items-center justify-center space-x-2 text-base sm:text-lg">
             <span>Enviar Inscripción</span>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
           </button>
         </form>
-      </div>
-    </div>
 
-    <!-- Script moved to public/whatsapp-form.js -->
-    <script src="/whatsapp-form.js"></script>
-
-    <!-- Ubicación y Contacto -->
-    <div class="py-8">
-      <div class="space-y-6">
-      <div class="space-y-4">
-        <a href="https://maps.google.com/maps?q=Pabellon+Calasanz+P.+de+Canalejas+8+39004+Santander" target="_blank" rel="noopener noreferrer" class="group flex items-center space-x-4 p-4 bg-gray-800/40 rounded-xl border border-gray-700/50 hover:bg-gray-700/60 transition-all hover:-translate-y-0.5">
-          <span class="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-amber-500/20 transition-all">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-          </span>
-          <div>
-            <p class="font-medium text-gray-200">Ubicación</p>
-            <p class="text-sm text-amber-300 group-hover:text-amber-200 transition-colors">Pabellón Calasanz, P.º Canalejas, 8, 39004 Santander</p>
-          </div>
-          <span class="ml-auto text-gray-400 group-hover:text-white transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-            </svg>
-          </span>
-        </a>
-        
-        <a href="https://wa.me/34690342138" target="_blank" rel="noopener noreferrer" class="group flex items-center space-x-4 p-4 bg-gray-800/40 rounded-xl border border-gray-700/50 hover:bg-gray-700/60 transition-all hover:-translate-y-0.5">
-          <span class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-emerald-500/20 transition-all">
+        <!-- Botones de Contacto -->
+        <div class="grid grid-cols-1 gap-4 mt-6">
+          <!-- Botón de WhatsApp -->
+          <a href="https://wa.me/34690342138" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center space-x-3 p-4 bg-emerald-600/90 hover:bg-emerald-700 rounded-xl border border-emerald-700/50 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-500/20">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.231 8.413 3.488 2.245 2.259 3.481 5.283 3.48 8.458-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.964-.941 1.162-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.499.099-.202.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
             </svg>
-          </span>
-          <div>
-            <p class="font-medium text-gray-200">WhatsApp</p>
-            <p class="text-sm text-emerald-300 group-hover:text-emerald-200 transition-colors">Envíanos un mensaje</p>
-          </div>
-          <span class="ml-auto text-gray-400 group-hover:text-white transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            <span class="text-white font-medium">Habla con nosotros por WhatsApp</span>
+          </a>
+
+          <!-- Botón de Ubicación -->
+          <a href="https://maps.google.com/maps?q=Pabellon+Calasanz+P.+de+Canalejas+8+39004+Santander" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center space-x-3 p-4 bg-red-600/90 hover:bg-red-700 rounded-xl border border-red-700/50 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-red-500/20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-          </span>
-        </a>
-      </div>
+            <span class="text-white font-medium">P.º Canalejas, 8, 39004 Santander, Cantabria</span>
+          </a>
+        </div>
       </div>
     </div>
+  </div>
 
-    <!-- ¿Qué debes traer? -->
-    <div class="py-8">
-      <div class="bg-green-900/30 rounded-2xl overflow-hidden border border-green-800/50 shadow-xl">
+  <!-- Sección ¿Qué debes traer? -->
+  <div class="py-8">
+    <div class="bg-green-900/30 rounded-2xl overflow-hidden border border-green-800/50 shadow-xl">
       <div class="bg-gradient-to-r from-orange-700/80 to-orange-800/90 p-4 sm:p-5">
         <h3 class="text-2xl sm:text-3xl font-bold text-center text-orange-100 tracking-tight">🎒 ¿QUÉ DEBES TRAER?</h3>
       </div>
       <div class="p-4 sm:p-6">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+        <!-- ... -->
           <div class="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-orange-900/20 rounded-xl hover:bg-orange-900/30 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
             <span class="w-9 h-9 sm:w-10 sm:h-10 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0">
               <span class="text-orange-400 text-lg sm:text-xl">👕</span>
@@ -419,6 +393,8 @@ export const noticias = [
       </div>
       </div>
     </div>
+  </div>
+</div>
 `,
     imagen: '/images/basket.JPEG',
     categoria: 'Eventos',
