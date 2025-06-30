@@ -7,7 +7,7 @@ export const noticias = [
     categoria: 'Equipos',
     destacado: true,
     tieneComponenteEspecial: true,
-    oculta: true
+    oculta: process.env.NODE_ENV === 'production'
   },
   {
     id: "jornadas-tecnificacion-2025",
