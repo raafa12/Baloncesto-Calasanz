@@ -1,5 +1,234 @@
 export const noticias = [
   {
+    id: "horarios-entrenamiento-25-26",
+    titulo: 'Horarios de entrenamiento - Temporada 2025/2026',
+    contenido: `
+    <div class="min-h-screen bg-gradient-to-br from-green-950 via-gray-900 to-green-950 text-white relative overflow-hidden">
+      <!-- Patrón de puntos sutiles -->
+      <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
+      
+      <!-- Contenedor principal -->
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-8">
+        <!-- Espaciador superior -->
+        <div class="h-8"></div>
+
+        <!-- Sección de Baby Basket -->
+        <div class="bg-orange-900/30 rounded-2xl overflow-hidden border border-orange-800/50 shadow-lg mb-8">
+          <div class="bg-gradient-to-r from-orange-600/80 to-orange-700/90 p-4">
+            <h2 class="text-2xl font-bold text-center text-orange-100">BABY BASKET</h2>
+          </div>
+          <div class="p-6">
+            <div class="space-y-6">
+              <div class="flex justify-between items-center">
+                <span>Lunes y Jueves</span>
+                <span class="font-medium">15:00 - 16:30 (exterior)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección de Horarios -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <!-- Sección Masculina -->
+          <div class="bg-blue-900/30 rounded-2xl overflow-hidden border border-blue-800/50 shadow-lg">
+            <div class="bg-gradient-to-r from-blue-700/80 to-blue-800/90 p-4">
+              <h2 class="text-xl font-bold text-center text-blue-100">SECCIÓN MASCULINA</h2>
+            </div>
+            <div class="p-6">
+              <div class="space-y-6">
+                <!-- Categorías masculinas -->
+                <div>
+                  <h3 class="text-lg font-semibold text-blue-300 mb-3">BENJAMÍN</h3>
+                  <ul class="space-y-2">
+                    <li class="flex justify-between">
+                      <span>Lunes y Miércoles</span>
+                      <span class="font-medium">16:30 - 18:00 (exterior)</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Viernes</span>
+                      <span class="font-medium">16:00 - 17:00 (exterior)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-semibold text-blue-300 mb-3">ALEVÍN</h3>
+                  <ul class="space-y-2">
+                    <li class="flex justify-between">
+                      <span>Lunes y miercoles</span>
+                      <span class="font-medium">18:00 - 19:30 (exterior)</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Vierneses</span>
+                      <span class="font-medium">18:00 - 19:00 (exterior)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-semibold text-blue-300 mb-3">INFANTIL A</h3>
+                  <ul class="space-y-2">
+                    <li class="flex justify-between">
+                      <span>Lunes y Miércoles</span>
+                      <span class="font-medium">16:30 - 18:00 (pabellón)</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Viernes</span>
+                      <span class="font-medium">16:00 - 17:00 (exterior)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-semibold text-blue-300 mb-3">INFANTIL B</h3>
+                  <ul class="space-y-2">
+                    <li class="flex justify-between">
+                      <span>Lunes y Miércoles</span>
+                      <span class="font-medium">16:30 - 18:00 (exterior)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-semibold text-blue-300 mb-3">CADETE A</h3>
+                  <ul class="space-y-2">
+                    <li class="flex justify-between">
+                      <span>Lunes y Miércoles </span>
+                      <span class="font-medium">18:00 - 19:30 (exterior)</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Viernes </span>
+                      <span class="font-medium">16:00 - 17:15 (exterior)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-semibold text-blue-300 mb-3">JUNIOR</h3>
+                  <ul class="space-y-2">
+                    <li class="flex justify-between">
+                      <span>Martes</span>
+                      <span class="font-medium">16:30 - 18:00 (pabellón)</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Miércoles</span>
+                      <span class="font-medium">18:00 - 19:30 (pabellón)</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Viernes</span>
+                      <span class="font-medium">17:15 - 18:30 (pabellón)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección Femenina -->
+          <div class="bg-pink-900/30 rounded-2xl overflow-hidden border border-pink-800/50 shadow-lg">
+            <div class="bg-gradient-to-r from-pink-700/80 to-pink-800/90 p-4">
+              <h2 class="text-xl font-bold text-center text-pink-100">SECCIÓN FEMENINA</h2>
+            </div>
+            <div class="p-6">
+              <div class="space-y-6">
+                <!-- Categorías femeninas -->
+                <div>
+                  <h3 class="text-lg font-semibold text-pink-300 mb-3">BENJAMÍN</h3>
+                  <ul class="space-y-2">
+                    <li class="flex justify-between">
+                      <span>Martes y Jueves</span>
+                      <span class="font-medium">17:30 - 18:45</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-semibold text-pink-300 mb-3">ALEVÍN A</h3>
+                  <ul class="space-y-2">
+                    <li class="flex justify-between">
+                      <span>Lunes y Miércoles</span>
+                      <span class="font-medium">17:30 - 19:00</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-semibold text-pink-300 mb-3">ALEVÍN B</h3>
+                  <ul class="space-y-2">
+                    <li class="flex justify-between">
+                      <span>Martes y Jueves</span>
+                      <span class="font-medium">18:45 - 20:15</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-semibold text-pink-300 mb-3">CADETE A</h3>
+                  <ul class="space-y-2">
+                    <li class="flex justify-between">
+                      <span>Lunes y Miércoles</span>
+                      <span class="font-medium">19:00 - 20:30</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-semibold text-pink-300 mb-3">CADETE B</h3>
+                  <ul class="space-y-2">
+                    <li class="flex justify-between">
+                      <span>Martes, Jueves y Viernes</span>
+                      <span class="font-medium">20:15 - 21:45</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-semibold text-pink-300 mb-3">JUNIOR</h3>
+                  <ul class="space-y-2">
+                    <li class="flex justify-between">
+                      <span>Lunes, Miércoles y Sábados</span>
+                      <span class="font-medium">19:30 - 21:00</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notas importantes -->
+        <div class="bg-green-900/30 rounded-2xl p-6 border border-green-700/50 max-w-4xl mx-auto">
+          <h3 class="text-2xl font-bold text-center text-green-300 mb-6">INFORMACIÓN IMPORTANTE</h3>
+          <ul class="space-y-3 text-gray-200">
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Los horarios podrán estar sujetos a cambios según disponibilidad de pistas y necesidades del club.</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Se recomienda llegar 10 minutos antes del inicio de cada entrenamiento.</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>Para más información, contactar con el club en: <a href="mailto:info@baloncalcetacalasanz.com" class="text-green-300 hover:underline">info@baloncalcetacalasanz.com</a></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>`,
+    imagen: '/images/AlesonMario.JPG',
+    categoria: 'Horarios',
+    destacado: true,
+    tieneComponenteEspecial: false,
+    oculta: false
+  },
+  {
     id: "equipos-temporada-25-26",
     titulo: 'CALASANZ EQUIPOS - Temporada 2025/2026',
     contenido: null,
