@@ -19,9 +19,9 @@ export const noticias = [
           </div>
           <div class="p-6">
             <div class="space-y-6">
-              <div class="flex justify-between items-center">
-                <span>Lunes y Jueves</span>
-                <span class="font-medium">15:00 - 16:30 (exterior)</span>
+              <div class="grid grid-cols-2 gap-2 sm:flex sm:justify-between sm:items-center">
+                <span class="text-sm sm:text-base">Lun y Jue</span>
+                <span class="text-sm sm:text-base font-medium text-right sm:text-left">15:00-16:30 (ext)</span>
               </div>
             </div>
           </div>
@@ -40,13 +40,13 @@ export const noticias = [
                 <div>
                   <h3 class="text-lg font-semibold text-blue-300 mb-3">BENJAMÍN</h3>
                   <ul class="space-y-2">
-                    <li class="flex justify-between">
-                      <span>Lunes y Miércoles</span>
-                      <span class="font-medium">16:30 - 18:00 (exterior)</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Lun y Mié</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:30-18:00 (ext)</span>
                     </li>
-                    <li class="flex justify-between">
-                      <span>Viernes</span>
-                      <span class="font-medium">16:00 - 17:00 (exterior)</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Viernes</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:00-17:00 (ext)</span>
                     </li>
                   </ul>
                 </div>
@@ -54,13 +54,13 @@ export const noticias = [
                 <div>
                   <h3 class="text-lg font-semibold text-blue-300 mb-3">ALEVÍN</h3>
                   <ul class="space-y-2">
-                    <li class="flex justify-between">
-                      <span>Lunes y miercoles</span>
-                      <span class="font-medium">18:00 - 19:30 (exterior)</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Lun y Mié</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:00-19:30 (ext)</span>
                     </li>
-                    <li class="flex justify-between">
-                      <span>Vierneses</span>
-                      <span class="font-medium">18:00 - 19:00 (exterior)</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Viernes</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:00-19:00 (ext)</span>
                     </li>
                   </ul>
                 </div>
@@ -68,13 +68,13 @@ export const noticias = [
                 <div>
                   <h3 class="text-lg font-semibold text-blue-300 mb-3">INFANTIL A</h3>
                   <ul class="space-y-2">
-                    <li class="flex justify-between">
-                      <span>Lunes y Miércoles</span>
-                      <span class="font-medium">16:30 - 18:00 (pabellón)</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Lun y Mié</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:30-18:00 (pab)</span>
                     </li>
-                    <li class="flex justify-between">
-                      <span>Viernes</span>
-                      <span class="font-medium">16:00 - 17:00 (exterior)</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Viernes</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:00-17:00 (ext)</span>
                     </li>
                   </ul>
                 </div>
@@ -82,9 +82,9 @@ export const noticias = [
                 <div>
                   <h3 class="text-lg font-semibold text-blue-300 mb-3">INFANTIL B</h3>
                   <ul class="space-y-2">
-                    <li class="flex justify-between">
-                      <span>Lunes y Miércoles</span>
-                      <span class="font-medium">16:30 - 18:00 (exterior)</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Lun y Mié</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:30-18:00 (ext)</span>
                     </li>
                   </ul>
                 </div>
@@ -92,13 +92,13 @@ export const noticias = [
                 <div>
                   <h3 class="text-lg font-semibold text-blue-300 mb-3">CADETE A</h3>
                   <ul class="space-y-2">
-                    <li class="flex justify-between">
-                      <span>Lunes y Miércoles </span>
-                      <span class="font-medium">18:00 - 19:30 (exterior)</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Lun y Mié</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:00-19:30 (ext)</span>
                     </li>
-                    <li class="flex justify-between">
-                      <span>Viernes </span>
-                      <span class="font-medium">16:00 - 17:15 (exterior)</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Viernes</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:00-17:15 (ext)</span>
                     </li>
                   </ul>
                 </div>
@@ -106,17 +106,17 @@ export const noticias = [
                 <div>
                   <h3 class="text-lg font-semibold text-blue-300 mb-3">JUNIOR</h3>
                   <ul class="space-y-2">
-                    <li class="flex justify-between">
-                      <span>Martes</span>
-                      <span class="font-medium">16:30 - 18:00 (pabellón)</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Martes</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:30-18:00 (pab)</span>
                     </li>
-                    <li class="flex justify-between">
-                      <span>Miércoles</span>
-                      <span class="font-medium">18:00 - 19:30 (pabellón)</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Miércoles</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:00-19:30 (pab)</span>
                     </li>
-                    <li class="flex justify-between">
-                      <span>Viernes</span>
-                      <span class="font-medium">17:15 - 18:30 (pabellón)</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Viernes</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">17:15-18:30 (pab)</span>
                     </li>
                   </ul>
                 </div>
@@ -132,42 +132,46 @@ export const noticias = [
             <div class="p-6">
               <div class="space-y-6">
                 <!-- Categorías femeninas -->
+                <!-- Exterior -->
                 <div>
                   <h3 class="text-lg font-semibold text-pink-300 mb-3">BENJAMÍN</h3>
                   <ul class="space-y-2">
-                    <li class="flex justify-between">
-                      <span>Martes y Jueves</span>
-                      <span class="font-medium">17:30 - 18:45</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Mar</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:30-18:00 (ext)</span>
+                    </li>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Vie</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">15:00-16:15 (ext)</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 class="text-lg font-semibold text-pink-300 mb-3">ALEVÍN A</h3>
+                  <h3 class="text-lg font-semibold text-pink-300 mb-3">ALEVÍN A/B</h3>
                   <ul class="space-y-2">
-                    <li class="flex justify-between">
-                      <span>Lunes y Miércoles</span>
-                      <span class="font-medium">17:30 - 19:00</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Mar y Jue</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:00-19:30 (ext)</span>
+                    </li>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Vie</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">17:00-18:00 (ext)</span>
                     </li>
                   </ul>
                 </div>
 
+                <!-- Pabellón -->
                 <div>
-                  <h3 class="text-lg font-semibold text-pink-300 mb-3">ALEVÍN B</h3>
+                  <h3 class="text-lg font-semibold text-pink-300 mb-3">INFANTIL</h3>
                   <ul class="space-y-2">
-                    <li class="flex justify-between">
-                      <span>Martes y Jueves</span>
-                      <span class="font-medium">18:45 - 20:15</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Mar</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">19:30-21:00 (pab)</span>
                     </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 class="text-lg font-semibold text-pink-300 mb-3">CADETE A</h3>
-                  <ul class="space-y-2">
-                    <li class="flex justify-between">
-                      <span>Lunes y Miércoles</span>
-                      <span class="font-medium">19:00 - 20:30</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Jue</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:30-18:00 (pab)</span>
                     </li>
                   </ul>
                 </div>
@@ -175,9 +179,27 @@ export const noticias = [
                 <div>
                   <h3 class="text-lg font-semibold text-pink-300 mb-3">CADETE B</h3>
                   <ul class="space-y-2">
-                    <li class="flex justify-between">
-                      <span>Martes, Jueves y Viernes</span>
-                      <span class="font-medium">20:15 - 21:45</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Lun y Jue</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:00-19:30 (pab)</span>
+                    </li>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Mié</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">19:30-21:00 (ext)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-semibold text-pink-300 mb-3">CADETE A</h3>
+                  <ul class="space-y-2">
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Mar y Vie</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:00-19:30 (pab)</span>
+                    </li>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Vie</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:30-19:45 (pab)</span>
                     </li>
                   </ul>
                 </div>
@@ -185,9 +207,13 @@ export const noticias = [
                 <div>
                   <h3 class="text-lg font-semibold text-pink-300 mb-3">JUNIOR</h3>
                   <ul class="space-y-2">
-                    <li class="flex justify-between">
-                      <span>Lunes, Miércoles y Sábados</span>
-                      <span class="font-medium">19:30 - 21:00</span>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Lun y Mié</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">19:30-21:00 (pab)</span>
+                    </li>
+                    <li class="grid grid-cols-2 gap-2">
+                      <span class="text-sm sm:text-base">Vie</span>
+                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">19:45-21:00 (pab)</span>
                     </li>
                   </ul>
                 </div>
