@@ -24,7 +24,8 @@ import { noticias } from '../data/noticias';
                 <img 
                   src={noticia.imagen} 
                   alt={noticia.titulo} 
-                  class="w-full h-full object-cover object-[center_35%] md:object-[center_30%] transition-transform duration-700 group-hover:scale-105"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  style={`object-position: ${noticia.imagenPosition || 'center 30%'};`}
                   loading="lazy"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-green-950/80 to-transparent md:bg-gradient-to-r"></div>

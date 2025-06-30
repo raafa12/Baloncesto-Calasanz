@@ -1,10 +1,17 @@
 ---
 // src/components/NewsCard.astro
-const { titulo, descripcion, imagen, fecha, id } = Astro.props;
+const { titulo, descripcion, imagen, imagenPosition = 'center', fecha, id } = Astro.props;
 ---
 
 <article class="bg-green-950 border border-green-800 rounded-xl overflow-hidden shadow-md h-full flex flex-col">
-  <img src={imagen} alt={titulo} class="w-full h-64 object-cover" />
+  <div class="w-full h-64 overflow-hidden">
+    <img 
+      src={imagen} 
+      alt={titulo} 
+      class="w-full h-full object-cover" 
+      style={`object-position: ${imagenPosition};`}
+    />
+  </div>
   <div class="p-6 space-y-2 flex-grow">
     <h2 class="text-2xl font-bold text-white">{titulo}</h2>
     <p class="text-sm text-green-300">{fecha}</p>

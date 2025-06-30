@@ -249,6 +249,8 @@ export const noticias = [
       </div>
     </div>`,
     imagen: '/images/AlesonMario.JPG',
+    imagenPosition: 'center 20%',
+    imagenSize: 'cover',
     categoria: 'Horarios',
     destacado: true,
     tieneComponenteEspecial: false,
