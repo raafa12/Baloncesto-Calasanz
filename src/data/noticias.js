@@ -262,7 +262,7 @@ export const noticias = [
     categoria: 'Equipos',
     destacado: true,
     tieneComponenteEspecial: true,
-    oculta: false
+    oculta: true
   },
   {
     id: "jornadas-tecnificacion-2025",
