@@ -713,7 +713,7 @@ Object.entries(playersData).forEach(([genero, categorias]) => {
                     <p class="text-sm text-gray-400">Nacimiento: {jugador.birth} ({jugador.year})</p>
                     <div class="mt-2 pt-2 border-t border-pink-800/30 text-sm">
                       <p>📞 {jugador.phone}</p>
-                      <p class="truncate" title={jugador.email}>📧 {jugador.email}</p>
+                      <p class="break-words whitespace-normal">📧 {jugador.email}</p>
                     </div>
                   </div>
                 ))}
@@ -752,7 +752,7 @@ Object.entries(playersData).forEach(([genero, categorias]) => {
                     <p class="text-sm text-gray-400">Nacimiento: {jugador.birth} ({jugador.year})</p>
                     <div class="mt-2 pt-2 border-t border-blue-800/30 text-sm">
                       <p>📞 {jugador.phone}</p>
-                      <p class="truncate" title={jugador.email}>📧 {jugador.email}</p>
+                      <p class="break-words whitespace-normal">📧 {jugador.email}</p>
                     </div>
                   </div>
                 ))}
@@ -832,6 +832,14 @@ Object.entries(playersData).forEach(([genero, categorias]) => {
   .equipos-temporada .player-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Ensure email addresses are fully visible and wrap properly */
+  .equipos-temporada .player-card p {
+    word-break: break-word;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
   }
 </style>
 
