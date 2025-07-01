@@ -8,115 +8,115 @@ export const noticias = [
       <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
       
       <!-- Contenedor principal -->
-      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-8">
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
         <!-- Espaciador superior -->
-        <div class="h-8"></div>
+        <div class="h-4 sm:h-8"></div>
 
         <!-- Sección de Baby Basket -->
-        <div class="bg-orange-900/30 rounded-2xl overflow-hidden border border-orange-800/50 shadow-lg mb-8">
-          <div class="bg-gradient-to-r from-orange-600/80 to-orange-700/90 p-4">
-            <h2 class="text-2xl font-bold text-center text-orange-100">BABY BASKET</h2>
+        <div class="bg-orange-900/30 rounded-xl overflow-hidden border border-orange-800/50 shadow-lg mb-6 sm:mb-8">
+          <div class="bg-gradient-to-r from-orange-600/80 to-orange-700/90 p-3 sm:p-4">
+            <h2 class="text-xl sm:text-2xl font-bold text-center text-orange-100">BABY BASKET</h2>
           </div>
-          <div class="p-6">
-            <div class="space-y-6">
-              <div class="grid grid-cols-2 gap-2 sm:flex sm:justify-between sm:items-center">
+          <div class="p-4 sm:p-6">
+            <div class="space-y-4 sm:space-y-6">
+              <div class="grid grid-cols-2 gap-2 sm:gap-4">
                 <span class="text-sm sm:text-base">Lunes y Jueves</span>
-                <span class="text-sm sm:text-base font-medium text-right sm:text-left">15:00-16:30 (ext)</span>
+                <span class="text-sm sm:text-base font-medium text-right">15:00-16:30</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Sección de Horarios -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8">
           <!-- Sección Masculina -->
-          <div class="bg-blue-900/30 rounded-2xl overflow-hidden border border-blue-800/50 shadow-lg">
-            <div class="bg-gradient-to-r from-blue-700/80 to-blue-800/90 p-4">
-              <h2 class="text-xl font-bold text-center text-blue-100">SECCIÓN MASCULINA</h2>
+          <div class="bg-blue-900/30 rounded-xl overflow-hidden border border-blue-800/50 shadow-lg">
+            <div class="bg-gradient-to-r from-blue-700/80 to-blue-800/90 p-3 sm:p-4">
+              <h2 class="text-lg sm:text-xl font-bold text-center text-blue-100">SECCIÓN MASCULINA</h2>
             </div>
-            <div class="p-6">
-              <div class="space-y-6">
+            <div class="p-4 sm:p-6">
+              <div class="space-y-4 sm:space-y-6">
                 <!-- Categorías masculinas -->
                 <div>
-                  <h3 class="text-lg font-semibold text-blue-300 mb-3">BENJAMÍN</h3>
+                  <h3 class="text-base sm:text-lg font-semibold text-blue-300 mb-2 sm:mb-3">BENJAMÍN</h3>
                   <ul class="space-y-2">
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Lunes y Miércoles</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:30-18:00 (ext)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">16:30-18:00</span>
                     </li>
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Viernes</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:00-17:00 (ext)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">16:00-17:00</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 class="text-lg font-semibold text-blue-300 mb-3">ALEVÍN</h3>
+                  <h3 class="text-base sm:text-lg font-semibold text-blue-300 mb-2 sm:mb-3">ALEVÍN</h3>
                   <ul class="space-y-2">
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Lunes y Miércoles</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:00-19:30 (ext)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">18:00-19:30</span>
                     </li>
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Viernes</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:00-19:00 (ext)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">18:00-19:00</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 class="text-lg font-semibold text-blue-300 mb-3">INFANTIL A</h3>
+                  <h3 class="text-base sm:text-lg font-semibold text-blue-300 mb-2 sm:mb-3">INFANTIL A</h3>
                   <ul class="space-y-2">
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Lunes y Miércoles</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:30-18:00 (pab)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">16:30-18:00</span>
                     </li>
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Viernes</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:00-17:00 (ext)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">16:00-17:00</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 class="text-lg font-semibold text-blue-300 mb-3">INFANTIL B</h3>
+                  <h3 class="text-base sm:text-lg font-semibold text-blue-300 mb-2 sm:mb-3">INFANTIL B</h3>
                   <ul class="space-y-2">
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Lunes y Miércoles</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:30-18:00 (ext)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">16:30-18:00</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 class="text-lg font-semibold text-blue-300 mb-3">CADETE A</h3>
+                  <h3 class="text-base sm:text-lg font-semibold text-blue-300 mb-2 sm:mb-3">CADETE A</h3>
                   <ul class="space-y-2">
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Lunes y Miércoles</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:00-19:30 (ext)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">18:00-19:30</span>
                     </li>
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Viernes</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:00-17:15 (ext)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">16:00-17:15</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 class="text-lg font-semibold text-blue-300 mb-3">JUNIOR</h3>
+                  <h3 class="text-base sm:text-lg font-semibold text-blue-300 mb-2 sm:mb-3">JUNIOR</h3>
                   <ul class="space-y-2">
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Martes</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:30-18:00 (pab)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">16:30-18:00</span>
                     </li>
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Miércoles</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:00-19:30 (pab)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">18:00-19:30</span>
                     </li>
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Viernes</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">17:15-18:30 (pab)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">17:15-18:30</span>
                     </li>
                   </ul>
                 </div>
@@ -125,95 +125,93 @@ export const noticias = [
           </div>
 
           <!-- Sección Femenina -->
-          <div class="bg-pink-900/30 rounded-2xl overflow-hidden border border-pink-800/50 shadow-lg">
-            <div class="bg-gradient-to-r from-pink-700/80 to-pink-800/90 p-4">
-              <h2 class="text-xl font-bold text-center text-pink-100">SECCIÓN FEMENINA</h2>
+          <div class="bg-pink-900/30 rounded-xl overflow-hidden border border-pink-800/50 shadow-lg">
+            <div class="bg-gradient-to-r from-pink-700/80 to-pink-800/90 p-3 sm:p-4">
+              <h2 class="text-lg sm:text-xl font-bold text-center text-pink-100">SECCIÓN FEMENINA</h2>
             </div>
-            <div class="p-6">
-              <div class="space-y-6">
+            <div class="p-4 sm:p-6">
+              <div class="space-y-4 sm:space-y-6">
                 <!-- Categorías femeninas -->
-                <!-- Exterior -->
                 <div>
-                  <h3 class="text-lg font-semibold text-pink-300 mb-3">BENJAMÍN</h3>
+                  <h3 class="text-base sm:text-lg font-semibold text-pink-300 mb-2 sm:mb-3">BENJAMÍN</h3>
                   <ul class="space-y-2">
-                    <li class="grid grid-cols-2 gap-2">
-                      <span class="text-sm sm:text-base">Martes</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:30-18:00 (ext)</span>
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
+                      <span class="text-sm sm:text-base">Martes y jueves</span>
+                      <span class="text-sm sm:text-base font-medium text-right">16:30-18:00</span>
                     </li>
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Viernes</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">15:00-16:15 (ext)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">15:00-16:15</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 class="text-lg font-semibold text-pink-300 mb-3">ALEVÍN A/B</h3>
+                  <h3 class="text-base sm:text-lg font-semibold text-pink-300 mb-2 sm:mb-3">ALEVÍN A/B</h3>
                   <ul class="space-y-2">
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Martes y Jueves</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:00-19:30 (ext)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">18:00-19:30</span>
                     </li>
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Viernes</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">17:00-18:00 (ext)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">17:00-18:00</span>
                     </li>
                   </ul>
                 </div>
 
-                <!-- Pabellón -->
                 <div>
-                  <h3 class="text-lg font-semibold text-pink-300 mb-3">INFANTIL</h3>
+                  <h3 class="text-base sm:text-lg font-semibold text-pink-300 mb-2 sm:mb-3">INFANTIL</h3>
                   <ul class="space-y-2">
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Martes</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">19:30-21:00 (pab)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">19:30-21:00</span>
                     </li>
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Jueves</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">16:30-18:00 (pab)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">16:30-18:00</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 class="text-lg font-semibold text-pink-300 mb-3">CADETE B</h3>
+                  <h3 class="text-base sm:text-lg font-semibold text-pink-300 mb-2 sm:mb-3">CADETE B</h3>
                   <ul class="space-y-2">
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Lunes y Jueves</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:00-19:30 (pab)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">18:00-19:30</span>
                     </li>
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Miércoles</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">19:30-21:00 (ext)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">19:30-21:00</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 class="text-lg font-semibold text-pink-300 mb-3">CADETE A</h3>
+                  <h3 class="text-base sm:text-lg font-semibold text-pink-300 mb-2 sm:mb-3">CADETE A</h3>
                   <ul class="space-y-2">
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Martes y Viernes</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:00-19:30 (pab)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">18:00-19:30</span>
                     </li>
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Viernes</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">18:30-19:45 (pab)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">18:30-19:45</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 class="text-lg font-semibold text-pink-300 mb-3">JUNIOR</h3>
+                  <h3 class="text-base sm:text-lg font-semibold text-pink-300 mb-2 sm:mb-3">JUNIOR</h3>
                   <ul class="space-y-2">
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Lunes y Miércoles</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">19:30-21:00 (pab)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">19:30-21:00</span>
                     </li>
-                    <li class="grid grid-cols-2 gap-2">
+                    <li class="grid grid-cols-2 gap-2 sm:gap-4">
                       <span class="text-sm sm:text-base">Viernes</span>
-                      <span class="text-sm sm:text-base font-medium text-right sm:text-left">19:45-21:00 (pab)</span>
+                      <span class="text-sm sm:text-base font-medium text-right">19:45-21:00</span>
                     </li>
                   </ul>
                 </div>
