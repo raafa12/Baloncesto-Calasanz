@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calasanz Equipos - Temporada 25/26</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a5f3f 0%, #2d8f5f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 100%;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+        }
+
+        .section-header {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .gender-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .masculino {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .femenino {
+            background: #E91E63;
+            color: white;
+        }
+
+        .category {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .category:last-child {
+            border-bottom: none;
+        }
+
+        .category-header {
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        .category-header:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .category-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .category-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .category-name {
+            flex: 1;
+        }
+
+        .category-stats {
+            display: flex;
+            gap: 10px;
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+
+        .stat-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .collapse-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            color: #90EE90;
+        }
+
+        .category.expanded .collapse-icon {
+            transform: rotate(180deg);
+        }
+
+        .category-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+        }
+
+        .category.expanded .category-content {
+            max-height: 2000px;
+            padding: 0 20px 20px 20px;
+        }
+
+        .player-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .player-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .player-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .player-name {
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .player-details {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        .player-birth {
+            color: #90EE90;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #90EE90;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            .category-title {
+                font-size: 1rem;
+            }
+            
+            .player-name {
+                font-size: 0.95rem;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .category-stats {
+                display: none;
+            }
+
+            .category-info {
+                gap: 8px;
+            }
+
+            .stat-badge {
+                font-size: 0.7rem;
+                padding: 2px 6px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .category-stats {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏀 CALASANZ EQUIPOS</h1>
+        <p>Temporada 2025/2026 - Informe de Jugadores</p>
+    </div>
+
+    <div class="container">
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="total-players">0</div>
+                <div class="stat-label">Total Jugadores</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="male-players">0</div>
+                <div class="stat-label">Masculino</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="female-players">0</div>
+                <div class="stat-label">Femenino</div>
+            </div>
+        </div>
+
+        <!-- Sección Masculina -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">
+                    <div class="gender-icon masculino">♂</div>
+                    SECCIÓN MASCULINA
+                </div>
+            </div>
+
+            <!-- Benjamín Masculino -->
+            <div class="category" data-category="benjamin-masculino">
+                <div class="category-header">
+                    <div class="category-title">
+                        <div class="category-info">
+                            <div class="category-name">Benjamín (2016-2017)</div>
+                            <div class="category-stats">
+                                <span class="stat-badge" id="total-benjamin-masculino">0 jugadores</span>
+                                <span class="stat-badge" id="first-benjamin-masculino">0 (1º)</span>
+                                <span class="stat-badge" id="second-benjamin-masculino">0 (2º)</span>
+                            </div>
+                        </div>
+                        <div class="collapse-icon">▼</div>
+                    </div>
+                </div>
+                <div class="category-content">
+                    <div class="player-grid" id="benjamin-masculino"></div>
+                </div>
+            </div>
+
+            <!-- Alevín Masculino -->
+            <div class="category" data-category="alevin-masculino">
+                <div class="category-header">
+                    <div class="category-title">
+                        <div class="category-info">
+                            <div class="category-name">Alevín (2014-2015)</div>
+                            <div class="category-stats">
+                                <span class="stat-badge" id="total-alevin-masculino">0 jugadores</span>
+                                <span class="stat-badge" id="first-alevin-masculino">0 (1º)</span>
+                                <span class="stat-badge" id="second-alevin-masculino">0 (2º)</span>
+                            </div>
+                        </div>
+                        <div class="collapse-icon">▼</div>
+                    </div>
+                </div>
+                <div class="category-content">
+                    <div class="player-grid" id="alevin-masculino"></div>
+                </div>
+            </div>
+
+            <!-- Infantil Masculino -->
+            <div class="category" data-category="infantil-masculino">
+                <div class="category-header">
+                    <div class="category-title">
+                        <div class="category-info">
+                            <div class="category-name">Infantil (2012-2013)</div>
+                            <div class="category-stats">
+                                <span class="stat-badge" id="total-infantil-masculino">0 jugadores</span>
+                                <span class="stat-badge" id="first-infantil-masculino">0 (1º)</span>
+                                <span class="stat-badge" id="second-infantil-masculino">0 (2º)</span>
+                            </div>
+                        </div>
+                        <div class="collapse-icon">▼</div>
+                    </div>
+                </div>
+                <div class="category-content">
+                    <div class="player-grid" id="infantil-masculino"></div>
+                </div>
+            </div>
+
+            <!-- Cadete Masculino -->
+            <div class="category" data-category="cadete-masculino">
+                <div class="category-header">
+                    <div class="category-title">
+                        <div class="category-info">
+                            <div class="category-name">Cadete (2010-2011)</div>
+                            <div class="category-stats">
+                                <span class="stat-badge" id="total-cadete-masculino">0 jugadores</span>
+                                <span class="stat-badge" id="first-cadete-masculino">0 (1º)</span>
+                                <span class="stat-badge" id="second-cadete-masculino">0 (2º)</span>
+                            </div>
+                        </div>
+                        <div class="collapse-icon">▼</div>
+                    </div>
+                </div>
+                <div class="category-content">
+                    <div class="player-grid" id="cadete-masculino"></div>
+                </div>
+            </div>
+
+            <!-- Junior Masculino -->
+            <div class="category" data-category="junior-masculino">
+                <div class="category-header">
+                    <div class="category-title">
+                        <div class="category-info">
+                            <div class="category-name">Junior (2008-2009)</div>
+                            <div class="category-stats">
+                                <span class="stat-badge" id="total-junior-masculino">0 jugadores</span>
+                                <span class="stat-badge" id="first-junior-masculino">0 (1º)</span>
+                                <span class="stat-badge" id="second-junior-masculino">0 (2º)</span>
+                            </div>
+                        </div>
+                        <div class="collapse-icon">▼</div>
+                    </div>
+                </div>
+                <div class="category-content">
+                    <div class="player-grid" id="junior-masculino"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección Femenina -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">
+                    <div class="gender-icon femenino">♀</div>
+                    SECCIÓN FEMENINA
+                </div>
+            </div>
+
+            <!-- Benjamín Femenino -->
+            <div class="category" data-category="benjamin-femenino">
+                <div class="category-header">
+                    <div class="category-title">
+                        <div class="category-info">
+                            <div class="category-name">Benjamín (2016-2017)</div>
+                            <div class="category-stats">
+                                <span class="stat-badge" id="total-benjamin-femenino">0 jugadoras</span>
+                                <span class="stat-badge" id="first-benjamin-femenino">0 (1º)</span>
+                                <span class="stat-badge" id="second-benjamin-femenino">0 (2º)</span>
+                            </div>
+                        </div>
+                        <div class="collapse-icon">▼</div>
+                    </div>
+                </div>
+                <div class="category-content">
+                    <div class="player-grid" id="benjamin-femenino"></div>
+                </div>
+            </div>
+
+            <!-- Alevín Femenino -->
+            <div class="category" data-category="alevin-femenino">
+                <div class="category-header">
+                    <div class="category-title">
+                        <div class="category-info">
+                            <div class="category-name">Alevín (2014-2015)</div>
+                            <div class="category-stats">
+                                <span class="stat-badge" id="total-alevin-femenino">0 jugadoras</span>
+                                <span class="stat-badge" id="first-alevin-femenino">0 (1º)</span>
+                                <span class="stat-badge" id="second-alevin-femenino">0 (2º)</span>
+                            </div>
+                        </div>
+                        <div class="collapse-icon">▼</div>
+                    </div>
+                </div>
+                <div class="category-content">
+                    <div class="player-grid" id="alevin-femenino"></div>
+                </div>
+            </div>
+
+            <!-- Infantil Femenino -->
+            <div class="category" data-category="infantil-femenino">
+                <div class="category-header">
+                    <div class="category-title">
+                        <div class="category-info">
+                            <div class="category-name">Infantil (2012-2013)</div>
+                            <div class="category-stats">
+                                <span class="stat-badge" id="total-infantil-femenino">0 jugadoras</span>
+                                <span class="stat-badge" id="first-infantil-femenino">0 (1º)</span>
+                                <span class="stat-badge" id="second-infantil-femenino">0 (2º)</span>
+                            </div>
+                        </div>
+                        <div class="collapse-icon">▼</div>
+                    </div>
+                </div>
+                <div class="category-content">
+                    <div class="player-grid" id="infantil-femenino"></div>
+                </div>
+            </div>
+
+            <!-- Cadete Femenino -->
+            <div class="category" data-category="cadete-femenino">
+                <div class="category-header">
+                    <div class="category-title">
+                        <div class="category-info">
+                            <div class="category-name">Cadete (2010-2011)</div>
+                            <div class="category-stats">
+                                <span class="stat-badge" id="total-cadete-femenino">0 jugadoras</span>
+                                <span class="stat-badge" id="first-cadete-femenino">0 (1º)</span>
+                                <span class="stat-badge" id="second-cadete-femenino">0 (2º)</span>
+                            </div>
+                        </div>
+                        <div class="collapse-icon">▼</div>
+                    </div>
+                </div>
+                <div class="category-content">
+                    <div class="player-grid" id="cadete-femenino"></div>
+                </div>
+            </div>
+
+            <!-- Junior Femenino -->
+            <div class="category" data-category="junior-femenino">
+                <div class="category-header">
+                    <div class="category-title">
+                        <div class="category-info">
+                            <div class="category-name">Junior (2008-2009)</div>
+                            <div class="category-stats">
+                                <span class="stat-badge" id="total-junior-femenino">0 jugadoras</span>
+                                <span class="stat-badge" id="first-junior-femenino">0 (1º)</span>
+                                <span class="stat-badge" id="second-junior-femenino">0 (2º)</span>
+                            </div>
+                        </div>
+                        <div class="collapse-icon">▼</div>
+                    </div>
+                </div>
+                <div class="category-content">
+                    <div class="player-grid" id="junior-femenino"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const playersData = {
+            masculino: {
+                benjamin: [
+                    {
+                        name: "Hugo Fernández Gastañaga",
+                        birth: 2017,
+                        year: "1er año",
+                        phone: "679875853",
+                        email: "a.fernandezsalas@hotmail.com"
+                    },
+                    {
+                        name: "Borja Fernández Agüero",
+                        birth: 2017,
+                        year: "1er año",
+                        phone: "606370867",
+                        email: "borjafgc@gmail.com"
+                    },
+                    {
+                        name: "Alonso Gallegos Sánchez",
+                        birth: 2016,
+                        year: "2º año",
+                        phone: "646515198",
+                        email: "raquelmanjon@gmail.com"
+                    },
+                    {
+                        name: "Mario Gallegos Sánchez",
+                        birth: 2016,
+                        year: "2º año",
+                        phone: "646515198",
+                        email: "raquelmanjon@gmail.com"
+                    },
+                    {
+                        name: "Javi González Odriozola",
+                        birth: 2016,
+                        year: "2º año",
+                        phone: "679600610",
+                        email: "modriozola@icacantabria.es"
+                    },
+                    {
+                        name: "Javier Gonzalez Odriozola",
+                        birth: 2016,
+                        year: "2º año",
+                        phone: "699032869",
+                        email: "chiscogg@hotmail.com"
+                    },
+                    {
+                        name: "Julen González Presmanes",
+                        birth: 2016,
+                        year: "2º año",
+                        phone: "659729076",
+                        email: "presmanes_1987@hotmail.com"
+                    },
+                    {
+                        name: "Pablo del Portillo Iribarnegaray",
+                        birth: 2016,
+                        year: "2º año",
+                        phone: "619044080",
+                        email: "martairib@hotmail.com"
+                    },
+                    {
+                        name: "César Djaider Gonzalez",
+                        birth: 2016,
+                        year: "2º año",
+                        phone: "607453290",
+                        email: "cgonzalezlastra@icpcantabria.es"
+                    },
+                    {
+                        name: "Javier Pérez Peña",
+                        birth: 2016,
+                        year: "2º año",
+                        phone: "696148987",
+                        email: "perez_pena@hotmail.es"
+                    },
+                    {
+                        name: "Álvaro Arbide Gómez",
+                        birth: 2016,
+                        year: "2º año",
+                        phone: "650694597",
+                        email: "Rakylamejor@hotmail.com"
+                    }
+                ],
+                alevin: [
+                    {
+                        name: "Nicolás Calleja Díaz",
+                        birth: 2014,
+                        year: "2º año",
+                        phone: "626082643",
+                        email: "valvanuzdiazgonzalez@gmail.com"
+                    },
+                    {
+                        name: "Marcos Zorrilla Merino",
+                        birth: 2014,
+                        year: "2º año",
+                        phone: "652587900",
+                        email: "diegozmartinez@yahoo.es"
+                    },
+                    {
+                        name: "Zhuoxiang Lin",
+                        birth: 2014,
+                        year: "2º año",
+                        phone: "662499438",
+                        email: "504519433lxy@gmail.com"
+                    }
+                ],
+                infantil: [
+                    {
+                        name: "Jesús Fernández García",
+                        birth: 2013,
+                        year: "1er año",
+                        phone: "669450270",
+                        email: "agarbur75@gmail.com"
+                    },
+                    {
+                        name: "Alejandro Lozano Mier",
+                        birth: 2013,
+                        year: "1er año",
+                        phone: "638191724",
+                        email: "carmen_2630@hotmail.com"
+                    },
+                    {
+                        name: "Nicolás Grande Rosell",
+                        birth: 2013,
+                        year: "1er año",
+                        phone: "664436975",
+                        email: "Kalixti20@gmail.com"
+                    },
+                    {
+                        name: "Carlos Matesanz Espurz",
+                        birth: 2013,
+                        year: "1er año",
+                        phone: "636268993",
+                        email: "nataliaespurz@gmail.com"
+                    },
+                    {
+                        name: "Rafael de Andres Felguera",
+                        birth: 2012,
+                        year: "2º año",
+                        phone: "646242291",
+                        email: "Rdeandres@gmsil.com"
+                    },
+                    {
+                        name: "Gael Prieto Martínez-Aedo",
+                        birth: 2012,
+                        year: "2º año",
+                        phone: "657186416",
+                        email: "croki24@hotmail.com"
+                    },
+                    {
+                        name: "Darío Peñalba Mantecón",
+                        birth: 2012,
+                        year: "2º año",
+                        phone: "645888386",
+                        email: "hectorylara@gmail.com"
+                    },
+                    {
+                        name: "Marcos Benéitez Fuentevilla",
+                        birth: 2012,
+                        year: "2º año",
+                        phone: "690095090",
+                        email: "laura.fuentevilla@gmail.com"
+                    },
+                    {
+                        name: "Mateo Díaz Freije",
+                        birth: 2012,
+                        year: "2º año",
+                        phone: "672385955",
+                        email: "teo_00@hotmail.com"
+                    },
+                    {
+                        name: "Jorge Bustamante Antón",
+                        birth: 2012,
+                        year: "2º año",
+                        phone: "676007238",
+                        email: "Pedrobustamantecasuso@gmail.com"
+                    },
+                    {
+                        name: "Mario Pina López",
+                        birth: 2012,
+                        year: "2º año",
+                        phone: "616226921",
+                        email: "alicantrino@hotmail.com"
+                    },
+                    {
+                        name: "Pablo Fernández Agüero",
+                        birth: 2012,
+                        year: "2º año",
+                        phone: "606370867",
+                        email: "borjafgc@gmail.com"
+                    }
+                ],
+                cadete: [
+                    {
+                        name: "Iván Díaz Allende",
+                        birth: 2011,
+                        year: "1er año",
+                        phone: "680953394",
+                        email: "zoriallen2011@gmail.com"
+                    },
+                    {
+                        name: "Mario Domínguez Mesones",
+                        birth: 2011,
+                        year: "1er año",
+                        phone: "601399749",
+                        email: "mesones.torrec@gmail.com"
+                    },
+                    {
+                        name: "Ángel Cuesta Peña",
+                        birth: 2010,
+                        year: "2º año",
+                        phone: "601196862",
+                        email: "rakepf2014@gmail.com"
+                    },
+                    {
+                        name: "Jorge Moreno Vega",
+                        birth: 2010,
+                        year: "2º año",
+                        phone: "636848123",
+                        email: "rosanavega7@gmail.com"
+                    }
+                ],
+                junior: [
+                    {
+                        name: "Sergio Llamas Roque",
+                        birth: 2009,
+                        year: "1er año",
+                        phone: "639894053",
+                        email: "mayalen.roque@gmail.com"
+                    },
+                    {
+                        name: "Daniel Díez Carmona",
+                        birth: 2009,
+                        year: "1er año",
+                        phone: "Belén Carmona",
+                        email: "belencarmonamoro@hotmail.com"
+                    },
+                    {
+                        name: "Marcos Seoane Santos",
+                        birth: 2009,
+                        year: "1er año",
+                        phone: "678465094",
+                        email: "miguelseoane@icloud.com"
+                    },
+                    {
+                        name: "Nicolás Herrero Pérez",
+                        birth: 2009,
+                        year: "1er año",
+                        phone: "607454966",
+                        email: "antonio.herrero@gmail.com"
+                    },
+                    {
+                        name: "Pablo Miguel Zubieta",
+                        birth: 2008,
+                        year: "2º año",
+                        phone: "636130612",
+                        email: "pablomiguel1926@gmail.com"
+                    }
+                ]
+            },
+            femenino: {
+                benjamin: [
+                    {
+                        name: "Vega Recio Fernández-Regatillo",
+                        birth: 2017,
+                        year: "1er año",
+                        phone: "651323064",
+                        email: "vfernandez.regatillo@gmail.com"
+                    },
+                    {
+                        name: "Cecilia Grande Rosell",
+                        birth: 2017,
+                        year: "1er año",
+                        phone: "664436975",
+                        email: "Kalixti20@gmail.com"
+                    },
+                    {
+                        name: "Irene Peñalba Mantecón",
+                        birth: 2016,
+                        year: "2º año",
+                        phone: "645888386",
+                        email: "hectorylara@gmail.com"
+                    },
+                    {
+                        name: "Lucía Viadero Gutiérrez",
+                        birth: 2016,
+                        year: "2º año",
+                        phone: "637434166",
+                        email: "satiguti6@hotmail.com"
+                    },
+                    {
+                        name: "Carmen Rodríguez González",
+                        birth: 2016,
+                        year: "2º año",
+                        phone: "625668570",
+                        email: "esteluca_2007@hotmail.com"
+                    },
+                    {
+                        name: "Elana Cebrián Izaguirre",
+                        birth: 2016,
+                        year: "2º año",
+                        phone: "661512418",
+                        email: "martaizaguirre@me.com"
+                    }
+                ],
+                alevin: [
+                    {
+                        name: "Inés Peña Casado",
+                        birth: 2015,
+                        year: "1er año",
+                        phone: "649795134",
+                        email: "silviacasadocasuso@gmail.com"
+                    },
+                    {
+                        name: "Blanca Pedrosa Ortiz",
+                        birth: 2015,
+                        year: "1er año",
+                        phone: "626335728",
+                        email: "Cubas15@hotmail.com"
+                    },
+                    {
+                        name: "Noa Linares Mangue",
+                        birth: 2015,
+                        year: "1er año",
+                        phone: "699083042",
+                        email: "javilincel@gmail.com"
+                    },
+                    {
+                        name: "Noemí Diez Campos",
+                        birth: 2015,
+                        year: "1er año",
+                        phone: "685193604",
+                        email: "colibri1010@hotmail.com"
+                    },
+                    {
+                        name: "Laura Ballestero Madrigal",
+                        birth: 2015,
+                        year: "1er año",
+                        phone: "652663718",
+                        email: "c.madrigaldiez@yahoo.es"
+                    },
+                    {
+                        name: "Berta López García de Soto",
+                        birth: 2015,
+                        year: "1er año",
+                        phone: "606553693",
+                        email: "Crisgsl@hotmail.com"
+                    }
+                ],
+                infantil: [
+                    {
+                        name: "Carla Djaider González",
+                        birth: 2013,
+                        year: "1er año",
+                        phone: "607453290",
+                        email: "cgonzalezlastra@icpcantabria.es"
+                    }
+                ],
+                cadete: [
+                    {
+                        name: "Sofía Osés Fernández",
+                        birth: 2011,
+                        year: "1er año",
+                        phone: "676942407",
+                        email: "evafernandez0809@gmail.com"
+                    },
+                    {
+                        name: "Candela Moxó García",
+                        birth: 2011,
+                        year: "1er año",
+                        phone: "686377854",
+                        email: "candelamoxo@gmail.com"
+                    },
+                    {
+                        name: "Olivia Cañete Núñez",
+                        birth: 2011,
+                        year: "1er año",
+                        phone: "685944177",
+                        email: "olivares1112c@gmail.com"
+                    },
+                    {
+                        name: "Carla Duart Carreres",
+                        birth: 2011,
+                        year: "1er año",
+                        phone: "619105858",
+                        email: "duartgomez@hotmail.com"
+                    },
+                    {
+                        name: "Vega Calvo Diego",
+                        birth: 2011,
+                        year: "1er año",
+                        phone: "687708777 / 626021205",
+                        email: "gdiegohazas@educantabria.es"
+                    },
+                    {
+                        name: "Amaya Aguado Romero",
+                        birth: 2011,
+                        year: "1er año",
+                        phone: "636940033",
+                        email: "m.romero07@yahoo.es"
+                    },
+                    {
+                        name: "Sandra Vivero Núñez",
+                        birth: 2011,
+                        year: "1er año",
+                        phone: "627393605",
+                        email: "viveronunezsandra@gmail.com"
+                    },
+                    {
+                        name: "Celia Balbás Motta",
+                        birth: 2010,
+                        year: "2º año",
+                        phone: "666182232",
+                        email: "r_balbas@hotmail.com"
+                    },
+                    {
+                        name: "Lara Pila Serrano",
+                        birth: 2010,
+                        year: "2º año",
+                        phone: "652647769",
+                        email: "rosaliaserrano@gmail.com"
+                    },
+                    {
+                        name: "María Martínez López-Tormos",
+                        birth: 2010,
+                        year: "2º año",
+                        phone: "676745064",
+                        email: "mariamltrp@gmail.com"
+                    },
+                    {
+                        name: "María González Odriozola",
+                        birth: 2010,
+                        year: "2º año",
+                        phone: "679600610",
+                        email: "mariaglzodriozola@gmail.com"
+                    },
+                    {
+                        name: "Alba Sánchez Bolado",
+                        birth: 2010,
+                        year: "2º año",
+                        phone: "696235926",
+                        email: "evalabola@hotmail.com"
+                    }
+                ],
+                junior: [
+                    {
+                        name: "Valeria García Abad",
+                        birth: 2009,
+                        year: "1er año",
+                        phone: "657787297",
+                        email: "Silanbell@hotmail.com"
+                    },
+                    {
+                        name: "Sofía Bosque Cano",
+                        birth: 2009,
+                        year: "1er año",
+                        phone: "653918458",
+                        email: "sofiabosquecano@gmail.com"
+                    },
+                    {
+                        name: "Ana Ruiz Odriozola",
+                        birth: 2008,
+                        year: "2º año",
+                        phone: "676772282",
+                        email: "ana.ruiz.odriozola@gmail.com"
+                    }
+                ]
+            }
+        };
+
+        function createPlayerCard(player) {
+            return `
+                <div class="player-card">
+                    <div class="player-name">${player.name}</div>
+                    <div class="player-details">
+                        <div class="player-birth">Nacimiento: ${player.birth} (${player.year})</div>
+                        <div class="contact-info">
+                            <div>📞 ${player.phone}</div>
+                            <div>📧 ${player.email}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderPlayers() {
+            let totalMale = 0;
+            let totalFemale = 0;
+
+            // Render masculine teams
+            Object.entries(playersData.masculino).forEach(([category, players]) => {
+                const container = document.getElementById(`${category}-masculino`);
+                if (container) {
+                    container.innerHTML = players.map(createPlayerCard).join('');
+                    totalMale += players.length;
+
+                    // Calculate stats for this category
+                    const firstYear = players.filter(p => p.year === "1er año").length;
+                    const secondYear = players.filter(p => p.year === "2º año").length;
+                    
+                    // Update category stats
+                    const totalEl = document.getElementById(`total-${category}-masculino`);
+                    const firstEl = document.getElementById(`first-${category}-masculino`);
+                    const secondEl = document.getElementById(`second-${category}-masculino`);
+                    
+                    if (totalEl) totalEl.textContent = `${players.length} jugadores`;
+                    if (firstEl) firstEl.textContent = `${firstYear} (1º)`;
+                    if (secondEl) secondEl.textContent = `${secondYear} (2º)`;
+                }
+            });
+
+            // Render feminine teams
+            Object.entries(playersData.femenino).forEach(([category, players]) => {
+                const container = document.getElementById(`${category}-femenino`);
+                if (container) {
+                    container.innerHTML = players.map(createPlayerCard).join('');
+                    totalFemale += players.length;
+
+                    // Calculate stats for this category
+                    const firstYear = players.filter(p => p.year === "1er año").length;
+                    const secondYear = players.filter(p => p.year === "2º año").length;
+                    
+                    // Update category stats
+                    const totalEl = document.getElementById(`total-${category}-femenino`);
+                    const firstEl = document.getElementById(`first-${category}-femenino`);
+                    const secondEl = document.getElementById(`second-${category}-femenino`);
+                    
+                    if (totalEl) totalEl.textContent = `${players.length} jugadoras`;
+                    if (firstEl) firstEl.textContent = `${firstYear} (1º)`;
+                    if (secondEl) secondEl.textContent = `${secondYear} (2º)`;
+                }
+            });
+
+            // Update global stats
+            document.getElementById('total-players').textContent = totalMale + totalFemale;
+            document.getElementById('male-players').textContent = totalMale;
+            document.getElementById('female-players').textContent = totalFemale;
+        }
+
+        function initializeCollapsibles() {
+            // Add click event listeners to category headers
+            document.querySelectorAll('.category-header').forEach(header => {
+                header.addEventListener('click', function() {
+                    const category = this.closest('.category');
+                    category.classList.toggle('expanded');
+                });
+            });
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            renderPlayers();
+            initializeCollapsibles();
+        });
+    </script>
+</body>
+</html>

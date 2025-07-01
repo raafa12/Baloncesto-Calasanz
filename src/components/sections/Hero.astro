@@ -1,0 +1,152 @@
+---
+import InstagramIcon from "../../assets/icons/Instagram.astro";
+import TwitterIcon from "../../assets/icons/Twitter.astro";
+import MailIcon from "../../assets/icons/Mail.astro";
+import PhoneIcon from "../../assets/icons/Phone.astro";
+import SocialPill from "../../components/common/SocialPill.astro";
+---
+
+<div class="relative overflow-hidden">
+  <!-- Fondo con patrón de balones de baloncesto estilizados -->
+  <div class="absolute inset-0 bg-green-900 bg-opacity-90"></div>
+  <div class="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5"></div>
+  
+  <!-- Líneas decorativas inspiradas en la cancha de baloncesto -->
+  <div class="absolute top-0 left-0 right-0 h-1 bg-green-600"></div>
+  <div class="absolute bottom-0 left-0 right-0 h-1 bg-green-600"></div>
+
+  <div class="max-w-6xl mx-auto relative z-10 px-4 py-8 sm:py-12">
+    <!-- Hero principal con diseño centrado y moderno -->
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto">
+      <!-- Etiqueta de temporada -->
+      <div class="inline-flex items-center px-3 py-1 rounded-full bg-green-600 text-white text-xs font-bold mb-4 uppercase tracking-wider shadow-lg">
+        <span class="mr-2 h-2 w-2 rounded-full bg-white animate-pulse"></span>
+        Temporada 2024-2025
+      </div>
+      
+      <!-- Logo y título -->
+      <div class="mb-4">
+        <div class="flex flex-col items-center gap-2 mb-4">
+          <img 
+            src="/images/LogoCalasanz.png" 
+            alt="Logo Club Baloncesto Calasanz" 
+            class="w-24 h-24 object-contain bg-white rounded-full p-2 shadow-xl border-2 border-green-600"
+          />
+          <div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-2 uppercase">
+              <span class="text-green-400">CALASANZ</span>
+            </h1>
+            <p class="text-xl text-white/80 font-medium">Club de Baloncesto</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Descripción -->
+      <p class="text-lg md:text-xl text-gray-300 mb-6 max-w-2xl">
+        <span class="text-green-400 font-semibold">+50 años</span> formando personas a través del deporte en Santander
+      </p>
+      
+      <!-- Redes sociales y contacto con iconos rediseñados -->
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="https://instagram.com/cbcalasanz" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-green-600 to-green-800 hover:from-green-500 hover:to-green-700 text-white shadow-lg transition-all duration-300 hover:scale-110 group">
+          <InstagramIcon class="w-5 h-5 group-hover:scale-110 transition-transform" />
+        </a>
+        <a href="https://twitter.com/cbcalasanz" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-green-600 to-green-800 hover:from-green-500 hover:to-green-700 text-white shadow-lg transition-all duration-300 hover:scale-110 group">
+          <TwitterIcon class="w-5 h-5 group-hover:scale-110 transition-transform" />
+        </a>
+        <a href="mailto:info@cbcalasanz.es" class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-green-600 to-green-800 hover:from-green-500 hover:to-green-700 text-white shadow-lg transition-all duration-300 hover:scale-110 group">
+          <MailIcon class="w-5 h-5 group-hover:scale-110 transition-transform" />
+        </a>
+        <a href="/contact" class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-green-600 to-green-800 hover:from-green-500 hover:to-green-700 text-white shadow-lg transition-all duration-300 hover:scale-110 group">
+          <PhoneIcon class="w-5 h-5 group-hover:scale-110 transition-transform" />
+        </a>
+      </div>
+      
+      <!-- Línea decorativa -->
+      <div class="w-16 h-1 bg-green-600 mt-6 mb-8 rounded-full"></div>
+      
+      <!-- Sección de botones de navegación -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-4xl">
+        <!-- Botón de Equipos -->
+        <div class="relative overflow-hidden rounded-xl shadow-2xl group transition-all duration-300 transform hover:scale-[1.01]">
+          <a href="/teams" class="block">
+            <img
+              class="w-full h-52 sm:h-56 object-cover transition-transform duration-700 group-hover:scale-105"
+              src="/images/BanquilloFem.jpeg"
+              alt="Equipo femenino de baloncesto Calasanz"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-2 transition-transform duration-300 group-hover:translate-y-0">
+              <h3 class="text-lg sm:text-xl font-bold mb-1 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                Equipos
+              </h3>
+              <div class="h-0.5 w-8 bg-green-500 mb-1"></div>
+              <p class="text-gray-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Conoce a nuestros jugadores y categorías
+              </p>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Botón de Resultados -->
+        <div class="relative overflow-hidden rounded-xl shadow-2xl group transition-all duration-300 transform hover:scale-[1.01]">
+          <a href="/resultados" class="block">
+            <img
+              class="w-full h-52 sm:h-56 object-cover transition-transform duration-700 group-hover:scale-105"
+              src="/images/DaniDiez.JPG"
+              alt="Partido de baloncesto Calasanz"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-2 transition-transform duration-300 group-hover:translate-y-0">
+              <h3 class="text-lg sm:text-xl font-bold mb-1 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                Resultados
+              </h3>
+              <div class="h-0.5 w-8 bg-green-500 mb-1"></div>
+              <p class="text-gray-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Consulta los últimos marcadores
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+  
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+</style>

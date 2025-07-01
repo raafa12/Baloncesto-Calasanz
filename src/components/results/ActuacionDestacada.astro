@@ -1,0 +1,72 @@
+---
+// Importamos los datos de los equipos
+import equiposMasculinos from '../../data/equiposMasculinos.json';
+import equiposFemeninos from '../../data/equiposFemeninos.json';
+
+const { jugadorNombre, equipo, seccion = "masculina", comentario } = Astro.props;
+
+// Función para buscar un jugador por nombre en los equipos
+function buscarJugador(nombre, seccion) {
+  // Seleccionamos el conjunto de equipos según la sección
+  const equipos = seccion === "masculina" ? equiposMasculinos : equiposFemeninos;
+  
+  // Buscamos en todos los equipos
+  for (const equipoData of equipos) {
+    // Primero buscamos en miembros (jugadores)
+    const jugador = equipoData.miembros?.find(
+      miembro => miembro.nombre.toLowerCase() === nombre.toLowerCase()
+    );
+    
+    if (jugador) {
+      return { 
+        ...jugador,
+        equipo: equipoData.nombre
+      };
+    }
+    
+    // Si no se encuentra, también buscamos en entrenadores
+    const entrenador = equipoData.entrenadores?.find(
+      entrenador => entrenador.nombre.toLowerCase() === nombre.toLowerCase()
+    );
+    
+    if (entrenador) {
+      return { 
+        ...entrenador,
+        equipo: equipoData.nombre
+      };
+    }
+  }
+  
+  // Si no se encuentra, devolvemos un objeto con datos mínimos
+  return { 
+    nombre: nombre,
+    foto: "/api/placeholder/150/150",
+    equipo: equipo || "Equipo no especificado"
+  };
+}
+
+// Buscar al jugador en los datos
+const jugador = buscarJugador(jugadorNombre, seccion);
+---
+
+<div class="mt-4 border-l-2 border-green-500 pl-3">
+  <div class="flex items-center">
+    <img 
+      src={jugador.foto} 
+      alt={`Foto de ${jugador.nombre}`} 
+      class="w-14 h-14 object-cover rounded-full shadow-md border border-green-700"
+      onerror="this.src='/images/placeholder-player.png'"
+    />
+    
+    <div class="ml-3">
+      <div class="flex items-center">
+        <h4 class="text-white font-medium">{jugador.nombre}</h4>
+        <span class="ml-2 bg-green-800 px-2 py-0.5 rounded-sm text-xs text-green-100 font-medium">MVP</span>
+      </div>
+      
+      {comentario && (
+        <p class="text-gray-300 text-sm mt-1 italic">{comentario}</p>
+      )}
+    </div>
+  </div>
+</div>

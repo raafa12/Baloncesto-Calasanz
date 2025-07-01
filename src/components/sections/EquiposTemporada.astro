@@ -13,24 +13,12 @@ type CategoriaJugadores = {
 };
 
 type PlayersData = {
-  baby: CategoriaJugadores;
   masculino: CategoriaJugadores;
   femenino: CategoriaJugadores;
 };
 
 // Datos de los jugadores
 const playersData: PlayersData = {
-  baby: {
-    prebenjamin: [
-      {
-        name: "Lidia Pérez Polanco",
-        birth: 2018,
-        year: "Prebenjamín",
-        phone: "696118208 / 690098224",
-        email: "Javierperezmartinez6@hotmail.com"
-      }
-    ]
-  },
   masculino: {
     benjamin: [
       {
@@ -619,14 +607,12 @@ const playersData: PlayersData = {
 
 // Definir tipos
 type CategoriaStats = {
-  baby: number;
   masculino: number;
   femenino: number;
 };
 
 type Stats = {
   total: number;
-  baby: number;
   masculino: number;
   femenino: number;
   categorias: {
@@ -637,7 +623,6 @@ type Stats = {
 // Calcular estadísticas
 const stats: Stats = {
   total: 0,
-  baby: 0,
   masculino: 0,
   femenino: 0,
   categorias: {}
@@ -651,34 +636,29 @@ Object.entries(playersData).forEach(([genero, categorias]) => {
   Object.entries(categoriasData).forEach(([categoria, jugadores]) => {
     stats.total += jugadores.length;
     
-    if (genero === 'baby' || genero === 'masculino' || genero === 'femenino') {
+    if (genero === 'masculino' || genero === 'femenino') {
       // Type assertion for stats[genero]
       (stats[genero as keyof Omit<Stats, 'total' | 'categorias'>] as number) += jugadores.length;
     }
     
     if (!stats.categorias[categoria]) {
-      stats.categorias[categoria] = { baby: 0, masculino: 0, femenino: 0 };
+      stats.categorias[categoria] = { masculino: 0, femenino: 0 };
     }
     
-    if (genero === 'baby' || genero === 'masculino' || genero === 'femenino') {
+    if (genero === 'masculino' || genero === 'femenino') {
       stats.categorias[categoria][genero as keyof CategoriaStats] = jugadores.length;
     }
   });
 });
-
 ---
 
 <div class="equipos-temporada">
 
   <!-- Estadísticas -->
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
     <div class="bg-green-900/50 p-6 rounded-lg border border-green-800/30 text-center">
       <div class="text-3xl font-bold text-green-400" id="total-players">{stats.total}</div>
       <div class="text-gray-300">Total Jugadores</div>
-    </div>
-    <div class="bg-green-900/50 p-6 rounded-lg border border-green-800/30 text-center">
-      <div class="text-3xl font-bold text-orange-400" id="baby-players">{stats.baby}</div>
-      <div class="text-gray-300">Baby</div>
     </div>
     <div class="bg-green-900/50 p-6 rounded-lg border border-green-800/30 text-center">
       <div class="text-3xl font-bold text-blue-400" id="male-players">{stats.masculino}</div>
@@ -692,48 +672,9 @@ Object.entries(playersData).forEach(([genero, categorias]) => {
 
   <!-- Sección de Equipos -->
   <div class="space-y-12">
-    <!-- Sección Baby -->
-    <div class="bg-green-950/50 rounded-xl overflow-hidden border border-orange-800/30">
-      <div class="bg-orange-900/70 p-4 border-b border-orange-800/30">
-        <h2 class="text-xl font-bold flex items-center gap-2">
-          <span class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center">👶</span>
-          SECCIÓN BABY
-        </h2>
-      </div>
-      
-      <div class="space-y-4 p-4">
-        {Object.entries(playersData.baby).map(([categoria, jugadores]: [string, Jugador[]]) => (
-          <div class="mb-6">
-            <div class="flex justify-between items-center bg-orange-900/30 p-3 rounded-lg cursor-pointer" 
-                 onclick="this.nextElementSibling.classList.toggle('hidden')">
-              <h3 class="font-semibold">
-                {categoria.charAt(0).toUpperCase() + categoria.slice(1)} 
-                <span class="text-sm font-normal text-orange-400 ml-2">({jugadores.length} {jugadores.length === 1 ? 'jugadora' : 'jugadoras'})</span>
-              </h3>
-              <span class="text-orange-400">▼</span>
-            </div>
-            <div class="hidden mt-2 bg-orange-900/20 p-4 rounded-lg">
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {jugadores.map(jugador => (
-                  <div class="bg-pink-900/30 p-4 rounded border border-pink-800/30">
-                    <h4 class="font-medium">{jugador.name}</h4>
-                    <p class="text-sm text-gray-400">Nacimiento: {jugador.birth} ({jugador.year})</p>
-                    <div class="mt-2 pt-2 border-t border-pink-800/30 text-sm">
-                      <p>📞 {jugador.phone}</p>
-                      <p class="truncate" title={jugador.email}>📧 {jugador.email}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-
     <!-- Sección Masculina -->
-    <div class="bg-green-950/50 rounded-xl overflow-hidden border border-blue-800/30">
-      <div class="bg-blue-900/70 p-4 border-b border-blue-800/30">
+    <div class="bg-green-950/50 rounded-xl overflow-hidden border border-green-800/30">
+      <div class="bg-green-900/70 p-4 border-b border-green-800/30">
         <h2 class="text-xl font-bold flex items-center gap-2">
           <span class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center">♂</span>
           SECCIÓN MASCULINA
@@ -743,21 +684,21 @@ Object.entries(playersData).forEach(([genero, categorias]) => {
       <div class="space-y-4 p-4">
         {Object.entries(playersData.masculino).map(([categoria, jugadores]: [string, Jugador[]]) => (
           <div class="mb-6">
-            <div class="flex justify-between items-center bg-blue-900/30 p-3 rounded-lg cursor-pointer" 
+            <div class="flex justify-between items-center bg-green-900/30 p-3 rounded-lg cursor-pointer" 
                  onclick="this.nextElementSibling.classList.toggle('hidden')">
               <h3 class="font-semibold">
                 {categoria.charAt(0).toUpperCase() + categoria.slice(1)} 
-                <span class="text-sm font-normal text-blue-400 ml-2">({jugadores.length} jugadores)</span>
+                <span class="text-sm font-normal text-green-400 ml-2">({jugadores.length} jugadores)</span>
               </h3>
-              <span class="text-blue-400">▼</span>
+              <span class="text-green-400">▼</span>
             </div>
-            <div class="hidden mt-2 bg-blue-900/20 p-4 rounded-lg">
+            <div class="hidden mt-2 bg-green-900/20 p-4 rounded-lg">
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {jugadores.map(jugador => (
-                  <div class="bg-blue-900/30 p-4 rounded border border-blue-800/30">
+                  <div class="bg-green-900/30 p-4 rounded border border-green-800/30">
                     <h4 class="font-medium">{jugador.name}</h4>
                     <p class="text-sm text-gray-400">Nacimiento: {jugador.birth} ({jugador.year})</p>
-                    <div class="mt-2 pt-2 border-t border-blue-800/30 text-sm">
+                    <div class="mt-2 pt-2 border-t border-green-800/30 text-sm">
                       <p>📞 {jugador.phone}</p>
                       <p class="truncate" title={jugador.email}>📧 {jugador.email}</p>
                     </div>
