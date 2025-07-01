@@ -252,7 +252,7 @@ export const noticias = [
     categoria: 'Horarios',
     destacado: true,
     tieneComponenteEspecial: false,
-    oculta: false
+    oculta: true
   },
   {
     id: "equipos-temporada-25-26",
