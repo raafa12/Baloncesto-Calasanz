@@ -229,11 +229,11 @@ INFANTIL
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-white font-bold">Martes y jueves </span>
+                      <span class="text-white font-bold">Martes y Jueves </span>
                       <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">16:30-18:00</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-white font-bold">Jueves</span>
+                      <span class="text-white font-bold">Viernes</span>
                       <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">18:00-19:00</span>
                     </div>
                   </div>
