@@ -29,7 +29,7 @@ export const noticias = [
             
             <div class="grid grid-cols-1 sm:grid-cols-1 gap-3 p-4 sm:p-6">
               <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <h3 class="text-lg sm:text-xl font-bold text-gray-100 mb-3 sm:mb-4 flex items-center gap-2 border-l-4 border-orange-400 pl-3 py-1">
+                <h3 class="text-sm sm:text-base font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-orange-400 pl-3 py-1">
                   HORARIOS
                 </h3>
                 <div class="space-y-2">
@@ -66,7 +66,7 @@ export const noticias = [
                 
                 <!-- Benjamín -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-lg sm:text-xl font-bold text-gray-100 mb-3 sm:mb-4 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
+                  <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
 BENJAMÍN
                   </h3>
                   <div class="space-y-2">
@@ -83,7 +83,7 @@ BENJAMÍN
   
                 <!-- Alevín -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-lg sm:text-xl font-bold text-gray-100 mb-3 sm:mb-4 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
+                  <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
 ALEVÍN
                   </h3>
                   <div class="space-y-2">
@@ -100,7 +100,7 @@ ALEVÍN
   
                 <!-- Infantil A -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-lg sm:text-xl font-bold text-gray-100 mb-3 sm:mb-4 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
+                  <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
 INFANTIL A
                   </h3>
                   <div class="space-y-2">
@@ -117,7 +117,7 @@ INFANTIL A
   
                 <!-- Infantil B -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-lg sm:text-xl font-bold text-gray-100 mb-3 sm:mb-4 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
+                  <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
 INFANTIL B
                   </h3>
                   <div class="space-y-2">
@@ -130,7 +130,7 @@ INFANTIL B
   
                 <!-- Cadete A -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-lg sm:text-xl font-bold text-gray-100 mb-3 sm:mb-4 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
+                  <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
 CADETE A
                   </h3>
                   <div class="space-y-2">
@@ -147,7 +147,7 @@ CADETE A
   
                 <!-- Junior -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-lg sm:text-xl font-bold text-gray-100 mb-3 sm:mb-4 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
+                  <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
 JUNIOR
                   </h3>
                   <div class="space-y-2">
@@ -190,7 +190,7 @@ JUNIOR
                 
                 <!-- Benjamín -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-lg sm:text-xl font-bold text-gray-100 mb-3 sm:mb-4 flex items-center gap-2 border-l-4 border-pink-400 pl-3 py-1">
+                  <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-pink-400 pl-3 py-1">
 BENJAMÍN
                   </h3>
                   <div class="space-y-2">
@@ -207,7 +207,7 @@ BENJAMÍN
   
                 <!-- Alevín A/B -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-lg sm:text-xl font-bold text-gray-100 mb-3 sm:mb-4 flex items-center gap-2 border-l-4 border-pink-400 pl-3 py-1">
+                  <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-pink-400 pl-3 py-1">
 ALEVÍN A/B
                   </h3>
                   <div class="space-y-2">
@@ -224,7 +224,7 @@ ALEVÍN A/B
   
                 <!-- Infantil -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-lg sm:text-xl font-bold text-gray-100 mb-3 sm:mb-4 flex items-center gap-2 border-l-4 border-pink-400 pl-3 py-1">
+                  <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-pink-400 pl-3 py-1">
 INFANTIL
                   </h3>
                   <div class="space-y-2">
@@ -241,7 +241,7 @@ INFANTIL
   
                 <!-- Cadete B -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-lg sm:text-xl font-bold text-gray-100 mb-3 sm:mb-4 flex items-center gap-2 border-l-4 border-pink-400 pl-3 py-1">
+                  <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-pink-400 pl-3 py-1">
 CADETE B
                   </h3>
                   <div class="space-y-2">
@@ -258,7 +258,7 @@ CADETE B
   
                 <!-- Cadete A -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-lg sm:text-xl font-bold text-gray-100 mb-3 sm:mb-4 flex items-center gap-2 border-l-4 border-pink-400 pl-3 py-1">
+                  <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-pink-400 pl-3 py-1">
 CADETE A
                   </h3>
                   <div class="space-y-2">
@@ -275,7 +275,7 @@ CADETE A
   
                 <!-- Junior -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-lg sm:text-xl font-bold text-gray-100 mb-3 sm:mb-4 flex items-center gap-2 border-l-4 border-pink-400 pl-3 py-1">
+                  <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-pink-400 pl-3 py-1">
 JUNIOR
                   </h3>
                   <div class="space-y-2">
