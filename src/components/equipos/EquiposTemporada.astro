@@ -797,8 +797,6 @@ Object.entries(playersData).forEach(([genero, categorias]) => {
                   {categoria.charAt(0).toUpperCase() + categoria.slice(1)} 
                   <span class="text-sm font-normal text-orange-400 ml-2">
                     ({totalJugadores} {totalJugadores === 1 ? 'jugador/a' : 'jugadores/as'})
-                    {totalNiños > 0 && <span class="text-blue-400 ml-2">{totalNiños} niño{totalNiños !== 1 ? 's' : ''}</span>}
-                    {totalNiñas > 0 && <span class="text-pink-400 ml-2">{totalNiñas} niña{totalNiñas !== 1 ? 's' : ''}</span>}
                   </span>
                 </h3>
                 <span class="text-orange-400">▼</span>
