@@ -332,12 +332,11 @@ JUNIOR
                   <div class="w-6 h-6 sm:w-8 sm:h-8 bg-green-400/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <div class="w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full animate-pulse"></div>
                   </div>
-                  <span class="text-sm sm:text-base text-gray-100 leading-relaxed">
-                    Para más información, contactar con el club en: 
-                    <a href="mailto:clubcalasanzbaloncesto@gmail.com" class="text-green-300 hover:text-green-200 underline decoration-green-300/50 hover:decoration-green-200 transition-colors duration-200 font-medium">
-                      clubcalasanzbaloncesto@gmail.com
-                    </a>
-                  </span>
+                  <div class="flex-1">
+                    <span class="text-sm sm:text-base text-gray-100 leading-relaxed">
+                      Para más información o avisar de ausencias en los entrenamientos contactar con el club.
+                    </span>
+                  </div>
                 </div>
   
               </div>
