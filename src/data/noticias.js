@@ -10,39 +10,33 @@ export const noticias = [
       <!-- Contenedor principal -->
       <div class="relative max-w-6xl mx-auto px-3 sm:px-6 py-4 sm:py-8">
   
-        <!-- Baby Basket - Diseño especial -->
-        <div class="mb-8 sm:mb-12">
-          <div class="relative bg-gradient-to-br from-orange-500/20 via-orange-600/30 to-yellow-500/20 rounded-3xl overflow-hidden border border-orange-400/50 shadow-2xl backdrop-blur-sm">
-            <div class="absolute inset-0 bg-gradient-to-br from-orange-400/10 to-yellow-400/10"></div>
-            <div class="relative">
-              <!-- Header con icono -->
-              <div class="bg-gradient-to-r from-orange-500 to-yellow-500 p-4 sm:p-6 text-center relative overflow-hidden">
-                <div class="absolute inset-0 bg-black/10"></div>
-                <div class="relative flex items-center justify-center gap-3">
-                  <div class="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center">
-                    <span class="text-lg sm:text-xl">🏀</span>
-                  </div>
-                  <h2 class="text-xl sm:text-3xl font-black text-white tracking-wide">BABY BASKET</h2>
-                  <div class="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center">
-                    <span class="text-lg sm:text-xl">👶</span>
-                  </div>
+        <!-- Baby Basket -->
+        <div class="relative bg-gradient-to-br from-orange-500/20 via-orange-600/30 to-yellow-500/20 rounded-3xl overflow-hidden border border-orange-400/50 shadow-2xl backdrop-blur-sm mb-6 sm:mb-8">
+          <div class="absolute inset-0 bg-gradient-to-br from-orange-400/10 to-yellow-400/10"></div>
+          <div class="relative">
+            <!-- Header con icono -->
+            <div class="bg-gradient-to-r from-orange-500 to-yellow-500 p-4 sm:p-6 text-center relative overflow-hidden">
+              <div class="absolute inset-0 bg-black/10"></div>
+              <div class="relative flex items-center justify-center gap-3">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center">
+                  <span class="text-lg sm:text-xl">🏀</span>
+                </div>
+                <h2 class="text-xl sm:text-3xl font-black text-white tracking-wide">BABY BASKET</h2>
+                <div class="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center">
+                  <span class="text-lg sm:text-xl">👶</span>
                 </div>
               </div>
-              
-              <!-- Contenido -->
-              <div class="p-6 sm:p-8">
-                <div class="bg-white/10 rounded-2xl p-4 sm:p-6 backdrop-blur-sm border border-white/20">
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <div class="w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
-                      <span class="text-base sm:text-lg font-semibold text-orange-100">Lunes y Jueves</span>
-                    </div>
-                    <div class="text-right">
-                      <span class="text-xl sm:text-2xl font-black text-white">15:00</span>
-                      <span class="text-orange-300 mx-2">-</span>
-                      <span class="text-xl sm:text-2xl font-black text-white">16:30</span>
-                    </div>
+            </div>
+            
+            <!-- Contenido -->
+            <div class="p-4 sm:p-6">
+              <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm border border-white/20">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
+                    <span class="text-sm sm:text-base font-semibold text-orange-100">Lunes y Jueves</span>
                   </div>
+                  <span class="font-bold text-white bg-orange-500/30 px-2 py-1 rounded-lg text-sm">15:00-16:30</span>
                 </div>
               </div>
             </div>
@@ -72,7 +66,7 @@ export const noticias = [
                 
                 <!-- Benjamín -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-sm sm:text-lg font-bold text-blue-300 mb-2 sm:mb-3 flex items-center gap-2">
+                  <h3 class="text-base sm:text-xl font-extrabold text-blue-200 mb-3 sm:mb-4 flex items-center gap-2">
                     <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
                     BENJAMÍN
                   </h3>
@@ -90,7 +84,7 @@ export const noticias = [
   
                 <!-- Alevín -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-sm sm:text-lg font-bold text-blue-300 mb-2 sm:mb-3 flex items-center gap-2">
+                  <h3 class="text-base sm:text-xl font-extrabold text-blue-200 mb-3 sm:mb-4 flex items-center gap-2">
                     <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
                     ALEVÍN
                   </h3>
@@ -108,7 +102,7 @@ export const noticias = [
   
                 <!-- Infantil A -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-sm sm:text-lg font-bold text-blue-300 mb-2 sm:mb-3 flex items-center gap-2">
+                  <h3 class="text-base sm:text-xl font-extrabold text-blue-200 mb-3 sm:mb-4 flex items-center gap-2">
                     <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
                     INFANTIL A
                   </h3>
@@ -126,7 +120,7 @@ export const noticias = [
   
                 <!-- Infantil B -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-sm sm:text-lg font-bold text-blue-300 mb-2 sm:mb-3 flex items-center gap-2">
+                  <h3 class="text-base sm:text-xl font-extrabold text-blue-200 mb-3 sm:mb-4 flex items-center gap-2">
                     <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
                     INFANTIL B
                   </h3>
@@ -140,7 +134,7 @@ export const noticias = [
   
                 <!-- Cadete A -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-sm sm:text-lg font-bold text-blue-300 mb-2 sm:mb-3 flex items-center gap-2">
+                  <h3 class="text-base sm:text-xl font-extrabold text-blue-200 mb-3 sm:mb-4 flex items-center gap-2">
                     <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
                     CADETE A
                   </h3>
@@ -158,7 +152,7 @@ export const noticias = [
   
                 <!-- Junior -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-sm sm:text-lg font-bold text-blue-300 mb-2 sm:mb-3 flex items-center gap-2">
+                  <h3 class="text-base sm:text-xl font-extrabold text-blue-200 mb-3 sm:mb-4 flex items-center gap-2">
                     <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
                     JUNIOR
                   </h3>
@@ -202,7 +196,7 @@ export const noticias = [
                 
                 <!-- Benjamín -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-sm sm:text-lg font-bold text-pink-300 mb-2 sm:mb-3 flex items-center gap-2">
+                  <h3 class="text-base sm:text-xl font-extrabold text-pink-200 mb-3 sm:mb-4 flex items-center gap-2">
                     <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
                     BENJAMÍN
                   </h3>
@@ -220,7 +214,7 @@ export const noticias = [
   
                 <!-- Alevín A/B -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-sm sm:text-lg font-bold text-pink-300 mb-2 sm:mb-3 flex items-center gap-2">
+                  <h3 class="text-base sm:text-xl font-extrabold text-pink-200 mb-3 sm:mb-4 flex items-center gap-2">
                     <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
                     ALEVÍN A/B
                   </h3>
@@ -238,7 +232,7 @@ export const noticias = [
   
                 <!-- Infantil -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-sm sm:text-lg font-bold text-pink-300 mb-2 sm:mb-3 flex items-center gap-2">
+                  <h3 class="text-base sm:text-xl font-extrabold text-pink-200 mb-3 sm:mb-4 flex items-center gap-2">
                     <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
                     INFANTIL
                   </h3>
@@ -256,7 +250,7 @@ export const noticias = [
   
                 <!-- Cadete B -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-sm sm:text-lg font-bold text-pink-300 mb-2 sm:mb-3 flex items-center gap-2">
+                  <h3 class="text-base sm:text-xl font-extrabold text-pink-200 mb-3 sm:mb-4 flex items-center gap-2">
                     <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
                     CADETE B
                   </h3>
@@ -274,7 +268,7 @@ export const noticias = [
   
                 <!-- Cadete A -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-sm sm:text-lg font-bold text-pink-300 mb-2 sm:mb-3 flex items-center gap-2">
+                  <h3 class="text-base sm:text-xl font-extrabold text-pink-200 mb-3 sm:mb-4 flex items-center gap-2">
                     <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
                     CADETE A
                   </h3>
@@ -292,7 +286,7 @@ export const noticias = [
   
                 <!-- Junior -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-sm sm:text-lg font-bold text-pink-300 mb-2 sm:mb-3 flex items-center gap-2">
+                  <h3 class="text-base sm:text-xl font-extrabold text-pink-200 mb-3 sm:mb-4 flex items-center gap-2">
                     <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
                     JUNIOR
                   </h3>
