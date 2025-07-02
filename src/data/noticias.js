@@ -34,7 +34,7 @@ export const noticias = [
                 </h3>
                 <div class="space-y-2">
                   <div class="flex justify-between items-center text-xs sm:text-sm">
-                    <span class="text-orange-100">Lunes y Jueves</span>
+                    <span class="text-white font-bold">Lunes y Jueves</span>
                     <span class="font-bold text-white bg-orange-500/30 px-2 py-1 rounded-lg">15:00-16:30</span>
                   </div>
                 </div>
@@ -71,11 +71,11 @@ BENJAMÍN
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-blue-100">Lunes y Miércoles</span>
+                      <span class="text-white font-bold">Lunes y Miércoles</span>
                       <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">16:30-18:00</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-blue-100">Viernes</span>
+                      <span class="text-white font-bold">Viernes</span>
                       <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">16:00-17:00</span>
                     </div>
                   </div>
@@ -88,11 +88,11 @@ ALEVÍN
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-blue-100">Lunes y Miércoles</span>
+                      <span class="text-white font-bold">Lunes y Miércoles</span>
                       <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">18:00-19:30</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-blue-100">Viernes</span>
+                      <span class="text-white font-bold">Viernes</span>
                       <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">18:00-19:00</span>
                     </div>
                   </div>
@@ -105,11 +105,11 @@ INFANTIL A
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-blue-100">Lunes y Miércoles</span>
+                      <span class="text-white font-bold">Lunes y Miércoles</span>
                       <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">16:30-18:00</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-blue-100">Viernes</span>
+                      <span class="text-white font-bold">Viernes</span>
                       <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">16:00-17:00</span>
                     </div>
                   </div>
@@ -122,7 +122,7 @@ INFANTIL B
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-blue-100">Lunes y Miércoles</span>
+                      <span class="text-white font-bold">Lunes y Miércoles</span>
                       <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">16:30-18:00</span>
                     </div>
                   </div>
@@ -135,11 +135,11 @@ CADETE A
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-blue-100">Lunes y Miércoles</span>
+                      <span class="text-white font-bold">Lunes y Miércoles</span>
                       <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">18:00-19:30</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-blue-100">Viernes</span>
+                      <span class="text-white font-bold">Viernes</span>
                       <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">16:00-17:15</span>
                     </div>
                   </div>
@@ -152,15 +152,15 @@ JUNIOR
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-blue-100">Martes</span>
+                      <span class="text-white font-bold">Martes</span>
                       <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">16:30-18:00</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-blue-100">Miércoles</span>
+                      <span class="text-white font-bold">Miércoles</span>
                       <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">18:00-19:30</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-blue-100">Viernes</span>
+                      <span class="text-white font-bold">Viernes</span>
                       <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">17:15-18:30</span>
                     </div>
                   </div>
@@ -195,11 +195,11 @@ BENJAMÍN
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-pink-100">Martes y Jueves</span>
+                      <span class="text-white font-bold">Martes y Jueves</span>
                       <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">16:30-18:00</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-pink-100">Viernes</span>
+                      <span class="text-white font-bold">Viernes</span>
                       <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">15:00-16:15</span>
                     </div>
                   </div>
@@ -212,11 +212,11 @@ ALEVÍN A/B
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-pink-100">Martes y Jueves</span>
+                      <span class="text-white font-bold">Martes y Jueves</span>
                       <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">18:00-19:30</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-pink-100">Viernes</span>
+                      <span class="text-white font-bold">Viernes</span>
                       <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">17:00-18:00</span>
                     </div>
                   </div>
@@ -229,11 +229,11 @@ INFANTIL
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-pink-100">Martes y jueves </span>
+                      <span class="text-white font-bold">Martes y jueves </span>
                       <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">16:30-18:00</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-pink-100">Jueves</span>
+                      <span class="text-white font-bold">Jueves</span>
                       <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">18:00-19:00</span>
                     </div>
                   </div>
@@ -246,11 +246,11 @@ CADETE B
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-pink-100">Lunes y Jueves</span>
+                      <span class="text-white font-bold">Lunes y Jueves</span>
                       <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">18:00-19:30</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-pink-100">Miércoles</span>
+                      <span class="text-white font-bold">Miércoles</span>
                       <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">19:30-21:00</span>
                     </div>
                   </div>
@@ -263,11 +263,11 @@ CADETE A
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-pink-100">Martes</span>
+                      <span class="text-white font-bold">Martes</span>
                       <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">18:00-19:30</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-pink-100">Viernes</span>
+                      <span class="text-white font-bold">Viernes</span>
                       <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">18:30-19:45</span>
                     </div>
                   </div>
@@ -280,11 +280,11 @@ JUNIOR
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-pink-100">Lunes y Miércoles</span>
+                      <span class="text-white font-bold">Lunes y Miércoles</span>
                       <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">19:30-21:00</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-pink-100">Viernes</span>
+                      <span class="text-white font-bold">Viernes</span>
                       <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">19:45-21:00</span>
                     </div>
                   </div>
