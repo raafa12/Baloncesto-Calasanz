@@ -96,6 +96,14 @@
     ],
     "miembros": [
       { 
+        "nombre": "Irene Díaz de Tuesta García", 
+        "rol": "Nacida en 2014"
+      },
+      { 
+        "nombre": "Lucía Díaz de Tuesta García", 
+        "rol": "Nacida en 2014"
+      },
+      { 
         "nombre": "Alba González", 
         "rol": "Nacida en 2013", 
         "foto": "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/82b78a94-8215-419a-ac02-b604212680d5.jpeg" 

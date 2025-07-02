@@ -22,6 +22,10 @@
     ],
     "miembros": [
       { 
+        "nombre": "Lucas De Nieva Martinez", 
+        "rol": "Nacido en 2017"
+      },
+      { 
         "nombre": "Cesar Djaider", 
         "rol": "Nacido en 2015", 
         "foto": "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/999925fd-f064-43b9-b1e1-7026159d2080.jpg"

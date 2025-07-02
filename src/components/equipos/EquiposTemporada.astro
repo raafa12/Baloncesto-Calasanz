@@ -8,12 +8,19 @@ type Jugador = {
   email: string;
 };
 
+type GrupoJugadores = {
+  niños: Jugador[];
+  niñas: Jugador[];
+};
+
 type CategoriaJugadores = {
-  [categoria: string]: Jugador[];
+  [categoria: string]: Jugador[] | GrupoJugadores;
 };
 
 type PlayersData = {
-  baby: CategoriaJugadores;
+  baby: {
+    prebenjamin: GrupoJugadores;
+  };
   masculino: CategoriaJugadores;
   femenino: CategoriaJugadores;
 };
@@ -21,15 +28,26 @@ type PlayersData = {
 // Datos de los jugadores
 const playersData: PlayersData = {
   baby: {
-    prebenjamin: [
-      {
-        name: "Lidia Pérez Polanco",
-        birth: 2018,
-        year: "Prebenjamín",
-        phone: "696118208 / 690098224",
-        email: "Javierperezmartinez6@hotmail.com"
-      }
-    ]
+    prebenjamin: {
+      niños: [
+        {
+          name: "Adrián Abril Campos",
+          birth: 2018,
+          year: "Prebenjamín",
+          phone: "669648119",
+          email: "mlcamposaja@gmail.com"
+        }
+      ],
+      niñas: [
+        {
+          name: "Lidia Pérez Polanco",
+          birth: 2018,
+          year: "Prebenjamín",
+          phone: "696118208 / 690098224",
+          email: "Javierperezmartinez6@hotmail.com"
+        }
+      ]
+    }
   },
   masculino: {
     benjamin: [
@@ -678,17 +696,24 @@ const stats: Stats = {
   categorias: {}
 };
 
+// Función para contar jugadores en un grupo
+const contarJugadores = (grupo: Jugador[] | GrupoJugadores): number => {
+  if (Array.isArray(grupo)) {
+    return grupo.length;
+  } else if (typeof grupo === 'object' && grupo !== null) {
+    return (grupo.niños?.length || 0) + (grupo.niñas?.length || 0);
+  }
+  return 0;
+};
+
 // Procesar estadísticas
 Object.entries(playersData).forEach(([genero, categorias]) => {
-  // Type assertion for categorias
-  const categoriasData = categorias as CategoriaJugadores;
-  
-  Object.entries(categoriasData).forEach(([categoria, jugadores]) => {
-    stats.total += jugadores.length;
+  Object.entries(categorias).forEach(([categoria, jugadores]) => {
+    const totalJugadores = contarJugadores(jugadores);
+    stats.total += totalJugadores;
     
     if (genero === 'baby' || genero === 'masculino' || genero === 'femenino') {
-      // Type assertion for stats[genero]
-      (stats[genero as keyof Omit<Stats, 'total' | 'categorias'>] as number) += jugadores.length;
+      (stats[genero as keyof Omit<Stats, 'total' | 'categorias'>] as number) += totalJugadores;
     }
     
     if (!stats.categorias[categoria]) {
@@ -696,7 +721,7 @@ Object.entries(playersData).forEach(([genero, categorias]) => {
     }
     
     if (genero === 'baby' || genero === 'masculino' || genero === 'femenino') {
-      stats.categorias[categoria][genero as keyof CategoriaStats] = jugadores.length;
+      stats.categorias[categoria][genero as keyof CategoriaStats] = totalJugadores;
     }
   });
 });
@@ -737,32 +762,66 @@ Object.entries(playersData).forEach(([genero, categorias]) => {
       </div>
       
       <div class="space-y-4 p-4">
-        {Object.entries(playersData.baby).map(([categoria, jugadores]: [string, Jugador[]]) => (
-          <div class="mb-6">
-            <div class="flex justify-between items-center bg-orange-900/30 p-3 rounded-lg cursor-pointer" 
-                 onclick="this.nextElementSibling.classList.toggle('hidden')">
-              <h3 class="font-semibold">
-                {categoria.charAt(0).toUpperCase() + categoria.slice(1)} 
-                <span class="text-sm font-normal text-orange-400 ml-2">({jugadores.length} {jugadores.length === 1 ? 'jugadora' : 'jugadoras'})</span>
-              </h3>
-              <span class="text-orange-400">▼</span>
-            </div>
-            <div class="hidden mt-2 bg-orange-900/20 p-4 rounded-lg">
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {jugadores.map(jugador => (
-                  <div class="bg-pink-900/30 p-4 rounded border border-pink-800/30">
-                    <h4 class="font-medium">{jugador.name}</h4>
-                    <p class="text-sm text-gray-400">Nacimiento: {jugador.birth} ({jugador.year})</p>
-                    <div class="mt-2 pt-2 border-t border-pink-800/30 text-sm">
-                      <p>📞 {jugador.phone}</p>
-                      <p class="break-words whitespace-normal">📧 {jugador.email}</p>
+        {Object.entries(playersData.baby).map(([categoria, grupo]) => {
+          const grupoJugadores = grupo as GrupoJugadores;
+          const totalNiños = grupoJugadores.niños?.length || 0;
+          const totalNiñas = grupoJugadores.niñas?.length || 0;
+          const totalJugadores = totalNiños + totalNiñas;
+          
+          return (
+            <div class="mb-6">
+              <div class="flex justify-between items-center bg-orange-900/30 p-3 rounded-lg cursor-pointer" 
+                   onclick="this.nextElementSibling.classList.toggle('hidden')">
+                <h3 class="font-semibold">
+                  {categoria.charAt(0).toUpperCase() + categoria.slice(1)} 
+                  <span class="text-sm font-normal text-orange-400 ml-2">
+                    ({totalJugadores} {totalJugadores === 1 ? 'jugador/a' : 'jugadores/as'})
+                    {totalNiños > 0 && <span class="text-blue-400 ml-2">{totalNiños} niño{totalNiños !== 1 ? 's' : ''}</span>}
+                    {totalNiñas > 0 && <span class="text-pink-400 ml-2">{totalNiñas} niña{totalNiñas !== 1 ? 's' : ''}</span>}
+                  </span>
+                </h3>
+                <span class="text-orange-400">▼</span>
+              </div>
+              <div class="hidden mt-2 bg-orange-900/20 p-4 rounded-lg space-y-4">
+                {totalNiños > 0 && (
+                  <div>
+                    <h4 class="text-blue-300 font-medium mb-2">Niños ({totalNiños})</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+                      {grupoJugadores.niños.map(jugador => (
+                        <div class="bg-blue-900/30 p-4 rounded border border-blue-800/30">
+                          <h4 class="font-medium">{jugador.name}</h4>
+                          <p class="text-sm text-gray-400">Nacimiento: {jugador.birth} ({jugador.year})</p>
+                          <div class="mt-2 pt-2 border-t border-blue-800/30 text-sm">
+                            <p>📞 {jugador.phone}</p>
+                            <p class="break-words whitespace-normal">📧 {jugador.email}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                ))}
+                )}
+                
+                {totalNiñas > 0 && (
+                  <div>
+                    <h4 class="text-pink-300 font-medium mb-2">Niñas ({totalNiñas})</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {grupoJugadores.niñas.map(jugadora => (
+                        <div class="bg-pink-900/30 p-4 rounded border border-pink-800/30">
+                          <h4 class="font-medium">{jugadora.name}</h4>
+                          <p class="text-sm text-gray-400">Nacimiento: {jugadora.birth} ({jugadora.year})</p>
+                          <div class="mt-2 pt-2 border-t border-pink-800/30 text-sm">
+                            <p>📞 {jugadora.phone}</p>
+                            <p class="break-words whitespace-normal">📧 {jugadora.email}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
 
