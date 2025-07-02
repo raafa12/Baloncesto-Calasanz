@@ -1,7 +1,7 @@
 export const noticias = [
   {
     id: "horarios-entrenamiento-25-26",
-    titulo: 'Horarios de entrenamiento - Temporada 2025/2026',
+    titulo: 'Horarios de Entrenamiento - Temporada 2025/2026',
     contenido: `
     <div class="min-h-screen bg-gradient-to-br from-green-950 via-gray-900 to-green-950 text-white relative overflow-hidden">
       <!-- Patrón de puntos sutiles -->
