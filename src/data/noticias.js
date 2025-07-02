@@ -29,8 +29,8 @@ export const noticias = [
             
             <div class="grid grid-cols-1 sm:grid-cols-1 gap-3 p-4 sm:p-6">
               <div class="bg-white/10 rounded-xl p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <h3 class="text-base sm:text-xl font-extrabold text-orange-200 mb-3 sm:mb-4 flex items-center gap-2">
-                  <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
+                <h3 class="text-lg sm:text-xl font-black text-white mb-3 sm:mb-4 flex items-center gap-2">
+                  <div class="w-2.5 h-2.5 bg-orange-400 rounded-full"></div>
                   HORARIOS
                 </h3>
                 <div class="space-y-2">
@@ -67,8 +67,8 @@ export const noticias = [
                 
                 <!-- Benjamín -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-base sm:text-xl font-extrabold text-blue-100 mb-3 sm:mb-4 flex items-center gap-2">
-                    <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <h3 class="text-lg sm:text-xl font-black text-white mb-3 sm:mb-4 flex items-center gap-2">
+                    <div class="w-2.5 h-2.5 bg-blue-400 rounded-full"></div>
                     BENJAMÍN
                   </h3>
                   <div class="space-y-2">
@@ -85,8 +85,8 @@ export const noticias = [
   
                 <!-- Alevín -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-base sm:text-xl font-extrabold text-blue-100 mb-3 sm:mb-4 flex items-center gap-2">
-                    <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <h3 class="text-lg sm:text-xl font-black text-white mb-3 sm:mb-4 flex items-center gap-2">
+                    <div class="w-2.5 h-2.5 bg-blue-400 rounded-full"></div>
                     ALEVÍN
                   </h3>
                   <div class="space-y-2">
@@ -103,8 +103,8 @@ export const noticias = [
   
                 <!-- Infantil A -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-base sm:text-xl font-extrabold text-blue-100 mb-3 sm:mb-4 flex items-center gap-2">
-                    <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <h3 class="text-lg sm:text-xl font-black text-white mb-3 sm:mb-4 flex items-center gap-2">
+                    <div class="w-2.5 h-2.5 bg-blue-400 rounded-full"></div>
                     INFANTIL A
                   </h3>
                   <div class="space-y-2">
@@ -121,8 +121,8 @@ export const noticias = [
   
                 <!-- Infantil B -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-base sm:text-xl font-extrabold text-blue-100 mb-3 sm:mb-4 flex items-center gap-2">
-                    <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <h3 class="text-lg sm:text-xl font-black text-white mb-3 sm:mb-4 flex items-center gap-2">
+                    <div class="w-2.5 h-2.5 bg-blue-400 rounded-full"></div>
                     INFANTIL B
                   </h3>
                   <div class="space-y-2">
@@ -135,8 +135,8 @@ export const noticias = [
   
                 <!-- Cadete A -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-base sm:text-xl font-extrabold text-blue-100 mb-3 sm:mb-4 flex items-center gap-2">
-                    <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <h3 class="text-lg sm:text-xl font-black text-white mb-3 sm:mb-4 flex items-center gap-2">
+                    <div class="w-2.5 h-2.5 bg-blue-400 rounded-full"></div>
                     CADETE A
                   </h3>
                   <div class="space-y-2">
@@ -153,8 +153,8 @@ export const noticias = [
   
                 <!-- Junior -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-base sm:text-xl font-extrabold text-blue-100 mb-3 sm:mb-4 flex items-center gap-2">
-                    <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <h3 class="text-lg sm:text-xl font-black text-white mb-3 sm:mb-4 flex items-center gap-2">
+                    <div class="w-2.5 h-2.5 bg-blue-400 rounded-full"></div>
                     JUNIOR
                   </h3>
                   <div class="space-y-2">
@@ -197,8 +197,8 @@ export const noticias = [
                 
                 <!-- Benjamín -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-base sm:text-xl font-extrabold text-pink-100 mb-3 sm:mb-4 flex items-center gap-2">
-                    <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                  <h3 class="text-lg sm:text-xl font-black text-white mb-3 sm:mb-4 flex items-center gap-2">
+                    <div class="w-2.5 h-2.5 bg-pink-400 rounded-full"></div>
                     BENJAMÍN
                   </h3>
                   <div class="space-y-2">
@@ -215,8 +215,8 @@ export const noticias = [
   
                 <!-- Alevín A/B -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-base sm:text-xl font-extrabold text-pink-100 mb-3 sm:mb-4 flex items-center gap-2">
-                    <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                  <h3 class="text-lg sm:text-xl font-black text-white mb-3 sm:mb-4 flex items-center gap-2">
+                    <div class="w-2.5 h-2.5 bg-pink-400 rounded-full"></div>
                     ALEVÍN A/B
                   </h3>
                   <div class="space-y-2">
@@ -233,8 +233,8 @@ export const noticias = [
   
                 <!-- Infantil -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-base sm:text-xl font-extrabold text-pink-100 mb-3 sm:mb-4 flex items-center gap-2">
-                    <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                  <h3 class="text-lg sm:text-xl font-black text-white mb-3 sm:mb-4 flex items-center gap-2">
+                    <div class="w-2.5 h-2.5 bg-pink-400 rounded-full"></div>
                     INFANTIL
                   </h3>
                   <div class="space-y-2">
@@ -251,8 +251,8 @@ export const noticias = [
   
                 <!-- Cadete B -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-base sm:text-xl font-extrabold text-pink-100 mb-3 sm:mb-4 flex items-center gap-2">
-                    <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                  <h3 class="text-lg sm:text-xl font-black text-white mb-3 sm:mb-4 flex items-center gap-2">
+                    <div class="w-2.5 h-2.5 bg-pink-400 rounded-full"></div>
                     CADETE B
                   </h3>
                   <div class="space-y-2">
@@ -269,8 +269,8 @@ export const noticias = [
   
                 <!-- Cadete A -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-base sm:text-xl font-extrabold text-pink-100 mb-3 sm:mb-4 flex items-center gap-2">
-                    <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                  <h3 class="text-lg sm:text-xl font-black text-white mb-3 sm:mb-4 flex items-center gap-2">
+                    <div class="w-2.5 h-2.5 bg-pink-400 rounded-full"></div>
                     CADETE A
                   </h3>
                   <div class="space-y-2">
@@ -287,8 +287,8 @@ export const noticias = [
   
                 <!-- Junior -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <h3 class="text-base sm:text-xl font-extrabold text-pink-100 mb-3 sm:mb-4 flex items-center gap-2">
-                    <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                  <h3 class="text-lg sm:text-xl font-black text-white mb-3 sm:mb-4 flex items-center gap-2">
+                    <div class="w-2.5 h-2.5 bg-pink-400 rounded-full"></div>
                     JUNIOR
                   </h3>
                   <div class="space-y-2">
