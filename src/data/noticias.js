@@ -34,8 +34,8 @@ export const noticias = [
                 </h3>
                 <div class="space-y-2">
                   <div class="flex justify-between items-center text-xs sm:text-sm">
-                    <span class="text-white font-bold">Lunes y Jueves</span>
-                    <span class="font-bold text-white bg-orange-500/30 px-2 py-1 rounded-lg">15:00-16:30</span>
+                    <span class="text-white font-bold">Lunes y Miércoles</span>
+                    <span class="font-bold text-white bg-orange-500/30 px-2 py-1 rounded-lg">15:15-16:30</span>
                   </div>
                 </div>
               </div>
@@ -72,7 +72,7 @@ BENJAMÍN
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Lunes y Miércoles</span>
-                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">16:30-18:00</span>
+                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">16:45-18:15</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Viernes</span>
@@ -318,7 +318,7 @@ JUNIOR
                   <div class="w-6 h-6 sm:w-8 sm:h-8 bg-green-400/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <div class="w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full animate-pulse"></div>
                   </div>
-                  <span class="text-sm sm:text-base text-gray-100 leading-relaxed">Los horarios podrán estar sujetos a cambios según disponibilidad de pistas y necesidades del club.</span>
+                  <span class="text-sm sm:text-base text-gray-100 leading-relaxed">Los horarios son provisionales y podrán estar sujetos a cambios según disponibilidad de pistas y necesidades del club.</span>
                 </div>
                 
                 <div class="bg-white/10 rounded-xl p-4 sm:p-5 backdrop-blur-sm border border-white/20 flex items-start gap-3 sm:gap-4 hover:bg-white/15 transition-all duration-300">
@@ -334,7 +334,7 @@ JUNIOR
                   </div>
                   <div class="flex-1">
                     <span class="text-sm sm:text-base text-gray-100 leading-relaxed">
-                      Para más información o avisar de ausencias en los entrenamientos contactar con el club.
+                      Para más información o aviso de ausencias en los entrenamientos contactar con el club.
                     </span>
                   </div>
                 </div>
@@ -351,7 +351,7 @@ JUNIOR
     categoria: 'Horarios',
     destacado: true,
     tieneComponenteEspecial: false,
-    oculta: true
+    oculta: true,
   },
   {
     id: "equipos-temporada-25-26",
