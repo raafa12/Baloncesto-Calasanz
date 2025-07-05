@@ -22,6 +22,14 @@
     ],
     "miembros": [
       { 
+        "nombre": "Mario Toyos San Emeterio", 
+        "rol": "Nacido en 2017",
+        "contacto": {
+          "telefono": "625585262",
+          "email": "oscartoyos75@gmail.com"
+        }
+      },
+      { 
         "nombre": "Lucas De Nieva Martinez", 
         "rol": "Nacido en 2017"
       },
