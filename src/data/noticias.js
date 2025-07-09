@@ -119,11 +119,15 @@ INFANTIL A
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
                   <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
 INFANTIL B
-                  </h3>
+              </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Lunes y Miércoles</span>
                       <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">16:30-18:00</span>
+                    </div>
+                    <div class="flex justify-between items-center text-xs sm:text-sm">
+                      <span class="text-white font-bold">Viernes</span>
+                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">16:00-17:00</span>
                     </div>
                   </div>
                 </div>
@@ -149,6 +153,23 @@ CADETE A
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
                   <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
 JUNIOR
+                  </h3>
+                  <div class="space-y-2">
+                    <div class="flex justify-between items-center text-xs sm:text-sm">
+                      <span class="text-white font-bold">Martes</span>
+                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">16:30-18:00</span>
+                    </div>
+                    <div class="flex justify-between items-center text-xs sm:text-sm">
+                      <span class="text-white font-bold">Miércoles</span>
+                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">18:00-19:30</span>
+                    </div>
+                    <div class="flex justify-between items-center text-xs sm:text-sm">
+                      <span class="text-white font-bold">Viernes</span>
+                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">17:15-18:30</span>
+                    </div>
+                  </div>
+                </div>
+JUNIOR B
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
@@ -196,7 +217,7 @@ BENJAMÍN
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Martes y Jueves</span>
-                      <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">16:30-18:00</span>
+                      <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">15:00-16:30</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Viernes</span>
@@ -213,7 +234,7 @@ ALEVÍN A/B
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Martes y Jueves</span>
-                      <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">18:00-19:30</span>
+                      <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">16:30-18:00</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Viernes</span>
@@ -230,7 +251,7 @@ INFANTIL
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Martes y Jueves </span>
-                      <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">16:30-18:00</span>
+                      <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">18:00-19:30</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Viernes</span>
