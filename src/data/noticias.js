@@ -161,7 +161,7 @@ JUNIOR
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Miércoles</span>
-                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">19:15-20:45</span>
+                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">18:00-19:30</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Viernes</span>
