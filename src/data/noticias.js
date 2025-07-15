@@ -67,7 +67,7 @@ export const noticias = [
                 <!-- Benjamín -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
                   <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
-BENJAMÍN
+BENJAMÍN A y B
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
@@ -114,12 +114,12 @@ INFANTIL A
                     </div>
                   </div>
                 </div>
-  
+
                 <!-- Infantil B -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
                   <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
 INFANTIL B
-              </h3>
+                  </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Lunes y Miércoles</span>
@@ -127,7 +127,7 @@ INFANTIL B
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Viernes</span>
-                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">16:00-17:00</span>
+                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">18:00-19:00</span>
                     </div>
                   </div>
                 </div>
@@ -135,12 +135,12 @@ INFANTIL B
                 <!-- Cadete A -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
                   <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-blue-400 pl-3 py-1">
-CADETE A
+CADETE y JUNIOR B
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Lunes y Miércoles</span>
-                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">18:00-19:30</span>
+                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">18:15-19:30</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Viernes</span>
@@ -161,31 +161,15 @@ JUNIOR
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Miércoles</span>
-                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">18:00-19:30</span>
+                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">19:15-20:45</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Viernes</span>
-                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">17:15-18:30</span>
+                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">19:45-21:00</span>
                     </div>
                   </div>
                 </div>
-JUNIOR B
-                  </h3>
-                  <div class="space-y-2">
-                    <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-white font-bold">Martes</span>
-                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">16:30-18:00</span>
-                    </div>
-                    <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-white font-bold">Miércoles</span>
-                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">18:00-19:30</span>
-                    </div>
-                    <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-white font-bold">Viernes</span>
-                      <span class="font-bold text-white bg-blue-500/30 px-2 py-1 rounded-lg">17:15-18:30</span>
-                    </div>
-                  </div>
-                </div>
+
   
               </div>
             </div>
@@ -250,8 +234,12 @@ INFANTIL
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
-                      <span class="text-white font-bold">Martes y Jueves </span>
-                      <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">18:00-19:30</span>
+                      <span class="text-white font-bold">Lunes</span>
+                      <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">17:45-19:00</span>
+                    </div>
+                    <div class="flex justify-between items-center text-xs sm:text-sm">
+                      <span class="text-white font-bold">Jueves</span>
+                      <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">16:30-18:00</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Viernes</span>
@@ -285,11 +273,11 @@ CADETE A
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Martes</span>
-                      <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">18:00-19:30</span>
+                      <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">19:00-20:30</span>
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Viernes</span>
-                      <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">18:30-19:45</span>
+                      <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">17:15-18:30</span>
                     </div>
                   </div>
                 </div>
@@ -306,7 +294,7 @@ JUNIOR
                     </div>
                     <div class="flex justify-between items-center text-xs sm:text-sm">
                       <span class="text-white font-bold">Viernes</span>
-                      <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">19:45-21:00</span>
+                      <span class="font-bold text-white bg-pink-500/30 px-2 py-1 rounded-lg">18:30-19:45</span>
                     </div>
                   </div>
                 </div>
@@ -338,8 +326,7 @@ JUNIOR
                 <div class="bg-white/10 rounded-xl p-4 sm:p-5 backdrop-blur-sm border border-white/20 flex items-start gap-3 sm:gap-4 hover:bg-white/15 transition-all duration-300">
                   <div class="w-6 h-6 sm:w-8 sm:h-8 bg-green-400/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <div class="w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full animate-pulse"></div>
-                  </div>
-                  <span class="text-sm sm:text-base text-gray-100 leading-relaxed">Los horarios son provisionales y podrán estar sujetos a cambios según disponibilidad de pistas y necesidades del club.</span>
+                  </div>Los horarios podrán estar sujetos a cambios según disponibilidad de pistas y necesidades del club.</span>
                 </div>
                 
                 <div class="bg-white/10 rounded-xl p-4 sm:p-5 backdrop-blur-sm border border-white/20 flex items-start gap-3 sm:gap-4 hover:bg-white/15 transition-all duration-300">
@@ -372,7 +359,7 @@ JUNIOR
     categoria: 'Horarios',
     destacado: true,
     tieneComponenteEspecial: false,
-    oculta: true,
+    oculta: false,
   },
   {
     id: "equipos-temporada-25-26",
