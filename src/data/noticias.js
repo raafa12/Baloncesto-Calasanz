@@ -213,7 +213,7 @@ BENJAMÍN
                 <!-- Alevín A/B -->
                 <div class="bg-white/10 rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
                   <h3 class="text-base sm:text-lg font-bold text-gray-100 mb-2 sm:mb-3 flex items-center gap-2 border-l-4 border-pink-400 pl-3 py-1">
-ALEVÍN A/B
+ALEVÍN A y B
                   </h3>
                   <div class="space-y-2">
                     <div class="flex justify-between items-center text-xs sm:text-sm">
