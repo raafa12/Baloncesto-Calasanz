@@ -792,6 +792,7 @@ JUNIOR
     imagen: '/images/basket.JPEG',
     categoria: 'Eventos',
     destacado: true,
+    oculta: true,
     tieneComponenteEspecial: false,
     tieneFormulario: false,
     tipoFormulario: ''
