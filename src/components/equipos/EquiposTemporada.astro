@@ -1412,31 +1412,52 @@ const categoriasConEquipos = procesarCategorias(playersData);
             </div>
             <div class="hidden mt-2 space-y-2">
               {equipos.map((equipo: any) => (
-                <div class="ml-4">
-                  <div class="flex justify-between items-center bg-blue-800/20 p-2 rounded-lg cursor-pointer"
-                       onclick="this.nextElementSibling.classList.toggle('hidden')">
-                    <h4 class="font-medium">
-                      {equipo.nombre}
-                      <span class="text-sm font-normal text-blue-300 ml-2">
-                        ({equipo.total} {equipo.total === 1 ? 'jugador' : 'jugadores'})
-                      </span>
-                    </h4>
-                    <span class="text-blue-300">▼</span>
-                  </div>
-                  <div class="hidden mt-2 ml-4 bg-blue-900/20 p-3 rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                      {equipo.jugadores.map((jugador: any) => (
-                        <div class="bg-blue-900/30 p-4 rounded border border-blue-800/30">
-                          <h4 class="font-medium">{jugador.name}</h4>
-                          <p class="text-sm text-gray-400">Nacimiento: {jugador.birth} ({jugador.year})</p>
-                          <div class="mt-2 pt-2 border-t border-blue-800/30 text-sm">
-                            <p>📞 {jugador.phone}</p>
-                            <p class="break-words whitespace-normal">📧 {jugador.email}</p>
+                <div class={equipos.length > 1 ? 'ml-4' : ''}>
+                  {equipos.length > 1 ? (
+                    <>
+                      <div class="flex justify-between items-center bg-blue-800/20 p-2 rounded-lg cursor-pointer"
+                           onclick="this.nextElementSibling.classList.toggle('hidden')">
+                        <h4 class="font-medium">
+                          {equipo.nombre}
+                          <span class="text-sm font-normal text-blue-300 ml-2">
+                            ({equipo.total} {equipo.total === 1 ? 'jugador' : 'jugadores'})
+                          </span>
+                        </h4>
+                        <span class="text-blue-300">▼</span>
+                      </div>
+                      <div class="hidden mt-2 ml-4">
+                        <div class="bg-blue-900/20 p-3 rounded-lg">
+                          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {equipo.jugadores.map((jugador: any) => (
+                              <div class="bg-blue-900/30 p-4 rounded border border-blue-800/30">
+                                <h4 class="font-medium">{jugador.name}</h4>
+                                <p class="text-sm text-gray-400">Nacimiento: {jugador.birth} ({jugador.year})</p>
+                                <div class="mt-2 pt-2 border-t border-blue-800/30 text-sm">
+                                  <p>📞 {jugador.phone}</p>
+                                  <p class="break-words whitespace-normal">📧 {jugador.email}</p>
+                                </div>
+                              </div>
+                            ))}
                           </div>
                         </div>
-                      ))}
+                      </div>
+                    </>
+                  ) : (
+                    <div class="bg-blue-900/20 p-3 rounded-lg">
+                      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {equipo.jugadores.map((jugador: any) => (
+                          <div class="bg-blue-900/30 p-4 rounded border border-blue-800/30">
+                            <h4 class="font-medium">{jugador.name}</h4>
+                            <p class="text-sm text-gray-400">Nacimiento: {jugador.birth} ({jugador.year})</p>
+                            <div class="mt-2 pt-2 border-t border-blue-800/30 text-sm">
+                              <p>📞 {jugador.phone}</p>
+                              <p class="break-words whitespace-normal">📧 {jugador.email}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -1469,31 +1490,52 @@ const categoriasConEquipos = procesarCategorias(playersData);
             </div>
             <div class="hidden mt-2 space-y-2">
               {equipos.map((equipo: any) => (
-                <div class="ml-4">
-                  <div class="flex justify-between items-center bg-pink-800/20 p-2 rounded-lg cursor-pointer"
-                       onclick="this.nextElementSibling.classList.toggle('hidden')">
-                    <h4 class="font-medium">
-                      {equipo.nombre}
-                      <span class="text-sm font-normal text-pink-300 ml-2">
-                        ({equipo.total} {equipo.total === 1 ? 'jugadora' : 'jugadoras'})
-                      </span>
-                    </h4>
-                    <span class="text-pink-300">▼</span>
-                  </div>
-                  <div class="hidden mt-2 ml-4 bg-pink-900/20 p-3 rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                      {equipo.jugadores.map((jugadora: any) => (
-                        <div class="bg-pink-900/30 p-4 rounded border border-pink-800/30">
-                          <h4 class="font-medium">{jugadora.name}</h4>
-                          <p class="text-sm text-gray-400">Nacimiento: {jugadora.birth} ({jugadora.year})</p>
-                          <div class="mt-2 pt-2 border-t border-pink-800/30 text-sm">
-                            <p>📞 {jugadora.phone}</p>
-                            <p class="break-words whitespace-normal">📧 {jugadora.email}</p>
+                <div class={equipos.length > 1 ? 'ml-4' : ''}>
+                  {equipos.length > 1 ? (
+                    <>
+                      <div class="flex justify-between items-center bg-pink-800/20 p-2 rounded-lg cursor-pointer"
+                           onclick="this.nextElementSibling.classList.toggle('hidden')">
+                        <h4 class="font-medium">
+                          {equipo.nombre}
+                          <span class="text-sm font-normal text-pink-300 ml-2">
+                            ({equipo.total} {equipo.total === 1 ? 'jugadora' : 'jugadoras'})
+                          </span>
+                        </h4>
+                        <span class="text-pink-300">▼</span>
+                      </div>
+                      <div class="hidden mt-2 ml-4">
+                        <div class="bg-pink-900/20 p-3 rounded-lg">
+                          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {equipo.jugadores.map((jugadora: any) => (
+                              <div class="bg-pink-900/30 p-4 rounded border border-pink-800/30">
+                                <h4 class="font-medium">{jugadora.name}</h4>
+                                <p class="text-sm text-gray-400">Nacimiento: {jugadora.birth} ({jugadora.year})</p>
+                                <div class="mt-2 pt-2 border-t border-pink-800/30 text-sm">
+                                  <p>📞 {jugadora.phone}</p>
+                                  <p class="break-words whitespace-normal">📧 {jugadora.email}</p>
+                                </div>
+                              </div>
+                            ))}
                           </div>
                         </div>
-                      ))}
+                      </div>
+                    </>
+                  ) : (
+                    <div class="bg-pink-900/20 p-3 rounded-lg">
+                      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {equipo.jugadores.map((jugadora: any) => (
+                          <div class="bg-pink-900/30 p-4 rounded border border-pink-800/30">
+                            <h4 class="font-medium">{jugadora.name}</h4>
+                            <p class="text-sm text-gray-400">Nacimiento: {jugadora.birth} ({jugadora.year})</p>
+                            <div class="mt-2 pt-2 border-t border-pink-800/30 text-sm">
+                              <p>📞 {jugadora.phone}</p>
+                              <p class="break-words whitespace-normal">📧 {jugadora.email}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               ))}
             </div>
