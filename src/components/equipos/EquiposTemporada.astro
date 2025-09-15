@@ -502,10 +502,10 @@ const playersData: PlayersData = {
         email: "danielruizteza@gmail.com"
       },
       {
-        name: "Juan García-Barredo",
-        birth: 2008,
-        year: "2º año Junior",
-        phone: "621317063",
+        name: "Juan Garcia Hierro",
+        birth: 2009,
+        year: "1er año Junior",
+        phone: "603528489",
         email: "juangarciabarredo@icloud.com"
       },
       {
@@ -518,7 +518,7 @@ const playersData: PlayersData = {
       {
         name: "Gonzalo Vega Dieguez",
         birth: 2008,
-        year: "2º año Junior",
+        year: "1er año Junior",
         phone: "665550273",
         email: "gonzalovd2009@gmail.com"
       },
@@ -560,7 +560,7 @@ const playersData: PlayersData = {
       {
         name: "Daniel Añó García-Barredo",
         birth: 2009,
-        year: "1er año Junior",
+        year: "2º año Junior",
         phone: "649602348",
         email: "daniagb2020@gmail.com"
       },
@@ -598,6 +598,13 @@ const playersData: PlayersData = {
         year: "2º año Junior",
         phone: "636130612",
         email: "pablomiguel1926@gmail.com"
+      },
+      {
+        name: "Raul León",
+        birth: 2009,
+        year: "1er año Junior",
+        phone: "640342227",
+        email: ""
       }
     ]
   },
@@ -1061,10 +1068,10 @@ type Stats = {
 
 // Calcular estadísticas
 const stats: Stats = {
-  total: 2,
+  total: 0,
   baby: 0,
-  masculino: 1,
-  femenino: 1,
+  masculino: 0,
+  femenino: 0,
   categorias: {}
 };
 
@@ -1082,7 +1089,6 @@ const contarJugadores = (grupo: Jugador[] | GrupoJugadores): number => {
 Object.entries(playersData).forEach(([genero, categorias]) => {
   Object.entries(categorias).forEach(([categoria, jugadores]) => {
     const totalJugadores = contarJugadores(jugadores);
-    stats.total += totalJugadores;
     
     if (genero === 'baby' || genero === 'masculino' || genero === 'femenino') {
       (stats[genero as keyof Omit<Stats, 'total' | 'categorias'>] as number) += totalJugadores;
@@ -1093,10 +1099,197 @@ Object.entries(playersData).forEach(([genero, categorias]) => {
     }
     
     if (genero === 'baby' || genero === 'masculino' || genero === 'femenino') {
-      stats.categorias[categoria][genero as keyof CategoriaStats] = totalJugadores;
+      stats.categorias[categoria][genero as keyof CategoriaStats] += totalJugadores;
     }
   });
 });
+
+// Actualizar el total general
+stats.total = stats.baby + stats.masculino + stats.femenino;
+
+// Función para agrupar jugadores en equipos según la categoría
+const agruparEnEquipos = (jugadores: Jugador[], categoria: string, genero: string): {[key: string]: Jugador[]} => {
+  if (!Array.isArray(jugadores) || jugadores.length === 0) return {};
+  
+  // Ordenar jugadores por año de nacimiento (de menor a mayor)
+  const jugadoresOrdenados = [...jugadores].sort((a, b) => a.birth - b.birth);
+  
+  const equipos: {[key: string]: Jugador[]} = {
+    'A': [],
+    'B': [],
+    'C': []
+  };
+
+  // Solo aplicar lógica especial para la sección masculina
+  if (genero === 'masculino') {
+    switch (categoria) {
+      case 'benjamin':
+        // Benjamín: Equipo A (2º año) y Equipo B (1er año)
+        equipos['A'] = jugadoresOrdenados.filter(j => j.year.includes('2º año'));
+        equipos['B'] = jugadoresOrdenados.filter(j => j.year.includes('1er año'));
+        break;
+        
+      case 'alevin':
+      case 'cadete':
+        // Alevín y Cadete: Un solo equipo
+        equipos['A'] = [...jugadoresOrdenados];
+        delete equipos['B'];
+        delete equipos['C'];
+        break;
+        
+      case 'infantil':
+        // Infantil: Equipo A (2º año), B (primeros 10 de 1er año), C (resto 1er año)
+        const segundoAnio = jugadoresOrdenados.filter(j => j.year.includes('2º año'));
+        const primerAnio = jugadoresOrdenados.filter(j => j.year.includes('1er año'));
+        equipos['A'] = [...segundoAnio];
+        equipos['B'] = primerAnio.slice(0, 10);
+        equipos['C'] = primerAnio.slice(10);
+        break;
+        
+      case 'junior':
+        // Junior: Equipo A (2º año) y Equipo B (1er año), con excepciones que van al A
+        const jugadoresEquipoA = [];
+        const jugadoresEquipoB = [];
+        
+        jugadoresOrdenados.forEach(jugador => {
+          if (jugador.year.includes('2º año') || 
+              jugador.name === 'Juan Garcia Hierro' || 
+              jugador.name === 'Raul León') {
+            jugadoresEquipoA.push(jugador);
+          } else {
+            jugadoresEquipoB.push(jugador);
+          }
+        });
+        
+        equipos['A'] = jugadoresEquipoA;
+        if (jugadoresEquipoB.length > 0) {
+          equipos['B'] = jugadoresEquipoB;
+        }
+        break;
+        
+      default:
+        // Para cualquier otra categoría, mantener la lógica por defecto
+        const totalJugadores = jugadoresOrdenados.length;
+        const jugadoresPorEquipo = Math.ceil(totalJugadores / 3);
+        
+        jugadoresOrdenados.forEach((jugador, index) => {
+          if (index < jugadoresPorEquipo) {
+            equipos['A'].push(jugador);
+          } else if (index < jugadoresPorEquipo * 2) {
+            equipos['B'].push(jugador);
+          } else {
+            equipos['C'].push(jugador);
+          }
+        });
+    }
+  } else if (genero === 'femenino') {
+    // Lógica para la sección femenina
+    switch (categoria) {
+      case 'benjamin':
+      case 'infantil':
+      case 'junior':
+        // Benjamín, Infantil y Junior: Un solo equipo
+        equipos['A'] = [...jugadoresOrdenados];
+        delete equipos['B'];
+        delete equipos['C'];
+        break;
+        
+      case 'alevin':
+      case 'cadete':
+        // Alevín y Cadete: Equipo A (2º año) y Equipo B (1er año)
+        equipos['A'] = jugadoresOrdenados.filter(j => j.year.includes('2º año'));
+        const primerAnio = jugadoresOrdenados.filter(j => j.year.includes('1er año'));
+        if (primerAnio.length > 0) {
+          equipos['B'] = primerAnio;
+        } else {
+          delete equipos['B'];
+        }
+        delete equipos['C'];
+        break;
+        
+      default:
+        // Para cualquier otra categoría, mantener la lógica por defecto
+        const totalJugadores = jugadoresOrdenados.length;
+        const jugadoresPorEquipo = Math.ceil(totalJugadores / 3);
+        
+        jugadoresOrdenados.forEach((jugador, index) => {
+          if (index < jugadoresPorEquipo) {
+            equipos['A'].push(jugador);
+          } else if (index < jugadoresPorEquipo * 2) {
+            equipos['B'].push(jugador);
+          } else {
+            equipos['C'].push(jugador);
+          }
+        });
+    }
+  } else {
+    // Para la sección baby u otros casos
+    const totalJugadores = jugadoresOrdenados.length;
+    const jugadoresPorEquipo = Math.ceil(totalJugadores / 3);
+    
+    jugadoresOrdenados.forEach((jugador, index) => {
+      if (index < jugadoresPorEquipo) {
+        equipos['A'].push(jugador);
+      } else if (index < jugadoresPorEquipo * 2) {
+        equipos['B'].push(jugador);
+      } else {
+        equipos['C'].push(jugador);
+      }
+    });
+  }
+  
+  // Eliminar equipos vacíos
+  Object.keys(equipos).forEach(key => {
+    if (equipos[key].length === 0) {
+      delete equipos[key];
+    }
+  });
+  
+  return equipos;
+};
+
+// Procesar las categorías para incluir equipos
+const procesarCategorias = (data: PlayersData) => {
+  const resultado: any = { masculino: {}, femenino: {} };
+  
+  // Procesar sección masculina
+  Object.entries(data.masculino).forEach(([categoria, jugadores]) => {
+    if (Array.isArray(jugadores)) {
+      const equipos = agruparEnEquipos(jugadores, categoria, 'masculino');
+      const totalJugadores = jugadores.length;
+      
+      resultado.masculino[categoria] = {
+        equipos: Object.entries(equipos).map(([letra, jugadoresEquipo]) => ({
+          nombre: `Equipo ${letra}`,
+          jugadores: jugadoresEquipo,
+          total: jugadoresEquipo.length
+        })),
+        totalJugadores: totalJugadores
+      };
+    }
+  });
+  
+  // Procesar sección femenina
+  Object.entries(data.femenino).forEach(([categoria, jugadoras]) => {
+    if (Array.isArray(jugadoras)) {
+      const equipos = agruparEnEquipos(jugadoras, categoria, 'femenino');
+      const totalJugadoras = jugadoras.length;
+      
+      resultado.femenino[categoria] = {
+        equipos: Object.entries(equipos).map(([letra, jugadorasEquipo]) => ({
+          nombre: `Equipo ${letra}`,
+          jugadores: jugadorasEquipo,
+          total: jugadorasEquipo.length
+        })),
+        totalJugadoras: totalJugadoras
+      };
+    }
+  });
+  
+  return resultado;
+};
+
+const categoriasConEquipos = procesarCategorias(playersData);
 
 ---
 
@@ -1205,29 +1398,47 @@ Object.entries(playersData).forEach(([genero, categorias]) => {
       </div>
       
       <div class="space-y-4 p-4">
-        {Object.entries(playersData.masculino).map(([categoria, jugadores]: [string, Jugador[]]) => (
+        {Object.entries(categoriasConEquipos.masculino).map(([categoria, {equipos, totalJugadores}]: [string, any]) => (
           <div class="mb-6">
             <div class="flex justify-between items-center bg-blue-900/30 p-3 rounded-lg cursor-pointer" 
                  onclick="this.nextElementSibling.classList.toggle('hidden')">
               <h3 class="font-semibold">
-                {categoria.charAt(0).toUpperCase() + categoria.slice(1)} 
-                <span class="text-sm font-normal text-blue-400 ml-2">({jugadores.length} jugadores)</span>
+                {categoria.charAt(0).toUpperCase() + categoria.slice(1)}
+                <span class="text-sm font-normal text-blue-400 ml-2">
+                  ({equipos.length} {equipos.length === 1 ? 'equipo' : 'equipos'}, {totalJugadores} {totalJugadores === 1 ? 'jugador' : 'jugadores'})
+                </span>
               </h3>
               <span class="text-blue-400">▼</span>
             </div>
-            <div class="hidden mt-2 bg-blue-900/20 p-4 rounded-lg">
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {jugadores.map(jugador => (
-                  <div class="bg-blue-900/30 p-4 rounded border border-blue-800/30">
-                    <h4 class="font-medium">{jugador.name}</h4>
-                    <p class="text-sm text-gray-400">Nacimiento: {jugador.birth} ({jugador.year})</p>
-                    <div class="mt-2 pt-2 border-t border-blue-800/30 text-sm">
-                      <p>📞 {jugador.phone}</p>
-                      <p class="break-words whitespace-normal">📧 {jugador.email}</p>
+            <div class="hidden mt-2 space-y-2">
+              {equipos.map((equipo: any) => (
+                <div class="ml-4">
+                  <div class="flex justify-between items-center bg-blue-800/20 p-2 rounded-lg cursor-pointer"
+                       onclick="this.nextElementSibling.classList.toggle('hidden')">
+                    <h4 class="font-medium">
+                      {equipo.nombre}
+                      <span class="text-sm font-normal text-blue-300 ml-2">
+                        ({equipo.total} {equipo.total === 1 ? 'jugador' : 'jugadores'})
+                      </span>
+                    </h4>
+                    <span class="text-blue-300">▼</span>
+                  </div>
+                  <div class="hidden mt-2 ml-4 bg-blue-900/20 p-3 rounded-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {equipo.jugadores.map((jugador: any) => (
+                        <div class="bg-blue-900/30 p-4 rounded border border-blue-800/30">
+                          <h4 class="font-medium">{jugador.name}</h4>
+                          <p class="text-sm text-gray-400">Nacimiento: {jugador.birth} ({jugador.year})</p>
+                          <div class="mt-2 pt-2 border-t border-blue-800/30 text-sm">
+                            <p>📞 {jugador.phone}</p>
+                            <p class="break-words whitespace-normal">📧 {jugador.email}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         ))}
@@ -1235,7 +1446,7 @@ Object.entries(playersData).forEach(([genero, categorias]) => {
     </div>
 
     <!-- Sección Femenina -->
-    <div class="bg-green-950/50 rounded-xl overflow-hidden border border-green-800/30">
+    <div class="bg-green-950/50 rounded-xl overflow-hidden border border-pink-800/30 mt-8">
       <div class="bg-pink-900/70 p-4 border-b border-pink-800/30">
         <h2 class="text-xl font-bold flex items-center gap-2">
           <span class="bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center">♀</span>
@@ -1244,29 +1455,47 @@ Object.entries(playersData).forEach(([genero, categorias]) => {
       </div>
       
       <div class="space-y-4 p-4">
-        {Object.entries(playersData.femenino).map(([categoria, jugadoras]: [string, Jugador[]]) => (
+        {Object.entries(categoriasConEquipos.femenino).map(([categoria, {equipos, totalJugadoras}]: [string, any]) => (
           <div class="mb-6">
             <div class="flex justify-between items-center bg-pink-900/30 p-3 rounded-lg cursor-pointer"
                  onclick="this.nextElementSibling.classList.toggle('hidden')">
               <h3 class="font-semibold">
                 {categoria.charAt(0).toUpperCase() + categoria.slice(1)}
-                <span class="text-sm font-normal text-pink-400 ml-2">({jugadoras.length} jugadoras)</span>
+                <span class="text-sm font-normal text-pink-400 ml-2">
+                  ({equipos.length} {equipos.length === 1 ? 'equipo' : 'equipos'}, {totalJugadoras} {totalJugadoras === 1 ? 'jugadora' : 'jugadoras'})
+                </span>
               </h3>
               <span class="text-pink-400">▼</span>
             </div>
-            <div class="hidden mt-2 bg-pink-900/20 p-4 rounded-lg">
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {jugadoras.map((jugadora) => (
-                  <div class="bg-pink-900/30 p-4 rounded border border-pink-800/30">
-                    <h4 class="font-medium">{jugadora.name}</h4>
-                    <p class="text-sm text-gray-400">Nacimiento: {jugadora.birth} ({jugadora.year})</p>
-                    <div class="mt-2 pt-2 border-t border-pink-800/30 text-sm">
-                      <p>📞 {jugadora.phone}</p>
-                      <p class="truncate" title={jugadora.email}>📧 {jugadora.email}</p>
+            <div class="hidden mt-2 space-y-2">
+              {equipos.map((equipo: any) => (
+                <div class="ml-4">
+                  <div class="flex justify-between items-center bg-pink-800/20 p-2 rounded-lg cursor-pointer"
+                       onclick="this.nextElementSibling.classList.toggle('hidden')">
+                    <h4 class="font-medium">
+                      {equipo.nombre}
+                      <span class="text-sm font-normal text-pink-300 ml-2">
+                        ({equipo.total} {equipo.total === 1 ? 'jugadora' : 'jugadoras'})
+                      </span>
+                    </h4>
+                    <span class="text-pink-300">▼</span>
+                  </div>
+                  <div class="hidden mt-2 ml-4 bg-pink-900/20 p-3 rounded-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {equipo.jugadores.map((jugadora: any) => (
+                        <div class="bg-pink-900/30 p-4 rounded border border-pink-800/30">
+                          <h4 class="font-medium">{jugadora.name}</h4>
+                          <p class="text-sm text-gray-400">Nacimiento: {jugadora.birth} ({jugadora.year})</p>
+                          <div class="mt-2 pt-2 border-t border-pink-800/30 text-sm">
+                            <p>📞 {jugadora.phone}</p>
+                            <p class="break-words whitespace-normal">📧 {jugadora.email}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         ))}

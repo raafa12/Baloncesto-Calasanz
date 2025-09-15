@@ -325,9 +325,12 @@
         "foto": "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/bcaa220b-ae63-407d-be95-6d779fa25fad.jpg" 
       },
       { 
-        "nombre": "Juan Puente", 
-        "rol": "Nacido en 2008", 
-        "foto": "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/JSbnCTnwT2kBAm7jgdz8.jpg" 
+        "nombre": "Juan Garcia Hierro", 
+        "rol": "Nacido en 2009", 
+        "foto": "https://ow-produccio-fecan.s3.eu-west-1.amazonaws.com/federats/fotos/JSbnCTnwT2kBAm7jgdz8.jpg",
+        "contacto": {
+          "telefono": "603528489"
+        }
       },
       { 
         "nombre": "Alexander Gómez", 
