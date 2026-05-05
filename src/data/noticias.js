@@ -1,6 +1,7 @@
 export const noticias = [
   {
     id: "horarios-entrenamiento-25-26",
+    oculta: true,
     titulo: 'Horarios de Entrenamiento - Temporada 2025/2026',
     contenido: `
     <div class="min-h-screen bg-gradient-to-br from-green-950 via-gray-900 to-green-950 text-white relative overflow-hidden">
@@ -372,8 +373,8 @@ JUNIOR
     oculta: true
   },
   {
-    id: "jornadas-tecnificacion-2025",
-    titulo: 'Jornadas de Tecnificación 2025',
+    id: "jornadas-tecnificacion-2026",
+    titulo: 'Jornadas de Tecnificación 2026',
     contenido: `
     <div class="min-h-screen bg-gradient-to-br from-green-950 via-gray-900 to-green-950 text-white relative overflow-hidden">
       <!-- Patrón de puntos sutiles -->
@@ -394,7 +395,7 @@ JUNIOR
           <div class="grid grid-cols-2 gap-3 max-w-md mx-auto sm:max-w-4xl sm:grid-cols-4 sm:gap-4">
             <div class="bg-green-900/50 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-800/50 hover:transform hover:scale-105 transition-transform duration-200">
               <p class="font-bold text-sm sm:text-base text-green-300 leading-tight">18-31 Agosto</p>
-              <p class="text-xs sm:text-sm text-green-200 mt-1">2025</p>
+              <p class="text-xs sm:text-sm text-green-200 mt-1">2026</p>
             </div>
             <div class="bg-green-900/50 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-800/50 hover:transform hover:scale-105 transition-transform duration-200">
               <p class="font-bold text-sm sm:text-base text-green-300 leading-tight">8:30-13:30h</p>
@@ -451,7 +452,7 @@ JUNIOR
               <div class="bg-green-800/40 border border-green-700/50 rounded-xl p-4 sm:p-5 flex items-center space-x-4 hover:bg-green-800/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
                 <span class="text-3xl sm:text-4xl flex-shrink-0">👋</span>
                 <div class="flex-1 min-w-0">
-                  <span class="font-bold text-base sm:text-lg block text-green-300 truncate">13:30 - 14:00</span>
+                  <span class="font-bold text-base sm:text-lg block text-green-300 truncate">13:30</span>
                   <span class="text-green-100 text-sm sm:text-base">Recogida de participantes</span>
                 </div>
               </div>
@@ -534,7 +535,7 @@ JUNIOR
                 <span class="text-2xl text-green-400 flex-shrink-0 mt-0.5">✓</span>
                 <div class="flex-1">
                   <span class="font-medium text-sm sm:text-base text-green-100">Camiseta de participación oficial</span>
-                  <p class="text-xs sm:text-sm text-green-300 mt-1">Diseño exclusivo 2025</p>
+                  <p class="text-xs sm:text-sm text-green-300 mt-1">Diseño exclusivo 2026</p>
                 </div>
               </div>
             </div>
@@ -613,7 +614,7 @@ JUNIOR
               <div class="p-4 sm:p-6 text-center">
                 <div class="bg-slate-700/40 rounded-xl p-4 sm:p-6 border border-slate-600/50">
                   <p class="text-lg sm:text-xl font-semibold text-white mb-2">
-                    💰 Pago en mano el primer día
+                    💰 Pago en mano a Rafa o David
                   </p>
                   <p class="text-slate-300 text-sm sm:text-base">
                     No es necesario realizar ningún pago por adelantado.<br>
@@ -674,6 +675,21 @@ JUNIOR
               <option value="Juvenil (16-18 años)">Juvenil (16-18 años)</option>
             </select>
           </div>
+
+          <!-- Camiseta -->
+          <div>
+            <label for="categoria" class="block text-sm sm:text-base font-medium text-gray-300 mb-1.5">Talla de camiseta</label>
+            <select id="categoria" name="categoria" required class="w-full px-4 py-2.5 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm sm:text-base">
+              <option value="" disabled selected>Selecciona tu talla de camiseta</option>
+              <option value="6-7 años">7-8 años</option>
+              <option value="8-9 años">9-10 años</option>
+              <option value="8-9 años">11-12 años</option>
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
 
           <!-- Nombre y Apellidos -->
           <div>
