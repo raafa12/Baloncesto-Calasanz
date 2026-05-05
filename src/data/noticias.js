@@ -799,10 +799,10 @@ JUNIOR
   </div>
 </div>
 `,
-    imagen: '/images/basket.JPEG',
+    imagen: '/images/campus.png',
     categoria: 'Eventos',
     destacado: true,
-    oculta: true,
+    oculta: false,
     tieneComponenteEspecial: false,
     tieneFormulario: false,
     tipoFormulario: ''
