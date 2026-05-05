@@ -394,7 +394,7 @@ JUNIOR
           <!-- Info Cards optimizadas para móvil -->
           <div class="grid grid-cols-2 gap-3 max-w-md mx-auto sm:max-w-4xl sm:grid-cols-4 sm:gap-4">
             <div class="bg-green-900/50 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-800/50 hover:transform hover:scale-105 transition-transform duration-200">
-              <p class="font-bold text-sm sm:text-base text-green-300 leading-tight">18-31 Agosto</p>
+              <p class="font-bold text-sm sm:text-base text-green-300 leading-tight">17-28 Agosto</p>
               <p class="text-xs sm:text-sm text-green-200 mt-1">2026</p>
             </div>
             <div class="bg-green-900/50 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-green-800/50 hover:transform hover:scale-105 transition-transform duration-200">
@@ -565,9 +565,6 @@ JUNIOR
               <div class="bg-gradient-to-br from-green-700/80 to-green-800/90 text-white rounded-2xl p-6 sm:p-8 border-2 border-green-600/70 shadow-lg hover:shadow-green-500/20 hover:-translate-y-1 transition-all duration-300 transform hover:scale-[1.02] relative">
                 <!-- Badge destacado -->
                 <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span class="bg-green-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-                    MÁS POPULAR
-                  </span>
                 </div>
                 <div class="text-center h-full flex flex-col mt-2">
                   <h3 class="text-xl sm:text-2xl font-bold mb-3 text-green-300">OPCIÓN COMPLETA</h3>
@@ -616,10 +613,7 @@ JUNIOR
                   <p class="text-lg sm:text-xl font-semibold text-white mb-2">
                     💰 Pago en mano a Rafa o David
                   </p>
-                  <p class="text-slate-300 text-sm sm:text-base">
-                    No es necesario realizar ningún pago por adelantado.<br>
-                    Solo inscríbete y paga cuando comiences las jornadas.
-                  </p>
+            
                 </div>
               </div>
             </div>
@@ -635,7 +629,7 @@ JUNIOR
                 <h3 class="text-lg sm:text-xl font-bold text-white">¡INSCRIPCIONES ABIERTAS!</h3>
               </div>
               <div class="text-center sm:text-right">
-                <p class="text-sm sm:text-base text-green-100">Plazo límite: <span class="font-bold text-white">1 de Agosto de 2025</span></p>
+                <p class="text-sm sm:text-base text-green-100">Plazo límite: <span class="font-bold text-white">1 de Agosto de 2026</span></p>
                 <p class="text-xs sm:text-sm text-green-200 mt-1">¡No te quedes sin tu plaza! Plazas limitadas</p>
               </div>
             </div>
@@ -680,7 +674,7 @@ JUNIOR
           <div>
             <label for="categoria" class="block text-sm sm:text-base font-medium text-gray-300 mb-1.5">Talla de camiseta</label>
             <select id="categoria" name="categoria" required class="w-full px-4 py-2.5 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm sm:text-base">
-              <option value="" disabled selected>Selecciona tu talla de camiseta</option>
+              <option value="" disabled selected>Selecciona tu talla</option>
               <option value="6-7 años">7-8 años</option>
               <option value="8-9 años">9-10 años</option>
               <option value="8-9 años">11-12 años</option>
