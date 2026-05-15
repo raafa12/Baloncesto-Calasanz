@@ -554,7 +554,7 @@ JUNIOR
                 <div class="text-center h-full flex flex-col">
                   <h3 class="text-xl sm:text-2xl font-bold mb-3 text-green-300">OPCIÓN SEMANAL</h3>
                   <div class="flex-grow flex flex-col justify-center">
-                    <p class="text-4xl sm:text-5xl font-bold mb-2 text-white">90€</p>
+                    <p class="text-4xl sm:text-5xl font-bold mb-2 text-white">100€</p>
                     <p class="text-green-200 text-base sm:text-lg">1 semana de entrenamiento</p>
                   </div>
                   <div class="mt-4 pt-4 border-t border-green-700/50">
@@ -569,7 +569,7 @@ JUNIOR
                 <div class="text-center h-full flex flex-col mt-2">
                   <h3 class="text-xl sm:text-2xl font-bold mb-3 text-green-300">OPCIÓN COMPLETA</h3>
                   <div class="flex-grow flex flex-col justify-center">
-                    <p class="text-4xl sm:text-5xl font-bold mb-2 text-white">160€</p>
+                    <p class="text-4xl sm:text-5xl font-bold mb-2 text-white">180€</p>
                     <p class="text-green-200 text-base sm:text-lg">2 semanas intensivas</p>
                   </div>
                   <div class="mt-4 pt-4 border-t border-green-600/50">
@@ -597,7 +597,7 @@ JUNIOR
                 </div>
                 <div class="bg-amber-800/40 rounded-xl p-4 border border-amber-700/50">
                   <p class="text-amber-100 text-sm sm:text-base">
-                    <strong>Ejemplo:</strong> 2 hermanos (opción completa) = 320€ → <span class="text-amber-300 font-bold">300€</span>
+                    <strong>Ejemplo:</strong> 2 hermanos (opción completa) = 360€ → <span class="text-amber-300 font-bold">340€</span>
                   </p>
                 </div>
               </div>
@@ -672,8 +672,8 @@ JUNIOR
 
           <!-- Camiseta -->
           <div>
-            <label for="categoria" class="block text-sm sm:text-base font-medium text-gray-300 mb-1.5">Talla de camiseta</label>
-            <select id="categoria" name="categoria" required class="w-full px-4 py-2.5 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm sm:text-base">
+            <label for="talla" class="block text-sm sm:text-base font-medium text-gray-300 mb-1.5">Talla de camiseta</label>
+            <select id="talla" name="talla" required class="w-full px-4 py-2.5 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm sm:text-base">
               <option value="" disabled selected>Selecciona tu talla</option>
               <option value="6-7 años">7-8 años</option>
               <option value="8-9 años">9-10 años</option>
@@ -708,28 +708,76 @@ JUNIOR
             <label class="block text-sm sm:text-base font-medium text-gray-300 mb-3">Duración</label>
             <div class="grid grid-cols-2 gap-3">
               <div class="relative">
-                <input type="radio" id="semana1" name="semanas" value="1" class="hidden peer" required>
-                <label for="semana1" class="flex items-center justify-center p-3 sm:p-4 bg-gray-700/50 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-600/50 peer-checked:border-emerald-500 peer-checked:bg-emerald-900/20 peer-checked:ring-1 peer-checked:ring-emerald-500 transition-all duration-200 hover:shadow-md">
-                  <span class="text-white font-medium text-sm sm:text-base">1 Semana</span>
+                <input type="radio" id="semana1" name="semanas" value="1 semana - 100€" class="hidden peer" required>
+                <label for="semana1" class="flex flex-col items-center justify-center p-3 sm:p-4 bg-gray-700/50 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-600/50 peer-checked:border-emerald-500 peer-checked:bg-emerald-900/20 peer-checked:ring-1 peer-checked:ring-emerald-500 transition-all duration-200 hover:shadow-md">
+                  <span class="text-white font-bold text-sm sm:text-base">1 Semana</span>
+                  <span class="text-emerald-400 font-bold text-lg sm:text-xl">100€</span>
                 </label>
               </div>
               <div class="relative">
-                <input type="radio" id="semanas2" name="semanas" value="2" class="hidden peer">
-                <label for="semanas2" class="flex items-center justify-center p-3 sm:p-4 bg-gray-700/50 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-600/50 peer-checked:border-emerald-500 peer-checked:bg-emerald-900/20 peer-checked:ring-1 peer-checked:ring-emerald-500 transition-all duration-200 hover:shadow-md">
-                  <span class="text-white font-medium text-sm sm:text-base">2 Semanas</span>
+                <input type="radio" id="semanas2" name="semanas" value="2 semanas - 180€" class="hidden peer">
+                <label for="semanas2" class="flex flex-col items-center justify-center p-3 sm:p-4 bg-gray-700/50 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-600/50 peer-checked:border-emerald-500 peer-checked:bg-emerald-900/20 peer-checked:ring-1 peer-checked:ring-emerald-500 transition-all duration-200 hover:shadow-md">
+                  <span class="text-white font-bold text-sm sm:text-base">2 Semanas</span>
+                  <span class="text-emerald-400 font-bold text-lg sm:text-xl">180€</span>
+                  <span class="text-xs text-amber-300 font-semibold mt-0.5">-20€ vs 2×semana</span>
                 </label>
               </div>
             </div>
           </div>
 
+          <!-- Descuento hermanos aviso -->
+          <div class="bg-amber-900/30 border border-amber-700/50 rounded-xl p-3 flex items-center gap-3">
+            <span class="text-xl flex-shrink-0">👨‍👩‍👧‍👦</span>
+            <p class="text-amber-200 text-xs sm:text-sm">¿Sois hermanos? Indicadlo en el campo de observaciones y se aplicará un <strong class="text-amber-300">descuento de -10€ por hermano</strong>.</p>
+          </div>
+
+          <!-- Observaciones -->
+          <div>
+            <label for="observaciones" class="block text-sm sm:text-base font-medium text-gray-300 mb-1.5">Observaciones <span class="text-gray-500 font-normal">(opcional)</span></label>
+            <textarea id="observaciones" name="observaciones" rows="2"
+                   class="w-full px-4 py-2.5 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm sm:text-base resize-none" 
+                   placeholder="Ej: somos hermanos, alguna alergia, duda..."></textarea>
+          </div>
+
           <!-- Botón de Envío -->
-          <button type="submit" class="w-full bg-gradient-to-r from-green-700 to-green-800 hover:from-green-800 hover:to-green-900 text-white font-medium py-3.5 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-500/20 flex items-center justify-center space-x-2 text-base sm:text-lg">
-            <span>Enviar Inscripción</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          <button type="button" onclick="enviarWhatsAppCampus()" class="w-full bg-gradient-to-r from-emerald-600 to-green-700 hover:from-emerald-700 hover:to-green-800 active:scale-95 text-white font-bold py-4 px-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-emerald-500/30 flex items-center justify-center space-x-3 text-base sm:text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.231 8.413 3.488 2.245 2.259 3.481 5.283 3.48 8.458-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.964-.941 1.162-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.499.099-.202.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
             </svg>
+            <span>Enviar Inscripción por WhatsApp</span>
           </button>
         </form>
+
+        <script>
+        function enviarWhatsAppCampus() {
+          var form = document.getElementById('inscripcionForm');
+          var genero = document.getElementById('genero') ? document.getElementById('genero').value : '';
+          var categoria = document.getElementById('categoria') ? document.getElementById('categoria').value : '';
+          var talla = document.querySelector('[name="talla"]') ? document.querySelector('[name="talla"]').value : (document.querySelectorAll('select')[2] ? document.querySelectorAll('select')[2].value : '');
+          var nombre = document.getElementById('nombre') ? document.getElementById('nombre').value : '';
+          var telefono = document.getElementById('telefono') ? document.getElementById('telefono').value : '';
+          var semanasEl = document.querySelector('input[name="semanas"]:checked');
+          var semanas = semanasEl ? semanasEl.value : '';
+          var observaciones = document.getElementById('observaciones') ? document.getElementById('observaciones').value : '';
+
+          if (!nombre) { alert('Por favor, introduce el nombre del jugador/a.'); return; }
+          if (!telefono) { alert('Por favor, introduce un teléfono de contacto.'); return; }
+          if (!semanas) { alert('Por favor, selecciona la duración (1 o 2 semanas).'); return; }
+          if (!categoria) { alert('Por favor, selecciona una categoría.'); return; }
+
+          var mensaje = '🏀 *INSCRIPCIÓN CAMPUS CALASANZ 2026*\n\n';
+          mensaje += '👤 *Jugador/a:* ' + nombre + '\n';
+          if (genero) mensaje += '⚧ *Género:* ' + genero + '\n';
+          mensaje += '📋 *Categoría:* ' + categoria + '\n';
+          if (talla) mensaje += '👕 *Talla camiseta:* ' + talla + '\n';
+          mensaje += '📅 *Duración:* ' + semanas + '\n';
+          mensaje += '📞 *Teléfono:* ' + telefono + '\n';
+          if (observaciones) mensaje += '📝 *Observaciones:* ' + observaciones + '\n';
+
+          var url = 'https://wa.me/34690342138?text=' + encodeURIComponent(mensaje);
+          window.open(url, '_blank');
+        }
+        </script>
 
         <!-- Botones de Contacto -->
         <div class="grid grid-cols-1 gap-4 mt-6">
@@ -753,9 +801,6 @@ JUNIOR
       </div>
     </div>
   </div>
-
-  <!-- Script para el formulario de WhatsApp -->
-  <script src="/whatsapp-form.js"></script>
 
   <!-- Sección ¿Qué debes traer? -->
   <div class="pt-4 pb-8">
