@@ -719,7 +719,7 @@ JUNIOR
                 <label for="semanas2" class="flex flex-col items-center justify-center p-3 sm:p-4 bg-gray-700/50 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-600/50 peer-checked:border-emerald-500 peer-checked:bg-emerald-900/20 peer-checked:ring-1 peer-checked:ring-emerald-500 transition-all duration-200 hover:shadow-md">
                   <span class="text-white font-bold text-sm sm:text-base">2 Semanas</span>
                   <span class="text-emerald-400 font-bold text-lg sm:text-xl">180€</span>
-                  <span class="text-xs text-amber-300 font-semibold mt-0.5">-20€ vs 2×semana</span>
+                  
                 </label>
               </div>
             </div>
