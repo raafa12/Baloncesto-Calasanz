@@ -39,6 +39,7 @@ if (tieneComponenteEspecial) {
   }
 }
 
+const tieneFormularioCampus = noticia.id === 'jornadas-tecnificacion-2026';
 ---
 <Layout title={title} description={description}>
   <main class="min-h-screen bg-[#0a1f1c] container mx-auto px-6 sm:px-12 lg:px-24 py-20 sm:py-28 max-w-7xl">
@@ -99,7 +100,7 @@ if (tieneComponenteEspecial) {
                     day: 'numeric', 
                     month: 'long', 
                     year: 'numeric',
-                    timeZone: 'UTC' // Asegura que no haya ajuste de zona horaria
+                    timeZone: 'UTC'
                   })}
                 </span>
               </div>
@@ -142,3 +143,37 @@ if (tieneComponenteEspecial) {
     )}
   </main>
 </Layout>
+
+{tieneFormularioCampus && (
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('btnEnviarCampus');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        const n = (document.getElementById('nombre')?.value || '').trim();
+        const t = (document.getElementById('telefono')?.value || '').trim();
+        const s = document.querySelector('input[name="semanas"]:checked');
+        const c = document.getElementById('categoria')?.value || '';
+        const g = document.getElementById('genero')?.value || '';
+        const tl = document.getElementById('talla')?.value || '';
+        const o = (document.getElementById('observaciones')?.value || '').trim();
+
+        if (!n) { alert('Por favor, introduce el nombre del jugador/a.'); return; }
+        if (!t) { alert('Por favor, introduce un teléfono de contacto.'); return; }
+        if (!s) { alert('Por favor, selecciona la duración.'); return; }
+        if (!c) { alert('Por favor, selecciona una categoría.'); return; }
+
+        let msg = '🏀 *INSCRIPCIÓN CAMPUS CALASANZ 2026*\n\n';
+        msg += `👤 *Jugador/a:* ${n}\n`;
+        if (g) msg += `⚧ *Género:* ${g}\n`;
+        msg += `📋 *Categoría:* ${c}\n`;
+        if (tl) msg += `👕 *Talla:* ${tl}\n`;
+        msg += `📅 *Duración:* ${s.value}\n`;
+        msg += `📞 *Teléfono:* ${t}\n`;
+        if (o) msg += `📝 *Observaciones:* ${o}\n`;
+
+        window.open('https://wa.me/34690342138?text=' + encodeURIComponent(msg), '_blank');
+      });
+    });
+  </script>
+)}
