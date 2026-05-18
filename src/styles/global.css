@@ -40,6 +40,12 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  /* FIX Android scroll: solo bloquear overscroll horizontal, nunca el vertical */
+  overscroll-behavior-x: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* Permitir scroll táctil vertical en Android */
+  touch-action: pan-y;
 }
 
 /* Asegurar que el contenido principal ocupe el espacio disponible */
