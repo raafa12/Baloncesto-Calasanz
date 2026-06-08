@@ -629,7 +629,7 @@ JUNIOR
                 <h3 class="text-lg sm:text-xl font-bold text-white">¡INSCRIPCIONES ABIERTAS!</h3>
               </div>
               <div class="text-center sm:text-right">
-                <p class="text-sm sm:text-base text-green-100">Plazo límite: <span class="font-bold text-white">31 de julio de 2026</span></p>
+                <p class="text-sm sm:text-base text-green-100">Plazo límite: <span class="font-bold text-white">6 de julio de 2026</span></p>
                 <p class="text-xs sm:text-sm text-green-200 mt-1">¡No te quedes sin tu plaza! Plazas limitadas</p>
               </div>
             </div>
